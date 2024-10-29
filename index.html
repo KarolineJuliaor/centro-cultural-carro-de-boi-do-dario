@@ -4,258 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro Cultural Carro de Boi do Dário</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Cores do tema */
-    :root {
-      --cor-principal: #C1440E; /* Vermelho pastel */
-      --cor-secundaria: #05668D; /* Azul pastel */
-      --cor-fundo: #F9F9F9; /* Fundo claro */
-      --cor-texto: #333; /* Texto principal */
-      --cor-secao: #D8E2DC; /* Fundo das seções */
-      --cor-erro: #FF4F4F; /* Cor para mensagens de erro */
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Cabeçalho */
-    header {
-      background-color: #FFD1A9; /* Laranja pastel */
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      color: var(--cor-principal);
-    }
-
-    header nav ul {
-      list-style-type: none;
-      margin-top: 10px;
-    }
-
-    header nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-
-    header nav ul li a {
-      color: var(--cor-texto);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    header nav ul li a:hover {
-      color: var(--cor-secundaria);
-    }
-
-    /* Seção Visual */
-    #visual {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px auto;
-      padding: 10px;
-    }
-
-    .cultural-image {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .cultural-image:hover {
-      transform: scale(1.05);
-    }
-
-    /* Seção Sobre */
-    #sobre {
-      background-color: var(--cor-secao);
-      padding: 30px;
-      margin: 20px auto;
-      width: 80%;
-      border-radius: 10px;
-    }
-
-    #sobre h2 {
-      color: var(--cor-texto);
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-
-    #sobre p {
-      color: #444;
-      margin: 10px 0;
-    }
-
-    /* Seção Atividades */
-    #atividades {
-      background-color: #A8D5BA; /* Verde pastel */
-      padding: 30px;
-      margin: 20px auto;
-      width: 80%;
-      border-radius: 10px;
-    }
-
-    #atividades h2 {
-      color: var(--cor-texto);
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-
-    #atividades ul {
-      list-style-type: none;
-    }
-
-    #atividades ul li {
-      margin: 10px 0;
-      font-size: 1.1em;
-      color: var(--cor-texto);
-    }
-
-    #atividades ul li strong {
-      color: var(--cor-secundaria);
-    }
-
-    /* Estilização da tabela de atividades */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0; /* Espaço entre a tabela e os elementos ao redor */
-    }
-
-    th, td {
-      padding: 15px; /* Espaço interno das células */
-      text-align: left; /* Alinhamento do texto */
-      border: 1px solid #ccc; /* Bordas das células */
-    }
-
-    th {
-      background-color: var(--cor-secundaria); /* Cor de fundo do cabeçalho */
-      color: #fff; /* Cor do texto no cabeçalho */
-      font-size: 1.2em; /* Tamanho da fonte no cabeçalho */
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2; /* Cor de fundo para linhas pares */
-    }
-
-    tr:hover {
-      background-color: var(--cor-secao); /* Cor de fundo ao passar o mouse sobre a linha */
-    }
-
-    /* Seção Contato */
-    #contato {
-      background-color: #FDE74C; /* Amarelo pastel */
-      padding: 30px;
-      margin: 20px auto;
-      width: 80%;
-      border-radius: 10px;
-    }
-
-    #contato h2 {
-      color: var(--cor-texto);
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-
-    #contato p {
-      color: #444;
-      margin: 8px 0;
-    }
-
-    #contato a {
-      color: var(--cor-texto);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    #contato a:hover {
-      color: var(--cor-principal);
-    }
-
-    /* Botão do WhatsApp */
-    #whatsapp-button {
-      background-color: #A8D5BA; /* Verde pastel */
-      color: var(--cor-texto);
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 15px;
-      display: inline-block;
-    }
-
-    #whatsapp-button a {
-      color: var(--cor-texto);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    #whatsapp-button:hover {
-      background-color: #95c8a6;
-    }
-
-    /* Formulário de Contato */
-    form {
-      margin-top: 20px;
-    }
-
-    form label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: var(--cor-texto);
-    }
-
-    form input[type="text"],
-    form input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    form button[type="submit"] {
-      background-color: var(--cor-secundaria); /* Azul pastel */
-      color: #fff;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    form button[type="submit"]:hover {
-      background-color: #04577A;
-    }
-
-    /* Rodapé */
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #FFD1A9; /* Laranja pastel */
-      color: var(--cor-texto);
-      margin-top: 20px;
-    }
-
-    /* Ícones */
-    .icon {
-      width: 30px; /* Tamanho do ícone */
-      margin-right: 10px; /* Espaço entre o ícone e o texto */
-      vertical-align: middle; /* Alinhamento vertical */
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Cabeçalho -->
@@ -274,7 +24,6 @@
   <section id="visual">
     <img src="images/boi-de-mamao.jpg" alt="Boi de Mamão" class="cultural-image">
     <img src="images/capoeira.jpg" alt="Capoeira" class="cultural-image">
-    <img src="images/rendeira.jpg" alt="Rendeira" class="cultural-image">
   </section>
 
   <!-- Seção Sobre -->
@@ -284,7 +33,7 @@
     <p>Além disso, o centro oferece diversos projetos, como aulas de jiu-jitsu, taekwondo e encontros da melhor idade, incentivando a participação de toda a comunidade.</p>
     <p>É um lugar onde o passado e o presente se encontram, promovendo alegria e conexão para todas as idades.</p>
   </section>
-
+  
   <!-- Seção Atividades -->
   <section id="atividades">
     <h2>Atividades Oferecidas</h2>
@@ -292,7 +41,7 @@
       <thead>
         <tr>
           <th>Atividade</th>
-          <th>Dia(s)</th>
+          <th>Dias</th>
           <th>Horário</th>
         </tr>
       </thead>
@@ -332,29 +81,18 @@
     <p>Entre em contato para saber mais sobre nossas atividades e como participar!</p>
     <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
     <p><strong>Telefone:</strong> <a href="tel:+5548999323570">(48) 99932-3570</a></p>
-    <p>
-      <strong>Instagram:</strong>
-      <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">
-        <img src="images/instagram-icon.png" alt="Instagram" class="icon"> @centroculturalcarrodeboidodari
-      </a>
-    </p>
-    <p>
-      <strong>WhatsApp:</strong>
-      <button id="whatsapp-button">
-        <a href="https://wa.me/5548999323570" target="_blank">
-          <img src="images/whatsapp-icon.png" alt="WhatsApp" class="icon"> Falar via WhatsApp
-        </a>
-      </button>
-    </p>
-
-    <p id="error-message" style="color: var(--cor-erro);"></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank"><i class="fab fa-instagram"></i> @centroculturalcarrodeboidodari</a></p>
+    
+    <button id="whatsapp-button"><i class="fab fa-whatsapp"></i> Falar via WhatsApp</button>
+    
+    <p id="error-message" style="color: red;"></p>
     <form>
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
-
+      
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
-
+      
       <button type="submit">Enviar</button>
     </form>
   </section>
