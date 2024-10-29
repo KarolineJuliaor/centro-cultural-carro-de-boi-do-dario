@@ -1,54 +1,44 @@
-/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9; /* fundo suave */
-    color: #333; /* texto escuro */
+    background-color: #eaf4f4; /* Azul pastel */
+    color: #333;
 }
 
-/* Cabeçalho */
 header {
-    background: linear-gradient(to right, #ffccbc, #ffab91); /* gradiente pastel */
-    color: #2c3e50; /* texto escuro */
-    padding: 2rem 0;
+    background-color: #ffcccb; /* Rosa pastel */
+    color: white;
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 3rem; /* título maior */
+    font-size: 2.5rem;
 }
 
-header p {
-    font-size: 1.2rem; /* subtítulo */
-}
-
-/* Navegação */
 nav {
-    background-color: #ffab91; /* cor pastel */
-    padding: 1rem 0;
+    text-align: center;
+    margin: 1rem 0;
 }
 
 nav a {
     text-decoration: none;
-    color: #fff; /* texto branco */
+    color: #ff6600; /* Laranja */
     font-weight: bold;
     margin: 0 1rem;
     padding: 0.5rem;
-    transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
-    color: #3f51b5; /* cor escura ao passar o mouse */
-    transform: scale(1.05); /* leve aumento ao passar o mouse */
+    color: #333;
 }
 
-/* Contêiner principal */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -56,40 +46,59 @@ nav a:hover {
     padding: 2rem 0;
 }
 
-/* Seções */
 section {
     margin-bottom: 2rem;
-    background-color: #fff3e0; /* fundo pastel */
-    border-radius: 12px; /* bordas arredondadas */
-    padding: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Títulos das seções */
 h2 {
-    color: #ff5722; /* cor vibrante */
+    color: #6ab04c; /* Verde pastel */
     margin-bottom: 1rem;
-    font-size: 2.5rem; /* tamanho maior */
+    font-size: 1.75rem;
     text-align: center;
 }
 
-/* Texto das seções */
 p {
     line-height: 1.6;
-    text-align: justify; /* justificar texto */
+    text-align: center;
 }
 
-/* Informações de contato */
 .contact-info {
     text-align: center;
-    background-color: #ffccbc; /* fundo pastel */
-    color: #2c3e50; /* texto escuro */
-    padding: 1.5rem;
+    background-color: #ffcccb; /* Rosa pastel */
+    color: white;
+    padding: 1rem;
     border-radius: 8px;
     margin-top: 2rem;
 }
 
-/* Botões */
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.activity-table, .activity-table th, .activity-table td {
+    border: 1px solid #ddd;
+}
+
+.activity-table th, .activity-table td {
+    padding: 1rem;
+    text-align: center;
+}
+
+.activity-table th {
+    background-color: #ff6600; /* Laranja */
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -98,58 +107,22 @@ p {
 }
 
 .buttons-container button {
-    padding: 0.75rem 1.5rem; /* botão maior */
-    font-size: 1.2rem; /* texto maior */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     cursor: pointer;
-    background-color: #ffab91; /* fundo pastel */
-    color: #fff; /* texto branco */
+    background-color: #6ab04c; /* Verde pastel */
+    color: white;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
 .buttons-container button:hover {
-    background-color: #3f51b5; /* cor escura ao passar o mouse */
-    transform: scale(1.05); /* leve aumento ao passar o mouse */
+    background-color: #ff6600; /* Laranja */
 }
 
-/* Conteúdo das atividades */
 .activity-content {
     display: none;
     margin-top: 1rem;
     text-align: center;
-    background-color: #ffe0b2; /* fundo pastel */
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Rodapé */
-footer {
-    background-color: #2c3e50; /* cor escura */
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-    margin-top: 2rem;
-    position: relative;
-}
-
-/* Media Queries para responsividade */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem; /* título menor em telas pequenas */
-    }
-    
-    nav a {
-        margin: 0 0.5rem; /* margens menores */
-    }
-
-    .buttons-container {
-        flex-direction: column; /* empilhar botões em telas pequenas */
-        gap: 0.5rem;
-    }
-
-    .buttons-container button {
-        width: 100%; /* largura total para botões */
-    }
 }
