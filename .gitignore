@@ -1,0 +1,28 @@
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretórios de dependências
+node_modules/
+vendor/
+
+# Ignorar arquivos de configuração do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos temporários
+*.tmp
+*.temp
+*.bak
+
+# Ignorar arquivos gerados
+/dist
+/build
+
+# Ignorar arquivos de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar arquivos de configuração do ambiente
+.env
