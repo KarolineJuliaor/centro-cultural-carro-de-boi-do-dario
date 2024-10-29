@@ -1,0 +1,5 @@
+projeto/
+├── index.html      <-- Arquivo HTML principal
+├── styles.css      <-- Arquivo CSS
+└── images/         <-- Pasta para armazenar imagens
+    └── image.png   <-- Sua logo ou outra imagem
