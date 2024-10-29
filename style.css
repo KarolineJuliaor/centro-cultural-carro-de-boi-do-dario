@@ -117,3 +117,135 @@ footer {
   background-color: #4682b4; /* Azul forte */
   color: white; /* Texto branco */
 }
+
+/* Estilos Gerais */
+body {
+  font-family: 'Roboto', sans-serif; /* Fonte moderna */
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8; /* Cor de fundo suave e moderna */
+  color: #333; /* Cor do texto */
+  line-height: 1.6; /* Melhor legibilidade */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b5998; /* Azul moderno */
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+header img.logo {
+  width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+  height: auto;
+  margin-right: 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em; /* Aumenta o tamanho do cabeçalho */
+  font-weight: 700; /* Negrito */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px; /* Aumenta o espaço entre os itens do menu */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s; /* Transição suave */
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Cor dourada ao passar o mouse */
+}
+
+/* Seções */
+section {
+  padding: 30px; /* Aumenta o espaçamento */
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 12px; /* Cantos arredondados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+  background-color: white;
+}
+
+h2 {
+  color: #3b5998; /* Azul moderno */
+  margin-bottom: 15px; /* Espaçamento abaixo do cabeçalho */
+  font-weight: 600; /* Levemente em negrito */
+}
+
+/* Imagens Culturais */
+.cultural-image {
+  width: 100%;
+  max-width: 450px; /* Aumenta o tamanho máximo da imagem */
+  border-radius: 12px; /* Cantos arredondados */
+  margin: 10px 0; /* Adiciona espaçamento vertical */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #3b5998; /* Azul moderno */
+  padding: 12px; /* Aumenta o espaçamento */
+  text-align: left;
+}
+
+th {
+  background-color: #e6f0f6; /* Azul claro moderno */
+  font-weight: 600; /* Levemente em negrito */
+}
+
+/* Botão do WhatsApp */
+#whatsapp-button {
+  background-color: #25D366; /* Cor do WhatsApp */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center; /* Alinhamento vertical do texto e ícone */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+#whatsapp-button img {
+  width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+  margin-right: 8px;
+}
+
+#whatsapp-button:hover {
+  background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b5998; /* Azul moderno */
+  color: white; /* Texto branco */
+  font-size: 0.9em; /* Tamanho de fonte menor */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave acima do rodapé */
+}
+
