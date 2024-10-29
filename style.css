@@ -6,12 +6,12 @@
 }
 
 body {
-    background-color: #eaf4f4; /* Azul pastel */
+    background-color: #e1f5fe; /* Azul pastel */
     color: #333;
 }
 
 header {
-    background-color: #ffcccb; /* Rosa pastel */
+    background-color: #ffb3c1; /* Rosa pastel */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -29,7 +29,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #ff6600; /* Laranja */
+    color: #ff5733; /* Laranja suave */
     font-weight: bold;
     margin: 0 1rem;
     padding: 0.5rem;
@@ -51,7 +51,7 @@ section {
 }
 
 h2 {
-    color: #6ab04c; /* Verde pastel */
+    color: #4caf50; /* Verde pastel */
     margin-bottom: 1rem;
     font-size: 1.75rem;
     text-align: center;
@@ -64,7 +64,7 @@ p {
 
 .contact-info {
     text-align: center;
-    background-color: #ffcccb; /* Rosa pastel */
+    background-color: #ffb3c1; /* Rosa pastel */
     color: white;
     padding: 1rem;
     border-radius: 8px;
@@ -87,7 +87,7 @@ p {
 }
 
 .activity-table th {
-    background-color: #ff6600; /* Laranja */
+    background-color: #ff5733; /* Laranja suave */
     color: white;
 }
 
@@ -110,7 +110,7 @@ footer {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #6ab04c; /* Verde pastel */
+    background-color: #4caf50; /* Verde pastel */
     color: white;
     border: none;
     border-radius: 5px;
@@ -118,7 +118,7 @@ footer {
 }
 
 .buttons-container button:hover {
-    background-color: #ff6600; /* Laranja */
+    background-color: #ff5733; /* Laranja suave */
 }
 
 .activity-content {
