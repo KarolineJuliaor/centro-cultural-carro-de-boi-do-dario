@@ -16,7 +16,7 @@
     header {
       display: flex;
       align-items: center;
-      background-color: #3e8e41; /* Verde mais escuro */
+      background-color: #ff6347; /* Tomate */
       color: white;
       padding: 1rem;
       text-align: center;
@@ -48,10 +48,10 @@
       margin: 20px;
       border: 1px solid #ddd;
       border-radius: 5px;
-      background-color: white;
+      background-color: #ffffff; /* Branco */
     }
     h2 {
-      color: #3e8e41; /* Verde mais escuro */
+      color: #ff6347; /* Tomate */
     }
     table {
       width: 100%;
@@ -64,11 +64,14 @@
       text-align: left;
     }
     th {
-      background-color: #f2f2f2; /* Cinza claro */
-      color: #3e8e41; /* Verde mais escuro */
+      background-color: #ffa500; /* Laranja */
+      color: white; /* Texto branco */
     }
     tr:nth-child(even) {
       background-color: #f9f9f9; /* Cor alternada para linhas da tabela */
+    }
+    tr:nth-child(odd) {
+      background-color: #ffe4e1; /* Rosa claro para linhas ímpares */
     }
     #whatsapp-button {
       background-color: #25D366; /* Verde WhatsApp */
@@ -114,7 +117,7 @@
       border-radius: 5px;
     }
     button[type="submit"] {
-      background-color: #3e8e41; /* Verde mais escuro */
+      background-color: #ff6347; /* Tomate */
       color: white;
       border: none;
       padding: 10px 20px;
@@ -124,7 +127,7 @@
       transition: background-color 0.3s; /* Transição suave para hover */
     }
     button[type="submit"]:hover {
-      background-color: #2a6a32; /* Verde mais escuro no hover */
+      background-color: #e0533a; /* Tomate mais escuro no hover */
     }
     .social-icon {
       width: 20px; /* Ajustar tamanho da logo */
@@ -213,28 +216,27 @@
     <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
     <p><strong>Telefone:</strong> <a href="tel:+5548999323570">(48) 99932-3570</a></p>
     <p><strong>Instagram:</strong> 
-      <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">
-        <img src="https://png.pngtree.com/element_our/sm/20180630/sm_5b37de3263964.jpg" alt="Instagram" class="social-icon">
+      <a href="https://www.instagram.com/centroculturalcarrodeboidodario/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_icon.png" alt="Instagram" class="social-icon">
       </a>
     </p>
-    <p><strong>YouTube:</strong>
-      <a href="https://www.youtube.com/@anapso82" target="_blank">Canal Ana Pso</a>
-    </p>
-    <form action="mailto:contato@centroculturalcarrodeboidodario.com" method="post" enctype="text/plain">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" required>
+    <button id="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5548999323570', '_blank')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">WhatsApp
+    </button>
+    
+    <!-- Formulário de Contato -->
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
       
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
       
-      <label for="message">Mensagem:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
       
       <button type="submit">Enviar</button>
     </form>
-    <a href="https://api.whatsapp.com/send?phone=5548999323570" target="_blank" id="whatsapp-button">
-      <img src="https://png.pngtree.com/element_our/sm/20180626/sm_5b321c99945a2.jpg" alt="WhatsApp" style="width: 25px; margin-right: 5px;"> Fale Conosco no WhatsApp
-    </a>
   </section>
 
   <!-- Rodapé -->
