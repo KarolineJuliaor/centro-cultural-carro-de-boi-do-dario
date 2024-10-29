@@ -1,209 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Cultural Carro de Boi do Dário</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
 
-        body {
-            background-color: #FFF8DC; /* Tom pastel suave para o fundo */
-            color: #333;
-        }
-
-        header {
-            background-color: #FFB6C1; /* Rosa pastel */
-            color: #333;
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #FF69B4; /* Rosa forte pastel */
-            font-weight: bold;
-            margin: 0 1rem;
-            padding: 0.5rem;
-        }
-
-        nav a:hover {
-            color: #333;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: #E6E6FA; /* Lavanda pastel */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #4682B4; /* Azul pastel */
-            margin-bottom: 1rem;
-            font-size: 1.75rem;
-            text-align: center;
-        }
-
-        p {
-            line-height: 1.6;
-            text-align: center;
-            color: #333;
-        }
-
-        .contact-info {
-            text-align: center;
-            background-color: #FFDAB9; /* Pêssego pastel */
-            color: #333;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-
-        .activity-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background-color: #FFFACD; /* Amarelo pastel */
-        }
-
-        .activity-table, .activity-table th, .activity-table td {
-            border: 1px solid #ddd;
-        }
-
-        .activity-table th {
-            padding: 1rem;
-            background-color: #FFDEAD; /* Pastel areia */
-            color: #333;
-        }
-
-        .activity-table td {
-            padding: 1rem;
-            text-align: center;
-            background-color: #F0FFF0; /* Menta pastel */
-        }
-
-        .buttons-container {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .buttons-container button {
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            cursor: pointer;
-            background-color: #87CEFA; /* Azul claro pastel */
-            color: #333;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .buttons-container button:hover {
-            background-color: #B0E0E6; /* Azul pó pastel */
-            color: #fff;
-        }
-
-        .activity-content {
-            display: none; /* Oculto por padrão */
-            margin-top: 1rem;
-            text-align: center;
-            background-color: #FFF0F5; /* Lavanda rosada pastel */
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        footer {
-            background-color: #DDA0DD; /* Roxo pastel */
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-
-        /* Animação de fade-in */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-    </style>
-</head>
 <body>
+
     <header>
         <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <nav>
-            <a href="#atividades">Atividades</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <p>Promovendo a Cultura e Tradições Regionais</p>
     </header>
 
+    <nav>
+        <a href="#descricao">Descrição</a>
+        <a href="#atividades">Atividades Oferecidas</a>
+        <a href="#historia">História</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
     <div class="container">
+        <section id="descricao">
+            <h2>Descrição</h2>
+            <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção da cultura e das tradições regionais em Florianópolis, destacando atividades como o boi de mamão e a capoeira. Este projeto visa proporcionar um ambiente acolhedor para a comunidade participar de diversas atividades culturais e esportivas.</p>
+        </section>
+
         <section id="atividades">
             <h2>Atividades Oferecidas</h2>
             <div class="buttons-container">
-                <button onclick="showActivity('jiu-jitsu')">Jiu-Jitsu</button>
-                <button onclick="showActivity('taekwondo')">Taekwondo</button>
+                <button onclick="showActivity('boi')">Boi de Mamão</button>
                 <button onclick="showActivity('capoeira')">Capoeira</button>
-                <button onclick="showActivity('boi-de-mamao')">Boi de Mamão</button>
+                <button onclick="showActivity('taekwondo')">Taekwondo</button>
+                <button onclick="showActivity('jiujitsu')">Jiu-Jitsu</button>
+                <button onclick="showActivity('melhorIdade')">Melhor Idade</button>
             </div>
 
-            <div id="jiu-jitsu" class="activity-content">
-                <p>Jiu-Jitsu: Segunda e Quarta, 18:30 às 19:30</p>
-            </div>
-            <div id="taekwondo" class="activity-content">
-                <p>Taekwondo: Terça e Quinta, 9:00 às 10:30 e 15:00 às 16:30</p>
+            <!-- Seções das atividades -->
+            <div id="boi" class="activity-content">
+                <h3>Boi de Mamão</h3>
+                <p>Atividade típica de Florianópolis, realizada aos sábados das 9h às 12h.</p>
             </div>
             <div id="capoeira" class="activity-content">
-                <p>Capoeira: Terça e Quinta, 20:00 às 22:00</p>
+                <h3>Capoeira</h3>
+                <p>Aulas de capoeira às terças e quintas, das 20h às 22h.</p>
             </div>
-            <div id="boi-de-mamao" class="activity-content">
-                <p>Boi de Mamão: Sábado, 9:00 às 12:00</p>
+            <div id="taekwondo" class="activity-content">
+                <h3>Taekwondo</h3>
+                <p>Aulas de taekwondo às terças e quintas, das 9h às 10h30 e das 15h às 16h30.</p>
             </div>
+            <div id="jiujitsu" class="activity-content">
+                <h3>Jiu-Jitsu</h3>
+                <p>Aulas de jiu-jitsu às segundas e quartas, das 18h30 às 19h30.</p>
+            </div>
+            <div id="melhorIdade" class="activity-content">
+                <h3>Melhor Idade</h3>
+                <p>Encontros da Melhor Idade nas quartas-feiras, das 13h30 às 17h.</p>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>História do Centro Cultural</h2>
+            <p>O Centro Cultural Carro de Boi do Dário foi fundado com o objetivo de preservar e promover a cultura local. Desde sua criação, tornou-se um ponto de encontro para a comunidade, oferecendo atividades como o boi de mamão, capoeira, e muitas outras tradições.</p>
         </section>
 
         <section id="contato">
             <h2>Contato</h2>
             <div class="contact-info">
-                <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC</p>
+                <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
                 <p>Telefone: (48) 99932-3570</p>
-                <p>Instagram: <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">@centroculturalcarrodeboidodari</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" style="color: white; text-decoration: underline;">@centroculturalcarrodeboidodari</a></p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
+        &copy; 2024 Centro Cultural Carro de Boi do Dário
     </footer>
 
     <script>
