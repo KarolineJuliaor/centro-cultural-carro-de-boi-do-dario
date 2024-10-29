@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural Carro de Boi do Dário</title>
     <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome para ícones -->
 </head>
 <body>
 
@@ -17,7 +16,6 @@
     <nav>
         <a href="#descricao">Descrição</a>
         <a href="#atividades">Atividades Oferecidas</a>
-        <a href="#galeria">Galeria</a>
         <a href="#historia">História</a>
         <a href="#contato">Contato</a>
     </nav>
@@ -61,31 +59,9 @@
             </div>
         </section>
 
-        <section id="galeria">
-            <h2>Galeria</h2>
-            <div class="gallery">
-                <img src="image1.jpg" alt="Atividade 1">
-                <img src="image2.jpg" alt="Atividade 2">
-                <img src="image3.jpg" alt="Atividade 3">
-                <img src="image4.jpg" alt="Atividade 4">
-            </div>
-        </section>
-
         <section id="historia">
             <h2>História do Centro Cultural</h2>
             <p>O Centro Cultural Carro de Boi do Dário foi fundado com o objetivo de preservar e promover a cultura local. Desde sua criação, tornou-se um ponto de encontro para a comunidade, oferecendo atividades como o boi de mamão, capoeira, e muitas outras tradições.</p>
-        </section>
-
-        <section id="depoimentos">
-            <h2>Depoimentos</h2>
-            <div class="testimonial">
-                <p>"O Centro Cultural é um lugar incrível! Sempre me sinto bem-vindo e aprendo muito com as atividades."</p>
-                <span>- Maria, participante de Capoeira</span>
-            </div>
-            <div class="testimonial">
-                <p>"As aulas de Jiu-Jitsu mudaram minha vida. É um ótimo espaço para se exercitar e fazer amigos!"</p>
-                <span>- João, aluno de Jiu-Jitsu</span>
-            </div>
         </section>
 
         <section id="contato">
@@ -94,14 +70,7 @@
                 <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
                 <p>Telefone: (48) 99932-3570</p>
                 <p>Instagram: <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" style="color: white; text-decoration: underline;">@centroculturalcarrodeboidodari</a></p>
-            </div>
-            <div class="social-buttons">
-                <a href="https://api.whatsapp.com/send?phone=48999923570" target="_blank" class="whatsapp-button">
-                    <i class="fab fa-whatsapp"></i> Fale Conosco
-                </a>
-                <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank" class="instagram-button">
-                    <i class="fab fa-instagram"></i> Siga-nos
-                </a>
+                <p>WhatsApp: <a href="https://api.whatsapp.com/send?phone=5548999323570" style="color: white; text-decoration: underline;">Clique para conversar!</a></p>
             </div>
         </section>
     </div>
@@ -115,8 +84,81 @@
             document.querySelectorAll('.activity-content').forEach(function(section) {
                 section.style.display = 'none';
             });
-            document.getElementById(activityId).style.display = 'block';
+            const activitySection = document.getElementById(activityId);
+            if (activitySection) {
+                activitySection.style.display = 'block';
+                activitySection.classList.add('fade-in');
+            } else {
+                alert('Atividade não encontrada!');
+            }
+            const sectionPosition = activitySection.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: sectionPosition,
+                behavior: 'smooth'
+            });
         }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        const backToTopButton = document.createElement('button');
+        backToTopButton.textContent = 'Voltar ao Topo';
+        backToTopButton.className = 'back-to-top';
+        backToTopButton.onclick = scrollToTop;
+        document.body.appendChild(backToTopButton);
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #4caf50; /* Verde pastel */
+                color: white;
+                border: none;
+                padding: 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                display: none;
+                transition: background-color 0.3s;
+            }
+            
+            .back-to-top:hover {
+                background-color: #ff5733; /* Laranja suave */
+            }
+        `;
+        document.head.appendChild(style);
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        const styleFadeIn = document.createElement('style');
+        styleFadeIn.innerHTML = `
+            .fade-in {
+                animation: fadeIn 0.5s forwards;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(styleFadeIn);
     </script>
 </body>
 </html>
