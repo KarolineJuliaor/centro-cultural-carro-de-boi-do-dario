@@ -1,147 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5dc; /* Fundo em tom pastel */
-}
-
-header {
-    background-color: #8ecae6; /* Azul suave */
-    color: #ffffff;
-    padding: 1.5em;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5em;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5em;
-    transition: color 0.3s;
-}
-
-header nav a:hover {
-    color: #333;
-}
-
-#visual {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    padding: 1.5em;
-    background-color: #ffb6c1; /* Rosa suave */
-}
-
-.cultural-image {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-section {
-    padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#atividades {
-    background-color: #a8d5ba; /* Verde suave */
-    color: #333;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #333;
-    color: #ffffff;
-    text-align: center;
-    padding: 1em;
-    margin-top: 2em;
-    font-size: 1em;
-}
-
-#contato {
-    padding: 2em;
-    background-color: #ffe4b5; /* Amarelo suave */
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#whatsapp-button {
-    margin-top: 1em;
-    padding: 0.75em 1.5em;
-    background-color: #25D366; /* Verde do WhatsApp */
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#whatsapp-button a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-#whatsapp-button:hover {
-    background-color: #1ebe5a; /* Tom mais escuro para hover */
-}
-
-form label, form input, form button {
-    display: block;
-    margin: 0.5em 0;
-    font-size: 1em;
-}
-
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.buttons-container button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.buttons-container button:hover {
-    background-color: #333;
-}
-
-.activity-content {
-    display: none; /* Oculto por padrão */
-    margin-top: 1rem;
-    text-align: center;
-}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -149,8 +5,6 @@ form label, form input, form button {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural Carro de Boi do Dário</title>
     <style>
-        /* Seus estilos existentes */
-
         * {
             margin: 0;
             padding: 0;
@@ -159,11 +13,99 @@ form label, form input, form button {
         }
 
         body {
-            background-color: #f3f3f3;
+            background-color: #FFF8DC; /* Tom pastel suave para o fundo */
             color: #333;
         }
 
-        /* Outros estilos... */
+        header {
+            background-color: #FFB6C1; /* Rosa pastel */
+            color: #333;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FF69B4; /* Rosa forte pastel */
+            font-weight: bold;
+            margin: 0 1rem;
+            padding: 0.5rem;
+        }
+
+        nav a:hover {
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #E6E6FA; /* Lavanda pastel */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4682B4; /* Azul pastel */
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: center;
+            color: #333;
+        }
+
+        .contact-info {
+            text-align: center;
+            background-color: #FFDAB9; /* Pêssego pastel */
+            color: #333;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .activity-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #FFFACD; /* Amarelo pastel */
+        }
+
+        .activity-table, .activity-table th, .activity-table td {
+            border: 1px solid #ddd;
+        }
+
+        .activity-table th {
+            padding: 1rem;
+            background-color: #FFDEAD; /* Pastel areia */
+            color: #333;
+        }
+
+        .activity-table td {
+            padding: 1rem;
+            text-align: center;
+            background-color: #F0FFF0; /* Menta pastel */
+        }
 
         .buttons-container {
             display: flex;
@@ -176,26 +118,37 @@ form label, form input, form button {
             padding: 0.5rem 1rem;
             font-size: 1rem;
             cursor: pointer;
-            background-color: #ff6600;
-            color: white;
+            background-color: #87CEFA; /* Azul claro pastel */
+            color: #333;
             border: none;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
 
         .buttons-container button:hover {
-            background-color: #333;
+            background-color: #B0E0E6; /* Azul pó pastel */
+            color: #fff;
         }
 
         .activity-content {
             display: none; /* Oculto por padrão */
             margin-top: 1rem;
             text-align: center;
+            background-color: #FFF0F5; /* Lavanda rosada pastel */
+            padding: 1rem;
+            border-radius: 8px;
         }
 
-        /* Estilos novos adicionados */
-        
-        /* Animação de fade-in para exibir a seção com suavidade */
+        footer {
+            background-color: #DDA0DD; /* Roxo pastel */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Animação de fade-in */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -204,27 +157,62 @@ form label, form input, form button {
         .fade-in {
             animation: fadeIn 0.5s ease-in-out;
         }
-
-        /* Animação ao carregar a página */
-        .page-load {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .page-load:not(.page-load) {
-            opacity: 1;
-        }
-
-        /* Destaque para o botão ativo */
-        .active-button {
-            background-color: #333;
-            color: #fff;
-            border: 2px solid #ff6600;
-        }
     </style>
 </head>
 <body>
-    <!-- O restante do seu HTML -->
+    <header>
+        <h1>Centro Cultural Carro de Boi do Dário</h1>
+        <nav>
+            <a href="#atividades">Atividades</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="atividades">
+            <h2>Atividades Oferecidas</h2>
+            <div class="buttons-container">
+                <button onclick="showActivity('jiu-jitsu')">Jiu-Jitsu</button>
+                <button onclick="showActivity('taekwondo')">Taekwondo</button>
+                <button onclick="showActivity('capoeira')">Capoeira</button>
+                <button onclick="showActivity('boi-de-mamao')">Boi de Mamão</button>
+            </div>
+
+            <div id="jiu-jitsu" class="activity-content">
+                <p>Jiu-Jitsu: Segunda e Quarta, 18:30 às 19:30</p>
+            </div>
+            <div id="taekwondo" class="activity-content">
+                <p>Taekwondo: Terça e Quinta, 9:00 às 10:30 e 15:00 às 16:30</p>
+            </div>
+            <div id="capoeira" class="activity-content">
+                <p>Capoeira: Terça e Quinta, 20:00 às 22:00</p>
+            </div>
+            <div id="boi-de-mamao" class="activity-content">
+                <p>Boi de Mamão: Sábado, 9:00 às 12:00</p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC</p>
+                <p>Telefone: (48) 99932-3570</p>
+                <p>Instagram: <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">@centroculturalcarrodeboidodari</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showActivity(activityId) {
+            document.querySelectorAll('.activity-content').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(activityId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
-
