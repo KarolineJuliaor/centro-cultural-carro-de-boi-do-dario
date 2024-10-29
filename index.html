@@ -4,81 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural Carro de Boi do Dário</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <p>Promovendo a Cultura e Tradições Regionais</p>
+        <div class="header-content">
+            <h1>Centro Cultural Carro de Boi do Dário</h1>
+            <p>Promovendo a cultura do boi de mamão e da capoeira</p>
+            <div class="header-buttons">
+                <button onclick="window.location.href='#sobre'">Sobre</button>
+                <button onclick="window.location.href='#atividades'">Atividades</button>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <a href="#descricao">Descrição</a>
-        <a href="#atividades">Atividades</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#historia">História</a>
-        <a href="#contato">Contato</a>
-    </nav>
+    <section id="sobre" class="section">
+        <h2>Sobre Nós</h2>
+        <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à preservação e promoção das tradições culturais, como o boi de mamão e a capoeira.</p>
+    </section>
 
-    <div class="container">
-        <section id="descricao">
-            <h2>Descrição</h2>
-            <p>O Centro Cultural Carro de Boi do Dário promove tradições locais como o boi de mamão e a capoeira, proporcionando atividades culturais e esportivas para a comunidade.</p>
-        </section>
-
-        <section id="atividades">
-            <h2>Atividades Oferecidas</h2>
-            <div class="buttons-container">
-                <button onclick="showActivity('boi')">Boi de Mamão</button>
-                <button onclick="showActivity('capoeira')">Capoeira</button>
-                <button onclick="showActivity('taekwondo')">Taekwondo</button>
-                <button onclick="showActivity('jiujitsu')">Jiu-Jitsu</button>
-                <button onclick="showActivity('melhorIdade')">Melhor Idade</button>
-            </div>
-
-            <div id="boi" class="activity-content">
+    <section id="atividades" class="section">
+        <h2>Atividades</h2>
+        <div class="activities-grid">
+            <div class="activity">
+                <img src="boi-mamao.jpg" alt="Boi de Mamão">
                 <h3>Boi de Mamão</h3>
-                <p>Atividade típica de Florianópolis, realizada aos sábados das 9h às 12h.</p>
+                <p>Apresentações e oficinas sobre a tradição do boi de mamão.</p>
             </div>
-            <div id="capoeira" class="activity-content">
+            <div class="activity">
+                <img src="capoeira.jpg" alt="Capoeira">
                 <h3>Capoeira</h3>
-                <p>Aulas de capoeira às terças e quintas, das 20h às 22h.</p>
+                <p>Aulas e rodas de capoeira para todas as idades.</p>
             </div>
-            <!-- Mais atividades aqui -->
-        </section>
+        </div>
+    </section>
 
-        <section id="galeria">
-            <h2>Galeria</h2>
-            <div class="gallery">
-                <!-- Coloque imagens aqui -->
-            </div>
-        </section>
-
-        <section id="historia">
-            <h2>História do Centro Cultural</h2>
-            <p>O Centro Cultural Carro de Boi do Dário foi fundado para preservar e promover a cultura local. É um ponto de encontro para a comunidade e suas tradições.</p>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <div class="contact-info">
-                <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses, Florianópolis - SC</p>
-                <p>Telefone: (48) 99932-3570</p>
-                <p>
-                    <a href="https://www.instagram.com/centroculturalcarrodeboidodari">
-                        <img src="instagram-icon.png" alt="Instagram" class="icon">
-                    </a>
-                    <a href="https://api.whatsapp.com/send?phone=5548999323570">
-                        <img src="whatsapp-icon.png" alt="WhatsApp" class="icon">
-                    </a>
-                </p>
-            </div>
-        </section>
-    </div>
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para saber mais sobre nossas atividades.</p>
+        <div class="contact-icons">
+            <a href="https://wa.me/seunumerodetelefone" target="_blank">
+                <img src="whatsapp-icon.png" alt="WhatsApp">
+            </a>
+            <a href="https://instagram.com/seuinstagram" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </section>
 
     <footer>
-        &copy; 2024 Centro Cultural Carro de Boi do Dário
+        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
