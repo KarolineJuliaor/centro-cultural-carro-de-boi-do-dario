@@ -1,42 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Cultural Carro de Boi do Dário</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Cultural Carro de Boi do Dário</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #ffffff;
+    }
+    header {
+      background-color: #87CEEB; /* Azul claro */
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    #visual {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      padding: 1em;
+      background-color: #FF4500; /* Vermelho para remeter ao boi de mamão */
+    }
+    .cultural-image {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+    section {
+      padding: 2em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    #atividades {
+      background-color: #228B22; /* Verde para vegetação */
+      color: #fff;
+      padding: 2em;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+    #contato {
+      padding: 2em;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      text-align: center;
+    }
+    #whatsapp-button {
+      margin-top: 1em;
+      padding: 0.75em 1.5em;
+      background-color: #25D366; /* Verde típico do WhatsApp */
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    #whatsapp-button a {
+      color: #fff;
+      text-decoration: none;
+    }
+    #whatsapp-button:hover {
+      background-color: #1ebe5a; /* Tom um pouco mais escuro para efeito de hover */
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <nav>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
-            <a href="#sobre">Sobre</a>
-        </nav>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Centro Cultural Carro de Boi do Dário</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#atividades">Atividades</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <article id="boi-de-mamao">
-            <h3>Boi de Mamão</h3>
-            <p>Descrição sobre a tradição do Boi de Mamão e como o centro cultural promove essa prática cultural.</p>
-        </article>
-        <article id="capoeira">
-            <h3>Capoeira</h3>
-            <p>Descrição sobre as atividades de capoeira e o papel do centro cultural na disseminação dessa arte.</p>
-        </article>
-    </section>
+  <!-- Seção Visual -->
+  <section id="visual">
+    <img src="images/boi-de-mamao.jpg" alt="Boi de Mamão" class="cultural-image">
+    <img src="images/capoeira.jpg" alt="Capoeira" class="cultural-image">
+    <img src="images/rendeira.jpg" alt="Rendeira" class="cultural-image">
+  </section>
 
-    <footer id="contato">
-        <h2>Contato</h2>
-        <p>Telefone: (XX) XXXX-XXXX</p>
-        <p>Email: contato@carrodeboidodario.org</p>
-        <div class="social">
-            <a href="https://wa.me/SEUNUMERO" target="_blank">WhatsApp</a>
-            <a href="https://instagram.com/SEUINSTAGRAM" target="_blank">Instagram</a>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+  <!-- Seção Sobre -->
+  <section id="sobre">
+    <h2>Sobre o Centro Cultural</h2>
+    <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado ao incentivo à cultura, localizado no Rio Vermelho, Florianópolis.</p>
+  </section>
+  
+  <!-- Seção Atividades -->
+  <section id="atividades">
+    <h2>Atividades Oferecidas</h2>
+    <ul>
+      <li><strong>Jiu-Jitsu:</strong> Segunda e Quarta - 18:30 às 19:30</li>
+      <li><strong>Taekwondo:</strong> Terça e Quinta - 9:00 às 10:30, 15:00 às 16:30</li>
+      <li><strong>Capoeira:</strong> Terça e Quinta - 20:00 às 22:00</li>
+      <li><strong>Melhor Idade:</strong> Quarta - 13:30 às 17:00</li>
+      <li><strong>Boi de Mamão:</strong> Sábado - 9:00 às 12:00</li>
+    </ul>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato para saber mais sobre nossas atividades e como participar!</p>
+
+    <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
+    <p><strong>Telefone:</strong> <a href="tel:+5548999323570">(48) 99932-3570</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">@centroculturalcarrodeboidodari</a></p>
+    
+    <button id="whatsapp-button">
+      <a href="https://wa.me/5548999323570" target="_blank">Falar via WhatsApp</a>
+    </button>
+    
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
