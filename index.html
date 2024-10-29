@@ -14,10 +14,17 @@
       padding: 0;
     }
     header {
+      display: flex;
+      align-items: center;
       background-color: #3e8e41; /* Verde mais escuro */
       color: white;
       padding: 1rem;
       text-align: center;
+    }
+    header img.logo {
+      width: 60px; /* Ajuste o tamanho da logo conforme necessário */
+      height: auto;
+      margin-right: 15px;
     }
     nav ul {
       list-style-type: none;
@@ -110,6 +117,7 @@
 <body>
   <!-- Cabeçalho -->
   <header>
+    <img src="images/logo.png" alt="Logo Centro Cultural" class="logo">
     <h1>Centro Cultural Carro de Boi do Dário</h1>
     <nav>
       <ul>
