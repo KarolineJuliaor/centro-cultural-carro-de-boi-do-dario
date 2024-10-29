@@ -130,7 +130,7 @@
 
   <!-- Seção Visual -->
   <section id="visual">
-    <img src="images/boi-de-mamao.jpg" alt="Boi de Mamão" class="cultural-image">
+    <img src="https://i.ytimg.com/vi/DzuaYveuMS4/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgVShJMA8=" alt="Boi de Mamão" class="cultural-image">
     <img src="images/capoeira.jpg" alt="Capoeira" class="cultural-image">
   </section>
 
@@ -194,17 +194,23 @@
         <img src="https://png.pngtree.com/element_our/sm/20180630/sm_5b37de3263964.jpg" alt="Instagram" class="social-icon"> @centroculturalcarrodeboidodari
       </a>
     </p>
+    <p><strong>YouTube:</strong> 
+      <a href="https://www.youtube.com/@anapso82" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/800px-YouTube_icon_%282013-2017%29.png" alt="YouTube" class="social-icon"> Canal do YouTube
+      </a>
+    </p>
     
-    <button id="whatsapp-button" onclick="window.open('https://wa.me/5548999323570', '_blank');">
-      <img src="https://i.pinimg.com/originals/6e/6a/d1/6e6ad17cb27de788fda8b7f7e3816aef.png" alt="WhatsApp" class="social-icon"> Falar via WhatsApp
+    <button id="whatsapp-button" onclick="window.open('https://wa.me/5548999323570', '_blank')">
+      <img src="https://image.pngaaa.com/236/2489236-middle.png" alt="WhatsApp"> Fale Conosco no WhatsApp
     </button>
     
-    <p id="error-message" style="color: red;"></p>
-    <form>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-      <label for="email">E-mail:</label>
+    <form action="submit_form.php" method="post">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
+      
       <button type="submit">Enviar</button>
     </form>
   </section>
