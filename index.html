@@ -144,3 +144,87 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Centro Cultural Carro de Boi do Dário</h1>
+        <p>Promovendo a Cultura e Tradições Regionais</p>
+    </header>
+
+    <nav>
+        <a href="#descricao">Descrição</a>
+        <a href="#atividades">Atividades Oferecidas</a>
+        <a href="#historia">História</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section id="descricao">
+            <h2>Descrição</h2>
+            <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção da cultura e das tradições regionais em Florianópolis, destacando atividades como o boi de mamão e a capoeira. Este projeto visa proporcionar um ambiente acolhedor para a comunidade participar de diversas atividades culturais e esportivas.</p>
+        </section>
+
+        <section id="atividades">
+            <h2>Atividades Oferecidas</h2>
+            <div class="buttons-container">
+                <button onclick="showActivity('boi')">Boi de Mamão</button>
+                <button onclick="showActivity('capoeira')">Capoeira</button>
+                <button onclick="showActivity('taekwondo')">Taekwondo</button>
+                <button onclick="showActivity('jiujitsu')">Jiu-Jitsu</button>
+                <button onclick="showActivity('melhorIdade')">Melhor Idade</button>
+            </div>
+
+            <!-- Seções das atividades -->
+            <div id="boi" class="activity-content">
+                <h3>Boi de Mamão</h3>
+                <p>Atividade típica de Florianópolis, realizada aos sábados das 9h às 12h.</p>
+            </div>
+            <div id="capoeira" class="activity-content">
+                <h3>Capoeira</h3>
+                <p>Aulas de capoeira às terças e quintas, das 20h às 22h.</p>
+            </div>
+            <div id="taekwondo" class="activity-content">
+                <h3>Taekwondo</h3>
+                <p>Aulas de taekwondo às terças e quintas, das 9h às 10h30 e das 15h às 16h30.</p>
+            </div>
+            <div id="jiujitsu" class="activity-content">
+                <h3>Jiu-Jitsu</h3>
+                <p>Aulas de jiu-jitsu às segundas e quartas, das 18h30 às 19h30.</p>
+            </div>
+            <div id="melhorIdade" class="activity-content">
+                <h3>Melhor Idade</h3>
+                <p>Encontros da Melhor Idade nas quartas-feiras, das 13h30 às 17h.</p>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>História do Centro Cultural</h2>
+            <p>O Centro Cultural Carro de Boi do Dário foi fundado com o objetivo de preservar e promover a cultura local. Desde sua criação, tornou-se um ponto de encontro para a comunidade, oferecendo atividades como o boi de mamão, capoeira, e muitas outras tradições.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
+                <p>Telefone: (48) 99932-3570</p>
+                <p>Instagram: <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" style="color: white; text-decoration: underline;">@centroculturalcarrodeboidodari</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Centro Cultural Carro de Boi do Dário
+    </footer>
+
+    <script>
+        function showActivity(activityId) {
+            document.querySelectorAll('.activity-content').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(activityId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
