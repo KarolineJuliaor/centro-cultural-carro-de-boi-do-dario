@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e9f5e9; /* Verde claro */
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff; /* Azul claro */
       color: #333;
       margin: 0;
       padding: 0;
@@ -16,13 +16,14 @@
     header {
       display: flex;
       align-items: center;
-      background-color: #3e8e41; /* Verde mais escuro */
+      background-color: #ff4500; /* Laranja avermelhado */
       color: white;
       padding: 1rem;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    header img.logo {
-      width: 60px; /* Tamanho da logo do site */
+    header img {
+      width: 60px; /* Ajuste o tamanho da logo conforme necessário */
       height: auto;
       margin-right: 15px;
     }
@@ -38,20 +39,21 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s; /* Transição suave para hover */
+      transition: color 0.3s;
     }
     nav ul li a:hover {
-      color: #ffcc00; /* Amarelo no hover */
+      color: #ffd700; /* Amarelo */
     }
     section {
       padding: 20px;
       margin: 20px;
       border: 1px solid #ddd;
       border-radius: 5px;
-      background-color: white;
+      background-color: #ffffff; /* Branco */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     h2 {
-      color: #3e8e41; /* Verde mais escuro */
+      color: #ff6347; /* Tomate */
     }
     table {
       width: 100%;
@@ -64,11 +66,14 @@
       text-align: left;
     }
     th {
-      background-color: #f2f2f2; /* Cinza claro */
-      color: #3e8e41; /* Verde mais escuro */
+      background-color: #4682b4; /* Azul aço */
+      color: white;
     }
     tr:nth-child(even) {
-      background-color: #f9f9f9; /* Cor alternada para linhas da tabela */
+      background-color: #f2f2f2; /* Cinza claro */
+    }
+    tr:nth-child(odd) {
+      background-color: #ffebcd; /* Beige claro */
     }
     #whatsapp-button {
       background-color: #25D366; /* Verde WhatsApp */
@@ -79,11 +84,11 @@
       cursor: pointer;
       margin-top: 10px;
       display: flex;
-      align-items: center; /* Centraliza verticalmente o ícone e o texto */
-      transition: background-color 0.3s; /* Transição suave para hover */
+      align-items: center;
+      transition: background-color 0.3s;
     }
     #whatsapp-button:hover {
-      background-color: #20b358; /* Verde mais escuro no hover */
+      background-color: #20b358; /* Verde mais escuro */
     }
     #whatsapp-button img {
       width: 25px; /* Ajustar tamanho da logo */
@@ -114,30 +119,34 @@
       border-radius: 5px;
     }
     button[type="submit"] {
-      background-color: #3e8e41; /* Verde mais escuro */
+      background-color: #ff4500; /* Laranja avermelhado */
       color: white;
       border: none;
       padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
       margin-top: 10px;
-      transition: background-color 0.3s; /* Transição suave para hover */
+      transition: background-color 0.3s;
     }
     button[type="submit"]:hover {
-      background-color: #2a6a32; /* Verde mais escuro no hover */
+      background-color: #e03e00; /* Laranja escuro */
+    }
+    .social-icon {
+      width: 20px; /* Ajustar tamanho da logo */
+      vertical-align: middle;
     }
     .cultural-image {
-      width: 100%; /* Ajustar para largura total */
-      height: auto; /* Manter proporção */
-      border-radius: 5px; /* Arredondar cantos */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para a imagem */
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
-    <img src="https://files.oaiusercontent.com/file-EkutHsvxELlmMHfHWugZ3hV0?se=2024-10-29T16%3A19%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dimage.png&sig=4%2BYXB0vNNyHvkpf9Gnlt7zyg6DjmklGqjog6%2Buc0laA%3D" alt="Centro Cultural Carro de Boi do Dário" class="logo">
+    <img src="https://files.oaiusercontent.com/file-EkutHsvxELlmMHfHWugZ3hV0?se=2024-10-29T16%3A19%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dimage.png&sig=4%2BYXB0vNNyHvkpf9Gnlt7zyg6DjmklGqjog6%2Buc0laA%3D" alt="Centro Cultural Carro de Boi do Dário">
     <h1>Centro Cultural Carro de Boi do Dário</h1>
     <nav>
       <ul>
@@ -208,10 +217,33 @@
     <p>Entre em contato para saber mais sobre nossas atividades e como participar!</p>
     <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
     <p><strong>Telefone:</strong> <a href="tel:+5548999323570">(48) 99932-3570</a></p>
-    
-    <p><strong>Site:</strong> 
-      <img src="https://via.placeholder.com/25" alt="Logo do Site" class="social-icon"> <!-- Logo do site -->
+    <p><strong>Instagram:</strong> 
+      <a href="https://www.instagram.com/centroculturalcarrodeboidodario/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_icon.png" alt="Instagram" class="social-icon">
+      </a>
     </p>
+    <button id="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5548999323570', '_blank')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">WhatsApp
+    </button>
     
-    <form action="mailto:contato@centroculturalcarrodeboidodario.com" method="post" enctype="text/plain">
-      <label for="name">Nome:</label>
+    <!-- Formulário de Contato -->
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
