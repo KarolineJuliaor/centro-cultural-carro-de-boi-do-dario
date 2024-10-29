@@ -105,6 +105,34 @@
             text-align: center;
             margin-top: 2rem;
         }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .buttons-container button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buttons-container button:hover {
+            background-color: #333;
+        }
+
+        .activity-content {
+            display: none;
+            margin-top: 1rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -123,100 +151,45 @@
     <div class="container">
         <section id="descricao">
             <h2>Descrição</h2>
-            <section id="atividades">
-    <h2>Atividades Oferecidas</h2>
-    <div class="buttons-container">
-        <button onclick="showActivity('boi')">Boi de Mamão</button>
-        <button onclick="showActivity('capoeira')">Capoeira</button>
-        <button onclick="showActivity('taekwondo')">Taekwondo</button>
-        <button onclick="showActivity('jiujitsu')">Jiu-Jitsu</button>
-        <button onclick="showActivity('melhorIdade')">Melhor Idade</button>
-    </div>
-
-    <!-- Seções das atividades -->
-                <section id="historia">
-    <h2>História do Centro Cultural</h2>
-    <p>O Centro Cultural Carro de Boi do Dário foi fundado com o objetivo de preservar e promover a cultura local. Desde sua criação, tornou-se um ponto de encontro para a comunidade, oferecendo atividades como o boi de mamão, capoeira, e muitas outras tradições.</p>
-</section>
-
-    <div id="boi" class="activity-content">
-        <h3>Boi de Mamão</h3>
-        <p>Atividade típica de Florianópolis, realizada aos sábados das 9h às 12h.</p>
-    </div>
-    <div id="capoeira" class="activity-content">
-        <h3>Capoeira</h3>
-        <p>Aulas de capoeira às terças e quintas, das 20h às 22h.</p>
-    </div>
-    <div id="taekwondo" class="activity-content">
-        <h3>Taekwondo</h3>
-        <p>Aulas de taekwondo às terças e quintas, das 9h às 10h30 e das 15h às 16h30.</p>
-    </div>
-    <div id="jiujitsu" class="activity-content">
-        <h3>Jiu-Jitsu</h3>
-        <p>Aulas de jiu-jitsu às segundas e quartas, das 18h30 às 19h30.</p>
-    </div>
-    <div id="melhorIdade" class="activity-content">
-        <h3>Melhor Idade</h3>
-        <p>Encontros da Melhor Idade nas quartas-feiras, das 13h30 às 17h.</p>
-    </div>
-</section>
-
             <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção da cultura e das tradições regionais em Florianópolis, destacando atividades como o boi de mamão e a capoeira. Este projeto visa proporcionar um ambiente acolhedor para a comunidade participar de diversas atividades culturais e esportivas.</p>
         </section>
 
         <section id="atividades">
             <h2>Atividades Oferecidas</h2>
-            <table class="activity-table">
-                <thead>
-                    <tr>
-                        <th>Dia</th>
-                        <th>Atividade</th>
-                        <th>Horário</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Segunda</td>
-                        <td>Jiu-Jitsu</td>
-                        <td>18:30 - 19:30</td>
-                    </tr>
-                    <tr>
-                        <td>Terça</td>
-                        <td>Taekwondo</td>
-                        <td>9:00 - 10:30 e 15:00 - 16:30</td>
-                    </tr>
-                    <tr>
-                        <td>Terça</td>
-                        <td>Capoeira</td>
-                        <td>20:00 - 22:00</td>
-                    </tr>
-                    <tr>
-                        <td>Quarta</td>
-                        <td>Melhor Idade</td>
-                        <td>13:30 - 17:00</td>
-                    </tr>
-                    <tr>
-                        <td>Quarta</td>
-                        <td>Jiu-Jitsu</td>
-                        <td>18:30 - 19:30</td>
-                    </tr>
-                    <tr>
-                        <td>Quinta</td>
-                        <td>Taekwondo</td>
-                        <td>9:00 - 10:30 e 15:00 - 16:30</td>
-                    </tr>
-                    <tr>
-                        <td>Quinta</td>
-                        <td>Capoeira</td>
-                        <td>20:00 - 22:00</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>Boi de Mamão</td>
-                        <td>9:00 - 12:00</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="buttons-container">
+                <button onclick="showActivity('boi')">Boi de Mamão</button>
+                <button onclick="showActivity('capoeira')">Capoeira</button>
+                <button onclick="showActivity('taekwondo')">Taekwondo</button>
+                <button onclick="showActivity('jiujitsu')">Jiu-Jitsu</button>
+                <button onclick="showActivity('melhorIdade')">Melhor Idade</button>
+            </div>
+
+            <!-- Seções das atividades -->
+            <div id="boi" class="activity-content">
+                <h3>Boi de Mamão</h3>
+                <p>Atividade típica de Florianópolis, realizada aos sábados das 9h às 12h.</p>
+            </div>
+            <div id="capoeira" class="activity-content">
+                <h3>Capoeira</h3>
+                <p>Aulas de capoeira às terças e quintas, das 20h às 22h.</p>
+            </div>
+            <div id="taekwondo" class="activity-content">
+                <h3>Taekwondo</h3>
+                <p>Aulas de taekwondo às terças e quintas, das 9h às 10h30 e das 15h às 16h30.</p>
+            </div>
+            <div id="jiujitsu" class="activity-content">
+                <h3>Jiu-Jitsu</h3>
+                <p>Aulas de jiu-jitsu às segundas e quartas, das 18h30 às 19h30.</p>
+            </div>
+            <div id="melhorIdade" class="activity-content">
+                <h3>Melhor Idade</h3>
+                <p>Encontros da Melhor Idade nas quartas-feiras, das 13h30 às 17h.</p>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>História do Centro Cultural</h2>
+            <p>O Centro Cultural Carro de Boi do Dário foi fundado com o objetivo de preservar e promover a cultura local. Desde sua criação, tornou-se um ponto de encontro para a comunidade, oferecendo atividades como o boi de mamão, capoeira, e muitas outras tradições.</p>
         </section>
 
         <section id="contato">
@@ -233,5 +206,13 @@
         &copy; 2024 Centro Cultural Carro de Boi do Dário
     </footer>
 
+    <script>
+        function showActivity(activityId) {
+            document.querySelectorAll('.activity-content').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(activityId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
