@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Aqui você pode adicionar a lógica para enviar os dados para o servidor, se necessário
       alert('Formulário enviado com sucesso!');
       form.reset(); // Reseta o formulário após o envio
+      document.getElementById('error-message').textContent = ''; // Limpa mensagem de erro
     } else {
       document.getElementById('error-message').textContent = 'Por favor, preencha todos os campos.';
     }
