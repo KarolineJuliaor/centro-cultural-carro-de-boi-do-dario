@@ -114,6 +114,7 @@ header nav ul li a:hover {
 #atividades ul li strong {
   color: #05668D; /* Azul pastel */
 }
+
 /* Estilização da tabela de atividades */
 table {
   width: 100%;
@@ -140,7 +141,6 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #D8E2DC; /* Cor de fundo ao passar o mouse sobre a linha */
 }
-
 
 /* Seção Contato */
 #contato {
@@ -191,7 +191,7 @@ tr:hover {
 }
 
 #whatsapp-button:hover {
-  background-color: #95c8a6;
+  background-color: #95c8a6; /* Verde mais escuro no hover */
 }
 
 /* Formulário de Contato */
@@ -225,7 +225,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-  background-color: #04577A;
+  background-color: #04577A; /* Azul mais escuro no hover */
 }
 
 /* Rodapé */
