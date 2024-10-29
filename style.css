@@ -114,6 +114,33 @@ header nav ul li a:hover {
 #atividades ul li strong {
   color: #05668D; /* Azul pastel */
 }
+/* Estilização da tabela de atividades */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0; /* Espaço entre a tabela e os elementos ao redor */
+}
+
+th, td {
+  padding: 15px; /* Espaço interno das células */
+  text-align: left; /* Alinhamento do texto */
+  border: 1px solid #ccc; /* Bordas das células */
+}
+
+th {
+  background-color: #05668D; /* Cor de fundo do cabeçalho */
+  color: #fff; /* Cor do texto no cabeçalho */
+  font-size: 1.2em; /* Tamanho da fonte no cabeçalho */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Cor de fundo para linhas pares */
+}
+
+tr:hover {
+  background-color: #D8E2DC; /* Cor de fundo ao passar o mouse sobre a linha */
+}
+
 
 /* Seção Contato */
 #contato {
