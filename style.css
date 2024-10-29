@@ -1,83 +1,155 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* fundo suave */
+    color: #333; /* texto escuro */
+}
 
-    <header>
-        <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <p>Promovendo a Cultura e Tradições Regionais</p>
-    </header>
+/* Cabeçalho */
+header {
+    background: linear-gradient(to right, #ffccbc, #ffab91); /* gradiente pastel */
+    color: #2c3e50; /* texto escuro */
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    <nav>
-        <a href="#descricao">Descrição</a>
-        <a href="#atividades">Atividades Oferecidas</a>
-        <a href="#historia">História</a>
-        <a href="#contato">Contato</a>
-    </nav>
+header h1 {
+    font-size: 3rem; /* título maior */
+}
 
-    <div class="container">
-        <section id="descricao">
-            <h2>Descrição</h2>
-            <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção da cultura e das tradições regionais em Florianópolis, destacando atividades como o boi de mamão e a capoeira. Este projeto visa proporcionar um ambiente acolhedor para a comunidade participar de diversas atividades culturais e esportivas.</p>
-        </section>
+header p {
+    font-size: 1.2rem; /* subtítulo */
+}
 
-        <section id="atividades">
-            <h2>Atividades Oferecidas</h2>
-            <div class="buttons-container">
-                <button onclick="showActivity('boi')">Boi de Mamão</button>
-                <button onclick="showActivity('capoeira')">Capoeira</button>
-                <button onclick="showActivity('taekwondo')">Taekwondo</button>
-                <button onclick="showActivity('jiujitsu')">Jiu-Jitsu</button>
-                <button onclick="showActivity('melhorIdade')">Melhor Idade</button>
-            </div>
+/* Navegação */
+nav {
+    background-color: #ffab91; /* cor pastel */
+    padding: 1rem 0;
+}
 
-            <!-- Seções das atividades -->
-            <div id="boi" class="activity-content">
-                <h3>Boi de Mamão</h3>
-                <p>Atividade típica de Florianópolis, realizada aos sábados das 9h às 12h.</p>
-            </div>
-            <div id="capoeira" class="activity-content">
-                <h3>Capoeira</h3>
-                <p>Aulas de capoeira às terças e quintas, das 20h às 22h.</p>
-            </div>
-            <div id="taekwondo" class="activity-content">
-                <h3>Taekwondo</h3>
-                <p>Aulas de taekwondo às terças e quintas, das 9h às 10h30 e das 15h às 16h30.</p>
-            </div>
-            <div id="jiujitsu" class="activity-content">
-                <h3>Jiu-Jitsu</h3>
-                <p>Aulas de jiu-jitsu às segundas e quartas, das 18h30 às 19h30.</p>
-            </div>
-            <div id="melhorIdade" class="activity-content">
-                <h3>Melhor Idade</h3>
-                <p>Encontros da Melhor Idade nas quartas-feiras, das 13h30 às 17h.</p>
-            </div>
-        </section>
+nav a {
+    text-decoration: none;
+    color: #fff; /* texto branco */
+    font-weight: bold;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
 
-        <section id="historia">
-            <h2>História do Centro Cultural</h2>
-            <p>O Centro Cultural Carro de Boi do Dário foi fundado com o objetivo de preservar e promover a cultura local. Desde sua criação, tornou-se um ponto de encontro para a comunidade, oferecendo atividades como o boi de mamão, capoeira, e muitas outras tradições.</p>
-        </section>
+nav a:hover {
+    color: #3f51b5; /* cor escura ao passar o mouse */
+    transform: scale(1.05); /* leve aumento ao passar o mouse */
+}
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <div class="contact-info">
-                <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
-                <p>Telefone: (48) 99932-3570</p>
-                <p>Instagram: <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" style="color: white; text-decoration: underline;">@centroculturalcarrodeboidodari</a></p>
-            </div>
-        </section>
-    </div>
+/* Contêiner principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
 
-    <footer>
-        &copy; 2024 Centro Cultural Carro de Boi do Dário
-    </footer>
+/* Seções */
+section {
+    margin-bottom: 2rem;
+    background-color: #fff3e0; /* fundo pastel */
+    border-radius: 12px; /* bordas arredondadas */
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-    <script>
-        function showActivity(activityId) {
-            document.querySelectorAll('.activity-content').forEach(function(section) {
-                section.style.display = 'none';
-            });
-            document.getElementById(activityId).style.display = 'block';
-        }
-    </script>
-</body>
-</html>
+/* Títulos das seções */
+h2 {
+    color: #ff5722; /* cor vibrante */
+    margin-bottom: 1rem;
+    font-size: 2.5rem; /* tamanho maior */
+    text-align: center;
+}
+
+/* Texto das seções */
+p {
+    line-height: 1.6;
+    text-align: justify; /* justificar texto */
+}
+
+/* Informações de contato */
+.contact-info {
+    text-align: center;
+    background-color: #ffccbc; /* fundo pastel */
+    color: #2c3e50; /* texto escuro */
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Botões */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.buttons-container button {
+    padding: 0.75rem 1.5rem; /* botão maior */
+    font-size: 1.2rem; /* texto maior */
+    cursor: pointer;
+    background-color: #ffab91; /* fundo pastel */
+    color: #fff; /* texto branco */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttons-container button:hover {
+    background-color: #3f51b5; /* cor escura ao passar o mouse */
+    transform: scale(1.05); /* leve aumento ao passar o mouse */
+}
+
+/* Conteúdo das atividades */
+.activity-content {
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: #ffe0b2; /* fundo pastel */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50; /* cor escura */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* título menor em telas pequenas */
+    }
+    
+    nav a {
+        margin: 0 0.5rem; /* margens menores */
+    }
+
+    .buttons-container {
+        flex-direction: column; /* empilhar botões em telas pequenas */
+        gap: 0.5rem;
+    }
+
+    .buttons-container button {
+        width: 100%; /* largura total para botões */
+    }
+}
