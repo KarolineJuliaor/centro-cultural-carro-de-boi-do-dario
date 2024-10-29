@@ -1,55 +1,28 @@
-// Script para adicionar interatividade ao botão de WhatsApp e validação de formulário
-
-// Função para abrir o link do WhatsApp
-function openWhatsApp() {
-  const phoneNumber = "5511999999999"; // Coloque o número de telefone com o código do país
-  const message = "Olá, gostaria de mais informações sobre o Centro Cultural Carro de Boi do Dário.";
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
-}
-
-// Adiciona evento de clique ao botão de WhatsApp
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+  // Ação do botão WhatsApp
   const whatsappButton = document.getElementById('whatsapp-button');
-  if (whatsappButton) {
-    whatsappButton.addEventListener('click', openWhatsApp);
-  }
-});
+  whatsappButton.addEventListener('click', () => {
+    const phoneNumber = '(48) 99932-3570'; // Número do WhatsApp
+    const message = 'Olá, gostaria de saber mais sobre as atividades do Centro Cultural!';
+    const whatsappURL = `https://api.whatsapp.com/send?phone=55${phoneNumber.replace(/\D/g, '')}&text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappURL, '_blank'); // Abre o WhatsApp em uma nova aba
+  });
 
-// Validação do formulário de contato
-function validateForm(event) {
-  event.preventDefault(); // Impede o envio do formulário para validar antes
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const errorMessage = document.getElementById('error-message');
-
-  // Verifica se os campos estão preenchidos
-  if (!name || !email) {
-    errorMessage.textContent = "Por favor, preencha todos os campos obrigatórios.";
-    errorMessage.style.color = 'red';
-    return false;
-  }
-
-  // Expressão regular para validar email
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  if (!emailPattern.test(email)) {
-    errorMessage.textContent = "Por favor, insira um e-mail válido.";
-    errorMessage.style.color = 'red';
-    return false;
-  }
-
-  // Envia o formulário se todas as validações passarem
-  errorMessage.textContent = "";
-  alert("Formulário enviado com sucesso!");
-  return true;
-}
-
-// Adiciona evento de envio ao formulário
-document.addEventListener('DOMContentLoaded', function () {
+  // Validação do formulário
   const form = document.querySelector('form');
-  if (form) {
-    form.addEventListener('submit', validateForm);
-  }
-});
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Previne o envio padrão do formulário
 
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    
+    if (nome && email) {
+      // Aqui você pode adicionar a lógica para enviar os dados para o servidor, se necessário
+      alert('Formulário enviado com sucesso!');
+      form.reset(); // Reseta o formulário após o envio
+    } else {
+      document.getElementById('error-message').textContent = 'Por favor, preencha todos os campos.';
+    }
+  });
+});
