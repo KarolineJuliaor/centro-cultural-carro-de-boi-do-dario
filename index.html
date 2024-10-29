@@ -6,94 +6,138 @@
   <title>Centro Cultural Carro de Boi do Dário</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Estilos Gerais */
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f8ff; /* Azul claro */
-      color: #333;
+      font-family: 'Arial', sans-serif; /* Fonte moderna */
       margin: 0;
       padding: 0;
+      background-color: #f0f8ff; /* Azul claro */
+      color: #333; /* Cor do texto */
+      line-height: 1.6; /* Melhor legibilidade */
     }
+
     header {
       display: flex;
       align-items: center;
+      justify-content: center;
       background-color: #ff4500; /* Laranja avermelhado */
-      color: white;
+      color: white; /* Cor do texto escura para contraste */
       padding: 1rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
     }
+
     header img {
       width: 60px; /* Ajuste o tamanho da logo conforme necessário */
       height: auto;
       margin-right: 15px;
     }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
+
+    h1 {
+      margin: 0;
+      font-size: 2em; /* Aumenta o tamanho do cabeçalho */
+      font-weight: 700; /* Negrito */
     }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
     nav ul li {
       display: inline;
-      margin: 0 15px;
+      margin: 0 20px; /* Aumenta o espaço entre os itens do menu */
     }
+
     nav ul li a {
-      color: white;
+      color: white; /* Cor do texto escura para melhor contraste */
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s; /* Transição suave */
     }
+
     nav ul li a:hover {
       color: #ffd700; /* Amarelo */
     }
+
+    /* Seções */
     section {
-      padding: 20px;
-      margin: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #ffffff; /* Branco */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 30px; /* Aumenta o espaçamento */
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 12px; /* Cantos arredondados */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+      background-color: white; /* Fundo branco para se destacar */
     }
+
     h2 {
       color: #ff6347; /* Tomate */
+      margin-bottom: 15px; /* Espaçamento abaixo do cabeçalho */
+      font-weight: 600; /* Levemente em negrito */
     }
+
+    /* Imagens Culturais */
+    .cultural-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px; /* Cantos arredondados */
+      margin: 10px 0; /* Adiciona espaçamento vertical */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    /* Tabela */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin: 20px 0;
     }
+
     th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
+      border: 1px solid #ddd; /* Borda padrão */
+      padding: 12px; /* Aumenta o espaçamento */
       text-align: left;
     }
+
     th {
       background-color: #4682b4; /* Azul aço */
       color: white;
+      font-weight: 600; /* Levemente em negrito */
     }
+
     tr:nth-child(even) {
       background-color: #f2f2f2; /* Cinza claro */
     }
+
     tr:nth-child(odd) {
       background-color: #ffebcd; /* Beige claro */
     }
+
+    /* Botão do WhatsApp */
     #whatsapp-button {
       background-color: #25D366; /* Verde WhatsApp */
       color: white;
       border: none;
-      padding: 10px 20px;
       border-radius: 5px;
+      padding: 10px 20px;
       cursor: pointer;
-      margin-top: 10px;
+      font-size: 1em;
       display: flex;
       align-items: center;
+      margin-top: 10px;
       transition: background-color 0.3s;
     }
+
     #whatsapp-button:hover {
       background-color: #20b358; /* Verde mais escuro */
     }
+
     #whatsapp-button img {
       width: 25px; /* Ajustar tamanho da logo */
       margin-right: 5px;
     }
+
+    /* Rodapé */
     footer {
       text-align: center;
       padding: 1rem;
@@ -103,14 +147,18 @@
       bottom: 0;
       width: 100%;
     }
+
+    /* Formulário de Contato */
     form {
       margin-top: 20px;
     }
+
     label {
       display: block;
       margin-top: 10px;
       color: #333;
     }
+
     input[type="text"], input[type="email"], textarea {
       width: 100%;
       padding: 10px;
@@ -118,6 +166,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
     button[type="submit"] {
       background-color: #ff4500; /* Laranja avermelhado */
       color: white;
@@ -128,18 +177,14 @@
       margin-top: 10px;
       transition: background-color 0.3s;
     }
+
     button[type="submit"]:hover {
       background-color: #e03e00; /* Laranja escuro */
     }
+
     .social-icon {
       width: 20px; /* Ajustar tamanho da logo */
       vertical-align: middle;
-    }
-    .cultural-image {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -200,12 +245,7 @@
         <tr>
           <td>Melhor Idade</td>
           <td>Quarta</td>
-          <td>13:30 às 17:00</td>
-        </tr>
-        <tr>
-          <td>Boi de Mamão</td>
-          <td>Sábado</td>
-          <td>09:00 às 12:00</td>
+          <td>14:00 às 16:00</td>
         </tr>
       </tbody>
     </table>
@@ -214,36 +254,35 @@
   <!-- Seção Contato -->
   <section id="contato">
     <h2>Contato</h2>
-    <p>Entre em contato para saber mais sobre nossas atividades e como participar!</p>
-    <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
-    <p><strong>Telefone:</strong> <a href="tel:+5548999323570">(48) 99932-3570</a></p>
-    <p><strong>Instagram:</strong> 
-      <a href="https://www.instagram.com/centroculturalcarrodeboidodario/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_icon.png" alt="Instagram" class="social-icon">
-      </a>
-    </p>
-    <button id="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5548999323570', '_blank')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">WhatsApp
-    </button>
-    
-    <!-- Formulário de Contato -->
-    <form>
+    <form action="mailto:email@example.com" method="post" enctype="text/plain">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
-      
+
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
-      
+
       <label for="mensagem">Mensagem:</label>
       <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-      
+
       <button type="submit">Enviar</button>
     </form>
+    <button id="whatsapp-button">
+      <img src="whatsapp-icon.png" alt="WhatsApp Logo">
+      Fale Conosco no WhatsApp
+    </button>
   </section>
 
   <!-- Rodapé -->
   <footer>
     <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
+    <div>
+      <a href="https://www.facebook.com/centroculturalcarrodeboidodario">
+        <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/centroculturalcarrodeboidodario">
+        <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+      </a>
+    </div>
   </footer>
 </body>
 </html>
