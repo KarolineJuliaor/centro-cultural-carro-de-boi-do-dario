@@ -6,23 +6,23 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #e9f5f5; /* Azul claro */
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8; /* Cor de fundo mais suave */
   color: #333;
   line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #3B5998; /* Azul escuro */
+  background-color: #5f9ea0; /* Cor moderna */
   padding: 20px;
   text-align: center;
-  color: #fff;
+  color: #fff; /* Texto branco */
 }
 
 header h1 {
   font-size: 2.5em;
-  color: #f7f7f7; /* Branco quase puro */
+  color: #fff; /* Texto branco */
 }
 
 header nav ul {
@@ -36,13 +36,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #fff; /* Texto branco */
   text-decoration: none;
   font-weight: bold;
 }
 
 header nav ul li a:hover {
-  text-decoration: underline;
+  color: #ffd700; /* Cor dourada ao passar o mouse */
 }
 
 /* Seção Visual */
@@ -68,7 +68,7 @@ header nav ul li a:hover {
 
 /* Seção Sobre */
 #sobre {
-  background-color: #A8D5BA; /* Verde pastel */
+  background-color: #e6f7ff; /* Azul suave */
   padding: 30px;
   margin: 20px auto;
   width: 80%;
@@ -88,12 +88,11 @@ header nav ul li a:hover {
 
 /* Seção Atividades */
 #atividades {
-  background-color: #fff; /* Branco */
+  background-color: #b2e0a2; /* Verde pastel moderno */
   padding: 30px;
   margin: 20px auto;
   width: 80%;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #atividades h2 {
@@ -102,7 +101,7 @@ header nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-table {
+#atividades table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0; /* Espaço entre a tabela e os elementos ao redor */
@@ -115,7 +114,7 @@ th, td {
 }
 
 th {
-  background-color: #3B5998; /* Azul escuro */
+  background-color: #5f9ea0; /* Cor de fundo do cabeçalho */
   color: #fff; /* Cor do texto no cabeçalho */
   font-size: 1.2em; /* Tamanho da fonte no cabeçalho */
 }
@@ -125,12 +124,12 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background-color: #D8E2DC; /* Cor de fundo ao passar o mouse sobre a linha */
+  background-color: #e6f7ff; /* Cor de fundo ao passar o mouse sobre a linha */
 }
 
 /* Seção Contato */
 #contato {
-  background-color: #FDE74C; /* Amarelo pastel */
+  background-color: #ffe4b5; /* Amarelo pastel */
   padding: 30px;
   margin: 20px auto;
   width: 80%;
@@ -155,4 +154,36 @@ tr:hover {
 }
 
 #contato a:hover {
-  color: #
+  color: #d2691e; /* Cor laranja ao passar o mouse */
+}
+
+.social-icon {
+  width: 20px; /* Tamanho dos ícones sociais */
+  vertical-align: middle; /* Alinhamento vertical */
+  margin-right: 5px; /* Espaço à direita do ícone */
+}
+
+/* Botão do WhatsApp */
+#whatsapp-button {
+  background-color: #25D366; /* Cor do WhatsApp */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center; /* Alinhamento vertical do texto e ícone */
+}
+
+#whatsapp-button:hover {
+  background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #5f9ea0; /* Cor do fundo do rodapé */
+  color: #fff; /* Texto branco */
+}
