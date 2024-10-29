@@ -1,4 +1,5 @@
-<script>
+<body>
+    <script>
     function showActivity(activityId) {
         // Oculta todas as seções de atividades
         document.querySelectorAll('.activity-content').forEach(function(section) {
@@ -9,3 +10,4 @@
         document.getElementById(activityId).style.display = 'block';
     }
 </script>
+    <body>
