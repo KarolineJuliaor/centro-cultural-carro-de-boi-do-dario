@@ -1,180 +1,87 @@
-/* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif; /* Fonte moderna */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Azul claro */
-    color: #333; /* Cor do texto */
-    line-height: 1.6; /* Melhor legibilidade */
+    background-color: #f4f4f4;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff4500; /* Laranja avermelhado */
-    color: white; /* Cor do texto escura para contraste */
-    padding: 1rem;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
-header img {
-    width: 60px; /* Ajuste o tamanho da logo conforme necessário */
-    height: auto;
-    margin-right: 15px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2em; /* Aumenta o tamanho do cabeçalho */
-    font-weight: 700; /* Negrito */
+nav {
+    background: #444;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px; /* Aumenta o espaço entre os itens do menu */
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: white; /* Cor do texto escura para melhor contraste */
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s; /* Transição suave */
 }
 
-nav ul li a:hover {
-    color: #ffd700; /* Amarelo */
+h2, h3 {
+    color: #333;
 }
 
-/* Seções */
 section {
-    padding: 30px; /* Aumenta o espaçamento */
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 12px; /* Cantos arredondados */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
-    background-color: white; /* Fundo branco para se destacar */
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 5px;
 }
 
-h2 {
-    color: #ff6347; /* Tomate */
-    margin-bottom: 15px; /* Espaçamento abaixo do cabeçalho */
-    font-weight: 600; /* Levemente em negrito */
-}
-
-/* Imagens Culturais */
-.cultural-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px; /* Cantos arredondados */
-    margin: 10px 0; /* Adiciona espaçamento vertical */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-th, td {
-    border: 1px solid #ddd; /* Borda padrão */
-    padding: 12px; /* Aumenta o espaçamento */
-    text-align: left;
-}
-
-th {
-    background-color: #4682b4; /* Azul aço */
-    color: white;
-    font-weight: 600; /* Levemente em negrito */
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2; /* Cinza claro */
-}
-
-tr:nth-child(odd) {
-    background-color: #ffebcd; /* Beige claro */
-}
-
-/* Botão do WhatsApp */
-#whatsapp-button {
-    background-color: #25D366; /* Verde WhatsApp */
+button {
+    background: #5cb85c;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
     margin-top: 10px;
-    transition: background-color 0.3s;
 }
 
-#whatsapp-button:hover {
-    background-color: #20b358; /* Verde mais escuro */
+button:hover {
+    background: #4cae4c;
 }
 
-#whatsapp-button img {
-    width: 25px; /* Ajustar tamanho da logo */
-    margin-right: 5px;
+.social-links {
+    margin-top: 20px; /* Espaçamento acima das redes sociais */
 }
 
-/* Rodapé */
+.social-links a {
+    margin-right: 15px; /* Espaçamento entre os ícones */
+}
+
+.social-icon {
+    width: 40px; /* Tamanho ajustado das logos */
+    vertical-align: middle;
+}
+
+iframe {
+    width: 100%; /* Torna o iframe responsivo */
+    height: 300px; /* Altura fixa para as avaliações */
+    border: 0;
+    margin-top: 20px; /* Espaçamento acima do iframe */
+}
+
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #3e8e41; /* Verde mais escuro */
+    padding: 10px 0;
+    background: #333;
     color: white;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
-/* Formulário de Contato */
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    color: #333;
-}
-
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
-    background-color: #ff4500; /* Laranja avermelhado */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #e03e00; /* Laranja escuro */
-}
-
-.social-icon {
-    width: 20px; /* Ajustar tamanho da logo */
-    vertical-align: middle;
-}
