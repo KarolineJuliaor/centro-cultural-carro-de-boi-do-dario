@@ -6,23 +6,23 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  background-color: #e9f5f5; /* Azul claro */
   color: #333;
   line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #FFD1A9; /* Laranja pastel */
+  background-color: #3B5998; /* Azul escuro */
   padding: 20px;
   text-align: center;
-  color: #333;
+  color: #fff;
 }
 
 header h1 {
   font-size: 2.5em;
-  color: #C1440E; /* Vermelho pastel */
+  color: #f7f7f7; /* Branco quase puro */
 }
 
 header nav ul {
@@ -36,13 +36,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
 header nav ul li a:hover {
-  color: #05668D; /* Azul pastel */
+  text-decoration: underline;
 }
 
 /* Seção Visual */
@@ -68,7 +68,7 @@ header nav ul li a:hover {
 
 /* Seção Sobre */
 #sobre {
-  background-color: #D8E2DC; /* Vermelho suave pastel */
+  background-color: #A8D5BA; /* Verde pastel */
   padding: 30px;
   margin: 20px auto;
   width: 80%;
@@ -88,11 +88,12 @@ header nav ul li a:hover {
 
 /* Seção Atividades */
 #atividades {
-  background-color: #A8D5BA; /* Verde pastel */
+  background-color: #fff; /* Branco */
   padding: 30px;
   margin: 20px auto;
   width: 80%;
   border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #atividades h2 {
@@ -101,21 +102,6 @@ header nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-#atividades ul {
-  list-style-type: none;
-}
-
-#atividades ul li {
-  margin: 10px 0;
-  font-size: 1.1em;
-  color: #333;
-}
-
-#atividades ul li strong {
-  color: #05668D; /* Azul pastel */
-}
-
-/* Estilização da tabela de atividades */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -129,7 +115,7 @@ th, td {
 }
 
 th {
-  background-color: #05668D; /* Cor de fundo do cabeçalho */
+  background-color: #3B5998; /* Azul escuro */
   color: #fff; /* Cor do texto no cabeçalho */
   font-size: 1.2em; /* Tamanho da fonte no cabeçalho */
 }
@@ -169,70 +155,4 @@ tr:hover {
 }
 
 #contato a:hover {
-  color: #C1440E; /* Vermelho pastel */
-}
-
-/* Botão do WhatsApp */
-#whatsapp-button {
-  background-color: #A8D5BA; /* Verde pastel */
-  color: #333;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 15px;
-  display: inline-block;
-}
-
-#whatsapp-button a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#whatsapp-button:hover {
-  background-color: #95c8a6; /* Verde mais escuro no hover */
-}
-
-/* Formulário de Contato */
-form {
-  margin-top: 20px;
-}
-
-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-form input[type="text"],
-form input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button[type="submit"] {
-  background-color: #05668D; /* Azul pastel */
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button[type="submit"]:hover {
-  background-color: #04577A; /* Azul mais escuro no hover */
-}
-
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #FFD1A9; /* Laranja pastel */
-  color: #333;
-  margin-top: 20px;
-}
+  color: #
