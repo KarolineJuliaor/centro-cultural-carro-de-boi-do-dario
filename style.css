@@ -2,24 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
 }
 
 body {
-    background-color: #e1f5fe; /* Azul pastel */
+    background-color: #f0f4f8; /* Azul claro */
     color: #333;
 }
 
 header {
-    background-color: #ffb3c1; /* Rosa pastel */
+    background-color: #ff6f61; /* Rosa pastel */
     color: white;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Tamanho do título */
 }
 
 nav {
@@ -29,15 +29,15 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #ff5733; /* Laranja suave */
+    color: #ff6f61; /* Rosa pastel */
     font-weight: bold;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
+    margin: 0 1.5rem;
+    padding: 0.5rem;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #4caf50; /* Verde pastel */
+    color: #333;
 }
 
 .container {
@@ -48,24 +48,18 @@ nav a:hover {
 }
 
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem; /* Espaçamento entre seções */
+    padding: 1rem;
+    background-color: white; /* Fundo branco para contraste */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 h2 {
-    color: #4caf50; /* Verde pastel */
+    color: #3e92c4; /* Azul pastel */
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2rem; /* Tamanho do subtítulo */
     text-align: center;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 5px;
-    background: #ffb3c1; /* Rosa pastel */
-    margin: 10px auto;
 }
 
 p {
@@ -75,11 +69,15 @@ p {
 
 .contact-info {
     text-align: center;
-    background-color: #ffb3c1; /* Rosa pastel */
+    background-color: #ff6f61; /* Rosa pastel */
     color: white;
     padding: 1rem;
     border-radius: 8px;
     margin-top: 2rem;
+}
+
+.contact-info a {
+    color: white;
 }
 
 .activity-table {
@@ -98,7 +96,7 @@ p {
 }
 
 .activity-table th {
-    background-color: #ff5733; /* Laranja suave */
+    background-color: #3e92c4; /* Azul pastel */
     color: white;
 }
 
@@ -118,73 +116,23 @@ footer {
 }
 
 .buttons-container button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.5rem 1.5rem; /* Maior área de clique */
+    font-size: 1.2rem; /* Tamanho do botão */
     cursor: pointer;
-    background-color: #4caf50; /* Verde pastel */
+    background-color: #3e92c4; /* Azul pastel */
     color: white;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .buttons-container button:hover {
-    background-color: #ff5733; /* Laranja suave */
-    transform: scale(1.05);
+    background-color: #ff6f61; /* Rosa pastel */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
 
 .activity-content {
     display: none;
     margin-top: 1rem;
-    text-align: center;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.gallery img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.social-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.social-buttons a {
-    text-decoration: none;
-    color: white;
-    background-color: #25D366; /* Cor do botão do WhatsApp */
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin: 0 0.5rem;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.social-buttons a:hover {
-    background-color: #128C7E; /* Cor do WhatsApp ao passar o mouse */
-}
-
-.social-buttons i {
-    margin-right: 0.5rem; /* Espaçamento entre ícone e texto */
-}
-
-.testimonial {
-    background-color: #ffe0f0; /* Fundo rosa claro */
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem auto;
-    max-width: 600px;
     text-align: center;
 }
