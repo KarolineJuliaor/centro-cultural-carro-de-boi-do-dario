@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #66bb6a, #b2e3b2); /* Gradiente verde */
+    background: linear-gradient(to right, #66bb6a, #b2e3b2); /* Gradiente vermelho */
     padding: 1rem;
     text-align: center;
 }
