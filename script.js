@@ -1,44 +1,36 @@
-
-// Espera o carregamento completo do conteúdo do site
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Captura o formulário de inscrição e adiciona uma função para o envio
-    const signupForm = document.querySelector("#signup form");
-    signupForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        
-        const name = signupForm.querySelector("input[type='text']").value;
-        const email = signupForm.querySelector("input[type='email']").value;
-        
-        alert(`Obrigado por se inscrever, ${name}! Você receberá um e-mail de confirmação em ${email}.`);
-        
-        // Limpa o formulário
-        signupForm.reset();
-    });
-
-    // Captura o formulário de avaliações
+// Script para gerenciar o envio de avaliações
+document.addEventListener("DOMContentLoaded", function() {
     const ratingsForm = document.querySelector("#ratings form");
     const ratingsSection = document.querySelector("#ratings");
 
-    ratingsForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        
-        // Coleta os valores de avaliação e comentário
-        const rating = ratingsForm.querySelector("#rating").value;
-        const comment = ratingsForm.querySelector("textarea").value;
-
-        // Cria um novo elemento para mostrar a avaliação e o comentário
-        const newRating = document.createElement("div");
-        newRating.classList.add("user-rating");
-        newRating.innerHTML = `
+    // Função para adicionar uma nova avaliação na página
+    function addRating(rating, comment) {
+        const ratingDiv = document.createElement("div");
+        ratingDiv.classList.add("user-rating");
+        ratingDiv.innerHTML = `
             <p><strong>Avaliação:</strong> ${rating} estrelas</p>
-            <p>${comment}</p>
+            <p><strong>Comentário:</strong> ${comment}</p>
         `;
-        
-        // Adiciona a nova avaliação à seção de avaliações
-        ratingsSection.appendChild(newRating);
-        
-        // Limpa o formulário
-        ratingsForm.reset();
+        ratingsSection.appendChild(ratingDiv);
+    }
+
+    // Evento de envio do formulário de avaliação
+    ratingsForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita o recarregamento da página
+
+        // Obtém valores do formulário
+        const rating = document.querySelector("#rating").value;
+        const comment = document.querySelector("textarea").value;
+
+        if (rating && comment) {
+            addRating(rating, comment); // Adiciona a avaliação à página
+
+            // Limpa o formulário após o envio
+            document.querySelector("#rating").value = "";
+            document.querySelector("textarea").value = "";
+            alert("Obrigado pela sua avaliação!");
+        } else {
+            alert("Por favor, preencha todos os campos antes de enviar.");
+        }
     });
 });
