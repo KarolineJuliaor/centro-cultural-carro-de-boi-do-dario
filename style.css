@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #eafaf0; /* Fundo claro em tom pastel */
+    color: #333;
 }
 
 header {
@@ -48,13 +48,29 @@ main {
 section {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #1f1f1f; /* Fundo escuro para seções */
+    background: #ffffff; /* Fundo branco para seções */
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: #ff7e00; /* Títulos das seções em laranja escuro */
+}
+
+/* Estilos para as seções */
+#sobre,
+#atividades,
+#inscricao,
+#galeria,
+#doacoes,
+#blog,
+#eventos-especiais,
+#avaliacoes {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #ffffff; /* Fundo branco para seções */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Tabela */
@@ -65,15 +81,14 @@ table {
 
 table th {
     background-color: #ffeb3b; /* Cabeçalho da tabela em amarelo pastel */
-    color: #333; /* Cor do texto em escuro */
+    color: #3c763d; /* Cor do texto em verde escuro */
     padding: 0.75rem;
 }
 
 table td {
-    border: 1px solid #444; /* Borda suave em cinza */
+    border: 1px solid #e2e2e2; /* Borda suave */
     padding: 0.5rem;
     text-align: left;
-    background-color: #2c2c2c; /* Fundo escuro para células */
 }
 
 /* Formulários */
@@ -89,18 +104,16 @@ label {
 
 input, select, textarea {
     padding: 0.5rem;
-    border: 1px solid #555; /* Borda escura */
+    border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 0.5rem;
-    background-color: #2c2c2c; /* Fundo escuro para campos */
-    color: #ffffff; /* Texto claro */
+    transition: border-color 0.3s;
 }
 
 input:focus, select:focus, textarea:focus {
     border-color: #ff7e00; /* Borda laranja ao focar */
 }
 
-/* Botões */
 button {
     margin-top: 1rem;
     padding: 0.5rem;
@@ -120,9 +133,9 @@ button:hover {
 #contato {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: #1f1f1f; /* Fundo escuro para a seção de contato */
+    background: #ffe0b2; /* Fundo suave para a seção de contato */
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 }
@@ -176,15 +189,18 @@ button:hover {
 
 #avaliacoes-lista li {
     padding: 0.5rem;
-    border-bottom: 1px solid #444; /* Borda em cinza escuro */
-    background-color: #2c2c2c; /* Fundo escuro para as avaliações */
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #f1f8e9; /* Fundo suave para as avaliações */
 }
 
 /* Rodapé */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #1f1f1f; /* Fundo escuro para o rodapé */
-    color: #e0e0e0; /* Cor do texto do rodapé em claro */
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #3c763d; /* Cor do texto do rodapé em verde escuro */
     border-top: 4px solid #ff7e00; /* Borda superior em laranja */
 }
