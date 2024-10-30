@@ -125,27 +125,32 @@
         </section>
 
         <section id="avaliacoes">
-            <h2>Avaliações</h2>
-            <form id="form-avaliacao">
-                <label for="nota">Avalie o Centro Cultural:</label>
-                <div id="estrelas">
-                    <span class="estrela" data-valor="1">★</span>
-                    <span class="estrela" data-valor="2">★</span>
-                    <span class="estrela" data-valor="3">★</span>
-                    <span class="estrela" data-valor="4">★</span>
-                    <span class="estrela" data-valor="5">★</span>
-                </div>
-                <input type="hidden" id="nota" value="0">
-                <label for="comentario">Comentário:</label>
-                <textarea id="comentario" required></textarea>
-                <button type="submit">Enviar Avaliação</button>
-            </form>
-            <div id="avaliacoes-lista">
-                <h3>Avaliações Recebidas</h3>
-                <ul id="lista-avaliacoes"></ul>
-            </div>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
-        </section>
+    <h2>Avaliações</h2>
+    <form id="form-avaliacao">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        
+        <label for="nota">Avalie o Centro Cultural:</label>
+        <div id="estrelas">
+            <span class="estrela" data-valor="1">★</span>
+            <span class="estrela" data-valor="2">★</span>
+            <span class="estrela" data-valor="3">★</span>
+            <span class="estrela" data-valor="4">★</span>
+            <span class="estrela" data-valor="5">★</span>
+        </div>
+        <input type="hidden" id="nota" value="0">
+        
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" required></textarea>
+        
+        <button type="submit">Enviar Avaliação</button>
+    </form>
+    <div id="avaliacoes-lista">
+        <h3>Avaliações Recebidas</h3>
+        <ul id="lista-avaliacoes"></ul>
+    </div>
+</section>
+
     </main>
 
     <footer>
