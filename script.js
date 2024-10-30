@@ -10,11 +10,7 @@ estrelas.forEach(estrela => {
 
         // Atualizar a aparência das estrelas
         estrelas.forEach((e, index) => {
-            if (index < valor) {
-                e.style.color = 'gold'; // Cor das estrelas selecionadas
-            } else {
-                e.style.color = 'gray'; // Cor das estrelas não selecionadas
-            }
+            e.style.color = index < valor ? 'gold' : 'gray'; // Altera a cor das estrelas
         });
     });
 });
