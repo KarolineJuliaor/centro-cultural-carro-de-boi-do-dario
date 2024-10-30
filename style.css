@@ -1,89 +1,54 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
 }
 
-header {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    padding: 1rem;
-    text-align: center;
+h1, h2, h3 {
+    color: #007bff; /* Cor do título */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-h1 {
-    color: #6a0572;
-}
-
-/* Seções */
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
+/* Estilos para a seção de avaliações */
+#avaliacoes {
+    margin-top: 2rem;
     padding: 1.5rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #6a0572;
-}
-
-/* Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-/* Formulários */
-form {
+#estrelas {
     display: flex;
-    flex-direction: column;
+    cursor: pointer;
 }
 
-label {
+.estrela {
+    font-size: 2rem; /* Tamanho das estrelas */
+    color: gray; /* Cor padrão das estrelas */
+    transition: color 0.2s; /* Transição suave para mudança de cor */
+}
+
+/* Estilos para o formulário de avaliação */
+form {
     margin-top: 1rem;
 }
 
-input, select, textarea {
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 0.5rem;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-top: 0.5rem;
 }
 
 button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background-color: #6a0572;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff; /* Cor do botão */
     color: white;
     border: none;
     border-radius: 4px;
@@ -91,16 +56,55 @@ button {
 }
 
 button:hover {
-    background-color: #5b0463;
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
 }
+
+/* Estilos para a seção de informações */
+#informacoes {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#informacoes ul {
+    list-style: none;
+    padding: 0;
+}
+
+#informacoes li {
+    margin: 0.5rem 0;
+}
+
+/* Estilos para a lista de avaliações */
+#avaliacoes-lista {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #e9ecef; /* Cor de fundo da lista de avaliações */
+    border-radius: 8px;
+}
+
+#lista-avaliacoes {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-avaliacoes li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #ffffff; /* Cor de fundo dos itens de avaliação */
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a seção de contato */
 #contato {
     margin-top: 2rem;
     padding: 1.5rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
 }
 
 #botao-whatsapp {
@@ -124,44 +128,15 @@ button:hover {
     background-color: #128C7E; /* Cor do botão ao passar o mouse */
 }
 
-
-/* Estilos para a seção de avaliações */
-#avaliacoes {
+/* Estilos adicionais para a seção sobre o Centro Cultural */
+#sobre {
     margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#avaliacoes #estrelas {
-    display: flex;
-    cursor: pointer;
+#sobre p {
+    margin: 0.5rem 0;
 }
-
-.estrela {
-    font-size: 2rem; /* Tamanho das estrelas */
-    color: gray; /* Cor padrão das estrelas */
-    margin-right: 5px; /* Espaçamento entre as estrelas */
-}
-
-#avaliacoes-lista {
-    margin-top: 1rem;
-}
-
-#avaliacoes-lista ul {
-    list-style: none;
-    padding: 0;
-}
-
-#avaliacoes-lista li {
-    padding: 0.5rem;
-    border-bottom: 1px solid #ccc;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f1f1f1;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
