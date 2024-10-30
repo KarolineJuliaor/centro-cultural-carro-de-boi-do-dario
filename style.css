@@ -1,138 +1,160 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    font-family: Arial, sans-serif;
 }
 
+/* Estilo do corpo */
 body {
-    background-color: #f0f4f8; /* Azul claro */
+    background-color: #faf9f9;
     color: #333;
+    line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
-    background-color: #ff6f61; /* Rosa pastel */
-    color: white;
-    padding: 1.5rem;
+    background-color: #f1c2e0;
+    color: #333;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 3rem; /* Tamanho do título */
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-nav {
-    text-align: center;
-    margin: 1rem 0;
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #ff6f61; /* Rosa pastel */
-    font-weight: bold;
-    margin: 0 1.5rem;
-    padding: 0.5rem;
-    transition: color 0.3s;
+nav ul li {
+    margin: 0 15px;
 }
 
-nav a:hover {
+nav ul li a {
     color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
+nav ul li a:hover {
+    color: #666;
 }
 
+/* Área principal */
+main {
+    padding: 20px;
+}
+
+/* Estilo das seções */
 section {
-    margin-bottom: 3rem; /* Espaçamento entre seções */
-    padding: 1rem;
-    background-color: white; /* Fundo branco para contraste */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-h2 {
-    color: #3e92c4; /* Azul pastel */
-    margin-bottom: 1rem;
-    font-size: 2rem; /* Tamanho do subtítulo */
-    text-align: center;
-}
-
-p {
-    line-height: 1.6;
-    text-align: center;
-}
-
-.contact-info {
-    text-align: center;
-    background-color: #ff6f61; /* Rosa pastel */
-    color: white;
-    padding: 1rem;
+    margin: 20px 0;
+    padding: 20px;
     border-radius: 8px;
-    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-info a {
-    color: white;
+#atividades {
+    background-color: #a8d5ba;
 }
 
-.activity-table {
+#inscricoes {
+    background-color: #f8cfcf;
+}
+
+#galeria {
+    background-color: #c0d6e4;
+}
+
+#doacoes {
+    background-color: #f2d1b3;
+}
+
+#blog {
+    background-color: #f7e7b4;
+}
+
+#eventos {
+    background-color: #c7ecee;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+/* Estilo da tabela de atividades */
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 10px;
 }
 
-.activity-table, .activity-table th, .activity-table td {
+table th, table td {
+    padding: 10px;
+    text-align: left;
     border: 1px solid #ddd;
 }
 
-.activity-table th, .activity-table td {
-    padding: 1rem;
-    text-align: center;
+table th {
+    background-color: #e4e4e4;
 }
 
-.activity-table th {
-    background-color: #3e92c4; /* Azul pastel */
-    color: white;
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.buttons-container {
+/* Formulário de inscrição */
+form {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    flex-direction: column;
 }
 
-.buttons-container button {
-    padding: 0.5rem 1.5rem; /* Maior área de clique */
-    font-size: 1.2rem; /* Tamanho do botão */
-    cursor: pointer;
-    background-color: #3e92c4; /* Azul pastel */
-    color: white;
-    border: none;
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    border: 1px solid #ddd;
 }
 
-.buttons-container button:hover {
-    background-color: #ff6f61; /* Rosa pastel */
-    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+form button {
+    background-color: #6abf69;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.activity-content {
-    display: none;
-    margin-top: 1rem;
+form button:hover {
+    background-color: #57a557;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f1c2e0;
     text-align: center;
+    padding: 15px;
+    color: #333;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9em;
 }
