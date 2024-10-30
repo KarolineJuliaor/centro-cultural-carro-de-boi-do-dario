@@ -4,12 +4,12 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fffbf0; /* Fundo claro com um tom pastel */
+    background-color: #eafaf0; /* Fundo claro em tom pastel verde */
     color: #333;
 }
 
 header {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background: linear-gradient(to right, #66bb6a, #b2e3b2); /* Gradiente verde */
     padding: 1rem;
     text-align: center;
 }
@@ -31,7 +31,7 @@ nav ul li a {
 }
 
 h1 {
-    color: #6a0572;
+    color: #3c763d; /* Verde escuro */
 }
 
 /* Seções */
@@ -48,7 +48,7 @@ section {
 }
 
 h2 {
-    color: #6a0572; /* Título das seções */
+    color: #3c763d; /* Título das seções em verde escuro */
 }
 
 /* Estilos para as seções */
@@ -68,7 +68,7 @@ h2 {
 }
 
 h2 {
-    color: #6a0572; /* Título das seções */
+    color: #3c763d; /* Título das seções em verde escuro */
 }
 
 /* Tabela */
@@ -78,8 +78,8 @@ table {
 }
 
 table th {
-    background-color: #f9c8d8; /* Cabeçalho da tabela com cor pastel */
-    color: #6a0572; /* Cor do texto */
+    background-color: #c8e6c9; /* Cabeçalho da tabela em verde pastel */
+    color: #3c763d; /* Cor do texto em verde escuro */
     padding: 0.75rem;
 }
 
@@ -97,7 +97,7 @@ form {
 
 label {
     margin-top: 1rem;
-    color: #6a0572; /* Cor dos rótulos */
+    color: #3c763d; /* Cor dos rótulos em verde escuro */
 }
 
 input, select, textarea {
@@ -110,7 +110,7 @@ input, select, textarea {
 button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: #6a0572; /* Botão principal */
+    background-color: #3c763d; /* Botão principal em verde escuro */
     color: white;
     border: none;
     border-radius: 4px;
@@ -119,14 +119,14 @@ button {
 }
 
 button:hover {
-    background-color: #5b0463; /* Efeito de hover do botão */
+    background-color: #2c6b2d; /* Efeito de hover do botão em verde mais escuro */
 }
 
 /* Contato */
 #contato {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: #eaf6f6; /* Fundo suave para a seção de contato */
+    background: #e8f5e9; /* Fundo suave para a seção de contato */
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -193,5 +193,5 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    color: #6a0572; /* Cor do texto do rodapé */
+    color: #3c763d; /* Cor do texto do rodapé em verde escuro */
 }
