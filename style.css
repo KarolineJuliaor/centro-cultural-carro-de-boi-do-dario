@@ -1,197 +1,59 @@
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
-    background-color: #eafaf0; /* Fundo claro em tom pastel verde */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc;
     color: #333;
 }
 
 header {
-    background: linear-gradient(to right, #66bb6a, #b2e3b2); /* Gradiente verde */
-    padding: 1rem;
+    background-color: #e63946;
+    color: white;
+    padding: 1em;
     text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff; /* Branco para contraste */
-    font-weight: bold;
-}
-
-h1 {
-    color: #3c763d; /* Verde escuro */
-}
-
-/* Seções */
-main {
-    padding: 2rem;
 }
 
 section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #ffffff; /* Fundo branco para seções */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em 2em;
+    margin: 1em 0;
 }
 
 h2 {
-    color: #3c763d; /* Título das seções em verde escuro */
+    color: #028090;
 }
 
-/* Estilos para as seções */
-#sobre,
-#atividades,
-#inscricao,
-#galeria,
-#doacoes,
-#blog,
-#eventos-especiais,
-#avaliacoes {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #ffffff; /* Fundo branco para seções */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #3c763d; /* Título das seções em verde escuro */
-}
-
-/* Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th {
-    background-color: #c8e6c9; /* Cabeçalho da tabela em verde pastel */
-    color: #3c763d; /* Cor do texto em verde escuro */
-    padding: 0.75rem;
-}
-
-table td {
-    border: 1px solid #e2e2e2; /* Borda suave */
-    padding: 0.5rem;
-    text-align: left;
-}
-
-/* Formulários */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 1rem;
-    color: #3c763d; /* Cor dos rótulos em verde escuro */
-}
-
-input, select, textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 0.5rem;
+#activities, #signup, #gallery, #donations, #blog, #ratings {
+    border: 1px solid #e63946;
+    border-radius: 8px;
+    padding: 1em;
 }
 
 button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background-color: #3c763d; /* Botão principal em verde escuro */
+    background-color: #e63946;
     color: white;
     border: none;
-    border-radius: 4px;
+    padding: 0.5em 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #2c6b2d; /* Efeito de hover do botão em verde mais escuro */
+    background-color: #d62828;
 }
 
-/* Contato */
-#contato {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #e8f5e9; /* Fundo suave para a seção de contato */
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-}
-
-/* Botão WhatsApp */
-#botao-whatsapp {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-#botao-whatsapp img {
-    margin-right: 0.5rem; /* Espaço entre a imagem e o texto */
-}
-
-#botao-whatsapp:hover {
-    background-color: #128C7E; /* Cor do botão ao passar o mouse */
-}
-
-/* Estilos para a seção de avaliações */
-#avaliacoes {
-    margin-top: 2rem;
-}
-
-#avaliacoes #estrelas {
-    display: flex;
-    cursor: pointer;
-}
-
-.estrela {
-    font-size: 2rem; /* Tamanho das estrelas */
-    color: #ffcc00; /* Cor das estrelas */
-    margin-right: 5px; /* Espaçamento entre as estrelas */
-}
-
-#avaliacoes-lista {
-    margin-top: 1rem;
-}
-
-#avaliacoes-lista ul {
-    list-style: none;
-    padding: 0;
-}
-
-#avaliacoes-lista li {
-    padding: 0.5rem;
-    border-bottom: 1px solid #e2e2e2;
-}
-
-/* Rodapé */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f1f1f1;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    color: #3c763d; /* Cor do texto do rodapé em verde escuro */
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: #e63946;
+}
+
+footer a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 1em;
 }
