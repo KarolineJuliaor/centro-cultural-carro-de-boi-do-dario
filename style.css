@@ -1,19 +1,18 @@
-
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #eafaf0; /* Fundo claro em tom pastel vermelho */
-    color: #333
-;
+    background-color: #eafaf0; /* Fundo claro em tom pastel */
+    color: #333;
 }
 
 header {
-    background: linear-gradient(to right, #66bb6a, #b2e3b2); /* Gradiente vermelho */
+    background: linear-gradient(to right, #ff7e00, #ffbc00); /* Gradiente laranja */
     padding: 1rem;
     text-align: center;
+    color: #ffffff; /* Texto branco */
 }
 
 nav ul {
@@ -30,10 +29,15 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff; /* Branco para contraste */
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffbc00; /* Efeito hover em amarelo */
 }
 
 h1 {
-    color: #3c763d; /* Verde escuro */
+    color: #ff4c00; /* Laranja vibrante */
 }
 
 /* Seções */
@@ -50,7 +54,7 @@ section {
 }
 
 h2 {
-    color: #3c763d; /* Título das seções em laranja escuro */
+    color: #ff7e00; /* Títulos das seções em laranja escuro */
 }
 
 /* Estilos para as seções */
@@ -69,10 +73,6 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #3c763d; /* Título das seções em verde escuro */
-}
-
 /* Tabela */
 table {
     width: 100%;
@@ -80,8 +80,8 @@ table {
 }
 
 table th {
-    background-color: #c8e6c9; /* Cabeçalho da tabela em verde pastel */
-    color: #3c763d; /* Cor do texto em laranja escuro */
+    background-color: #ffeb3b; /* Cabeçalho da tabela em amarelo pastel */
+    color: #3c763d; /* Cor do texto em verde escuro */
     padding: 0.75rem;
 }
 
@@ -99,7 +99,7 @@ form {
 
 label {
     margin-top: 1rem;
-    color: #3c763d; /* Cor dos rótulos em laranja escuro */
+    color: #ff4c00; /* Cor dos rótulos em laranja vibrante */
 }
 
 input, select, textarea {
@@ -107,12 +107,17 @@ input, select, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 0.5rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ff7e00; /* Borda laranja ao focar */
 }
 
 button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: #3c763d; /* Botão principal em laranja escuro */
+    background-color: #ff4c00; /* Botão principal em laranja vibrante */
     color: white;
     border: none;
     border-radius: 4px;
@@ -121,14 +126,14 @@ button {
 }
 
 button:hover {
-    background-color: #2c6b2d; /* Efeito de hover do botão em laranja mais escuro */
+    background-color: #ffbc00; /* Efeito de hover do botão em amarelo */
 }
 
 /* Contato */
 #contato {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: #e8f5e9; /* Fundo suave para a seção de contato */
+    background: #ffe0b2; /* Fundo suave para a seção de contato */
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -185,6 +190,7 @@ button:hover {
 #avaliacoes-lista li {
     padding: 0.5rem;
     border-bottom: 1px solid #e2e2e2;
+    background-color: #f1f8e9; /* Fundo suave para as avaliações */
 }
 
 /* Rodapé */
@@ -196,4 +202,5 @@ footer {
     bottom: 0;
     width: 100%;
     color: #3c763d; /* Cor do texto do rodapé em verde escuro */
+    border-top: 4px solid #ff7e00; /* Borda superior em laranja */
 }
