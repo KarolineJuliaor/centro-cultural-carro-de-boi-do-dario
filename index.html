@@ -11,6 +11,7 @@
         <h1>Centro Cultural Carro de Boi do Dário</h1>
         <nav>
             <ul>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#atividades">Atividades</a></li>
                 <li><a href="#inscricao">Inscrição</a></li>
                 <li><a href="#galeria">Galeria</a></li>
@@ -58,7 +59,7 @@
                         <td>Capoeira</td>
                         <td>Terça e Quinta</td>
                         <td>20:00 - 22:00</td>
-                        <td>Professor Roseta</td>
+                        <td>Professor C</td>
                     </tr>
                     <tr>
                         <td>Melhor Idade</td>
@@ -80,20 +81,16 @@
             <h2>Inscrição nas Atividades</h2>
             <p>Preencha o formulário abaixo para se inscrever nas atividades:</p>
             <form>
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="atividade">Atividade:</label>
-                    <select id="atividade" required>
-                        <option value="jiu-jitsu">Jiu-Jitsu</option>
-                        <option value="taekwondo">Taekwondo</option>
-                        <option value="capoeira">Capoeira</option>
-                        <option value="melhor-idade">Melhor Idade</option>
-                        <option value="boi-de-mamao">Boi de Mamão</option>
-                    </select>
-                </div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="atividade">Atividade:</label>
+                <select id="atividade" required>
+                    <option value="jiu-jitsu">Jiu-Jitsu</option>
+                    <option value="taekwondo">Taekwondo</option>
+                    <option value="capoeira">Capoeira</option>
+                    <option value="melhor-idade">Melhor Idade</option>
+                    <option value="boi-de-mamao">Boi de Mamão</option>
+                </select>
                 <button type="submit">Inscrever-se</button>
             </form>
         </section>
@@ -120,32 +117,6 @@
             <p>Fique por dentro dos eventos culturais e apresentações que estão por vir!</p>
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Se você tiver dúvidas ou quiser mais informações, entre em contato conosco!</p>
-            <a href="https://wa.me/48999323570" target="_blank" id="botao-whatsapp">
-                <img src="https://www.vecteezy.com/png-gratis/logo-whatsapp" alt="WhatsApp" width="30" height="30">
-                Fale conosco via WhatsApp
-            </a>
-        </section>
-
-        <section id="informacoes">
-            <h2>Informações do Centro Cultural</h2>
-            <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
-            <p><strong>Telefone:</strong> (48) 99932-3570</p>
-            
-            <h3>Horário de Funcionamento:</h3>
-            <ul>
-                <li>Segunda-feira: 09:00–19:00</li>
-                <li>Terça-feira: 09:00–19:00</li>
-                <li>Quarta-feira: 09:00–19:00</li>
-                <li>Quinta-feira: 09:00–19:00</li>
-                <li>Sexta-feira: 09:00–19:00</li>
-                <li>Sábado: Fechado</li>
-                <li>Domingo: Fechado</li>
-            </ul>
-        </section>
-
         <section id="avaliacoes">
             <h2>Avaliações</h2>
             <form id="form-avaliacao">
@@ -167,15 +138,11 @@
                 <ul id="lista-avaliacoes"></ul>
             </div>
         </section>
-        
-        <footer>
-            <div class="footer-content">
-                <h3>Centro Cultural Carro de Boi do Dário</h3>
-                <p>"O Centro Cultural Carro de Boi do Dário tem o intuito de promover a cultura Açoriana como eventos, oficinas, aulas, encontros e muito mais..."</p>
-                <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
-            </div>
-        </footer>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
