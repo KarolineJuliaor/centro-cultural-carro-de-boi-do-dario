@@ -1,36 +1,38 @@
-// Script para confirmar inscrição e simular envio de QR Code de confirmação
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita o envio real do formulário para teste
-    const nome = document.querySelector("#nome").value;
-    const atividade = document.querySelector("#atividade").value;
-    
-    if (nome && atividade) {
-        alert(`Inscrição confirmada para ${nome} na atividade de ${atividade}!`);
-        // Aqui, você pode enviar uma requisição para gerar o QR Code
-    } else {
-        alert("Por favor, preencha todos os campos.");
-    }
+// Lógica para a avaliação com estrelas
+const estrelas = document.querySelectorAll('.estrela');
+const notaInput = document.getElementById('nota');
+
+// Marcar estrelas ao clicar
+estrelas.forEach(estrela => {
+    estrela.addEventListener('click', () => {
+        const valor = estrela.dataset.valor;
+        notaInput.value = valor;
+
+        // Atualizar a aparência das estrelas
+        estrelas.forEach((e, index) => {
+            if (index < valor) {
+                e.style.color = 'gold'; // Cor das estrelas selecionadas
+            } else {
+                e.style.color = 'gray'; // Cor das estrelas não selecionadas
+            }
+        });
+    });
 });
 
-// Script para a contagem regressiva dos eventos
-function atualizarContagemRegressiva() {
-    const eventoData = new Date("2024-12-25T00:00:00"); // Exemplo: Natal como próximo evento
-    const agora = new Date();
-    const tempoRestante = eventoData - agora;
+// Lidar com a submissão do formulário de avaliação
+document.getElementById('form-avaliacao').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio real do formulário
 
-    const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((tempoRestante % (1000 * 60)) / 1000);
+    const comentario = document.getElementById('comentario').value;
+    const nota = notaInput.value;
 
-    document.getElementById("contagem-regressiva").innerHTML = 
-        `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    // Criar um novo item de lista para a avaliação
+    const li = document.createElement('li');
+    li.textContent = `Avaliação: ${nota} Estrelas - Comentário: ${comentario}`;
+    document.getElementById('lista-avaliacoes').appendChild(li);
 
-    // Atualiza a contagem regressiva a cada segundo
-    setTimeout(atualizarContagemRegressiva, 1000);
-}
-
-// Inicializa a contagem regressiva ao carregar a página
-window.onload = function() {
-    atualizarContagemRegressiva();
-};
+    // Limpar o formulário
+    this.reset();
+    notaInput.value = '0'; // Resetar valor da nota
+    estrelas.forEach(e => e.style.color = 'gray'); // Resetar a cor das estrelas
+});
