@@ -8,21 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <nav>
-            <ul>
-                <li><a href="#atividades">Atividades</a></li>
-                <li><a href="#inscricao">Inscrição</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#doacoes">Doações</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#eventos">Eventos Especiais</a></li>
-                <li><a href="#avaliacoes">Avaliações</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Centro Cultural Carro de Boi do Dário</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#atividades">Atividades</a></li>
+                    <li><a href="#inscricao">Inscrição</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#doacoes">Doações</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="container">
         <section id="sobre">
             <h2>Sobre o Centro Cultural</h2>
             <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, é um espaço vibrante e acolhedor que valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e a capoeira.</p>
@@ -80,16 +84,20 @@
             <h2>Inscrição nas Atividades</h2>
             <p>Preencha o formulário abaixo para se inscrever nas atividades:</p>
             <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" required>
-                <label for="atividade">Atividade:</label>
-                <select id="atividade" required>
-                    <option value="jiu-jitsu">Jiu-Jitsu</option>
-                    <option value="taekwondo">Taekwondo</option>
-                    <option value="capoeira">Capoeira</option>
-                    <option value="melhor-idade">Melhor Idade</option>
-                    <option value="boi-de-mamao">Boi de Mamão</option>
-                </select>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="atividade">Atividade:</label>
+                    <select id="atividade" required>
+                        <option value="jiu-jitsu">Jiu-Jitsu</option>
+                        <option value="taekwondo">Taekwondo</option>
+                        <option value="capoeira">Capoeira</option>
+                        <option value="melhor-idade">Melhor Idade</option>
+                        <option value="boi-de-mamao">Boi de Mamão</option>
+                    </select>
+                </div>
                 <button type="submit">Inscrever-se</button>
             </form>
         </section>
@@ -132,13 +140,13 @@
             
             <h3>Horário de Funcionamento:</h3>
             <ul>
+                <li>Segunda-feira: 09:00–19:00</li>
+                <li>Terça-feira: 09:00–19:00</li>
                 <li>Quarta-feira: 09:00–19:00</li>
                 <li>Quinta-feira: 09:00–19:00</li>
                 <li>Sexta-feira: 09:00–19:00</li>
-                <li>Sábado (Dia de Finados): Fechado</li>
+                <li>Sábado: Fechado</li>
                 <li>Domingo: Fechado</li>
-                <li>Segunda-feira: 09:00–19:00</li>
-                <li>Terça-feira: 09:00–19:00</li>
             </ul>
         </section>
 
@@ -164,13 +172,14 @@
             </div>
         </section>
         
-        <h3>Centro Cultural Carro de Boi do Dário</h3>
-        <p>"O Centro Cultural Carro de Boi do Dário tem o intuito de promover a cultura Açoriana como eventos, oficinas, aulas, encontros e muito mais..."</p>
+        <footer>
+            <div class="footer-content">
+                <h3>Centro Cultural Carro de Boi do Dário</h3>
+                <p>"O Centro Cultural Carro de Boi do Dário tem o intuito de promover a cultura Açoriana como eventos, oficinas, aulas, encontros e muito mais..."</p>
+                <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
+            </div>
+        </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
