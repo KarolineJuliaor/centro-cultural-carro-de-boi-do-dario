@@ -22,6 +22,12 @@ document.getElementById('form-avaliacao').addEventListener('submit', function(ev
     const comentario = document.getElementById('comentario').value;
     const nota = notaInput.value;
 
+    // Verificar se o comentário foi preenchido
+    if (comentario.trim() === '') {
+        alert('Por favor, insira um comentário.');
+        return; // Não permite a submissão se o comentário estiver vazio
+    }
+
     // Criar um novo item de lista para a avaliação
     const li = document.createElement('li');
     li.textContent = `Avaliação: ${nota} Estrelas - Comentário: ${comentario}`;
@@ -31,4 +37,7 @@ document.getElementById('form-avaliacao').addEventListener('submit', function(ev
     this.reset();
     notaInput.value = '0'; // Resetar valor da nota
     estrelas.forEach(e => e.style.color = 'gray'); // Resetar a cor das estrelas
+
+    // Feedback ao usuário
+    alert('Obrigado pela sua avaliação!'); // Mensagem de feedback
 });
