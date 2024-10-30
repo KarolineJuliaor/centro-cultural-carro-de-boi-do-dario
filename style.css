@@ -1,160 +1,135 @@
-/* Reset básico */
-* {
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Estilo do corpo */
-body {
-    background-color: #faf9f9;
+    background-color: #f8f9fa;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Cabeçalho */
 header {
-    background-color: #f1c2e0;
-    color: #333;
-    padding: 20px;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 1rem;
     text-align: center;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
 nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    margin-top: 10px;
+    list-style: none;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    color: #333;
     text-decoration: none;
+    color: #fff;
     font-weight: bold;
-    font-size: 1.1em;
 }
 
-nav ul li a:hover {
-    color: #666;
+h1 {
+    color: #6a0572;
 }
 
-/* Área principal */
+/* Seções */
 main {
-    padding: 20px;
+    padding: 2rem;
 }
 
-/* Estilo das seções */
 section {
-    margin: 20px 0;
-    padding: 20px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#atividades {
-    background-color: #a8d5ba;
+h2 {
+    color: #6a0572;
 }
 
-#inscricoes {
-    background-color: #f8cfcf;
-}
-
-#galeria {
-    background-color: #c0d6e4;
-}
-
-#doacoes {
-    background-color: #f2d1b3;
-}
-
-#blog {
-    background-color: #f7e7b4;
-}
-
-#eventos {
-    background-color: #c7ecee;
-}
-
-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-section p {
-    font-size: 1em;
-    margin-top: 5px;
-}
-
-/* Estilo da tabela de atividades */
+/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
 
 table th, table td {
-    padding: 10px;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
     text-align: left;
-    border: 1px solid #ddd;
 }
 
-table th {
-    background-color: #e4e4e4;
-}
-
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Formulário de inscrição */
+/* Formulários */
 form {
     display: flex;
     flex-direction: column;
 }
 
-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
+label {
+    margin-top: 1rem;
 }
 
-form input, form select, form button {
-    padding: 10px;
-    font-size: 1em;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+input, select, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5rem;
 }
 
-form button {
-    background-color: #6abf69;
-    color: #fff;
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #6a0572;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
 }
 
-form button:hover {
-    background-color: #57a557;
+button:hover {
+    background-color: #5b0463;
+}
+
+/* Estilos para a seção de avaliações */
+#avaliacoes {
+    margin-top: 2rem;
+}
+
+#avaliacoes #estrelas {
+    display: flex;
+    cursor: pointer;
+}
+
+.estrela {
+    font-size: 2rem; /* Tamanho das estrelas */
+    color: gray; /* Cor padrão das estrelas */
+    margin-right: 5px; /* Espaçamento entre as estrelas */
+}
+
+#avaliacoes-lista {
+    margin-top: 1rem;
+}
+
+#avaliacoes-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+#avaliacoes-lista li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
 }
 
 /* Rodapé */
 footer {
-    background-color: #f1c2e0;
     text-align: center;
-    padding: 15px;
-    color: #333;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 0.9em;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
