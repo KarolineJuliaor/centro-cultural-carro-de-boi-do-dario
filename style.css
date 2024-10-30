@@ -1,24 +1,32 @@
+/* Importando Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    background-color: #f0f4f8; /* Cor de fundo mais clara */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3 {
-    color: #007bff; /* Cor do título */
+    color: #3A5A98; /* Azul moderno para títulos */
 }
 
 /* Estilos para seções */
 section {
     margin: 2rem auto;
-    padding: 1.5rem;
+    padding: 2rem;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Largura máxima para manter o conteúdo centralizado */
+    border-radius: 12px; /* Bordas arredondadas mais suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    transition: transform 0.3s; /* Efeito de elevação */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Efeito de flutuação */
 }
 
 /* Estilos para a seção de avaliações */
@@ -32,9 +40,14 @@ section {
 }
 
 .estrela {
-    font-size: 2rem; /* Tamanho das estrelas */
-    color: gray; /* Cor padrão das estrelas */
+    font-size: 2.5rem; /* Tamanho das estrelas */
+    color: #bbb; /* Cor padrão das estrelas */
     transition: color 0.2s; /* Transição suave para mudança de cor */
+}
+
+.estrela:hover,
+.estrela.selected {
+    color: #FFD700; /* Cor dourada para estrelas selecionadas */
 }
 
 /* Estilos para o formulário de avaliação */
@@ -48,22 +61,28 @@ textarea {
     margin-top: 0.5rem;
     padding: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    transition: border 0.3s;
+}
+
+textarea:focus {
+    border-color: #3A5A98; /* Borda azul quando focado */
 }
 
 button {
     margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #007bff; /* Cor do botão */
+    padding: 0.7rem 1.5rem;
+    background-color: #3A5A98; /* Azul do botão */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
 }
 
 button:hover {
-    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+    background-color: #2C4374; /* Cor do botão ao passar o mouse */
+    transform: scale(1.05); /* Efeito de ampliação ao passar o mouse */
 }
 
 /* Estilos para a seção de informações */
@@ -81,7 +100,7 @@ button:hover {
     margin-top: 1rem;
     padding: 1rem;
     background: #e9ecef; /* Cor de fundo da lista de avaliações */
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 #lista-avaliacoes {
@@ -93,8 +112,8 @@ button:hover {
     margin: 0.5rem 0;
     padding: 0.5rem;
     background: #ffffff; /* Cor de fundo dos itens de avaliação */
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para a seção de contato */
@@ -110,9 +129,9 @@ button:hover {
     background-color: #25D366; /* Cor do WhatsApp */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
 }
 
 #botao-whatsapp img {
@@ -121,6 +140,7 @@ button:hover {
 
 #botao-whatsapp:hover {
     background-color: #128C7E; /* Cor do botão ao passar o mouse */
+    transform: scale(1.05); /* Efeito de ampliação ao passar o mouse */
 }
 
 /* Estilos adicionais para a seção sobre o Centro Cultural */
@@ -139,6 +159,6 @@ button:hover {
     }
 
     .estrela {
-        font-size: 1.5rem; /* Tamanho das estrelas em telas menores */
+        font-size: 2rem; /* Tamanho das estrelas em telas menores */
     }
 }
