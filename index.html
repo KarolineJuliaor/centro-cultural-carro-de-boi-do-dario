@@ -5,174 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural Carro de Boi do Dário</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Estilos para as estrelas e a lista de avaliações */
-        .estrela {
-            cursor: pointer;
-            font-size: 30px;
-            color: red;
-        }
-        .avaliacao-lista {
-            list-style-type: none;
-            padding: 0;
-        }
-        .avaliacao-item {
-            margin: 10px 0;
-        }
-        img {
-            max-width: 100px;
-            display: block;
-            margin-top: 5px;
-        }
-        /* Estilos padrão (modo claro) */
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        /* Estilos do modo escuro */
-        .dark-mode {
-            background-color: #121212;
-            color: #f0f0f0;
-        }
-        /* Estilo do botão */
-        .toggle-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #009739;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-        /* Efeito do botão no modo escuro */
-        .dark-mode .toggle-btn {
-            background-color: #555;
-        }
-    </style>
 </head>
 <body>
+
+    <!-- Logo e Botão de Modo Escuro -->
     <header>
-        <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#atividades">Atividades</a></li>
-                <li><a href="#inscricao">Inscrição</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#doacoes">Doações</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#eventos">Eventos Especiais</a></li>
-                <li><a href="#avaliacoes">Avaliações</a></li>
-            </ul>
-        </nav>
+        <img src="https://lh5.googleusercontent.com/p/AF1QipOKO4peeH9odRhRD9q_n0yBeubKKXHajSJVz8Cs=w600-h600-k-no" alt="Logo do Centro Cultural">
+        <button id="modo-escuro" onclick="toggleModoEscuro()">🌙</button>
     </header>
-    <main>
-        <!-- Seção Sobre -->
-        <section id="sobre">
-            <h2>Sobre o Centro Cultural</h2>
-            <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, é um espaço vibrante e acolhedor que valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e a capoeira.</p>
-            <p>Além disso, o centro oferece diversos projetos, como aulas de jiu-jitsu, taekwondo e encontros da melhor idade, incentivando a participação de toda a comunidade.</p>
-            <p>É um lugar onde o passado e o presente se encontram, promovendo alegria e conexão para todas as idades.</p>
-        </section>
 
-        <!-- Seção Atividades -->
-        <section id="atividades">
-            <h2>Atividades e Horários</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Atividade</th>
-                        <th>Dia</th>
-                        <th>Horário</th>
-                        <th>Professor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jiu-Jitsu</td>
-                        <td>Segunda e Quarta</td>
-                        <td>18:30 - 19:30</td>
-                        <td>Professor A</td>
-                    </tr>
-                    <tr>
-                        <td>Taekwondo</td>
-                        <td>Terça e Quinta</td>
-                        <td>9h00 - 10h30 / 15h00 - 16h30</td>
-                        <td>Professor B</td>
-                    </tr>
-                    <tr>
-                        <td>Capoeira</td>
-                        <td>Terça e Quinta</td>
-                        <td>20:00 - 22:00</td>
-                        <td>Professora Roseta</td>
-                    </tr>
-                    <tr>
-                        <td>Melhor Idade</td>
-                        <td>Quarta</td>
-                        <td>13h30 - 17h00</td>
-                        <td>Professor D</td>
-                    </tr>
-                    <tr>
-                        <td>Boi de Mamão</td>
-                        <td>Sábado</td>
-                        <td>9h00 - 12h00</td>
-                        <td>Professor E</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- Sobre o Centro Cultural -->
+    <section id="sobre">
+        <h1>Sobre o Centro Cultural</h1>
+        <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, é um espaço vibrante e acolhedor que valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e a capoeira.</p>
+        <p>Além disso, o centro oferece diversos projetos, como aulas de jiu-jitsu, taekwondo e encontros da melhor idade, incentivando a participação de toda a comunidade.</p>
+        <p>É um lugar onde o passado e o presente se encontram, promovendo alegria e conexão para todas as idades.</p>
+    </section>
 
-        <!-- Seção Avaliações -->
-        <section id="avaliacoes">
-            <h2>Avaliações</h2>
-            <form id="form-avaliacao">
-                <label for="nome-avaliacao">Nome:</label>
-                <input type="text" id="nome-avaliacao" required>
-                <label>Avalie o Centro Cultural:</label>
-                <div id="estrelas">
-                    <span class="estrela" data-valor="1">★</span>
-                    <span class="estrela" data-valor="2">★</span>
-                    <span class="estrela" data-valor="3">★</span>
-                    <span class="estrela" data-valor="4">★</span>
-                    <span class="estrela" data-valor="5">★</span>
-                </div>
-                <input type="hidden" id="nota" value="0">
-                <label for="comentario">Comentário:</label>
-                <textarea id="comentario" required></textarea>
-                <label for="foto">Foto:</label>
-                <input type="file" id="foto" accept="image/*">
-                <button type="submit">Enviar Avaliação</button>
-            </form>
-            <div id="avaliacoes-lista">
-                <h3>Avaliações Recebidas</h3>
-                <ul id="lista-avaliacoes"></ul>
-            </div>
-        </section>
-    </main>
+    <!-- Atividades e Horários -->
+    <section id="atividades">
+        <h2>Atividades e Horários</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Atividade</th>
+                    <th>Horário</th>
+                    <th>Professor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Jiu-Jitsu</td><td>Segunda, 18:30 - 19:30</td><td>Professor A</td></tr>
+                <tr><td>Taekwondo</td><td>Terça e Quinta, 9:00 - 10:30 / 15:00 - 16:30</td><td>Professor B</td></tr>
+                <tr><td>Capoeira</td><td>Terça e Quinta, 20:00 - 22:00</td><td>Professor C</td></tr>
+                <tr><td>Encontro da Melhor Idade</td><td>Quarta, 13:30 - 17:00</td><td>Professor D</td></tr>
+                <tr><td>Boi de Mamão</td><td>Sábado, 9:00 - 12:00</td><td>Professor E</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Inscrição e Contato -->
+    <section id="inscricao">
+        <h2>Inscrição nas Atividades</h2>
+        <p>Entre em contato com os professores diretamente através dos números abaixo:</p>
+        <ul>
+            <li>Professor A - (48) 99999-1111</li>
+            <li>Professor B - (48) 99999-2222</li>
+            <li>Professor C - (48) 99999-3333</li>
+        </ul>
+    </section>
+
+    <!-- Galeria e História -->
+    <section id="galeria">
+        <h2>Galeria Cultural e História</h2>
+        <p>Explore a história do centro cultural e as tradições do bairro.</p>
+        <!-- Imagens e vídeos podem ser inseridos aqui -->
+    </section>
+
+    <!-- Doações e Voluntariado -->
+    <section id="doacoes">
+        <h2>Doações e Voluntariado</h2>
+        <p>Apoie o centro cultural por meio de doações via PIX ou como voluntário.</p>
+    </section>
+
+    <!-- Eventos -->
+    <section id="eventos">
+        <h2>Eventos Culturais</h2>
+        <p>Saiba mais sobre os eventos futuros e passados no centro cultural.</p>
+    </section>
+
+    <!-- Avaliações -->
+    <section id="avaliacoes">
+        <h2>Avaliações</h2>
+        <div id="estrelas">⭐ ⭐ ⭐ ⭐ ⭐</div>
+        <textarea id="comentario" placeholder="Deixe seu comentário"></textarea>
+        <button onclick="adicionarComentario()">Enviar Avaliação</button>
+        <div id="avaliacoes-lista">
+            <ul id="comentarios"></ul>
+        </div>
+    </section>
+
+    <!-- Redes Sociais e Contato -->
     <footer>
-        <p>© 2024 Centro Cultural Carro de Boi do Dário</p>
+        <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank" id="botao-instagram">
+            <img src="https://pt.m.wikipedia.org/wiki/Ficheiro:Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/5548999323570" target="_blank" id="botao-whatsapp">
+            <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png" alt="WhatsApp">
+        </a>
     </footer>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            const estrelas = document.querySelectorAll(".estrela");
-            const notaInput = document.querySelector("#nota");
-            estrelas.forEach((estrela, index) => {
-                estrela.addEventListener("click", function() {
-                    notaInput.value = index + 1;
-                    estrelas.forEach((s, i) => {
-                        s.style.color = i <= index ? "yellow" : "gray";
-                    });
-                });
-            });
-        });
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
