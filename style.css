@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #eafaf0; /* Fundo claro em tom pastel */
-    color: #333;
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
 }
 
 header {
@@ -48,9 +48,9 @@ main {
 section {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #ffffff; /* Fundo branco para seções */
+    background: #1f1f1f; /* Fundo escuro para seções */
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
 }
 
 h2 {
@@ -68,9 +68,9 @@ h2 {
 #avaliacoes {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #ffffff; /* Fundo branco para seções */
+    background: #1f1f1f; /* Fundo escuro para seções */
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
 }
 
 /* Tabela */
@@ -81,14 +81,15 @@ table {
 
 table th {
     background-color: #ffeb3b; /* Cabeçalho da tabela em amarelo pastel */
-    color: #3c763d; /* Cor do texto em verde escuro */
+    color: #333; /* Cor do texto em escuro */
     padding: 0.75rem;
 }
 
 table td {
-    border: 1px solid #e2e2e2; /* Borda suave */
+    border: 1px solid #444; /* Borda suave em cinza */
     padding: 0.5rem;
     text-align: left;
+    background-color: #2c2c2c; /* Fundo escuro para células */
 }
 
 /* Formulários */
@@ -104,16 +105,18 @@ label {
 
 input, select, textarea {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #555; /* Borda escura */
     border-radius: 4px;
     margin-top: 0.5rem;
-    transition: border-color 0.3s;
+    background-color: #2c2c2c; /* Fundo escuro para campos */
+    color: #ffffff; /* Texto claro */
 }
 
 input:focus, select:focus, textarea:focus {
     border-color: #ff7e00; /* Borda laranja ao focar */
 }
 
+/* Botões */
 button {
     margin-top: 1rem;
     padding: 0.5rem;
@@ -133,9 +136,9 @@ button:hover {
 #contato {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: #ffe0b2; /* Fundo suave para a seção de contato */
+    background: #1f1f1f; /* Fundo escuro para a seção de contato */
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
 }
@@ -189,18 +192,18 @@ button:hover {
 
 #avaliacoes-lista li {
     padding: 0.5rem;
-    border-bottom: 1px solid #e2e2e2;
-    background-color: #f1f8e9; /* Fundo suave para as avaliações */
+    border-bottom: 1px solid #444; /* Borda em cinza escuro */
+    background-color: #2c2c2c; /* Fundo escuro para as avaliações */
 }
 
 /* Rodapé */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #f1f1f1;
+    background-color: #1f1f1f; /* Fundo escuro para o rodapé */
     position: relative;
     bottom: 0;
     width: 100%;
-    color: #3c763d; /* Cor do texto do rodapé em verde escuro */
+    color: #e0e0e0; /* Cor do texto do rodapé em claro */
     border-top: 4px solid #ff7e00; /* Borda superior em laranja */
 }
