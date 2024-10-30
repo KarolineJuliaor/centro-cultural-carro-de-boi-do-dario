@@ -270,6 +270,54 @@
             // Carregar as avaliações ao iniciar
             carregarAvaliacoes();
         });
+
+    <html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Escuro</title>
+    <style>
+        /* Estilos padrão (modo claro) */
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Estilos do modo escuro */
+        .dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        
+        /* Estilo do botão */
+        .toggle-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #009739;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        
+        /* Efeito do botão no modo escuro */
+        .dark-mode .toggle-btn {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
+
 </body>
 </html>
