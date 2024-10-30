@@ -57,22 +57,6 @@ h2 {
     color: #ff7e00; /* Títulos das seções em laranja escuro */
 }
 
-/* Estilos para as seções */
-#sobre,
-#atividades,
-#inscricao,
-#galeria,
-#doacoes,
-#blog,
-#eventos-especiais,
-#avaliacoes {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #1f1f1f; /* Fundo escuro para seções */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
-}
-
 /* Tabela */
 table {
     width: 100%;
@@ -201,9 +185,6 @@ footer {
     text-align: center;
     padding: 1rem;
     background-color: #1f1f1f; /* Fundo escuro para o rodapé */
-    position: relative;
-    bottom: 0;
-    width: 100%;
     color: #e0e0e0; /* Cor do texto do rodapé em claro */
     border-top: 4px solid #ff7e00; /* Borda superior em laranja */
 }
