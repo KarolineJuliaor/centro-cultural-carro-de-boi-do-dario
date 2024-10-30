@@ -1,3 +1,4 @@
+/* Reset básico para remover margens e paddings */
 * {
     margin: 0;
     padding: 0;
@@ -6,54 +7,111 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff8dc;
+    background-color: #FFFACD; /* Fundo amarelo claro */
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #e63946;
+    background-color: #FF4500; /* Laranja */
     color: white;
-    padding: 1em;
+    padding: 20px;
     text-align: center;
 }
 
+header h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
 section {
-    padding: 1em 2em;
-    margin: 1em 0;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about, #activities, #signup, #gallery, #donations, #blog, #ratings {
+    background-color: #ffffff;
 }
 
 h2 {
-    color: #028090;
+    color: #228B22; /* Verde */
+    margin-bottom: 10px;
 }
 
-#activities, #signup, #gallery, #donations, #blog, #ratings {
-    border: 1px solid #e63946;
-    border-radius: 8px;
-    padding: 1em;
+p {
+    margin-bottom: 15px;
 }
 
-button {
-    background-color: #e63946;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
+/* Formulários de inscrição e avaliação */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-button:hover {
-    background-color: #d62828;
+form button {
+    display: inline-block;
+    background-color: #228B22; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+form button:hover {
+    background-color: #006400; /* Verde escuro */
+}
+
+/* Links e rodapé com redes sociais */
 footer {
     display: flex;
     justify-content: center;
-    padding: 1em;
-    background-color: #e63946;
+    padding: 20px;
+    background-color: #FF4500; /* Laranja */
 }
 
-footer a img {
-    width: 40px;
-    height: 40px;
-    margin: 0 1em;
+footer a {
+    margin: 0 15px;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos de avaliações */
+.user-rating {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 4px solid #FF4500;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer a {
+        margin: 10px 0;
+    }
 }
