@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -24,6 +23,37 @@
             max-width: 100px;
             display: block;
             margin-top: 5px;
+        }
+        /* Estilos padrão (modo claro) */
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        /* Estilos do modo escuro */
+        .dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        
+        /* Estilo do botão */
+        .toggle-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #009739;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        
+        /* Efeito do botão no modo escuro */
+        .dark-mode .toggle-btn {
+            background-color: #555;
         }
     </style>
 </head>
@@ -50,7 +80,7 @@
             <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, é um espaço vibrante e acolhedor que valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e a capoeira.</p>
             <p>Além disso, o centro oferece diversos projetos, como aulas de jiu-jitsu, taekwondo e encontros da melhor idade, incentivando a participação de toda a comunidade.</p>
             <p>É um lugar onde o passado e o presente se encontram, promovendo alegria e conexão para todas as idades.</p>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+            <p><strong>Conteúdo em breve...</strong></p>
         </section>
 
         <section id="atividades">
@@ -97,7 +127,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+            <p><strong>Conteúdo em breve...</strong></p>
         </section>
 
         <section id="inscricao">
@@ -112,38 +142,37 @@
                     <option value="taekwondo">Taekwondo</option>
                     <option value="capoeira">Capoeira</option>
                     <option value="melhor-idade">Melhor Idade</option>
-                     
                 </select>
                 <button type="submit">Inscrever-se</button>
             </form>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+            <p><strong>Conteúdo em breve...</strong></p>
         </section>
 
         <section id="galeria">
             <h2>Galeria Cultural</h2>
             <p>Confira as fotos e vídeos das nossas atividades:</p>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+            <p><strong>Conteúdo em breve...</strong></p>
         </section>
 
         <section id="doacoes">
             <h2>Doações e Voluntariado</h2>
             <p>Apoie o Centro Cultural Carro de Boi do Dário através de doações ou voluntariado. Entre em contato para saber mais!</p>
             <button>Fazer Doação</button>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+            <p><strong>Conteúdo em breve...</strong></p>
         </section>
 
         <section id="blog">
             <h2>Blog de Atualizações</h2>
             <p>Acompanhe as novidades e eventos do nosso centro cultural aqui.</p>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+            <p><strong>Conteúdo em breve...</strong></p>
         </section>
 
         <section id="eventos">
             <h2>Agenda de Eventos Especiais</h2>
             <p>Fique por dentro dos eventos culturais e apresentações que estão por vir!</p>
-            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
-      </section>
-     
+            <p><strong>Conteúdo em breve...</strong></p>
+        </section>
+
         <section id="avaliacoes">
             <h2>Avaliações</h2>
             <form id="form-avaliacao">
@@ -173,12 +202,13 @@
                 <ul id="lista-avaliacoes"></ul>
             </div>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2024 Centro Cultural Carro de Boi do Dário</p>
     </footer>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -186,138 +216,42 @@
             const notaInput = document.querySelector("#nota");
             const nomeInput = document.querySelector("#nome-avaliacao");
             const comentarioInput = document.querySelector("#comentario");
-            const fotoInput = document.querySelector("#foto");
-            const formAvaliacao = document.querySelector("#form-avaliacao");
             const listaAvaliacoes = document.querySelector("#lista-avaliacoes");
 
-            // Carregar avaliações do LocalStorage
-            function carregarAvaliacoes() {
-                const avaliacoes = JSON.parse(localStorage.getItem("avaliacoes") || "[]");
-                avaliacoes.forEach(avaliacao => {
-                    adicionarAvaliacao(avaliacao.nome, avaliacao.nota, avaliacao.comentario, avaliacao.foto);
-                });
-            }
-
-            // Salvar avaliação no LocalStorage
-            function salvarAvaliacao(nome, nota, comentario, foto) {
-                const avaliacoes = JSON.parse(localStorage.getItem("avaliacoes") || "[]");
-                avaliacoes.push({ nome, nota, comentario, foto });
-                localStorage.setItem("avaliacoes", JSON.stringify(avaliacoes));
-            }
-
-            // Adicionar avaliação ao DOM
-            function adicionarAvaliacao(nome, nota, comentario, fotoDataURL) {
-                const li = document.createElement("li");
-                li.className = "avaliacao-item";
-                li.innerHTML = `<strong>${nome}</strong> - Nota: ${nota}<br>${comentario}`;
-
-                if (fotoDataURL) {
-                    const img = document.createElement("img");
-                    img.src = fotoDataURL;
-                    li.appendChild(img);
-                }
-
-                listaAvaliacoes.appendChild(li);
-            }
-
-            // Configuração das estrelas de avaliação
-            estrelas.forEach((estrela, index) => {
+            estrelas.forEach(estrela => {
                 estrela.addEventListener("click", function() {
-                    const valor = index + 1;
+                    const valor = this.getAttribute("data-valor");
                     notaInput.value = valor;
-                    atualizarEstrelas(valor);
-                });
-                estrela.addEventListener("mouseover", function() {
-                    atualizarEstrelas(index + 1);
-                });
-                estrela.addEventListener("mouseout", function() {
-                    atualizarEstrelas(notaInput.value);
+
+                    estrelas.forEach(s => {
+                        s.style.color = s.getAttribute("data-valor") <= valor ? "red" : "gray";
+                    });
                 });
             });
 
-            function atualizarEstrelas(valor) {
-                estrelas.forEach((estrela, index) => {
-                    estrela.style.color = index < valor ? "gold" : "gray";
-                });
-            }
-
-            // Submissão do formulário
-            formAvaliacao.addEventListener("submit", function(event) {
+            document.querySelector("#form-avaliacao").addEventListener("submit", function(event) {
                 event.preventDefault();
+
                 const nome = nomeInput.value;
                 const nota = notaInput.value;
                 const comentario = comentarioInput.value;
-                const foto = fotoInput.files[0];
 
-                if (foto) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const fotoDataURL = e.target.result;
-                        adicionarAvaliacao(nome, nota, comentario, fotoDataURL);
-                        salvarAvaliacao(nome, nota, comentario, fotoDataURL);
-                    };
-                    reader.readAsDataURL(foto);
-                } else {
-                    adicionarAvaliacao(nome, nota, comentario, null);
-                    salvarAvaliacao(nome, nota, comentario, null);
-                }
+                const li = document.createElement("li");
+                li.className = "avaliacao-item";
+                li.innerHTML = `<strong>${nome}</strong> (${nota} estrelas): ${comentario}`;
 
-                formAvaliacao.reset();
-                atualizarEstrelas(0);
-                notaInput.value = "0"; // Reseta a nota
+                listaAvaliacoes.appendChild(li);
+
+                nomeInput.value = "";
+                notaInput.value = "0";
+                comentarioInput.value = "";
+                estrelas.forEach(s => s.style.color = "gray");
             });
-
-            // Carregar as avaliações ao iniciar
-            carregarAvaliacoes();
         });
 
-    <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modo Escuro</title>
-    <style>
-        /* Estilos padrão (modo claro) */
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-            font-family: Arial, sans-serif;
-        }
-        
-        /* Estilos do modo escuro */
-        .dark-mode {
-            background-color: #121212;
-            color: #f0f0f0;
-        }
-        
-        /* Estilo do botão */
-        .toggle-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #009739;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-        
-        /* Efeito do botão no modo escuro */
-        .dark-mode .toggle-btn {
-            background-color: #555;
-        }
-    </style>
-</head>
-<body>
-
-    <button class="toggle-btn" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
-
-    <script>
         function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle("dark-mode");
         }
     </script>
-
 </body>
 </html>
