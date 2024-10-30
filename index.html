@@ -11,13 +11,12 @@
         <h1>Centro Cultural Carro de Boi do Dário</h1>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#atividades">Atividades</a></li>
-                <li><a href="#inscricoes">Inscrições</a></li>
-                <li><a href="#galeria">Galeria e História</a></li>
-                <li><a href="#doacoes">Doações e Voluntariado</a></li>
+                <li><a href="#inscricao">Inscrição</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#doacoes">Doações</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#eventos">Eventos Especiais</a></li>
                 <li><a href="#avaliacoes">Avaliações</a></li>
             </ul>
         </nav>
@@ -34,52 +33,61 @@
         <section id="atividades">
             <h2>Atividades e Horários</h2>
             <table>
-                <tr>
-                    <th>Atividade</th>
-                    <th>Horário</th>
-                    <th>Responsável</th>
-                </tr>
-                <tr>
-                    <td>Jiu-Jitsu</td>
-                    <td>Segunda, 18:30 - 19:30</td>
-                    <td>Prof. João Silva</td>
-                </tr>
-                <tr>
-                    <td>Taekwondo</td>
-                    <td>Terça, 9:00 - 10:30, 15:00 - 16:30</td>
-                    <td>Prof. Carla Santos</td>
-                </tr>
-                <tr>
-                    <td>Capoeira</td>
-                    <td>Terça, 20:00 - 22:00</td>
-                    <td>Prof. Lucas Ferreira</td>
-                </tr>
-                <tr>
-                    <td>Encontro da Melhor Idade</td>
-                    <td>Quarta, 13:30 - 17:00</td>
-                    <td>Equipe do Centro</td>
-                </tr>
-                <tr>
-                    <td>Boi de Mamão</td>
-                    <td>Sábado, 9:00 - 12:00</td>
-                    <td>Equipe Cultural</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Atividade</th>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                        <th>Professor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jiu-Jitsu</td>
+                        <td>Segunda e Quarta</td>
+                        <td>18:30 - 19:30</td>
+                        <td>Professor A</td>
+                    </tr>
+                    <tr>
+                        <td>Taekwondo</td>
+                        <td>Terça e Quinta</td>
+                        <td>9:00 - 10:30 / 15:00 - 16:30</td>
+                        <td>Professor B</td>
+                    </tr>
+                    <tr>
+                        <td>Capoeira</td>
+                        <td>Terça e Quinta</td>
+                        <td>20:00 - 22:00</td>
+                        <td>Professor C</td>
+                    </tr>
+                    <tr>
+                        <td>Melhor Idade</td>
+                        <td>Quarta</td>
+                        <td>13:30 - 17:00</td>
+                        <td>Professor D</td>
+                    </tr>
+                    <tr>
+                        <td>Boi de Mamão</td>
+                        <td>Sábado</td>
+                        <td>9:00 - 12:00</td>
+                        <td>Professor E</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
-        <section id="inscricoes">
+        <section id="inscricao">
             <h2>Inscrição nas Atividades</h2>
-            <form action="/inscricao" method="POST">
+            <p>Preencha o formulário abaixo para se inscrever nas atividades:</p>
+            <form>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="text" id="nome" required>
                 <label for="atividade">Atividade:</label>
-                <select id="atividade" name="atividade" required>
+                <select id="atividade" required>
                     <option value="jiu-jitsu">Jiu-Jitsu</option>
                     <option value="taekwondo">Taekwondo</option>
                     <option value="capoeira">Capoeira</option>
-                    <option value="melhor-idade">Encontro da Melhor Idade</option>
+                    <option value="melhor-idade">Melhor Idade</option>
                     <option value="boi-de-mamao">Boi de Mamão</option>
                 </select>
                 <button type="submit">Inscrever-se</button>
@@ -87,57 +95,52 @@
         </section>
 
         <section id="galeria">
-            <h2>Galeria Cultural e História</h2>
-            <p>Explore a nossa galeria e conheça a história do Centro Cultural Carro de Boi do Dário, incluindo eventos históricos e tradições culturais como o Boi de Mamão.</p>
-            <!-- Galeria de imagens e linha do tempo podem ser implementados aqui -->
+            <h2>Galeria Cultural</h2>
+            <p>Confira as fotos e vídeos das nossas atividades:</p>
+            <!-- Aqui você pode adicionar imagens e vídeos -->
         </section>
 
         <section id="doacoes">
             <h2>Doações e Voluntariado</h2>
-            <p>Apoie o nosso centro através de doações ou inscrevendo-se como voluntário. Sua ajuda faz a diferença!</p>
-            <p><strong>Doações via PIX:</strong> chavepix@carrodeboidodario.com</p>
-            <p>Entre em contato para saber mais sobre como contribuir.</p>
+            <p>Apoie o Centro Cultural Carro de Boi do Dário através de doações ou voluntariado. Entre em contato para saber mais!</p>
+            <button>Fazer Doação</button>
         </section>
 
         <section id="blog">
-            <h2>Blog</h2>
-            <p>Fique por dentro das atualizações e notícias sobre eventos e conquistas dos nossos participantes.</p>
-            <!-- As publicações do blog podem ser adicionadas aqui -->
+            <h2>Blog de Atualizações</h2>
+            <p>Acompanhe as novidades e eventos do nosso centro cultural aqui.</p>
         </section>
 
         <section id="eventos">
-            <h2>Eventos Especiais</h2>
-            <p>Não perca nossos eventos culturais e apresentações especiais. Veja abaixo a contagem regressiva para o próximo evento:</p>
-            <!-- Contagem regressiva para eventos e painel de LED interativo podem ser implementados aqui -->
+            <h2>Agenda de Eventos Especiais</h2>
+            <p>Fique por dentro dos eventos culturais e apresentações que estão por vir!</p>
         </section>
 
         <section id="avaliacoes">
             <h2>Avaliações</h2>
             <form id="form-avaliacao">
-                <label for="comentario">Deixe seu comentário:</label>
-                <textarea id="comentario" name="comentario" rows="4" required></textarea>
-                
-                <label>Avalie o centro:</label>
+                <label for="nota">Avalie o Centro Cultural:</label>
                 <div id="estrelas">
-                    <span class="estrela" data-valor="1">⭐</span>
-                    <span class="estrela" data-valor="2">⭐</span>
-                    <span class="estrela" data-valor="3">⭐</span>
-                    <span class="estrela" data-valor="4">⭐</span>
-                    <span class="estrela" data-valor="5">⭐</span>
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
                 </div>
-                <input type="hidden" id="nota" name="nota" value="0">
+                <input type="hidden" id="nota" value="0">
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" required></textarea>
                 <button type="submit">Enviar Avaliação</button>
             </form>
             <div id="avaliacoes-lista">
-                <h3>Avaliações Anteriores:</h3>
+                <h3>Avaliações Recebidas</h3>
                 <ul id="lista-avaliacoes"></ul>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Centro Cultural Carro de Boi do Dário - Rod. João Gualberto Soares, 4360, Florianópolis, SC</p>
-        <p>Contato: (48) 99932-3570</p>
+        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário</p>
     </footer>
 
     <script src="script.js"></script>
