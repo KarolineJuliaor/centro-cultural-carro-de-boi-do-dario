@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural Carro de Boi do Dário</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-
     <style>
         /* Estilos para as estrelas e a lista de avaliações */
         .estrela {
@@ -201,7 +199,7 @@
             </form>
             <div id="avaliacoes-lista">
                 <h3>Avaliações Recebidas</h3>
-                <ul id="lista-avaliacoes" class="avaliacao-lista"></ul>
+                <ul id="lista-avaliacoes"></ul>
             </div>
         </section>
     </main>
@@ -213,63 +211,43 @@
     <button class="toggle-btn" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const estrelas = document.querySelectorAll(".estrela");
-            const notaInput = document.getElementById("nota");
+            const notaInput = document.querySelector("#nota");
+            const nomeInput = document.querySelector("#nome-avaliacao");
+            const comentarioInput = document.querySelector("#comentario");
+            const listaAvaliacoes = document.querySelector("#lista-avaliacoes");
 
-            estrelas.forEach((estrela) => {
-                estrela.addEventListener("click", function () {
+            estrelas.forEach(estrela => {
+                estrela.addEventListener("click", function() {
                     const valor = this.getAttribute("data-valor");
                     notaInput.value = valor;
-                    atualizarEstrelas(valor);
+
+                    estrelas.forEach(s => {
+                        s.style.color = s.getAttribute("data-valor") <= valor ? "red" : "gray";
+                    });
                 });
             });
 
-            document.getElementById("form-avaliacao").addEventListener("submit", function (e) {
-                e.preventDefault(); // Evita o envio do formulário
+            document.querySelector("#form-avaliacao").addEventListener("submit", function(event) {
+                event.preventDefault();
 
-                const nome = document.getElementById("nome-avaliacao").value;
+                const nome = nomeInput.value;
                 const nota = notaInput.value;
-                const comentario = document.getElementById("comentario").value;
-                const fotoInput = document.getElementById("foto");
-                let fotoUrl = "";
+                const comentario = comentarioInput.value;
 
-                if (fotoInput.files.length > 0) {
-                    const file = fotoInput.files[0];
-                    const reader = new FileReader();
-                    reader.onload = function (event) {
-                        fotoUrl = event.target.result;
-                        adicionarAvaliacao(nome, nota, comentario, fotoUrl);
-                    };
-                    reader.readAsDataURL(file);
-                } else {
-                    adicionarAvaliacao(nome, nota, comentario, fotoUrl);
-                }
+                const li = document.createElement("li");
+                li.className = "avaliacao-item";
+                li.innerHTML = `<strong>${nome}</strong> (${nota} estrelas): ${comentario}`;
 
-                // Limpa os campos do formulário após o envio
-                document.getElementById("form-avaliacao").reset();
-                atualizarEstrelas(0); // Reseta as estrelas
+                listaAvaliacoes.appendChild(li);
+
+                nomeInput.value = "";
+                notaInput.value = "0";
+                comentarioInput.value = "";
+                estrelas.forEach(s => s.style.color = "gray");
             });
         });
-
-        function atualizarEstrelas(nota) {
-            const estrelas = document.querySelectorAll(".estrela");
-            estrelas.forEach((estrela, index) => {
-                estrela.style.color = index < nota ? "gold" : "red";
-            });
-        }
-
-        function adicionarAvaliacao(nome, nota, comentario, fotoUrl) {
-            const listaAvaliacoes = document.getElementById("lista-avaliacoes");
-            const itemAvaliacao = document.createElement("li");
-            itemAvaliacao.classList.add("avaliacao-item");
-            itemAvaliacao.innerHTML = `
-                <strong>${nome}</strong> - Nota: ${nota}<br>
-                <p>${comentario}</p>
-                ${fotoUrl ? `<img src="${fotoUrl}" alt="Foto enviada">` : ""}
-            `;
-            listaAvaliacoes.appendChild(itemAvaliacao);
-        }
 
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
