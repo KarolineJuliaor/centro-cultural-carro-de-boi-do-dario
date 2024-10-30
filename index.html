@@ -18,6 +18,7 @@
                 <li><a href="#doacoes">Doações e Voluntariado</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
             </ul>
         </nav>
     </header>
@@ -109,57 +110,28 @@
             <p>Não perca nossos eventos culturais e apresentações especiais. Veja abaixo a contagem regressiva para o próximo evento:</p>
             <!-- Contagem regressiva para eventos e painel de LED interativo podem ser implementados aqui -->
         </section>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Cultural Carro de Boi do Dário</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#atividades">Atividades</a></li>
-                <li><a href="#inscricoes">Inscrições</a></li>
-                <li><a href="#galeria">Galeria e História</a></li>
-                <li><a href="#doacoes">Doações e Voluntariado</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#avaliacoes">Avaliações</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Outras seções como "Sobre", "Atividades", etc. -->
 
         <section id="avaliacoes">
-            <h2>Avaliações e Comentários</h2>
+            <h2>Avaliações</h2>
             <form id="form-avaliacao">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome-avaliador" name="nome" required>
+                <label for="comentario">Deixe seu comentário:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
                 
-                <label for="nota">Nota (1 a 5):</label>
-                <select id="nota-avaliacao" name="nota" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-
-                <label for="comentario">Comentário:</label>
-                <textarea id="comentario-avaliacao" name="comentario" rows="4" required></textarea>
-
+                <label>Avalie o centro:</label>
+                <div id="estrelas">
+                    <span class="estrela" data-valor="1">⭐</span>
+                    <span class="estrela" data-valor="2">⭐</span>
+                    <span class="estrela" data-valor="3">⭐</span>
+                    <span class="estrela" data-valor="4">⭐</span>
+                    <span class="estrela" data-valor="5">⭐</span>
+                </div>
+                <input type="hidden" id="nota" name="nota" value="0">
                 <button type="submit">Enviar Avaliação</button>
             </form>
-
-            <h3>Comentários Recentes</h3>
-            <div id="comentarios"></div>
+            <div id="avaliacoes-lista">
+                <h3>Avaliações Anteriores:</h3>
+                <ul id="lista-avaliacoes"></ul>
+            </div>
         </section>
     </main>
 
@@ -171,4 +143,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
