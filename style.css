@@ -1,117 +1,198 @@
-/* Reset básico para remover margens e paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFFACD; /* Fundo amarelo claro */
-    color: #333;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #eafaf0; /* Fundo claro em tom pastel verde */
+    color: #333;
 }
 
 header {
-    background-color: #FF4500; /* Laranja */
-    color: white;
-    padding: 20px;
+    background: linear-gradient(to right, #66bb6a, #b2e3b2); /* Gradiente verde */
+    padding: 1rem;
     text-align: center;
 }
 
-header h1 {
-    font-size: 2em;
-    margin-bottom: 0.2em;
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Branco para contraste */
+    font-weight: bold;
+}
+
+h1 {
+    color: #3c763d; /* Verde escuro */
+}
+
+/* Seções */
+main {
+    padding: 2rem;
 }
 
 section {
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #ffffff; /* Fundo branco para seções */
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#about, #activities, #signup, #gallery, #donations, #blog, #ratings {
-    background-color: #ffffff;
+h2 {
+    color: #3c763d; /* Título das seções em verde escuro */
+}
+
+/* Estilos para as seções */
+#sobre,
+#atividades,
+#inscricao,
+#galeria,
+#doacoes,
+#blog,
+#eventos-especiais,
+#avaliacoes {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #ffffff; /* Fundo branco para seções */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #228B22; /* Verde */
-    margin-bottom: 10px;
+    color: #3c763d; /* Título das seções em verde escuro */
 }
 
-p {
-    margin-bottom: 15px;
-}
-
-/* Formulários de inscrição e avaliação */
-form input[type="text"],
-form input[type="email"],
-form input[type="number"],
-form textarea {
+/* Tabela */
+table {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-collapse: collapse;
 }
 
-form button {
-    display: inline-block;
-    background-color: #228B22; /* Verde */
+table th {
+    background-color: #c8e6c9; /* Cabeçalho da tabela em verde pastel */
+    color: #3c763d; /* Cor do texto em verde escuro */
+    padding: 0.75rem;
+}
+
+table td {
+    border: 1px solid #e2e2e2; /* Borda suave */
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    color: #3c763d; /* Cor dos rótulos em verde escuro */
+}
+
+input, select, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #3c763d; /* Botão principal em verde escuro */
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: #006400; /* Verde escuro */
+button:hover {
+    background-color: #2c6b2d; /* Efeito de hover do botão em verde mais escuro */
 }
 
-/* Links e rodapé com redes sociais */
-footer {
+/* Contato */
+#contato {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #e8f5e9; /* Fundo suave para a seção de contato */
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: #FF4500; /* Laranja */
+    align-items: center;
 }
 
-footer a {
-    margin: 0 15px;
+/* Botão WhatsApp */
+#botao-whatsapp {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-footer img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s;
+#botao-whatsapp img {
+    margin-right: 0.5rem; /* Espaço entre a imagem e o texto */
 }
 
-footer img:hover {
-    transform: scale(1.1);
+#botao-whatsapp:hover {
+    background-color: #128C7E; /* Cor do botão ao passar o mouse */
 }
 
-/* Estilos de avaliações */
-.user-rating {
-    background-color: #f3f3f3;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 8px;
-    border-left: 4px solid #FF4500;
+/* Estilos para a seção de avaliações */
+#avaliacoes {
+    margin-top: 2rem;
 }
 
-/* Media queries para responsividade */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-    footer {
-        flex-direction: column;
-    }
-    footer a {
-        margin: 10px 0;
-    }
+#avaliacoes #estrelas {
+    display: flex;
+    cursor: pointer;
+}
+
+.estrela {
+    font-size: 2rem; /* Tamanho das estrelas */
+    color: #ffcc00; /* Cor das estrelas */
+    margin-right: 5px; /* Espaçamento entre as estrelas */
+}
+
+#avaliacoes-lista {
+    margin-top: 1rem;
+}
+
+#avaliacoes-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+#avaliacoes-lista li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #3c763d; /* Cor do texto do rodapé em verde escuro */
 }
