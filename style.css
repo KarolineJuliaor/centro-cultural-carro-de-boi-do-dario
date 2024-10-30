@@ -15,12 +15,25 @@ header {
     text-align: center;
 }
 
+/* Logo */
 #logo {
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
+    width: 100px; /* Tamanho da logo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
 }
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 #modo-escuro {
     background-color: #fad0c4; /* Cor pastel para botão modo escuro */
