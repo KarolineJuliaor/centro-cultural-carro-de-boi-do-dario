@@ -1,43 +1,44 @@
-// Lógica para a avaliação com estrelas
-const estrelas = document.querySelectorAll('.estrela');
-const notaInput = document.getElementById('nota');
 
-// Marcar estrelas ao clicar
-estrelas.forEach(estrela => {
-    estrela.addEventListener('click', () => {
-        const valor = estrela.dataset.valor;
-        notaInput.value = valor;
+// Espera o carregamento completo do conteúdo do site
+document.addEventListener("DOMContentLoaded", () => {
 
-        // Atualizar a aparência das estrelas
-        estrelas.forEach((e, index) => {
-            e.style.color = index < valor ? 'gold' : 'gray'; // Altera a cor das estrelas
-        });
+    // Captura o formulário de inscrição e adiciona uma função para o envio
+    const signupForm = document.querySelector("#signup form");
+    signupForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        
+        const name = signupForm.querySelector("input[type='text']").value;
+        const email = signupForm.querySelector("input[type='email']").value;
+        
+        alert(`Obrigado por se inscrever, ${name}! Você receberá um e-mail de confirmação em ${email}.`);
+        
+        // Limpa o formulário
+        signupForm.reset();
     });
-});
 
-// Lidar com a submissão do formulário de avaliação
-document.getElementById('form-avaliacao').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o envio real do formulário
+    // Captura o formulário de avaliações
+    const ratingsForm = document.querySelector("#ratings form");
+    const ratingsSection = document.querySelector("#ratings");
 
-    const comentario = document.getElementById('comentario').value;
-    const nota = notaInput.value;
+    ratingsForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        
+        // Coleta os valores de avaliação e comentário
+        const rating = ratingsForm.querySelector("#rating").value;
+        const comment = ratingsForm.querySelector("textarea").value;
 
-    // Verificar se o comentário foi preenchido
-    if (comentario.trim() === '') {
-        alert('Por favor, insira um comentário.');
-        return; // Não permite a submissão se o comentário estiver vazio
-    }
-
-    // Criar um novo item de lista para a avaliação
-    const li = document.createElement('li');
-    li.textContent = `Avaliação: ${nota} Estrelas - Comentário: ${comentario}`;
-    document.getElementById('lista-avaliacoes').appendChild(li);
-
-    // Limpar o formulário
-    this.reset();
-    notaInput.value = '0'; // Resetar valor da nota
-    estrelas.forEach(e => e.style.color = 'gray'); // Resetar a cor das estrelas
-
-    // Feedback ao usuário
-    alert('Obrigado pela sua avaliação!'); // Mensagem de feedback
+        // Cria um novo elemento para mostrar a avaliação e o comentário
+        const newRating = document.createElement("div");
+        newRating.classList.add("user-rating");
+        newRating.innerHTML = `
+            <p><strong>Avaliação:</strong> ${rating} estrelas</p>
+            <p>${comment}</p>
+        `;
+        
+        // Adiciona a nova avaliação à seção de avaliações
+        ratingsSection.appendChild(newRating);
+        
+        // Limpa o formulário
+        ratingsForm.reset();
+    });
 });
