@@ -93,6 +93,37 @@ button {
 button:hover {
     background-color: #5b0463;
 }
+#contato {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+#botao-whatsapp {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#botao-whatsapp img {
+    margin-right: 0.5rem; /* Espaço entre a imagem e o texto */
+}
+
+#botao-whatsapp:hover {
+    background-color: #128C7E; /* Cor do botão ao passar o mouse */
+}
+
 
 /* Estilos para a seção de avaliações */
 #avaliacoes {
