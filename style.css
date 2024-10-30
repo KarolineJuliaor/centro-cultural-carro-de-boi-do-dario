@@ -51,6 +51,26 @@ h2 {
     color: #6a0572; /* Título das seções */
 }
 
+/* Estilos para as seções */
+#sobre,
+#atividades,
+#inscricao,
+#galeria,
+#doacoes,
+#blog,
+#eventos-especiais,
+#avaliacoes {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #ffffff; /* Fundo branco para seções */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #6a0572; /* Título das seções */
+}
+
 /* Tabela */
 table {
     width: 100%;
