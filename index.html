@@ -3,70 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Centro Cultural Carro de Boi do Dário</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
+
     <header>
-        <img src="logo.png" alt="Logo do Centro Cultural Carro de Boi do Dário">
         <h1>Centro Cultural Carro de Boi do Dário</h1>
+        <p>Promovendo a Cultura e Tradições Regionais</p>
     </header>
-    
+
     <nav>
-        <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#cultural-images">Imagens Culturais</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
+        <a href="#descricao">Descrição</a>
+        <a href="#atividades">Atividades Oferecidas</a>
+        <a href="#historia">História</a>
+        <a href="#contato">Contato</a>
     </nav>
 
-    <section id="about">
-        <h2>Sobre Nós</h2>
-        <p>Informações sobre o centro cultural.</p>
-    </section>
+    <div class="container">
+        <section id="descricao">
+            <h2>Descrição</h2>
+            <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção da cultura e das tradições regionais em Florianópolis, destacando atividades como o boi de mamão e a capoeira. Este projeto visa proporcionar um ambiente acolhedor para a comunidade participar de diversas atividades culturais e esportivas.</p>
+        </section>
 
-    <section id="cultural-images">
-        <h2>Imagens Culturais</h2>
-        <img src="cultural-image.jpg" alt="Imagem Cultural" class="cultural-image">
-    </section>
+        <section id="atividades">
+            <h2>Atividades Oferecidas</h2>
+            <div class="buttons-container">
+                <button onclick="showActivity('boi')">Boi de Mamão</button>
+                <button onclick="showActivity('capoeira')">Capoeira</button>
+                <button onclick="showActivity('taekwondo')">Taekwondo</button>
+                <button onclick="showActivity('jiujitsu')">Jiu-Jitsu</button>
+                <button onclick="showActivity('melhorIdade')">Melhor Idade</button>
+            </div>
 
-    <section id="contact">
-        <h2>Contato</h2>
-        <form action="#" method="POST">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+            <!-- Seções das atividades -->
+            <div id="boi" class="activity-content">
+                <h3>Boi de Mamão</h3>
+                <p>Atividade típica de Florianópolis, realizada aos sábados das 9h às 12h.</p>
+            </div>
+            <div id="capoeira" class="activity-content">
+                <h3>Capoeira</h3>
+                <p>Aulas de capoeira às terças e quintas, das 20h às 22h.</p>
+            </div>
+            <div id="taekwondo" class="activity-content">
+                <h3>Taekwondo</h3>
+                <p>Aulas de taekwondo às terças e quintas, das 9h às 10h30 e das 15h às 16h30.</p>
+            </div>
+            <div id="jiujitsu" class="activity-content">
+                <h3>Jiu-Jitsu</h3>
+                <p>Aulas de jiu-jitsu às segundas e quartas, das 18h30 às 19h30.</p>
+            </div>
+            <div id="melhorIdade" class="activity-content">
+                <h3>Melhor Idade</h3>
+                <p>Encontros da Melhor Idade nas quartas-feiras, das 13h30 às 17h.</p>
+            </div>
+        </section>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+        <section id="historia">
+            <h2>História do Centro Cultural</h2>
+            <p>O Centro Cultural Carro de Boi do Dário foi fundado com o objetivo de preservar e promover a cultura local. Desde sua criação, tornou-se um ponto de encontro para a comunidade, oferecendo atividades como o boi de mamão, capoeira, e muitas outras tradições.</p>
+        </section>
 
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-
-        <!-- Botão do WhatsApp -->
-        <button id="whatsapp-button">
-            <img src="whatsapp-logo.png" alt="WhatsApp"> WhatsApp
-        </button>
-
-        <!-- Links para Redes Sociais -->
-        <div class="social-links">
-            <a href="https://www.instagram.com/seu_perfil" target="_blank">
-                <img src="instagram-logo.png" alt="Instagram" class="social-icon">
-            </a>
-            <a href="https://www.youtube.com/seu_canal" target="_blank">
-                <img src="youtube-logo.png" alt="YouTube" class="social-icon">
-            </a>
-        </div>
-
-        <!-- Avaliações do Google -->
-        <h3>Avaliações do Google</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dxxxxx!2d-xx.xxxxx!3dxx.xxxxx!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xxxxx!2sCentro%20Cultural%20Carro%20de%20Boi%20do%20D%C3%A1rio!5e0!3m2!1spt-BR!2sbr!4vxxxxxxxx!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <p>Endereço: Rod. João Gualberto Soares, 4360 - Ingleses do Rio Vermelho, Florianópolis - SC, 88060-000</p>
+                <p>Telefone: (48) 99932-3570</p>
+                <p>Instagram: <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" style="color: white; text-decoration: underline;">@centroculturalcarrodeboidodari</a></p>
+                <p>WhatsApp: <a href="https://api.whatsapp.com/send?phone=5548999323570" style="color: white; text-decoration: underline;">Clique para conversar!</a></p>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário</p>
+        &copy; 2024 Centro Cultural Carro de Boi do Dário
     </footer>
+
+    <script>
+        function showActivity(activityId) {
+            document.querySelectorAll('.activity-content').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            const activitySection = document.getElementById(activityId);
+            if (activitySection) {
+                activitySection.style.display = 'block';
+                activitySection.classList.add('fade-in');
+            } else {
+                alert('Atividade não encontrada!');
+            }
+            const sectionPosition = activitySection.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: sectionPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        const backToTopButton = document.createElement('button');
+        backToTopButton.textContent = 'Voltar ao Topo';
+        backToTopButton.className = 'back-to-top';
+        backToTopButton.onclick = scrollToTop;
+        document.body.appendChild(backToTopButton);
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #4caf50; /* Verde pastel */
+                color: white;
+                border: none;
+                padding: 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                display: none;
+                transition: background-color 0.3s;
+            }
+            
+            .back-to-top:hover {
+                background-color: #ff5733; /* Laranja suave */
+            }
+        `;
+        document.head.appendChild(style);
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        const styleFadeIn = document.createElement('style');
+        styleFadeIn.innerHTML = `
+            .fade-in {
+                animation: fadeIn 0.5s forwards;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(styleFadeIn);
+    </script>
 </body>
 </html>
