@@ -11,13 +11,19 @@ h1, h2, h3 {
     color: #007bff; /* Cor do título */
 }
 
-/* Estilos para a seção de avaliações */
-#avaliacoes {
-    margin-top: 2rem;
+/* Estilos para seções */
+section {
+    margin: 2rem auto;
     padding: 1.5rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Largura máxima para manter o conteúdo centralizado */
+}
+
+/* Estilos para a seção de avaliações */
+#avaliacoes {
+    margin-top: 2rem;
 }
 
 #estrelas {
@@ -53,6 +59,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
 }
 
 button:hover {
@@ -60,14 +67,6 @@ button:hover {
 }
 
 /* Estilos para a seção de informações */
-#informacoes {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 #informacoes ul {
     list-style: none;
     padding: 0;
@@ -101,10 +100,6 @@ button:hover {
 /* Estilos para a seção de contato */
 #contato {
     margin-top: 2rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #botao-whatsapp {
@@ -129,14 +124,21 @@ button:hover {
 }
 
 /* Estilos adicionais para a seção sobre o Centro Cultural */
-#sobre {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 #sobre p {
     margin: 0.5rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+
+    button, #botao-whatsapp {
+        width: 100%; /* Botões em tela pequena ocupam 100% da largura */
+    }
+
+    .estrela {
+        font-size: 1.5rem; /* Tamanho das estrelas em telas menores */
+    }
 }
