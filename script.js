@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const estrelas = document.querySelectorAll(".estrela");
     const notaInput = document.querySelector("#nota");
-    const nomeInput = document.querySelector("#nome");
+    const nomeInput = document.querySelector("#nome-avaliacao");
     const comentarioInput = document.querySelector("#comentario");
     const formAvaliacao = document.querySelector("#form-avaliacao");
     const listaAvaliacoes = document.querySelector("#lista-avaliacoes");
@@ -13,9 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
             notaInput.value = valor;
             atualizarEstrelas(valor);
         });
+
         estrela.addEventListener("mouseover", function() {
             atualizarEstrelas(index + 1);
         });
+
         estrela.addEventListener("mouseout", function() {
             atualizarEstrelas(notaInput.value);
         });
