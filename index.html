@@ -1,87 +1,157 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural Carro de Boi do Dário</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
         <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <p>Um espaço para celebrar o folclore e as tradições do Rio Vermelho, Florianópolis</p>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#inscricao">Inscrição</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#doacoes">Doações</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#eventos">Eventos Especiais</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>Sobre o Centro Cultural</h2>
-        <p>O Centro Cultural Carro de Boi do Dário valoriza o folclore e as tradições regionais, destacando o boi de mamão e a capoeira. Oferecemos projetos como aulas de jiu-jitsu, taekwondo, e encontros da melhor idade, incentivando a participação da comunidade.</p>
-    </section>
+    <main>
+        <section id="sobre">
+            <h2>Sobre o Centro Cultural</h2>
+            <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, é um espaço vibrante e acolhedor que valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e a capoeira.</p>
+            <p>Além disso, o centro oferece diversos projetos, como aulas de jiu-jitsu, taekwondo e encontros da melhor idade, incentivando a participação de toda a comunidade.</p>
+            <p>É um lugar onde o passado e o presente se encontram, promovendo alegria e conexão para todas as idades.</p>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
 
-    <!-- Activities Section -->
-    <section id="activities">
-        <h2>Atividades e Horários</h2>
-        <p>Aqui, você encontra uma lista das atividades culturais e esportivas com horários, descrição e os professores responsáveis.</p>
-        <!-- Adicione conteúdo dinâmico das atividades aqui -->
-    </section>
+        <section id="atividades">
+            <h2>Atividades e Horários</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atividade</th>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                        <th>Professor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jiu-Jitsu</td>
+                        <td>Segunda e Quarta</td>
+                        <td>18:30 - 19:30</td>
+                        <td>Professor A</td>
+                    </tr>
+                    <tr>
+                        <td>Taekwondo</td>
+                        <td>Terça e Quinta</td>
+                        <td>9:00 - 10:30 / 15:00 - 16:30</td>
+                        <td>Professor B</td>
+                    </tr>
+                    <tr>
+                        <td>Capoeira</td>
+                        <td>Terça e Quinta</td>
+                        <td>20:00 - 22:00</td>
+                        <td>Professor C</td>
+                    </tr>
+                    <tr>
+                        <td>Melhor Idade</td>
+                        <td>Quarta</td>
+                        <td>13:30 - 17:00</td>
+                        <td>Professor D</td>
+                    </tr>
+                    <tr>
+                        <td>Boi de Mamão</td>
+                        <td>Sábado</td>
+                        <td>9:00 - 12:00</td>
+                        <td>Professor E</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
 
-    <!-- Signup Section -->
-    <section id="signup">
-        <h2>Inscreva-se em Nossas Atividades</h2>
-        <p>Cadastre-se diretamente pelo site para participar das atividades. Contato direto com os professores!</p>
-        <!-- Formulário de inscrição -->
-        <form action="#" method="POST">
-            <input type="text" placeholder="Nome Completo" required>
-            <input type="email" placeholder="Email" required>
-            <button type="submit">Inscrever-se</button>
-        </form>
-    </section>
+        <section id="inscricao">
+            <h2>Inscrição nas Atividades</h2>
+            <p>Preencha o formulário abaixo para se inscrever nas atividades:</p>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="atividade">Atividade:</label>
+                <select id="atividade" required>
+                    <option value="jiu-jitsu">Jiu-Jitsu</option>
+                    <option value="taekwondo">Taekwondo</option>
+                    <option value="capoeira">Capoeira</option>
+                    <option value="melhor-idade">Melhor Idade</option>
+                    <option value="boi-de-mamao">Boi de Mamão</option>
+                </select>
+                <button type="submit">Inscrever-se</button>
+            </form>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Galeria Cultural</h2>
-        <p>Fotos e vídeos das atividades, além de uma linha do tempo com a história do centro e do bairro.</p>
-        <!-- Conteúdo da galeria -->
-    </section>
+        <section id="galeria">
+            <h2>Galeria Cultural</h2>
+            <p>Confira as fotos e vídeos das nossas atividades:</p>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
 
-    <!-- Donation Section -->
-    <section id="donations">
-        <h2>Doações e Voluntariado</h2>
-        <p>Apoie nosso centro através de doações via PIX ou trabalho voluntário. Juntos fazemos a diferença!</p>
-        <!-- Opções de doação -->
-    </section>
+        <section id="doacoes">
+            <h2>Doações e Voluntariado</h2>
+            <p>Apoie o Centro Cultural Carro de Boi do Dário através de doações ou voluntariado. Entre em contato para saber mais!</p>
+            <button>Fazer Doação</button>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
 
-    <!-- Blog Section -->
-    <section id="blog">
-        <h2>Notícias e Atualizações</h2>
-        <p>Acompanhe as novidades e veja informações sobre eventos e atividades futuras.</p>
-    </section>
+        <section id="blog">
+            <h2>Blog de Atualizações</h2>
+            <p>Acompanhe as novidades e eventos do nosso centro cultural aqui.</p>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
 
-    <!-- Ratings Section -->
-    <section id="ratings">
-        <h2>Avaliações</h2>
-        <p>Deixe sua avaliação com até 5 estrelas e um comentário!</p>
-        <form action="#" method="POST">
-            <label for="rating">Avaliação:</label>
-            <input type="number" id="rating" min="1" max="5" required>
-            <textarea placeholder="Deixe um comentário" required></textarea>
-            <button type="submit">Enviar Avaliação</button>
-        </form>
-    </section>
+        <section id="eventos">
+            <h2>Agenda de Eventos Especiais</h2>
+            <p>Fique por dentro dos eventos culturais e apresentações que estão por vir!</p>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
 
-    <!-- Social Links -->
+        <section id="avaliacoes">
+            <h2>Avaliações</h2>
+            <form id="form-avaliacao">
+                <label for="nota">Avalie o Centro Cultural:</label>
+                <div id="estrelas">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                </div>
+                <input type="hidden" id="nota" value="0">
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" required></textarea>
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+            <div id="avaliacoes-lista">
+                <h3>Avaliações Recebidas</h3>
+                <ul id="lista-avaliacoes"></ul>
+            </div>
+            <p><strong>Conteúdo em breve...</strong></p> <!-- Lacuna -->
+        </section>
+    </main>
+
     <footer>
-        <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">
-            <img src="instagram.png" alt="Instagram">
-        </a>
-        <a href="https://wa.me/5548999323570" target="_blank">
-            <img src="whatsapp.png" alt="WhatsApp">
-        </a>
+        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário</p>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
