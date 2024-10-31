@@ -9,24 +9,28 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #704214; /* Marrom amadeirado */
+    background-color: #8b5a2b; /* Marrom escuro para destaque */
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-header img {
-    max-width: 140px; /* Ajuste da largura da logo */
+header .logo {
+    max-width: 120px; /* Tamanho máximo da logo */
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    border-radius: 50%; /* Borda arredondada para efeito de logo */
 }
 
 header h1 {
-    color: #fdf5e6; /* Texto claro */
+    color: #fdf5e6; /* Texto claro no fundo marrom */
     font-size: 2em;
     font-weight: bold;
-    margin: 0;
+    margin-top: 10px;
+}
+
+.descricao {
+    color: #fdf5e6;
+    font-size: 1.2em;
+    margin-top: 5px;
 }
 
 /* Navegação */
