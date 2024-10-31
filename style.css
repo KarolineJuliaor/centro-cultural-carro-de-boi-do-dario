@@ -1,26 +1,38 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #fffbf0;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Cabeçalho */
 header {
     background: linear-gradient(to right, #ff9a9e, #fad0c4);
     padding: 1rem;
     text-align: center;
 }
 
+header img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+header h1 {
+    color: #6a0572;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
@@ -30,105 +42,52 @@ nav ul li a {
     font-weight: bold;
 }
 
-h1 {
-    color: #6a0572;
-}
-
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 h2 {
     color: #6a0572;
 }
 
-/* Tabela de atividades */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    border: 1px solid #e2e2e2;
 }
 
 table th {
     background-color: #f9c8d8;
     color: #6a0572;
-    padding: 0.75rem;
 }
 
-table td {
-    border: 1px solid #e2e2e2;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-/* Formulários */
-form {
+/* Galeria */
+#gallery-display,
+.event-images {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-label {
-    margin-top: 1rem;
-    color: #6a0572;
-}
-
-input, select, textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-}
-
-button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background-color: #6a0572;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #5b0463;
-}
-
-/* Estilos de galeria */
-#galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#galeria input[type="file"] {
-    margin-top: 1rem;
-}
-
-.galeria-imagem {
-    margin-top: 0.5rem;
-    max-width: 100%;
+#gallery-display img,
+.event-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos de avaliações */
-#avaliacoes {
-    margin-top: 2rem;
+/* Avaliações */
+#estrelas {
+    cursor: pointer;
+    display: flex;
 }
 
 .estrela {
     font-size: 2rem;
     color: #ffcc00;
-    margin-right: 5px;
-    cursor: pointer;
 }
 
 #avaliacoes-lista ul {
@@ -139,31 +98,11 @@ button:hover {
 #avaliacoes-lista li {
     padding: 0.5rem;
     border-bottom: 1px solid #e2e2e2;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Eventos e Festividades */
-.evento {
-    margin-bottom: 1.5rem;
-}
-
-.evento h3 {
-    color: #6a0572;
-}
-
-.evento img {
-    margin-top: 0.5rem;
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Rodapé */
+/* Contato */
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #f1f1f1;
-    color: #6a0572;
 }
-
