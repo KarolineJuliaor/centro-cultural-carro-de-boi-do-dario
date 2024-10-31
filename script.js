@@ -55,34 +55,59 @@ function loadImages() {
 }
 
 // Avaliação
+const estrelas = document.querySelectorAll('.estrela');
+let notaSelecionada = 0;
+
+estrelas.forEach(estrela => {
+    estrela.addEventListener('click', () => {
+        notaSelecionada = estrela.getAttribute('data-value');
+        atualizarEstrelas(notaSelecionada);
+    });
+});
+
+function atualizarEstrelas(nota) {
+    estrelas.forEach(estrela => {
+        if (estrela.getAttribute('data-value') <= nota) {
+            estrela.classList.add('selecionada');
+            estrela.innerHTML = '&#9733;'; // Estrela preenchida
+        } else {
+            estrela.classList.remove('selecionada');
+            estrela.innerHTML = '&#9734;'; // Estrela vazia
+        }
+    });
+}
+
 document.getElementById('form-avaliacao').addEventListener('submit', function(event) {
     event.preventDefault();
     const nome = document.getElementById('nome').value;
     const comentario = document.getElementById('comentario').value;
-    addReview(nome, comentario);
-    saveReviewToLocalStorage(nome, comentario);
+
+    // Adicionar a avaliação
+    addReview(nome, comentario, notaSelecionada);
+    saveReviewToLocalStorage(nome, comentario, notaSelecionada);
     this.reset();
+    atualizarEstrelas(0); // Resetar a avaliação
 });
 
 // Função para adicionar uma nova avaliação
-function addReview(nome, comentario) {
+function addReview(nome, comentario, nota) {
     const lista = document.getElementById('avaliacoes-lista').querySelector('ul');
     const li = document.createElement('li');
-    li.innerHTML = `<strong>${nome}:</strong> ${comentario}`;
+    li.innerHTML = `<strong>${nome}:</strong> ${comentario} (${nota} estrelas)`;
     lista.appendChild(li);
 }
 
 // Salvar avaliações no localStorage
-function saveReviewToLocalStorage(nome, comentario) {
+function saveReviewToLocalStorage(nome, comentario, nota) {
     let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.push({ nome, comentario });
+    reviews.push({ nome, comentario, nota });
     localStorage.setItem('reviews', JSON.stringify(reviews));
 }
 
 // Carregar avaliações salvas ao recarregar a página
 function loadReviews() {
     const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.forEach(review => addReview(review.nome, review.comentario));
+    reviews.forEach(review => addReview(review.nome, review.comentario, review.nota));
 }
 
 // Carregar todas as imagens e avaliações quando a página for aberta
