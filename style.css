@@ -4,14 +4,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: url('https://lh3.googleusercontent.com/p/AF1QipMKhWCI2kBaUXoPGqzmErHYULjj8c7cjp5FXAWx=s680-w680-h510') no-repeat center center fixed; /* Imagem de fundo */
-    background-size: cover; /* Para cobrir toda a área */
+    background-color: #fffbf0; /* Cor de fundo clara com um tom pastel */
     color: #333;
 }
 
 /* Outros estilos */
 header {
-    background: rgba(255, 154, 158, 0.7); /* Fundo com transparência, se preferir um tom mais suave */
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Mantendo o fundo gradiente anterior */
     padding: 1rem;
     text-align: center;
 }
@@ -33,6 +32,7 @@ nav ul li a {
 }
 
 /* Continue com os outros estilos como antes... */
+
 
 
 h2 {
