@@ -50,12 +50,12 @@
                 <tbody>
                     <tr>
                         <td>Capoeira</td>
-                        <td>Ter/Qui 20:00 - 22:00</td>
+                        <td>Terça e Quinta 20:00 - 22:00</td>
                         <td>Prof. João Silva</td>
                     </tr>
                     <tr>
                         <td>Jiu-Jitsu</td>
-                        <td>Seg/Qua 18:30 - 19:30</td>
+                        <td>Segunda e Quarta 18:30 - 19:30</td>
                         <td>Prof. Ana Martins</td>
                     </tr>
                     <tr>
@@ -70,25 +70,39 @@
         <!-- Inscrição nas Atividades -->
         <section id="inscricao">
             <h2>Inscrição nas Atividades</h2>
-            <form>
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="atividade">Atividade:</label>
-                <select id="atividade" name="atividade" required>
-                    <option value="jiu-jitsu">Jiu-Jitsu</option>
-                    <option value="taekwondo">Taekwondo</option>
-                    <option value="capoeira">Capoeira</option>
-                </select>
-                <button type="submit">Inscrever-se</button>
-            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Oficina</th>
+                        <th>Professor</th>
+                        <th>Contato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Capoeira</td>
+                        <td>Prof. João Silva</td>
+                        <td><a href="https://wa.me/55489991234567">Contato WhatsApp</a></td>
+                    </tr>
+                    <tr>
+                        <td>Jiu-Jitsu</td>
+                        <td>Prof. Ana Martins</td>
+                        <td><a href="https://wa.me/55489997654321">Contato WhatsApp</a></td>
+                    </tr>
+                    <tr>
+                        <td>Boi de Mamão</td>
+                        <td>Prof. Carlos Souza</td>
+                        <td><a href="https://wa.me/55489999876543">Contato WhatsApp</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <!-- Galeria Cultural e História -->
         <section id="galeria">
             <h2>Galeria Cultural</h2>
-            <p>Veja imagens e vídeos das atividades culturais.</p>
+            <input type="file" id="file-input" accept="image/*">
+            <div id="gallery-display"></div>
         </section>
 
         <!-- Doações e Voluntariado -->
@@ -101,7 +115,30 @@
         <!-- Eventos e Festividades -->
         <section id="eventos">
             <h2>Eventos e Festividades</h2>
-            <p>Confira eventos passados e futuros no centro cultural, como apresentações de boi de mamão.</p>
+            <div class="evento">
+                <h3>Festa Junina</h3>
+                <p>15 de Junho de 2023</p>
+                <input type="file" class="file-input" accept="image/*" onchange="addImage(this)">
+                <div class="event-images"></div>
+            </div>
+            <div class="evento">
+                <h3>Vostelaço</h3>
+                <p>16 de Março</p>
+                <input type="file" class="file-input" accept="image/*" onchange="addImage(this)">
+                <div class="event-images"></div>
+            </div>
+            <div class="evento">
+                <h3>Festa de Dia das Bruxas</h3>
+                <p>26 de Outubro</p>
+                <input type="file" class="file-input" accept="image/*" onchange="addImage(this)">
+                <div class="event-images"></div>
+            </div>
+            <div class="evento">
+                <h3>Feijoada com Samba</h3>
+                <p>7 de Setembro</p>
+                <input type="file" class="file-input" accept="image/*" onchange="addImage(this)">
+                <div class="event-images"></div>
+            </div>
         </section>
 
         <!-- Avaliações -->
@@ -115,7 +152,9 @@
                 <span class="estrela">&#9733;</span>
             </div>
             <form id="form-avaliacao">
-                <label for="comentario">Deixe seu comentário:</label>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="comentario">Comentário:</label>
                 <textarea id="comentario" name="comentario" required></textarea>
                 <button type="submit">Enviar Avaliação</button>
             </form>
