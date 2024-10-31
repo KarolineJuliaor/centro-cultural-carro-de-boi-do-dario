@@ -1,177 +1,105 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    background-color: #f5f1e6; /* Fundo suave */
+    color: #4b3b28; /* Cor de texto marrom escuro */
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Fundo claro */
-    color: #333;
 }
 
+/* Cabeçalho */
 header {
-    background: linear-gradient(to right, #8b5a2b, #f0e68c); /* Gradiente amadeirado */
-    padding: 1rem;
+    background-color: #8b5a2b; /* Marrom escuro para destacar */
+    padding: 20px;
     text-align: center;
 }
 
+header h1 {
+    color: #fdf5e6; /* Texto claro no fundo marrom */
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Navegação */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 1rem;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Branco para contraste */
+    color: #fdf5e6; /* Links em branco */
     font-weight: bold;
 }
 
-h1 {
-    color: #4d3b24; /* Cor marrom escuro */
-}
-
-/* Seções */
-main {
-    padding: 2rem;
-}
-
+/* Seções principais */
 section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #ffffff; /* Fundo branco para seções */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #e8dcc3; /* Fundo amadeirado claro */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
-h2 {
-    color: #4d3b24; /* Títulos com cor marrom escuro */
+section h2 {
+    color: #4b3b28; /* Título em marrom escuro */
+    border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
 }
 
-/* Tabela */
-table {
+/* Galeria de Imagens */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
     width: 100%;
-    border-collapse: collapse;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-table th {
-    background-color: #d2b48c; /* Cabeçalho da tabela em tom de madeira */
-    color: #4d3b24; /* Cor do texto */
-    padding: 0.75rem;
-}
-
-table td {
-    border: 1px solid #e2e2e2; /* Borda suave */
-    padding: 0.5rem;
-    text-align: left;
-}
-
-/* Formulários */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 1rem;
-    color: #4d3b24; /* Cor dos rótulos */
-}
-
-input, select, textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-}
-
+/* Botões */
 button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background-color: #4d3b24; /* Botão principal em marrom escuro */
-    color: white;
+    background-color: #8b5a2b;
+    color: #fdf5e6;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #3e2a18; /* Efeito de hover do botão */
-}
-
-/* Contato */
-#contato {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #eaf6f6; /* Fundo suave para a seção de contato */
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-}
-
-/* Botão WhatsApp */
-#botao-whatsapp {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-#botao-whatsapp img {
-    margin-right: 0.5rem; /* Espaço entre a imagem e o texto */
-}
-
-#botao-whatsapp:hover {
-    background-color: #128C7E; /* Cor do botão ao passar o mouse */
-}
-
-/* Estilos para a seção de avaliações */
-#avaliacoes {
-    margin-top: 2rem;
-}
-
-#avaliacoes #estrelas {
-    display: flex;
-    cursor: pointer;
-}
-
-.estrela {
-    font-size: 2rem; /* Tamanho das estrelas */
-    color: #ffcc00; /* Cor das estrelas */
-    margin-right: 5px; /* Espaçamento entre as estrelas */
-}
-
-#avaliacoes-lista {
-    margin-top: 1rem;
-}
-
-#avaliacoes-lista ul {
-    list-style: none;
-    padding: 0;
-}
-
-#avaliacoes-lista li {
-    padding: 0.5rem;
-    border-bottom: 1px solid #e2e2e2;
+    background-color: #6e4820;
 }
 
 /* Rodapé */
 footer {
+    background-color: #8b5a2b;
+    color: #fdf5e6;
     text-align: center;
-    padding: 1rem;
-    background-color: #f1f1f1;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    color: #4d3b24; /* Cor do texto do rodapé */
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Redes Sociais */
+#social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    filter: brightness(0) invert(1); /* Ícones brancos */
+}
+
+#social-icons a {
+    color: #fdf5e6;
+    text-decoration: none;
 }
