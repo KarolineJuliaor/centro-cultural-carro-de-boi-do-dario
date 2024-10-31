@@ -76,13 +76,22 @@ table th {
 
 /* Avaliações */
 #estrelas {
-    cursor: pointer;
     display: flex;
+    cursor: pointer;
 }
 
 .estrela {
-    font-size: 2rem;
-    color: #ffcc00;
+    font-size: 2rem; /* Tamanho das estrelas */
+    color: #ffcc00; /* Cor das estrelas quando não selecionadas */
+    margin-right: 5px; /* Espaçamento entre as estrelas */
+}
+
+.estrela.selecionada {
+    color: #ffcc00; /* Cor das estrelas quando selecionadas */
+}
+
+form {
+    margin-top: 1rem;
 }
 
 #avaliacoes-lista ul {
@@ -91,9 +100,11 @@ table th {
 }
 
 #avaliacoes-lista li {
-    padding: 0.5rem;
-    border-bottom: 1px solid #e2e2e2;
+    margin-top: 10px;
+    border-bottom: 1px solid #e2e2e2; /* Separador entre avaliações */
+    padding: 10px 0;
 }
+
 
 /* Contato */
 footer {
