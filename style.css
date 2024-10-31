@@ -1,17 +1,32 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #fafafa;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #fffbf0;
-    color: #333;
 }
 
 header {
     background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    padding: 1rem;
     text-align: center;
+    padding: 2rem 1rem;
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    color: #5a006e;
+    font-size: 2.5rem;
+}
+
+.descricao {
+    color: #5a006e;
+    font-size: 1.2rem;
 }
 
 nav ul {
@@ -19,6 +34,9 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
 
 nav ul li {
@@ -27,12 +45,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #6a0572;
+    color: #5a006e;
     font-weight: bold;
-}
-
-h1, h2 {
-    color: #6a0572;
 }
 
 main {
@@ -41,36 +55,31 @@ main {
 
 section {
     margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #ffffff;
-    border-radius: 12px;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input, select, textarea {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+h2 {
+    color: #5a006e;
 }
 
 button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background-color: #6a0572;
-    color: white;
+    background-color: #5a006e;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #480053;
 }
 
 #botao-whatsapp img, footer a img {
-    height: 24px;
-    width: 24px;
+    width: 20px;
     margin-right: 8px;
 }
