@@ -104,6 +104,32 @@ section h2 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
 }
 
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as células */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #8b5a2b; /* Borda marrom escura */
+}
+
+th {
+    background-color: #e8dcc3; /* Fundo claro para cabeçalho */
+    color: #4b3b28; /* Texto em marrom escuro */
+}
+
+tr:nth-child(even) {
+    background-color: #f5f1e6; /* Fundo suave para linhas pares */
+}
+
+tr:hover {
+    background-color: #dcdcdc; /* Efeito de hover para as linhas */
+}
+
 /* Botões */
 button {
     background-color: #8b5a2b;
