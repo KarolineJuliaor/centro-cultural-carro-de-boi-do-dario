@@ -1,9 +1,15 @@
+// Função para salvar avaliações
 document.addEventListener("DOMContentLoaded", function () {
     const formAvaliacao = document.getElementById("form-avaliacao");
+    const nomeInput = document.getElementById("nome");
     const comentarioInput = document.getElementById("comentario");
     const avaliacoesLista = document.getElementById("avaliacoes-lista").querySelector("ul");
 
-    formAvaliacao.addEventListener("submit", function (e) {
+    const savedReviews = JSON.parse(localStorage.getItem("avaliacoes")) || [];
+    savedReviews.forEach(({ nome, comentario }) => addReview(nome, comentario));
+
+    formA
+valiacao.addEventListener("submit", function (e) {
         e.preventDefault();
 
         const comentario = comentarioInput.value.trim();
