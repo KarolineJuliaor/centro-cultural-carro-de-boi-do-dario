@@ -1,33 +1,67 @@
-// Função para salvar avaliações
 document.addEventListener("DOMContentLoaded", function () {
+    // Avaliações
     const formAvaliacao = document.getElementById("form-avaliacao");
-    const nomeInput = document.getElementById("nome");
     const comentarioInput = document.getElementById("comentario");
+    const nomeInput = document.getElementById("nome");
     const avaliacoesLista = document.getElementById("avaliacoes-lista").querySelector("ul");
+    
+    // Carregar avaliações do localStorage
+    const avaliacoesSalvas = JSON.parse(localStorage.getItem("avaliacoes")) || [];
+    avaliacoesSalvas.forEach(avaliacao => {
+        adicionarAvaliacao(avaliacao.nome, avaliacao.comentario);
+    });
 
-    const savedReviews = JSON.parse(localStorage.getItem("avaliacoes")) || [];
-    savedReviews.forEach(({ nome, comentario }) => addReview(nome, comentario));
+    // Função para adicionar avaliação
+    function adicionarAvaliacao(nome, comentario) {
+        const novoComentario = document.createElement("li");
+        novoComentario.innerHTML = `<strong>${nome}:</strong> ${comentario}`;
+        avaliacoesLista.appendChild(novoComentario);
+    }
 
-    formA
-valiacao.addEventListener("submit", function (e) {
+    // Enviar avaliação
+    formAvaliacao.addEventListener("submit", function (e) {
         e.preventDefault();
-
+        
+        const nome = nomeInput.value.trim();
         const comentario = comentarioInput.value.trim();
-        if (comentario) {
-            const novoComentario = document.createElement("li");
-            novoComentario.textContent = comentario;
-            avaliacoesLista.appendChild(novoComentario);
 
+        if (nome && comentario) {
+            adicionarAvaliacao(nome, comentario);
+            avaliacoesSalvas.push({ nome, comentario });
+            localStorage.setItem("avaliacoes", JSON.stringify(avaliacoesSalvas));
+            
+            nomeInput.value = "";
             comentarioInput.value = "";
         }
     });
 
-    const estrelas = document.querySelectorAll(".estrela");
-    estrelas.forEach((estrela, index) => {
-        estrela.addEventListener("click", () => {
-            estrelas.forEach((el, i) => {
-                el.style.color = i <= index ? "#ffcc00" : "#ccc";
-            });
-        });
+    // Galeria - Carregar imagens salvas
+    const galeriaContainer = document.getElementById("galeria-imagens");
+    const fotosSalvas = JSON.parse(localStorage.getItem("galeriaFotos")) || [];
+
+    fotosSalvas.forEach(src => {
+        const imgElement = document.createElement("img");
+        imgElement.src = src;
+        imgElement.classList.add("galeria-imagem");
+        galeriaContainer.appendChild(imgElement);
+    });
+
+    // Adicionar novas imagens
+    document.getElementById("galeria-input").addEventListener("change", function (e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                const src = reader.result;
+                const imgElement = document.createElement("img");
+                imgElement.src = src;
+                imgElement.classList.add("galeria-imagem");
+                galeriaContainer.appendChild(imgElement);
+
+                fotosSalvas.push(src);
+                localStorage.setItem("galeriaFotos", JSON.stringify(fotosSalvas));
+            };
+            reader.readAsDataURL(file);
+        }
     });
 });
