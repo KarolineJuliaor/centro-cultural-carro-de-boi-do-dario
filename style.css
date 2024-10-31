@@ -103,3 +103,29 @@ footer {
     color: #fdf5e6;
     text-decoration: none;
 }
+#avaliacoes {
+    background-color: #e8dcc3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.avaliacao-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.estrela {
+    color: #ffcc00; /* Cor das estrelas */
+    font-size: 1.5em;
+}
+
+.avaliacao-nome {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.avaliacao-comentario {
+    font-style: italic;
+}
+
