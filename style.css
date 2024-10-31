@@ -4,13 +4,12 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fffbf0; /* Cor de fundo clara com um tom pastel */
+    background-color: #fffbf0;
     color: #333;
 }
 
-/* Outros estilos */
 header {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Mantendo o fundo gradiente anterior */
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
     padding: 1rem;
     text-align: center;
 }
@@ -27,13 +26,25 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Branco para contraste */
+    color: #ffffff;
     font-weight: bold;
 }
 
-/* Continue com os outros estilos como antes... */
+h1 {
+    color: #6a0572;
+}
 
+main {
+    padding: 2rem;
+}
 
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 h2 {
     color: #6a0572;
