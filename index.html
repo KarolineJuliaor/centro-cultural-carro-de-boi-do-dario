@@ -9,19 +9,20 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <img src="https://lh5.googleusercontent.com/p/AF1QipOKO4peeH9odRhRD9q_n0yBeubKKXHajSJVz8Cs=w600-h600-k-no" alt="Logo Centro Cultural">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipOKO4peeH9odRhRD9q_n0yBeubKKXHajSJVz8Cs=w200-h200" alt="Logo Centro Cultural">
         <h1>Centro Cultural Carro de Boi do Dário</h1>
+        <p class="descricao">Promovendo Cultura e Tradições no Rio Vermelho, Florianópolis</p>
     </header>
 
     <!-- Menu de navegação -->
     <nav>
         <ul>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#atividades">Atividades e Horários</a></li>
-            <li><a href="#inscricao">Inscrição nas Atividades</a></li>
-            <li><a href="#galeria">Galeria Cultural e História</a></li>
-            <li><a href="#doacoes">Doações e Voluntariado</a></li>
-            <li><a href="#eventos">Eventos e Festividades</a></li>
+            <li><a href="#atividades">Atividades</a></li>
+            <li><a href="#inscricao">Inscrição</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#doacoes">Doações</a></li>
+            <li><a href="#eventos">Eventos</a></li>
             <li><a href="#avaliacoes">Avaliações</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
@@ -32,50 +33,75 @@
         <!-- Sobre o Centro Cultural -->
         <section id="sobre">
             <h2>Sobre o Centro Cultural</h2>
-            <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, valoriza o folclore e tradições regionais, com destaque para o boi de mamão e capoeira. É um espaço onde o passado e o presente se encontram, promovendo conexão para todas as idades.</p>
+            <p>O Centro Cultural Carro de Boi do Dário valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e capoeira. É um espaço de integração comunitária que promove alegria para todas as idades.</p>
         </section>
 
         <!-- Atividades e Horários -->
         <section id="atividades">
             <h2>Atividades e Horários</h2>
-            <p>Capoeira, Jiu-Jitsu, Taekwondo, e mais! Horários e detalhes dos professores responsáveis.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atividade</th>
+                        <th>Horário</th>
+                        <th>Professor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Capoeira</td>
+                        <td>Ter/Qui 20:00 - 22:00</td>
+                        <td>Prof. João Silva</td>
+                    </tr>
+                    <tr>
+                        <td>Jiu-Jitsu</td>
+                        <td>Seg/Qua 18:30 - 19:30</td>
+                        <td>Prof. Ana Martins</td>
+                    </tr>
+                    <tr>
+                        <td>Boi de Mamão</td>
+                        <td>Sábado 9:00 - 12:00</td>
+                        <td>Prof. Carlos Souza</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <!-- Inscrição nas Atividades -->
         <section id="inscricao">
             <h2>Inscrição nas Atividades</h2>
             <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
                 <label for="atividade">Atividade:</label>
-                <select id="atividade" name="atividade">
+                <select id="atividade" name="atividade" required>
                     <option value="jiu-jitsu">Jiu-Jitsu</option>
                     <option value="taekwondo">Taekwondo</option>
                     <option value="capoeira">Capoeira</option>
                 </select>
-                <button type="submit">Enviar Inscrição</button>
+                <button type="submit">Inscrever-se</button>
             </form>
         </section>
 
         <!-- Galeria Cultural e História -->
         <section id="galeria">
-            <h2>Galeria Cultural e História</h2>
-            <p>Confira fotos e vídeos das atividades culturais.</p>
+            <h2>Galeria Cultural</h2>
+            <p>Veja imagens e vídeos das atividades culturais.</p>
         </section>
 
         <!-- Doações e Voluntariado -->
         <section id="doacoes">
             <h2>Doações e Voluntariado</h2>
-            <p>Ajude o centro com uma doação via PIX. Chave: contato@centrocultural.com.br</p>
-            <button>Doar via PIX</button>
+            <p>Ajude o centro com uma doação via PIX.</p>
+            <button onclick="window.location.href='https://www.bancodopix.com.br'">Doar via PIX</button>
         </section>
 
         <!-- Eventos e Festividades -->
         <section id="eventos">
             <h2>Eventos e Festividades</h2>
-            <p>Fique por dentro dos eventos futuros e passados, incluindo apresentações de boi de mamão.</p>
+            <p>Confira eventos passados e futuros no centro cultural, como apresentações de boi de mamão.</p>
         </section>
 
         <!-- Avaliações -->
@@ -88,9 +114,9 @@
                 <span class="estrela">&#9733;</span>
                 <span class="estrela">&#9733;</span>
             </div>
-            <form>
+            <form id="form-avaliacao">
                 <label for="comentario">Deixe seu comentário:</label>
-                <textarea id="comentario" name="comentario"></textarea>
+                <textarea id="comentario" name="comentario" required></textarea>
                 <button type="submit">Enviar Avaliação</button>
             </form>
             <div id="avaliacoes-lista">
@@ -104,14 +130,15 @@
     <!-- Contato e Redes Sociais -->
     <footer id="contato">
         <h2>Contato</h2>
+        <p>Siga-nos nas redes sociais e entre em contato.</p>
         <a id="botao-whatsapp" href="https://wa.me/5548999323570" target="_blank">
-            <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png" alt="WhatsApp">
-            Chamar no WhatsApp
+            <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png" alt="WhatsApp"> WhatsApp
         </a>
         <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Seguir no Instagram
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
         </a>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
