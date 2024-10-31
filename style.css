@@ -64,19 +64,14 @@ table th {
 }
 
 /* Galeria */
-#gallery-display,
-.event-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.galeria-imagem {
+    width: 100%; /* Ajusta a imagem para caber no espaço */
+    max-width: 300px; /* Limita a largura máxima */
+    margin: 10px; /* Espaçamento entre as imagens */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-#gallery-display img,
-.event-images img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
 }
 
 /* Avaliações */
