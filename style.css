@@ -9,22 +9,24 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #8b5a2b; /* Marrom escuro para destacar */
+    background-color: #704214; /* Marrom amadeirado */
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 header img {
-    max-width: 150px; /* Ajuste a largura conforme necessário */
+    max-width: 140px; /* Ajuste da largura da logo */
     height: auto;
-    border-radius: 8px; /* Arredonda levemente as bordas, se desejado */
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-
 header h1 {
-    color: #fdf5e6; /* Texto claro no fundo marrom */
+    color: #fdf5e6; /* Texto claro */
     font-size: 2em;
     font-weight: bold;
+    margin: 0;
 }
 
 /* Navegação */
@@ -32,6 +34,10 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    background-color: #8b5a2b; /* Marrom escuro para navegação */
+    margin: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li {
@@ -41,8 +47,38 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fdf5e6; /* Links em branco */
+    color: #f5f1e6; /* Links em tom claro */
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffe4b5; /* Tom amadeirado claro ao passar o mouse */
+}
+
+/* Estilos adicionais para suavidade e consistência */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff8e6;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #704214;
+    color: #fdf5e6;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Seções principais */
