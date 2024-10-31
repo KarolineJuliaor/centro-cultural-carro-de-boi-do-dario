@@ -1,98 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural Carro de Boi do Dário</title>
     <link rel="stylesheet" href="style.css">
-<header>
-    <img id="logo" src="https://lh5.googleusercontent.com/p/AF1QipOKO4peeH9odRhRD9q_n0yBeubKKXHajSJVz8Cs=w600-h600-k-no" alt="Centro Cultural Carro de Boi do Dário Logo">
-    <button id="modo-escuro" onclick="toggleModoEscuro()">https://cdn-icons-png.flaticon.com/512/63/63947.png</button>
-</header>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="https://lh5.googleusercontent.com/p/AF1QipOKO4peeH9odRhRD9q_n0yBeubKKXHajSJVz8Cs=w600-h600-k-no" alt="Logo Centro Cultural">
+        <h1>Centro Cultural Carro de Boi do Dário</h1>
+    </header>
 
-
-    <!-- Sobre o Centro Cultural -->
-    <section id="sobre">
-        <h1>Sobre o Centro Cultural</h1>
-        <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, é um espaço vibrante e acolhedor que valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e a capoeira.</p>
-        <p>Além disso, o centro oferece diversos projetos, como aulas de jiu-jitsu, taekwondo e encontros da melhor idade, incentivando a participação de toda a comunidade.</p>
-        <p>É um lugar onde o passado e o presente se encontram, promovendo alegria e conexão para todas as idades.</p>
-    </section>
-
-    <!-- Atividades e Horários -->
-    <section id="atividades">
-        <h2>Atividades e Horários</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Atividade</th>
-                    <th>Horário</th>
-                    <th>Professor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Jiu-Jitsu</td><td>Segunda, 18:30 - 19:30</td><td>Professor A</td></tr>
-                <tr><td>Taekwondo</td><td>Terça e Quinta, 9:00 - 10:30 / 15:00 - 16:30</td><td>Professor B</td></tr>
-                <tr><td>Capoeira</td><td>Terça e Quinta, 20:00 - 22:00</td><td>Professor C</td></tr>
-                <tr><td>Encontro da Melhor Idade</td><td>Quarta, 13:30 - 17:00</td><td>Professor D</td></tr>
-                <tr><td>Boi de Mamão</td><td>Sábado, 9:00 - 12:00</td><td>Professor E</td></tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Inscrição e Contato -->
-    <section id="inscricao">
-        <h2>Inscrição nas Atividades</h2>
-        <p>Entre em contato com os professores diretamente através dos números abaixo:</p>
+    <!-- Menu de navegação -->
+    <nav>
         <ul>
-            <li>Professor A - (48) 99999-1111</li>
-            <li>Professor B - (48) 99999-2222</li>
-            <li>Professor C - (48) 99999-3333</li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#atividades">Atividades e Horários</a></li>
+            <li><a href="#inscricao">Inscrição nas Atividades</a></li>
+            <li><a href="#galeria">Galeria Cultural e História</a></li>
+            <li><a href="#doacoes">Doações e Voluntariado</a></li>
+            <li><a href="#eventos">Eventos e Festividades</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <!-- Galeria e História -->
-    <section id="galeria">
-        <h2>Galeria Cultural e História</h2>
-        <p>Explore a história do centro cultural e as tradições do bairro.</p>
-        <!-- Imagens e vídeos podem ser inseridos aqui -->
-    </section>
+    <!-- Seções do site -->
+    <main>
+        <!-- Sobre o Centro Cultural -->
+        <section id="sobre">
+            <h2>Sobre o Centro Cultural</h2>
+            <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, valoriza o folclore e tradições regionais, com destaque para o boi de mamão e capoeira. É um espaço onde o passado e o presente se encontram, promovendo conexão para todas as idades.</p>
+        </section>
 
-    <!-- Doações e Voluntariado -->
-    <section id="doacoes">
-        <h2>Doações e Voluntariado</h2>
-        <p>Apoie o centro cultural por meio de doações via PIX ou como voluntário.</p>
-    </section>
+        <!-- Atividades e Horários -->
+        <section id="atividades">
+            <h2>Atividades e Horários</h2>
+            <p>Capoeira, Jiu-Jitsu, Taekwondo, e mais! Horários e detalhes dos professores responsáveis.</p>
+        </section>
 
-    <!-- Eventos -->
-    <section id="eventos">
-        <h2>Eventos Culturais</h2>
-        <p>Saiba mais sobre os eventos futuros e passados no centro cultural.</p>
-    </section>
+        <!-- Inscrição nas Atividades -->
+        <section id="inscricao">
+            <h2>Inscrição nas Atividades</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="atividade">Atividade:</label>
+                <select id="atividade" name="atividade">
+                    <option value="jiu-jitsu">Jiu-Jitsu</option>
+                    <option value="taekwondo">Taekwondo</option>
+                    <option value="capoeira">Capoeira</option>
+                </select>
+                <button type="submit">Enviar Inscrição</button>
+            </form>
+        </section>
 
-    <!-- Avaliações -->
-    <section id="avaliacoes">
-        <h2>Avaliações</h2>
-        <div id="estrelas">⭐ ⭐ ⭐ ⭐ ⭐</div>
-        <textarea id="comentario" placeholder="Deixe seu comentário"></textarea>
-        <button onclick="adicionarComentario()">Enviar Avaliação</button>
-        <div id="avaliacoes-lista">
-            <ul id="comentarios"></ul>
-        </div>
-    </section>
+        <!-- Galeria Cultural e História -->
+        <section id="galeria">
+            <h2>Galeria Cultural e História</h2>
+            <p>Confira fotos e vídeos das atividades culturais.</p>
+        </section>
 
-    <!-- Redes Sociais e Contato -->
-<!-- Redes Sociais e Contato -->
-<footer>
-    <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank" id="botao-instagram">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram" />
-    </a>
-    <a href="https://wa.me/5548999323570" target="_blank" id="botao-whatsapp">
-        <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png" alt="WhatsApp" />
-    </a>
-</footer>
+        <!-- Doações e Voluntariado -->
+        <section id="doacoes">
+            <h2>Doações e Voluntariado</h2>
+            <p>Ajude o centro com uma doação via PIX. Chave: contato@centrocultural.com.br</p>
+            <button>Doar via PIX</button>
+        </section>
 
-    <script src="script.js"></script>
+        <!-- Eventos e Festividades -->
+        <section id="eventos">
+            <h2>Eventos e Festividades</h2>
+            <p>Fique por dentro dos eventos futuros e passados, incluindo apresentações de boi de mamão.</p>
+        </section>
+
+        <!-- Avaliações -->
+        <section id="avaliacoes">
+            <h2>Avaliações</h2>
+            <div id="estrelas">
+                <span class="estrela">&#9733;</span>
+                <span class="estrela">&#9733;</span>
+                <span class="estrela">&#9733;</span>
+                <span class="estrela">&#9733;</span>
+                <span class="estrela">&#9733;</span>
+            </div>
+            <form>
+                <label for="comentario">Deixe seu comentário:</label>
+                <textarea id="comentario" name="comentario"></textarea>
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+            <div id="avaliacoes-lista">
+                <ul>
+                    <!-- Comentários dos usuários aparecerão aqui -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contato e Redes Sociais -->
+    <footer id="contato">
+        <h2>Contato</h2>
+        <a id="botao-whatsapp" href="https://wa.me/5548999323570" target="_blank">
+            <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png" alt="WhatsApp">
+            Chamar no WhatsApp
+        </a>
+        <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Seguir no Instagram
+        </a>
+    </footer>
 </body>
 </html>
-
