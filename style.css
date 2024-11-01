@@ -92,7 +92,7 @@ section h2 {
 
 .gallery img {
     width: 100%; /* Largura total da coluna */
-    height: auto; /* Altura automática para manter a proporção */
+    height: 150px; /* Altura fixa para uniformizar todas as imagens */
     object-fit: cover; /* Corta as imagens para se ajustarem ao tamanho */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra para destacar as imagens */
