@@ -188,6 +188,45 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #dcdcdc; /* Efeito de hover para as linhas */
 }
+/* Ajustes na Galeria de Eventos */
+.event-gallery {
+    margin-bottom: 3rem;
+    text-align: center; /* Centraliza o texto */
+}
+
+.event-gallery h2 {
+    font-size: 1.8rem;
+    color: #6a0572;
+    margin-bottom: 1rem;
+}
+
+.event-gallery p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Galeria de Imagens de Eventos */
+.costelaco-images,
+.galeria-festajunina {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.costelaco-images img,
+.galeria-festajunina img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.costelaco-images img:hover,
+.galeria-festajunina img:hover {
+    transform: scale(1.05);
+}
 
 /* Botões */
 button {
