@@ -104,6 +104,30 @@ section h2 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
 }
 
+/* Galeria de Imagens - Feijoada com Samba */
+.galeria-feijoada {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta o tamanho mínimo das colunas */
+    gap: 10px; /* Espaço entre as imagens */
+    padding: 10px;
+    background-color: #fff8e6; /* Fundo suave */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-feijoada img {
+    width: 100%; /* Largura total da coluna */
+    height: auto; /* Ajusta a altura proporcional */
+    object-fit: cover; /* Corta as imagens para preencher o espaço */
+    border-radius: 8px; /* Borda arredondada nas imagens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.galeria-feijoada img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
 /* Estilos para a tabela */
 table {
     width: 100%;
@@ -197,3 +221,4 @@ footer p {
 .avaliacao-comentario {
     font-style: italic;
 }
+
