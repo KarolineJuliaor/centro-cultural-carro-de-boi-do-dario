@@ -105,6 +105,21 @@ section h2 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
 }
 
+/* Galeria de eventos em fila horizontal */
+.gallery-grid {
+    display: flex;
+    gap: 10px; /* Espaçamento entre as imagens */
+    overflow-x: auto; /* Adiciona rolagem horizontal caso as imagens ultrapassem a largura da tela */
+    padding: 10px 0;
+}
+
+.gallery-grid img {
+    height: 150px; /* Define uma altura padrão para as imagens */
+    width: auto; /* Ajusta a largura proporcionalmente */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor das imagens */
+}
+
 /* Estilos para a tabela */
 table {
     width: 100%;
