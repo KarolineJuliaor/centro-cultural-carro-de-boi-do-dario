@@ -81,9 +81,9 @@ section h2 {
 /* Galeria de Imagens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tamanho mínimo reduzido */
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Colunas mais estreitas */
+    gap: 10px; /* Espaçamento entre as imagens */
+    padding: 10px;
     background-color: #f5f1e6; /* Fundo suave para a seção da galeria */
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -91,8 +91,8 @@ section h2 {
 }
 
 .gallery img {
-    width: 100%; /* Mantém a largura total da coluna */
-    height: 150px; /* Altura fixa para uniformizar */
+    width: 100%; /* Largura total da coluna */
+    height: 100px; /* Altura menor e fixa */
     object-fit: cover; /* Corta as imagens para se ajustarem ao tamanho */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra para destacar as imagens */
@@ -102,30 +102,6 @@ section h2 {
 .gallery img:hover {
     transform: scale(1.05); /* Efeito de zoom */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
-}
-
-/* Galeria de Imagens - Feijoada com Samba */
-.galeria-feijoada {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta o tamanho mínimo das colunas */
-    gap: 10px; /* Espaço entre as imagens */
-    padding: 10px;
-    background-color: #fff8e6; /* Fundo suave */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.galeria-feijoada img {
-    width: 100%; /* Largura total da coluna */
-    height: auto; /* Ajusta a altura proporcional */
-    object-fit: cover; /* Corta as imagens para preencher o espaço */
-    border-radius: 8px; /* Borda arredondada nas imagens */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
-}
-
-.galeria-feijoada img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
 /* Estilos para a tabela */
@@ -221,4 +197,3 @@ footer p {
 .avaliacao-comentario {
     font-style: italic;
 }
-
