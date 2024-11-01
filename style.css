@@ -1,61 +1,47 @@
-/* Variáveis de Cores */
-:root {
-    --cor-fundo: #f5f1e6;
-    --cor-texto: #4b3b28;
-    --cor-header: #8b5a2b;
-    --cor-texto-claro: #fdf5e6;
-    --cor-acento: #ffe4b5;
-    --cor-fundo-secundario: #e8dcc3;
-    --cor-borda: #4b3b28;
-    --cor-estrela: #ffcc00;
-}
 
 /* Estilos gerais */
 body {
     font-family: 'Georgia', serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    background-color: #f5f1e6; /* Fundo suave */
+    color: #4b3b28; /* Cor de texto marrom escuro */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* Cabeçalho */
 header {
-    background-color: var(--cor-header);
+    background-color: #8b5a2b; /* Marrom escuro para destaque */
     padding: 20px;
     text-align: center;
-    width: 100%;
 }
 
 header .logo {
-    max-width: 120px;
+    max-width: 120px; /* Tamanho máximo da logo */
     height: auto;
-    border-radius: 50%;
-}
-
-header h1, .descricao {
-    color: var(--cor-texto-claro);
-    margin: 5px 0;
+    border-radius: 50%; /* Borda arredondada para efeito de logo */
 }
 
 header h1 {
+    color: #fdf5e6; /* Texto claro no fundo marrom */
     font-size: 2em;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .descricao {
+    color: #fdf5e6;
     font-size: 1.2em;
+    margin-top: 5px;
 }
 
 /* Navegação */
 nav ul {
     list-style: none;
-    padding: 10px 0;
-    background-color: var(--cor-header);
+    padding: 0;
+    text-align: center;
+    background-color: #8b5a2b; /* Marrom escuro para navegação */
     margin: 0;
+    padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -66,76 +52,111 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--cor-texto-claro);
+    color: #f5f1e6; /* Links em tom claro */
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--cor-acento);
+    color: #ffe4b5; /* Tom amadeirado claro ao passar o mouse */
 }
 
-/* Estilos principais */
+/* Seções principais */
 main {
     padding: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 section {
+    background-color: #fff8e6;
+    border-radius: 12px;
     padding: 20px;
-    background-color: var(--cor-fundo-secundario);
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    width: 90%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #4b3b28; /* Título em marrom escuro */
+    border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
 }
 
 /* Galeria de Imagens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas com tamanho mínimo de 150px */
+    gap: 10px; /* Espaçamento entre as imagens */
+    padding: 10px;
+    background-color: #f5f1e6; /* Fundo suave para a seção da galeria */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .gallery img {
-    width: 100%;
-    max-width: 60px; /* Reduzido para deixar as imagens ainda menores */
-    height: auto;
+    width: 100%; /* Largura total da coluna */
+    height: 150px; /* Altura fixa para uniformizar todas as imagens */
+    object-fit: cover; /* Corta as imagens para se ajustarem ao tamanho */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra para destacar as imagens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
 }
 
-/* Tabela para Atividades e Horários */
+.gallery img:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+/* Estilos para a tabela */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+    border-collapse: collapse; /* Remove espaços entre as células */
+    margin-top: 20px;
 }
 
-table th, table td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid var(--cor-borda);
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #8b5a2b; /* Borda marrom escura */
 }
 
-table th {
-    background-color: var(--cor-header);
-    color: var(--cor-texto-claro);
+th {
+    background-color: #e8dcc3; /* Fundo claro para cabeçalho */
+    color: #4b3b28; /* Texto em marrom escuro */
+}
+
+tr:nth-child(even) {
+    background-color: #f5f1e6; /* Fundo suave para linhas pares */
+}
+
+tr:hover {
+    background-color: #dcdcdc; /* Efeito de hover para as linhas */
+}
+
+/* Botões */
+button {
+    background-color: #8b5a2b;
+    color: #fdf5e6;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6e4820;
 }
 
 /* Rodapé */
 footer {
-    background-color: var(--cor-header);
-    color: var(--cor-texto-claro);
+    background-color: #8b5a2b;
+    color: #fdf5e6;
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
-    width: 100%;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Redes Sociais */
@@ -143,20 +164,19 @@ footer {
     width: 24px;
     height: 24px;
     margin: 0 8px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* Ícones brancos */
 }
 
 #social-icons a {
-    color: var(--cor-texto-claro);
+    color: #fdf5e6;
     text-decoration: none;
 }
 
-/* Seção de Avaliações */
+/* Avaliações */
 #avaliacoes {
-    background-color: var(--cor-fundo-secundario);
+    background-color: #e8dcc3;
     padding: 20px;
     border-radius: 8px;
-    width: 90%;
 }
 
 .avaliacao-item {
@@ -166,7 +186,7 @@ footer {
 }
 
 .estrela {
-    color: var(--cor-estrela);
+    color: #ffcc00; /* Cor das estrelas */
     font-size: 1.5em;
 }
 
@@ -177,19 +197,4 @@ footer {
 
 .avaliacao-comentario {
     font-style: italic;
-}
-
-/* Media Queries para Responsividade */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em; /* Reduz tamanho do título em telas pequenas */
-    }
-
-    .gallery img {
-        max-width: 50px; /* Imagens ainda menores em telas pequenas */
-    }
-
-    nav ul li {
-        margin: 0 10px; /* Reduz margens da navegação */
-    }
 }
