@@ -1,3 +1,4 @@
+
 /* Estilos gerais */
 body {
     font-family: 'Georgia', serif;
@@ -59,46 +60,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffe4b5; /* Tom amadeirado claro ao passar o mouse */
 }
-/* Seção de Eventos */
-#eventos {
-    background-color: #f9f5f0; /* Fundo suave para a seção */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#eventos h2 {
-    color: #4b3b28; /* Cor do título em marrom escuro */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.evento {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #fff; /* Fundo branco para o evento */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.evento h3 {
-    color: #8b5a2b; /* Marrom escuro para o título do evento */
-    margin-bottom: 5px;
-}
-
-.galeria-festabruxas {
-    display: flex;
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    padding: 10px 0;
-    gap: 10px; /* Espaçamento entre as imagens */
-}
-
-.galeria-festabruxas img {
-    max-width: 100px; /* Tamanho das imagens */
-    height: auto; /* Mantém a proporção */
-    border-radius: 8px; /* Borda arredondada */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
 
 /* Seções principais */
 main {
@@ -118,19 +79,30 @@ section h2 {
     border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
 }
 
+/* Galeria de Imagens */
 .gallery {
-    display: flex; /* Alinha as imagens horizontalmente */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    padding: 20px;
-    justify-content: center; /* Centraliza as imagens */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas com tamanho mínimo de 150px */
     gap: 10px; /* Espaçamento entre as imagens */
+    padding: 10px;
+    background-color: #f5f1e6; /* Fundo suave para a seção da galeria */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .gallery img {
-    width: 100px; /* Tamanho menor para as imagens */
-    height: auto; /* Mantém a proporção */
-    border-radius: 8px; /* Borda arredondada */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Largura total da coluna */
+    height: 150px; /* Altura fixa para uniformizar todas as imagens */
+    object-fit: cover; /* Corta as imagens para se ajustarem ao tamanho */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra para destacar as imagens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
 }
 
 /* Estilos para a tabela */
