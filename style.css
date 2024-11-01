@@ -5,6 +5,9 @@ body {
     color: #4b3b28; /* Cor de texto marrom escuro */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha todo o conteúdo ao centro */
 }
 
 /* Cabeçalho */
@@ -12,6 +15,7 @@ header {
     background-color: #8b5a2b; /* Marrom escuro para destaque */
     padding: 20px;
     text-align: center;
+    width: 100%; /* Para ocupar a largura total */
 }
 
 header .logo {
@@ -60,22 +64,22 @@ nav ul li a:hover {
     color: #ffe4b5; /* Tom amadeirado claro ao passar o mouse */
 }
 
-/* Seções principais */
+/* Estilos adicionais para suavidade e consistência */
 main {
     padding: 20px;
+    width: 100%; /* Para ocupar a largura total */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo centralizado */
 }
 
 section {
-    background-color: #fff8e6;
-    border-radius: 12px;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    color: #4b3b28; /* Título em marrom escuro */
-    border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
+    background-color: #e8dcc3; /* Fundo amadeirado claro */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 90%; /* Largura responsiva */
 }
 
 /* Galeria de Imagens */
@@ -84,6 +88,7 @@ section h2 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tamanho mínimo das imagens ajustado */
     gap: 15px;
     padding: 20px;
+    width: 100%; /* Para ocupar a largura total */
 }
 
 .gallery img {
@@ -91,53 +96,24 @@ section h2 {
     height: auto; /* Mantém a proporção das imagens */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
-.gallery img:hover {
-    transform: scale(1.05); /* Efeito de zoom */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
-}
-
-/* Estilos para a tabela */
+/* Tabela para Atividades e Horários */
 table {
-    width: 100%;
-    border-collapse: collapse; /* Remove espaços entre as células */
-    margin-top: 20px;
+    width: 100%; /* Tabela ocupa a largura total */
+    border-collapse: collapse; /* Para bordas mais limpas */
+    margin: 20px 0; /* Margem para espaçamento */
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #8b5a2b; /* Borda marrom escura */
+table th, table td {
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border: 1px solid #4b3b28; /* Borda marrom escura */
 }
 
-th {
-    background-color: #e8dcc3; /* Fundo claro para cabeçalho */
-    color: #4b3b28; /* Texto em marrom escuro */
-}
-
-tr:nth-child(even) {
-    background-color: #f5f1e6; /* Fundo suave para linhas pares */
-}
-
-tr:hover {
-    background-color: #dcdcdc; /* Efeito de hover para as linhas */
-}
-
-/* Botões */
-button {
-    background-color: #8b5a2b;
-    color: #fdf5e6;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #6e4820;
+table th {
+    background-color: #8b5a2b; /* Cabeçalho da tabela em marrom */
+    color: #fdf5e6; /* Texto claro no cabeçalho */
 }
 
 /* Rodapé */
@@ -147,10 +123,7 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
-}
-
-footer p {
-    margin: 0;
+    width: 100%; /* Para ocupar a largura total */
 }
 
 /* Redes Sociais */
@@ -166,11 +139,12 @@ footer p {
     text-decoration: none;
 }
 
-/* Avaliações */
+/* Seção de Avaliações */
 #avaliacoes {
     background-color: #e8dcc3;
     padding: 20px;
     border-radius: 8px;
+    width: 90%; /* Largura responsiva */
 }
 
 .avaliacao-item {
