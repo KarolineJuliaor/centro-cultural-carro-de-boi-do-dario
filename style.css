@@ -81,22 +81,17 @@ section h2 {
 /* Galeria de Imagens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas com tamanho mínimo de 150px */
-    gap: 10px; /* Espaçamento entre as imagens */
-    padding: 10px;
-    background-color: #f5f1e6; /* Fundo suave para a seção da galeria */
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tamanho mínimo das imagens ajustado */
+    gap: 15px;
+    padding: 20px;
 }
 
 .gallery img {
-    width: 100%; /* Largura total da coluna */
-    height: 150px; /* Altura fixa para uniformizar todas as imagens */
-    object-fit: cover; /* Corta as imagens para se ajustarem ao tamanho */
+    width: 100%; /* Ajusta a largura das imagens para 100% do espaço disponível */
+    height: auto; /* Mantém a proporção das imagens */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra para destacar as imagens */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .gallery img:hover {
