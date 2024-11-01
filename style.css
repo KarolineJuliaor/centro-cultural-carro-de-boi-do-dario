@@ -105,33 +105,62 @@ section h2 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
 }
 
-/* Galeria de eventos em fila horizontal */
-.gallery-grid {
-    display: flex;
-    gap: 10px; /* Espaçamento entre as imagens */
-    overflow-x: auto; /* Adiciona rolagem horizontal caso as imagens ultrapassem a largura da tela */
-    padding: 10px 0;
+/* Estilos Gerais para a Galeria de Eventos */
+#eventos {
+    padding: 2rem;
+    background-color: #fffbf0; /* Fundo pastel suave */
 }
 
-.gallery-grid img {
-    height: 150px; /* Define uma altura padrão para as imagens */
-    width: auto; /* Ajusta a largura proporcionalmente */
-    border-radius: 8px; /* Bordas arredondadas nas imagens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor das imagens */
+#eventos h2 {
+    color: #6a0572;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
-/* Galeria de eventos em fila horizontal */
+
+#eventos p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para a Galeria de Fotos */
 .event-gallery {
-    display: flex;
-    gap: 10px; /* Espaçamento entre as imagens */
-    overflow-x: auto; /* Adiciona rolagem horizontal */
-    padding: 10px 0;
+    margin-bottom: 3rem;
 }
 
-.event-gallery img {
-    height: 150px; /* Define altura das imagens */
-    width: auto; /* Largura proporcional */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+.costelaco-images,
+.galeria-festajunina {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.costelaco-images img,
+.galeria-festajunina img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.costelaco-images img:hover,
+.galeria-festajunina img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para Texto */
+.event-gallery h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #6a0572;
+}
+
+.event-gallery p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 /* Estilos para a tabela */
