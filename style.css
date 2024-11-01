@@ -1,50 +1,61 @@
+/* Variáveis de Cores */
+:root {
+    --cor-fundo: #f5f1e6;
+    --cor-texto: #4b3b28;
+    --cor-header: #8b5a2b;
+    --cor-texto-claro: #fdf5e6;
+    --cor-acento: #ffe4b5;
+    --cor-fundo-secundario: #e8dcc3;
+    --cor-borda: #4b3b28;
+    --cor-estrela: #ffcc00;
+}
+
 /* Estilos gerais */
 body {
     font-family: 'Georgia', serif;
-    background-color: #f5f1e6; /* Fundo suave */
-    color: #4b3b28; /* Cor de texto marrom escuro */
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha todo o conteúdo ao centro */
+    align-items: center;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #8b5a2b; /* Marrom escuro para destaque */
+    background-color: var(--cor-header);
     padding: 20px;
     text-align: center;
-    width: 100%; /* Para ocupar a largura total */
+    width: 100%;
 }
 
 header .logo {
-    max-width: 120px; /* Tamanho máximo da logo */
+    max-width: 120px;
     height: auto;
-    border-radius: 50%; /* Borda arredondada para efeito de logo */
+    border-radius: 50%;
+}
+
+header h1, .descricao {
+    color: var(--cor-texto-claro);
+    margin: 5px 0;
 }
 
 header h1 {
-    color: #fdf5e6; /* Texto claro no fundo marrom */
     font-size: 2em;
     font-weight: bold;
-    margin-top: 10px;
 }
 
 .descricao {
-    color: #fdf5e6;
     font-size: 1.2em;
-    margin-top: 5px;
 }
 
 /* Navegação */
 nav ul {
     list-style: none;
-    padding: 0;
-    text-align: center;
-    background-color: #8b5a2b; /* Marrom escuro para navegação */
-    margin: 0;
     padding: 10px 0;
+    background-color: var(--cor-header);
+    margin: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -55,76 +66,76 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #f5f1e6; /* Links em tom claro */
+    color: var(--cor-texto-claro);
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffe4b5; /* Tom amadeirado claro ao passar o mouse */
+    color: var(--cor-acento);
 }
 
-/* Estilos adicionais para suavidade e consistência */
+/* Estilos principais */
 main {
     padding: 20px;
-    width: 100%; /* Para ocupar a largura total */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha o conteúdo centralizado */
+    align-items: center;
 }
 
 section {
     padding: 20px;
-    background-color: #e8dcc3; /* Fundo amadeirado claro */
+    background-color: var(--cor-fundo-secundario);
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
-    width: 90%; /* Largura responsiva */
+    width: 90%;
 }
 
 /* Galeria de Imagens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Tamanho mínimo das imagens ajustado */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 15px;
     padding: 20px;
-    width: 100%; /* Para ocupar a largura total */
+    width: 100%;
 }
 
 .gallery img {
-    width: 100%; /* Ajusta a largura das imagens para 100% do espaço disponível */
-    max-width: 80px; /* Define um tamanho máximo para as imagens */
-    height: auto; /* Mantém a proporção das imagens */
+    width: 100%;
+    max-width: 60px; /* Reduzido para deixar as imagens ainda menores */
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Tabela para Atividades e Horários */
 table {
-    width: 100%; /* Tabela ocupa a largura total */
-    border-collapse: collapse; /* Para bordas mais limpas */
-    margin: 20px 0; /* Margem para espaçamento */
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
 table th, table td {
-    padding: 10px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    border: 1px solid #4b3b28; /* Borda marrom escura */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--cor-borda);
 }
 
 table th {
-    background-color: #8b5a2b; /* Cabeçalho da tabela em marrom */
-    color: #fdf5e6; /* Texto claro no cabeçalho */
+    background-color: var(--cor-header);
+    color: var(--cor-texto-claro);
 }
 
 /* Rodapé */
 footer {
-    background-color: #8b5a2b;
-    color: #fdf5e6;
+    background-color: var(--cor-header);
+    color: var(--cor-texto-claro);
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
-    width: 100%; /* Para ocupar a largura total */
+    width: 100%;
 }
 
 /* Redes Sociais */
@@ -132,20 +143,20 @@ footer {
     width: 24px;
     height: 24px;
     margin: 0 8px;
-    filter: brightness(0) invert(1); /* Ícones brancos */
+    filter: brightness(0) invert(1);
 }
 
 #social-icons a {
-    color: #fdf5e6;
+    color: var(--cor-texto-claro);
     text-decoration: none;
 }
 
 /* Seção de Avaliações */
 #avaliacoes {
-    background-color: #e8dcc3;
+    background-color: var(--cor-fundo-secundario);
     padding: 20px;
     border-radius: 8px;
-    width: 90%; /* Largura responsiva */
+    width: 90%;
 }
 
 .avaliacao-item {
@@ -155,7 +166,7 @@ footer {
 }
 
 .estrela {
-    color: #ffcc00; /* Cor das estrelas */
+    color: var(--cor-estrela);
     font-size: 1.5em;
 }
 
@@ -166,4 +177,19 @@ footer {
 
 .avaliacao-comentario {
     font-style: italic;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em; /* Reduz tamanho do título em telas pequenas */
+    }
+
+    .gallery img {
+        max-width: 50px; /* Imagens ainda menores em telas pequenas */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Reduz margens da navegação */
+    }
 }
