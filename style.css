@@ -85,7 +85,7 @@ section {
 /* Galeria de Imagens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tamanho mínimo das imagens ajustado */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Tamanho mínimo das imagens ajustado */
     gap: 15px;
     padding: 20px;
     width: 100%; /* Para ocupar a largura total */
@@ -93,6 +93,7 @@ section {
 
 .gallery img {
     width: 100%; /* Ajusta a largura das imagens para 100% do espaço disponível */
+    max-width: 120px; /* Define um tamanho máximo para as imagens */
     height: auto; /* Mantém a proporção das imagens */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
