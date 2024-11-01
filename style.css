@@ -90,8 +90,8 @@ section h2 {
 }
 
 .gallery img {
-    width: 25px; /* Ajusta a largura das imagens para 25px */
-    height: auto; /* Mantém a proporção das imagens */
+    width: 50px; /* Ajusta a largura das imagens para 50px */
+    height: 50px; /* Define uma altura fixa para manter a proporção */
     border-radius: 4px; /* Arredondar as bordas das imagens */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
     object-fit: cover; /* Para garantir que a imagem se ajuste ao espaço */
