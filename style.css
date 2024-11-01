@@ -82,7 +82,7 @@ section h2 {
 /* Galeria de Imagens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); /* Tamanho mínimo das imagens ajustado */
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Tamanho mínimo das imagens ajustado */
     gap: 5px; /* Espaço entre as imagens */
     padding: 20px;
     width: 100%; /* Para ocupar a largura total */
@@ -90,9 +90,9 @@ section h2 {
 
 .gallery img {
     width: 100%; /* Ajusta a largura das imagens para 100% do espaço disponível */
-    max-width: 30px; /* Define um tamanho máximo menor para as imagens */
+    max-width: 10px; /* Define um tamanho máximo menor para as imagens */
     height: auto; /* Mantém a proporção das imagens */
-    border-radius: 4px; /* Arredondar as bordas das imagens */
+    border-radius: 2px; /* Arredondar as bordas das imagens */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
 }
 
