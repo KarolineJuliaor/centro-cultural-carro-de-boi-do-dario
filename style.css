@@ -119,6 +119,20 @@ section h2 {
     border-radius: 8px; /* Bordas arredondadas nas imagens */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor das imagens */
 }
+/* Galeria de eventos em fila horizontal */
+.event-gallery {
+    display: flex;
+    gap: 10px; /* Espaçamento entre as imagens */
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    padding: 10px 0;
+}
+
+.event-gallery img {
+    height: 150px; /* Define altura das imagens */
+    width: auto; /* Largura proporcional */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
 
 /* Estilos para a tabela */
 table {
