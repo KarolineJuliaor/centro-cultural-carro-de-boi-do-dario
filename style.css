@@ -79,22 +79,19 @@ section h2 {
     border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
 }
 
-/* Galeria de Imagens */
 .gallery {
-    display: flex; /* Alinha as imagens em uma fila horizontal */
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte, se necessário */
-    justify-content: center; /* Centraliza as imagens na fila */
-    gap: 5px; /* Espaço entre as imagens */
+    display: flex; /* Muda para display flex para alinhar horizontalmente */
+    flex-wrap: wrap; /* Permite que as imagens quebrem a linha se não houver espaço */
+    justify-content: center; /* Centraliza as imagens na linha */
     padding: 20px;
-    width: 100%; /* Para ocupar a largura total */
 }
 
 .gallery img {
-    width: 50px; /* Ajusta a largura das imagens para 50px */
-    height: 50px; /* Define uma altura fixa para manter a proporção */
-    border-radius: 4px; /* Arredondar as bordas das imagens */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
-    object-fit: cover; /* Para garantir que a imagem se ajuste ao espaço */
+    width: 50px; /* Defina um tamanho menor para as imagens */
+    height: auto; /* Mantém a proporção das imagens */
+    margin: 5px; /* Adiciona espaço entre as imagens */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para a tabela */
