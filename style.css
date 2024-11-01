@@ -87,7 +87,7 @@ section h2 {
 }
 
 .gallery img {
-    width: 50px; /* Defina um tamanho menor para as imagens */
+    width: 20px; /* Defina um tamanho menor para as imagens */
     height: auto; /* Mantém a proporção das imagens */
     margin: 5px; /* Adiciona espaço entre as imagens */
     border-radius: 8px;
