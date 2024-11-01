@@ -24,7 +24,7 @@ header h1 {
     color: #fdf5e6; /* Texto claro no fundo marrom */
     font-size: 2em;
     font-weight: bold;
-    margin: 10px 0 5px; /* Margens ajustadas */
+    margin-top: 10px;
 }
 
 .descricao {
@@ -87,7 +87,7 @@ section h2 {
     background-color: #f5f1e6; /* Fundo suave para a seção da galeria */
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0; /* Margens ajustadas */
+    margin: 20px;
 }
 
 .gallery img {
