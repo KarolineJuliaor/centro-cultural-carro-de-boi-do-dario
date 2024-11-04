@@ -78,52 +78,49 @@ section h2 {
     border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
 }
 
-/* Galeria de Imagens */
-.gallery,
-.costelaco-images,
+/* Galerias Individuais */
 .galeria-cultural,
-.feijoada-com-samba {
+.doacoes,
+.outras-fotos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px;
     padding: 10px;
-    background-color: #f5f1e6; /* Fundo suave para a seção da galeria */
+    background-color: #f5f1e6;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin-bottom: 30px; /* Espaçamento entre as galerias */
 }
 
-.gallery img,
-.costelaco-images img,
 .galeria-cultural img,
-.feijoada-com-samba img {
+.doacoes img,
+.outras-fotos img {
     width: 100%;
-    height: 150px; /* Altura fixa para uniformizar todas as imagens */
-    object-fit: cover; /* Corta as imagens para se ajustarem ao tamanho */
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra para destacar as imagens */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery img:hover,
-.costelaco-images img:hover,
 .galeria-cultural img:hover,
-.feijoada-com-samba img:hover {
-    transform: scale(1.05); /* Efeito de zoom */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+.doacoes img:hover,
+.outras-fotos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo para Títulos e Textos da Galeria */
 .event-gallery h2 {
     text-align: center;
     font-size: 1.8rem;
-    color: #6a0572; /* Cor do título */
+    color: #6a0572;
 }
 
 .event-gallery p {
     text-align: center;
     font-size: 1.2rem;
-    color: #555; /* Cor do texto */
+    color: #555;
     margin-bottom: 1rem;
 }
 
