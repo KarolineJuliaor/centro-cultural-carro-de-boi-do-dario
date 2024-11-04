@@ -78,29 +78,6 @@ section h2 {
     border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
 }
 
-/* Seções Gerais */
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f5f1e6;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #6a0572;
-    margin-bottom: 10px;
-}
-
-section p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
 /* Galeria Cultural */
 .galeria-costelaco {
     display: flex;
@@ -124,82 +101,6 @@ section p {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-n-top: 15px;
-}
-
-.gallery-grid img,
-.galeria-costelaco img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-grid img:hover,
-.galeria-costelaco img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Botão de Doação */
-.botao-doacao {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.botao-doacao:hover {
-    background-color: #128C7E;
-}
-}
-
-/* Estilo para Títulos e Textos da Galeria */
-.event-gallery h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #6a0572;
-}
-
-.event-gallery p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-/* Estilos para a tabela */
-table {
-    width: 100%;
-    border-collapse: collapse; /* Remove espaços entre as células */
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #8b5a2b; /* Borda marrom escura */
-}
-
-th {
-    background-color: #e8dcc3; /* Fundo claro para cabeçalho */
-    color: #4b3b28; /* Texto em marrom escuro */
-}
-
-tr:nth-child(even) {
-    background-color: #f5f1e6; /* Fundo suave para linhas pares */
-}
-
-tr:hover {
-    background-color: #dcdcdc; /* Efeito de hover para as linhas */
-}
 /* Ajustes na Galeria de Eventos */
 .event-gallery {
     margin-bottom: 3rem;
@@ -240,89 +141,45 @@ tr:hover {
     transform: scale(1.05);
 }
 
-/* Botões */
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as células */
+    margin-top: 20px;
+}
 
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #8b5a2b; /* Borda marrom escura */
+}
+
+th {
+    background-color: #e8dcc3; /* Fundo claro para cabeçalho */
+    color: #4b3b28; /* Texto em marrom escuro */
+}
+
+tr:nth-child(even) {
+    background-color: #f5f1e6; /* Fundo suave para linhas pares */
+}
+
+tr:hover {
+    background-color: #dcdcdc; /* Efeito de hover para as linhas */
+}
+
+/* Botão de Doação */
 .botao-doacao {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     background-color: #25D366; /* Cor do botão */
     color: white;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .botao-doacao:hover {
     background-color: #128C7E; /* Efeito hover */
-}
-
-
-button {
-    background-color: #8b5a2b;
-    color: #fdf5e6;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #6e4820;
-}
-
-/* Rodapé */
-footer {
-    background-color: #8b5a2b;
-    color: #fdf5e6;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Redes Sociais */
-#social-icons img {
-    width: 24px;
-    height: 24px;
-    margin: 0 8px;
-    filter: brightness(0) invert(1); /* Ícones brancos */
-}
-
-#social-icons a {
-    color: #fdf5e6;
-    text-decoration: none;
-}
-
-/* Avaliações */
-#avaliacoes {
-    background-color: #e8dcc3;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.avaliacao-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.estrela {
-    color: #ffcc00; /* Cor das estrelas */
-    font-size: 1.5em;
-}
-
-.avaliacao-nome {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.avaliacao-comentario {
-    font-style: italic;
 }
