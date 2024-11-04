@@ -29,6 +29,7 @@
             <li><a href="#avaliacoes">Avaliações</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
+        
     </nav>
 
     <!-- Seções do site -->
@@ -292,10 +293,9 @@
         <button type="submit">Enviar Avaliação</button>
     </form>
     <div id="avaliacoes-lista">
-   <ul id="lista-avaliacoes">
-    <!-- Comentários dos usuários aparecerão aqui -->
-</ul>
-
+        <ul id="lista-avaliacoes">
+            <!-- Comentários dos usuários aparecerão aqui -->
+        </ul>
     </div>
 </section>
 
@@ -320,7 +320,7 @@
         event.preventDefault(); // Impede o envio do formulário
 
         const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value; // Novo campo
+        const email = document.getElementById('email').value;
         const comentario = document.getElementById('comentario').value;
 
         // Adiciona a nova avaliação ao armazenamento local
@@ -348,7 +348,25 @@
         const listaAvaliacoes = document.getElementById('lista-avaliacoes');
         const li = document.createElement('li');
         li.textContent = `${nome} (${email}): ${comentario} - ${nota} Estrelas`;
+        // Botão de excluir
+        const botaoExcluir = document.createElement('button');
+        botaoExcluir.textContent = 'Excluir';
+        botaoExcluir.onclick = () => excluirAvaliacao(nome, email, comentario, nota);
+        li.appendChild(botaoExcluir);
         listaAvaliacoes.appendChild(li);
+    }
+
+    // Excluir avaliação
+    function excluirAvaliacao(nome, email, comentario, nota) {
+        const senha = prompt("Digite a senha para excluir a avaliação:");
+        if (senha === "@Boidemamão2023") { 
+            let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews = reviews.filter(review => !(review.nome === nome && review.email === email && review.comentario === comentario && review.nota === nota));
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+            exibirAvaliacoes(); // Atualiza a exibição após a exclusão
+        } else {
+            alert("Senha incorreta. Você não tem permissão para excluir esta avaliação.");
+        }
     }
 
     // Exibir avaliações ao carregar a página
