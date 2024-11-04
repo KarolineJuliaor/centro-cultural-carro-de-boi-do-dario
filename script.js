@@ -54,7 +54,8 @@ function loadImages() {
     });
 }
 
-// Avaliação// Seleciona as estrelas e inicializa a nota
+// Avaliação
+// Seleciona as estrelas e inicializa a nota
 const estrelas = document.querySelectorAll('.estrela');
 let notaSelecionada = 0;
 
@@ -78,7 +79,6 @@ form.addEventListener('submit', function(event) {
     saveReviewToLocalStorage(nome, comentario, notaSelecionada);
     form.reset(); // Limpa o formulário
     atualizarEstrelas(0); // Resetar a avaliação
-    exibirAvaliacoes(); // Atualiza a exibição das avaliações
 });
 
 // Salvar avaliações no localStorage
@@ -92,7 +92,9 @@ function saveReviewToLocalStorage(nome, comentario, nota) {
 // Carregar avaliações salvas ao recarregar a página
 function loadReviews() {
     const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.forEach(review => addReview(review.nome, review.comentario, review.nota));
+    reviews.forEach(review => {
+        addReview(review.nome, review.comentario, review.nota); // Adiciona a avaliação
+    });
 }
 
 // Exibir as avaliações
@@ -102,10 +104,20 @@ function exibirAvaliacoes() {
     const reviews = JSON.parse(localStorage.getItem('reviews')) || []; // Recupera as avaliações
     reviews.forEach(avaliacao => {
         const li = document.createElement('li');
-        li.textContent = `${avaliacao.nome}: ${avaliacao.comentario}`;
+        li.textContent = `${avaliacao.nome}: ${avaliacao.comentario} (Nota: ${avaliacao.nota})`;
         listaAvaliacoes.appendChild(li);
     });
 }
 
-// Carregar as avaliações ao carregar a página
-window.addEventListener('load', loadReviews);
+// Exibir a avaliação
+function addReview(nome, comentario, nota) {
+    const listaAvaliacoes = document.getElementById('lista-avaliacoes');
+    const li = document.createElement('li');
+    li.textContent = `${nome}: ${comentario} (Nota: ${nota})`;
+    listaAvaliacoes.appendChild(li);
+}
+
+// Chame a função loadReviews no evento de carregamento da janela
+window.addEventListener('load', () => {
+    loadReviews(); // Carrega as avaliações ao abrir a página
+});
