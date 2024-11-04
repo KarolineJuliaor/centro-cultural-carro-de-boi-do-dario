@@ -77,17 +77,21 @@ function atualizarEstrelas(nota) {
     });
 }
 
-document.getElementById('form-avaliacao').addEventListener('submit', function(event) {
+// Centralizar a lógica de avaliação
+function handleReviewSubmission(event) {
     event.preventDefault();
+    
     const nome = document.getElementById('nome').value;
     const comentario = document.getElementById('comentario').value;
 
     // Adicionar a avaliação
     addReview(nome, comentario, notaSelecionada);
     saveReviewToLocalStorage(nome, comentario, notaSelecionada);
-    this.reset();
+    document.getElementById('form-avaliacao').reset();
     atualizarEstrelas(0); // Resetar a avaliação
-});
+}
+
+document.getElementById('form-avaliacao').addEventListener('submit', handleReviewSubmission);
 
 // Função para adicionar uma nova avaliação
 function addReview(nome, comentario, nota) {
