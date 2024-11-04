@@ -212,10 +212,12 @@ tr:hover {
     margin: 20px 0; /* Espaçamento em cima e embaixo */
 }
 
-.social-buttons a {
-    margin: 0 10px; /* Espaçamento entre os botões */
-    text-decoration: none; /* Remove o sublinhado */
+.social-buttons img {
+    width: 30px; /* Define uma largura fixa */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 10px; /* Espaçamento entre os ícones */
 }
+
 /* avaliacoes */
 #avaliacoes {
     margin-top: 2rem;
