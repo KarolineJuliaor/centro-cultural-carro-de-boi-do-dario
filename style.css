@@ -206,3 +206,50 @@ tr:hover {
 .botao-doacao:hover {
     background-color: #128C7E; /* Efeito hover */
 }
+.social-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    margin: 20px 0; /* Espaçamento em cima e embaixo */
+}
+
+.social-buttons a {
+    margin: 0 10px; /* Espaçamento entre os botões */
+    text-decoration: none; /* Remove o sublinhado */
+}
+/* avaliacoes */
+#avaliacoes {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #eaf6f6;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#estrelas {
+    display: flex;
+    cursor: pointer;
+}
+
+.estrela {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-right: 5px;
+}
+
+#avaliacoes-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+#avaliacoes-lista li {
+    padding: 10px; /* Mantenha apenas um padding */
+    margin: 10px 0;
+    background: #fff; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.estrela:hover {
+    color: #ffdb58; /* Tom mais claro ao passar o mouse */
+}
+
