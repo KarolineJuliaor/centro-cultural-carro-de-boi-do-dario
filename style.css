@@ -104,50 +104,57 @@ section h2 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
 }
 
-/* Estilos Gerais para a Galeria de Eventos */
-#eventos {
-    padding: 2rem;
-    background-color: #fffbf0; /* Fundo pastel suave */
+/* Estilos de Galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background-color: #f5f1e6;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
-#eventos h2 {
-    color: #6a0572;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#eventos p {
-    color: #333;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para a Galeria de Fotos */
-.event-gallery {
-    margin-bottom: 3rem;
-}
-
+/* Estilos para todas as galerias de eventos */
 .costelaco-images,
-.galeria-festajunina {
+.galeria-cultural,
+.feijoada-com-samba {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px;
 }
 
 .costelaco-images img,
-.galeria-festajunina img {
+.galeria-cultural img,
+.feijoada-com-samba img {
     width: 100%;
-    height: auto;
+    height: 150px; /* Define a altura igual para consistência */
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
 .costelaco-images img:hover,
-.galeria-festajunina img:hover {
+.galeria-cultural img:hover,
+.feijoada-com-samba img:hover {
     transform: scale(1.05);
 }
-
 /* Estilo para Texto */
 .event-gallery h2 {
     text-align: center;
