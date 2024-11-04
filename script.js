@@ -23,7 +23,7 @@ function addImage(input) {
         const img = document.createElement('img');
         img.src = e.target.result;
         eventImages.appendChild(img);
-        saveImageToLocalStorage('events', img.src); // Remove o container pois não é necessário
+        saveImageToLocalStorage('events', img.src);
     };
     reader.readAsDataURL(file);
 }
@@ -47,10 +47,10 @@ function loadImages() {
 
     const storedEventImages = JSON.parse(localStorage.getItem('events')) || [];
     storedEventImages.forEach(src => {
-        const container = document.querySelector(`#${src.containerId}`);
+        const img = document.createElement('img');
+        img.src = src;
+        const container = document.querySelector(`#event-container`); // Atualize conforme necessário
         if (container) {
-            const img = document.createElement('img');
-            img.src = src;
             container.appendChild(img);
         }
     });
@@ -98,23 +98,19 @@ function loadReviews() {
     });
 }
 
-// Exibir as avaliações
-function exibirAvaliacoes() {
-    const listaAvaliacoes = document.getElementById('lista-avaliacoes');
-    listaAvaliacoes.innerHTML = '';
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.forEach(avaliacao => {
-        const li = document.createElement('li');
-        li.textContent = `${avaliacao.nome} (${avaliacao.email}): ${avaliacao.comentario} (Nota: ${avaliacao.nota})`;
-        listaAvaliacoes.appendChild(li);
-    });
-}
-
 // Exibir a avaliação
 function addReview(nome, comentario, nota, email) {
     const listaAvaliacoes = document.getElementById('lista-avaliacoes');
     const li = document.createElement('li');
-    li.textContent = `${nome} (${email}): ${comentario} (Nota: ${nota})`;
+    li.textContent = `${nome} (${email}): ${comentario} (Nota: ${nota}) `;
+    
+    const botaoExcluir = document.createElement('button');
+    botaoExcluir.textContent = 'Excluir';
+    botaoExcluir.addEventListener('click', () => {
+        excluirAvaliacao(nome, email, comentario, nota);
+    });
+
+    li.appendChild(botaoExcluir);
     listaAvaliacoes.appendChild(li);
 }
 
@@ -123,3 +119,16 @@ window.addEventListener('load', () => {
     loadImages(); // Carrega as imagens ao abrir a página
     loadReviews(); // Carrega as avaliações ao abrir a página
 });
+
+// Função para excluir a avaliação
+function excluirAvaliacao(nome, email, comentario, nota) {
+    const senha = prompt("Digite a senha para excluir a avaliação:");
+    if (senha === "@Boidemamão2023") {
+        let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews = reviews.filter(review => !(review.nome === nome && review.email === email && review.comentario === comentario && review.nota === nota));
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        exibirAvaliacoes(); // Atualiza a exibição após a exclusão
+    } else {
+        alert("Senha incorreta. Você não tem permissão para excluir esta avaliação.");
+    }
+}
