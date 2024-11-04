@@ -54,10 +54,11 @@ function loadImages() {
     });
 }
 
-// Avaliação
+// Avaliação// Seleciona as estrelas e inicializa a nota
 const estrelas = document.querySelectorAll('.estrela');
 let notaSelecionada = 0;
 
+// Adiciona evento de clique nas estrelas
 estrelas.forEach((estrela, index) => {
     estrela.addEventListener('click', () => {
         notaSelecionada = index + 1; // Atualiza a nota selecionada
@@ -65,25 +66,27 @@ estrelas.forEach((estrela, index) => {
     });
 });
 
-// Centralizar a lógica de avaliação
-function handleReviewSubmission(event) {
-    event.preventDefault();
-    
+// Função de envio da avaliação
+const form = document.getElementById('form-avaliacao');
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
     const nome = document.getElementById('nome').value;
     const comentario = document.getElementById('comentario').value;
 
-    // Adicionar a avaliação
-    addReview(nome, comentario, notaSelecionada);
+    // Adiciona a nova avaliação ao armazenamento local
     saveReviewToLocalStorage(nome, comentario, notaSelecionada);
-    document.getElementById('form-avaliacao').reset();
+    form.reset(); // Limpa o formulário
     atualizarEstrelas(0); // Resetar a avaliação
-}
+    exibirAvaliacoes(); // Atualiza a exibição das avaliações
+});
 
 // Salvar avaliações no localStorage
 function saveReviewToLocalStorage(nome, comentario, nota) {
     let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     reviews.push({ nome, comentario, nota });
     localStorage.setItem('reviews', JSON.stringify(reviews));
+    exibirAvaliacoes(); // Chama a função para exibir as avaliações após salvar
 }
 
 // Carregar avaliações salvas ao recarregar a página
@@ -92,8 +95,17 @@ function loadReviews() {
     reviews.forEach(review => addReview(review.nome, review.comentario, review.nota));
 }
 
-// Carregar todas as imagens e avaliações quando a página for aberta
-window.addEventListener('load', () => {
-    loadImages();
-    loadReviews();
-});
+// Exibir as avaliações
+function exibirAvaliacoes() {
+    const listaAvaliacoes = document.getElementById('lista-avaliacoes');
+    listaAvaliacoes.innerHTML = ''; // Limpa a lista atual
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || []; // Recupera as avaliações
+    reviews.forEach(avaliacao => {
+        const li = document.createElement('li');
+        li.textContent = `${avaliacao.nome}: ${avaliacao.comentario}`;
+        listaAvaliacoes.appendChild(li);
+    });
+}
+
+// Carregar as avaliações ao carregar a página
+window.addEventListener('load', loadReviews);
