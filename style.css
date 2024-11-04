@@ -79,23 +79,23 @@ section h2 {
 }
 
 /* Galeria Cultural */
-
 .galeria-cultural {
-    display: flex; /* Ou grid, dependendo de como você deseja apresentar as imagens */
+    display: flex;
     flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se não houver espaço */
     justify-content: center; /* Centraliza as imagens na galeria */
+    text-align: center; /* Centraliza o texto e imagens */
 }
 
 .galeria-cultural img {
-    width: 100%; /* A imagem ocupará toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px;
     max-width: 300px; /* Limita a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para efeito visual */
     object-fit: cover; /* Corta as imagens para preencher o espaço */
 }
 
-
-
-
+/* Estilos específicos para a galeria do Costelaço */
 .galeria-costelaco {
     display: flex;
     flex-wrap: nowrap; /* Impede que as imagens quebrem para a próxima linha */
@@ -117,6 +117,7 @@ section h2 {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Ajustes na Galeria de Eventos */
 .event-gallery {
