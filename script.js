@@ -58,24 +58,12 @@ function loadImages() {
 const estrelas = document.querySelectorAll('.estrela');
 let notaSelecionada = 0;
 
-estrelas.forEach(estrela => {
+estrelas.forEach((estrela, index) => {
     estrela.addEventListener('click', () => {
-        notaSelecionada = estrela.getAttribute('data-value');
-        atualizarEstrelas(notaSelecionada);
+        notaSelecionada = index + 1; // Atualiza a nota selecionada
+        atualizarEstrelas(notaSelecionada); // Atualiza a visualização das estrelas
     });
 });
-
-function atualizarEstrelas(nota) {
-    estrelas.forEach(estrela => {
-        if (estrela.getAttribute('data-value') <= nota) {
-            estrela.classList.add('selecionada');
-            estrela.innerHTML = '&#9733;'; // Estrela preenchida
-        } else {
-            estrela.classList.remove('selecionada');
-            estrela.innerHTML = '&#9734;'; // Estrela vazia
-        }
-    });
-}
 
 // Centralizar a lógica de avaliação
 function handleReviewSubmission(event) {
@@ -89,16 +77,6 @@ function handleReviewSubmission(event) {
     saveReviewToLocalStorage(nome, comentario, notaSelecionada);
     document.getElementById('form-avaliacao').reset();
     atualizarEstrelas(0); // Resetar a avaliação
-}
-
-document.getElementById('form-avaliacao').addEventListener('submit', handleReviewSubmission);
-
-// Função para adicionar uma nova avaliação
-function addReview(nome, comentario, nota) {
-    const lista = document.getElementById('avaliacoes-lista').querySelector('ul');
-    const li = document.createElement('li');
-    li.innerHTML = `<strong>${nome}:</strong> ${comentario} (${nota} estrelas)`;
-    lista.appendChild(li);
 }
 
 // Salvar avaliações no localStorage
