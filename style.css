@@ -79,6 +79,19 @@ section h2 {
 }
 
 /* Galeria Cultural */
+.galeria-cultural img {
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção */
+    object-fit: cover; /* Garante que a imagem se ajuste ao espaço */
+    margin: 5px; /* Espaçamento entre as imagens */
+}
+.galeria-cultural {
+    display: flex; /* Ou grid, dependendo de como você deseja apresentar as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se não houver espaço */
+    justify-content: center; /* Centraliza as imagens na galeria */
+}
+
+
 .galeria-costelaco {
     display: flex;
     flex-wrap: nowrap; /* Impede que as imagens quebrem para a próxima linha */
@@ -139,6 +152,12 @@ section h2 {
 .costelaco-images img:hover,
 .galeria-festajunina img:hover {
     transform: scale(1.05);
+}
+.imagem-centralizada {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente se necessário */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
 }
 
 /* Estilos para a tabela */
