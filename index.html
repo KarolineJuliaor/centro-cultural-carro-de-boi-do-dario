@@ -263,12 +263,11 @@
 <section id="avaliacoes">
     <h2>Avaliações</h2>
     <div id="estrelas">
-        <span class="estrela" data-value="1">&#9734;</span>
-        <span class="estrela" data-value="2">&#9734;</span>
-        <span class="estrela" data-value="3">&#9734;</span>
-        <span class="estrela" data-value="4">&#9734;</span>
-        <span class="estrela" data-value="5">&#9734;</span>
-
+        <span class="estrela" data-value="1">★</span>
+        <span class="estrela" data-value="2">★</span>
+        <span class="estrela" data-value="3">★</span>
+        <span class="estrela" data-value="4">★</span>
+        <span class="estrela" data-value="5">★</span>
     </div>
     <form id="form-avaliacao">
         <label for="nome">Nome:</label>
@@ -283,6 +282,34 @@
         </ul>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const estrelas = document.querySelectorAll('#estrelas .estrela');
+        let avaliacaoSelecionada = 0;
+
+        estrelas.forEach(estrela => {
+            estrela.addEventListener('click', function() {
+                avaliacaoSelecionada = this.getAttribute('data-value');
+                estrelas.forEach(e => e.style.color = e.getAttribute('data-value') <= avaliacaoSelecionada ? '#ffcc00' : '#000');
+            });
+        });
+
+        document.getElementById('form-avaliacao').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const comentario = document.getElementById('comentario').value;
+            const novaAvaliacao = document.createElement('li');
+            novaAvaliacao.innerHTML = `<strong>${nome}</strong>: ${comentario} - <strong>${avaliacaoSelecionada} Estrelas</strong>`;
+
+            document.getElementById('lista-avaliacoes').appendChild(novaAvaliacao);
+
+            this.reset();
+        });
+    });
+</script>
+
 
     <!-- Contato e Redes Sociais -->
     <footer id="contato">
