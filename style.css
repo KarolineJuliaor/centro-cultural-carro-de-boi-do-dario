@@ -105,6 +105,7 @@ section p {
 .galeria-costelaco {
     display: flex;
     flex-wrap: nowrap; /* Impede que as imagens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
     gap: 10px; /* Espaçamento entre as imagens */
     overflow-x: auto; /* Permite rolagem horizontal se as imagens excederem a largura da tela */
 }
@@ -122,6 +123,7 @@ section p {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
+
 n-top: 15px;
 }
 
