@@ -2,6 +2,7 @@
 document.getElementById('file-input').addEventListener('change', function() {
     const gallery = document.getElementById('gallery-display');
     const file = this.files[0];
+    if (!file) return; // Verifica se um arquivo foi selecionado
     const reader = new FileReader();
     reader.onload = function(e) {
         const img = document.createElement('img');
@@ -14,22 +15,23 @@ document.getElementById('file-input').addEventListener('change', function() {
 
 // Função para adicionar imagens em eventos
 function addImage(input) {
-    const eventImages = input.nextElementSibling;
+    const eventImages = input.nextElementSibling; // Verifique se é o elemento correto
     const file = input.files[0];
+    if (!file) return; // Verifica se um arquivo foi selecionado
     const reader = new FileReader();
     reader.onload = function(e) {
         const img = document.createElement('img');
         img.src = e.target.result;
         eventImages.appendChild(img);
-        saveImageToLocalStorage('events', img.src, eventImages);
+        saveImageToLocalStorage('events', img.src); // Remove o container pois não é necessário
     };
     reader.readAsDataURL(file);
 }
 
 // Função para salvar imagens no localStorage
-function saveImageToLocalStorage(key, src, container) {
+function saveImageToLocalStorage(key, src) {
     let storedImages = JSON.parse(localStorage.getItem(key)) || [];
-    storedImages.push({ src: src, containerId: container ? container.id : null });
+    storedImages.push(src);
     localStorage.setItem(key, JSON.stringify(storedImages));
 }
 
@@ -37,87 +39,87 @@ function saveImageToLocalStorage(key, src, container) {
 function loadImages() {
     const gallery = document.getElementById('gallery-display');
     const storedGalleryImages = JSON.parse(localStorage.getItem('gallery')) || [];
-    storedGalleryImages.forEach(imgData => {
+    storedGalleryImages.forEach(src => {
         const img = document.createElement('img');
-        img.src = imgData.src;
+        img.src = src;
         gallery.appendChild(img);
     });
 
     const storedEventImages = JSON.parse(localStorage.getItem('events')) || [];
-    storedEventImages.forEach(imgData => {
-        const container = document.querySelector(`#${imgData.containerId}`);
+    storedEventImages.forEach(src => {
+        const container = document.querySelector(`#${src.containerId}`);
         if (container) {
             const img = document.createElement('img');
-            img.src = imgData.src;
+            img.src = src;
             container.appendChild(img);
         }
     });
 }
 
 // Avaliação
-// Seleciona as estrelas e inicializa a nota
 const estrelas = document.querySelectorAll('.estrela');
 let notaSelecionada = 0;
 
 // Adiciona evento de clique nas estrelas
 estrelas.forEach((estrela, index) => {
     estrela.addEventListener('click', () => {
-        notaSelecionada = index + 1; // Atualiza a nota selecionada
-        atualizarEstrelas(notaSelecionada); // Atualiza a visualização das estrelas
+        notaSelecionada = index + 1;
+        atualizarEstrelas(notaSelecionada);
     });
 });
 
 // Função de envio da avaliação
 const form = document.getElementById('form-avaliacao');
 form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio do formulário
+    event.preventDefault();
 
     const nome = document.getElementById('nome').value;
     const comentario = document.getElementById('comentario').value;
+    const email = document.getElementById('email').value;
 
-    // Adiciona a nova avaliação ao armazenamento local
-    saveReviewToLocalStorage(nome, comentario, notaSelecionada);
-    form.reset(); // Limpa o formulário
-    atualizarEstrelas(0); // Resetar a avaliação
+    saveReviewToLocalStorage(nome, comentario, notaSelecionada, email);
+    form.reset();
+    atualizarEstrelas(0);
 });
 
 // Salvar avaliações no localStorage
-function saveReviewToLocalStorage(nome, comentario, nota) {
+function saveReviewToLocalStorage(nome, comentario, nota, email) {
     let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.push({ nome, comentario, nota });
+    reviews.push({ nome, comentario, nota, email });
     localStorage.setItem('reviews', JSON.stringify(reviews));
-    exibirAvaliacoes(); // Chama a função para exibir as avaliações após salvar
+    exibirAvaliacoes();
 }
 
 // Carregar avaliações salvas ao recarregar a página
 function loadReviews() {
     const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     reviews.forEach(review => {
-        addReview(review.nome, review.comentario, review.nota); // Adiciona a avaliação
+        addReview(review.nome, review.comentario, review.nota, review.email);
     });
 }
 
 // Exibir as avaliações
 function exibirAvaliacoes() {
     const listaAvaliacoes = document.getElementById('lista-avaliacoes');
-    listaAvaliacoes.innerHTML = ''; // Limpa a lista atual
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || []; // Recupera as avaliações
+    listaAvaliacoes.innerHTML = '';
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     reviews.forEach(avaliacao => {
         const li = document.createElement('li');
-        li.textContent = `${avaliacao.nome}: ${avaliacao.comentario} (Nota: ${avaliacao.nota})`;
+        li.textContent = `${avaliacao.nome} (${avaliacao.email}): ${avaliacao.comentario} (Nota: ${avaliacao.nota})`;
         listaAvaliacoes.appendChild(li);
     });
 }
 
 // Exibir a avaliação
-function addReview(nome, comentario, nota) {
+function addReview(nome, comentario, nota, email) {
     const listaAvaliacoes = document.getElementById('lista-avaliacoes');
     const li = document.createElement('li');
-    li.textContent = `${nome}: ${comentario} (Nota: ${nota})`;
+    li.textContent = `${nome} (${email}): ${comentario} (Nota: ${nota})`;
     listaAvaliacoes.appendChild(li);
 }
 
-// Chame a função loadReviews no evento de carregamento da janela
+// Chame a função loadImages e loadReviews no evento de carregamento da janela
 window.addEventListener('load', () => {
+    loadImages(); // Carrega as imagens ao abrir a página
     loadReviews(); // Carrega as avaliações ao abrir a página
 });
