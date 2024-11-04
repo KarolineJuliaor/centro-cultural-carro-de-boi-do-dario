@@ -87,12 +87,12 @@ section h2 {
 }
 
 .galeria-cultural img {
-    width: 100%; /* Faz com que as imagens ocupem toda a largura do contêiner */
+    width: 100%; /* A imagem ocupará toda a largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Cobre o espaço, cortando a imagem se necessário */
-    border-radius: 8px; /* Adiciona bordas arredondadas, se desejar */
-    margin: 5px; /* Espaçamento entre as imagens */
+    max-width: 300px; /* Limita a largura máxima das imagens */
+    object-fit: cover; /* Corta as imagens para preencher o espaço */
 }
+
 
 
 
