@@ -193,19 +193,19 @@ tr:hover {
 /* Botão de Doação */
 .botao-doacao {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #25D366; /* Cor do botão */
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    padding: 0.75rem 1.5rem;
+    background-color: #6a0572; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border-radius: 4px; /* Bordas arredondadas */
+    text-decoration: none; /* Remover sublinhado */
+    transition: background-color 0.3s; /* Efeito de transição */
 }
 
 .botao-doacao:hover {
-    background-color: #128C7E; /* Efeito hover */
+    background-color: #5b0463; /* Cor do botão ao passar o mouse */
 }
+
+/* Botões Sociais */
 .social-buttons {
     display: flex;
     justify-content: center; /* Centraliza os botões */
@@ -217,6 +217,7 @@ tr:hover {
     height: auto; /* Mantém a proporção da imagem */
     margin: 0 10px; /* Espaçamento entre os ícones */
 }
+
 
 /* Avaliações */
 #avaliacoes {
