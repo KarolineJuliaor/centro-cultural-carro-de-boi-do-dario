@@ -218,11 +218,11 @@ tr:hover {
     margin: 0 10px; /* Espaçamento entre os ícones */
 }
 
-/* avaliacoes */
+/* Avaliações */
 #avaliacoes {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: #eaf6f6;
+    background: #f5f1e6; /* Cor de fundo suave que combina com o resto do site */
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -230,12 +230,22 @@ tr:hover {
 #estrelas {
     display: flex;
     cursor: pointer;
+    justify-content: center; /* Centraliza as estrelas */
 }
 
 .estrela {
     font-size: 2rem;
-    color: #ffcc00;
+    color: #ffcc00; /* Cor padrão das estrelas */
     margin-right: 5px;
+    transition: transform 0.2s; /* Animação suave ao passar o mouse */
+}
+
+.estrela:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+#avaliacoes-lista {
+    margin-top: 1rem; /* Espaço acima da lista */
 }
 
 #avaliacoes-lista ul {
@@ -244,14 +254,14 @@ tr:hover {
 }
 
 #avaliacoes-lista li {
-    padding: 10px; /* Mantenha apenas um padding */
+    padding: 12px; /* Espaçamento interno */
     margin: 10px 0;
-    background: #fff; /* Fundo branco */
+    background: #fff; /* Fundo branco para os comentários */
     border-radius: 8px; /* Bordas arredondadas */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: box-shadow 0.3s; /* Animação de sombra ao passar o mouse */
 }
 
-.estrela:hover {
-    color: #ffdb58; /* Tom mais claro ao passar o mouse */
+#avaliacoes-lista li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
 }
-
