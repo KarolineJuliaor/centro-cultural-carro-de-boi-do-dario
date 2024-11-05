@@ -1,29 +1,24 @@
 // Função para adicionar imagens na galeria cultural
 document.getElementById('file-input').addEventListener('change', function() {
-    const gallery = document.getElementById('gallery-display');
-    const file = this.files[0];
-    if (!file) return; // Verifica se um arquivo foi selecionado
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const img = document.createElement('img');
-        img.src = e.target.result;
-        gallery.appendChild(img);
-        saveImageToLocalStorage('gallery', img.src);
-    };
-    reader.readAsDataURL(file);
+    adicionarImagem(this, 'gallery-display', 'gallery');
 });
 
 // Função para adicionar imagens em eventos
 function addImage(input) {
-    const eventImages = input.nextElementSibling; // Verifique se é o elemento correto
+    adicionarImagem(input, input.nextElementSibling.id, 'events');
+}
+
+// Função para adicionar imagem ao display e ao localStorage
+function adicionarImagem(input, displayId, storageKey) {
+    const display = document.getElementById(displayId);
     const file = input.files[0];
     if (!file) return; // Verifica se um arquivo foi selecionado
     const reader = new FileReader();
     reader.onload = function(e) {
         const img = document.createElement('img');
         img.src = e.target.result;
-        eventImages.appendChild(img);
-        saveImageToLocalStorage('events', img.src);
+        display.appendChild(img);
+        saveImageToLocalStorage(storageKey, img.src);
     };
     reader.readAsDataURL(file);
 }
@@ -37,37 +32,26 @@ function saveImageToLocalStorage(key, src) {
 
 // Carregar imagens do localStorage ao recarregar a página
 function loadImages() {
-    const gallery = document.getElementById('gallery-display');
-    const storedGalleryImages = JSON.parse(localStorage.getItem('gallery')) || [];
-    storedGalleryImages.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        gallery.appendChild(img);
-    });
+    carregarImagens('gallery', 'gallery-display');
+    carregarImagens('events', 'event-container');
+}
 
-    const storedEventImages = JSON.parse(localStorage.getItem('events')) || [];
-    storedEventImages.forEach(src => {
+// Carregar imagens de uma chave específica do localStorage
+function carregarImagens(key, displayId) {
+    const display = document.getElementById(displayId);
+    const storedImages = JSON.parse(localStorage.getItem(key)) || [];
+    storedImages.forEach(src => {
         const img = document.createElement('img');
         img.src = src;
-        const container = document.querySelector(`#event-container`); // Atualize conforme necessário
-        if (container) {
-            container.appendChild(img);
-        }
+        display.appendChild(img);
     });
 }
 
-// Seleciona as estrelas de avaliação e inicializa a nota
 const estrelas = document.querySelectorAll('.estrela');
+const enviarBtn = document.getElementById('enviar');
 let notaSelecionada = 0;
 
-// Atualiza a cor das estrelas conforme a nota selecionada
-function atualizarEstrelas(estrelas, nota) {
-    estrelas.forEach((estrela, i) => {
-        estrela.style.color = i < nota ? '#ffcc00' : '#000';
-    });
-}
-
-// Adiciona eventos de clique para as estrelas
+// Atualiza a cor das estrelas ao selecionar
 estrelas.forEach((estrela, index) => {
     estrela.addEventListener('click', () => {
         notaSelecionada = index + 1;
@@ -75,15 +59,42 @@ estrelas.forEach((estrela, index) => {
     });
 });
 
-// Salva avaliações no localStorage
+function atualizarEstrelas(estrelas, nota) {
+    estrelas.forEach((e, i) => {
+        e.style.color = i < nota ? '#ffcc00' : '#000';
+    });
+}
+
+// Enviar avaliação
+enviarBtn.addEventListener('click', () => {
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const comentario = document.getElementById('comentario').value;
+
+    if (notaSelecionada && nome && email && comentario) {
+        saveReviewToLocalStorage(nome, comentario, notaSelecionada, email);
+        limparCampos();
+    } else {
+        alert("Por favor, preencha todos os campos e selecione uma nota.");
+    }
+});
+
+function limparCampos() {
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('comentario').value = '';
+    atualizarEstrelas(estrelas, 0); // Reseta as estrelas
+}
+
+// Função para salvar avaliações no localStorage
 function saveReviewToLocalStorage(nome, comentario, nota, email) {
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     reviews.push({ nome, comentario, nota, email });
     localStorage.setItem('reviews', JSON.stringify(reviews));
     loadReviews(); // Atualiza a lista de avaliações
 }
 
-// Carrega as avaliações do localStorage
+// Carregar avaliações ao abrir a página
 function loadReviews() {
     const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     const listaAvaliacoes = document.getElementById('lista-avaliacoes');
@@ -93,11 +104,11 @@ function loadReviews() {
     });
 }
 
-// Adiciona uma avaliação à lista
+// Exibir a avaliação na lista
 function addReview(nome, comentario, nota, email) {
     const listaAvaliacoes = document.getElementById('lista-avaliacoes');
     const li = document.createElement('li');
-    li.textContent = `${nome} (${email}): ${comentario} (Nota: ${nota}) `;
+    li.textContent = `${nome} (${email}): ${comentario} - Nota: ${'⭐'.repeat(nota)}`;
 
     const botaoExcluir = document.createElement('button');
     botaoExcluir.textContent = 'Excluir';
@@ -123,4 +134,5 @@ function excluirAvaliacao(nome, email, comentario, nota) {
 }
 
 // Carrega as avaliações ao abrir a página
+window.addEventListener('load', loadImages);
 window.addEventListener('load', loadReviews);
