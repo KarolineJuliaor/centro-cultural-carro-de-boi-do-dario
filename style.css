@@ -219,19 +219,23 @@ tr:hover {
     margin: 0 10px; /* Espaçamento entre os ícones */
 }
 
-#botao-instagram-boi button {
-    background-color: #E1306C; /* Cor do Instagram */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+#botao-instagram-boi {
+    display: flex; /* Permite alinhar os itens dentro do container */
+    justify-content: center; /* Centraliza os botões */
+    margin: 20px 0; /* Espaçamento em cima e embaixo */
 }
 
-#botao-instagram-boi button:hover {
-    background-color: #C13584;
+#botao-instagram-boi a { /* Supondo que você esteja usando links como botões */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os ícones */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    width: 30px; /* Define uma largura fixa */
+    height: auto; /* Mantém a proporção da imagem */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+#botao-instagram-boi a:hover {
+    background-color: #C13584; /* Cor de fundo ao passar o mouse */
 }
 
 
