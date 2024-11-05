@@ -1,15 +1,24 @@
+/* Variáveis CSS */
+:root {
+    --cor-fundo: #f5f1e6;
+    --cor-texto: #4b3b28;
+    --cor-destaque: #8b5a2b;
+    --cor-clara: #fdf5e6;
+    --cor-hover: #ffe4b5;
+}
+
 /* Estilos gerais */
 body {
     font-family: 'Georgia', serif;
-    background-color: #f5f1e6; /* Fundo suave */
-    color: #4b3b28; /* Cor de texto marrom escuro */
+    background-color: var(--cor-fundo); /* Fundo suave */
+    color: var(--cor-texto); /* Cor de texto marrom escuro */
     margin: 0;
     padding: 0;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #8b5a2b; /* Marrom escuro para destaque */
+    background-color: var(--cor-destaque); /* Marrom escuro para destaque */
     padding: 20px;
     text-align: center;
 }
@@ -21,14 +30,14 @@ header .logo {
 }
 
 header h1 {
-    color: #fdf5e6; /* Texto claro no fundo marrom */
+    color: var(--cor-clara); /* Texto claro no fundo marrom */
     font-size: 2em;
     font-weight: bold;
     margin-top: 10px;
 }
 
 .descricao {
-    color: #fdf5e6;
+    color: var(--cor-clara);
     font-size: 1.2em;
     margin-top: 5px;
 }
@@ -38,7 +47,7 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    background-color: #8b5a2b; /* Marrom escuro para navegação */
+    background-color: var(--cor-destaque); /* Marrom escuro para navegação */
     margin: 0;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -51,13 +60,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #f5f1e6; /* Links em tom claro */
+    color: var(--cor-clara); /* Links em tom claro */
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffe4b5; /* Tom amadeirado claro ao passar o mouse */
+    color: var(--cor-hover); /* Tom amadeirado claro ao passar o mouse */
 }
 
 /* Seções principais */
@@ -74,8 +83,8 @@ section {
 }
 
 section h2 {
-    color: #4b3b28; /* Título em marrom escuro */
-    border-bottom: 2px solid #8b5a2b; /* Linha de destaque */
+    color: var(--cor-texto); /* Título em marrom escuro */
+    border-bottom: 2px solid var(--cor-destaque); /* Linha de destaque */
 }
 
 /* Galeria Cultural */
@@ -88,7 +97,8 @@ section h2 {
 
 .galeria-cultural img {
     margin: 10px;
-    max-width: 300px; /* Limita a largura máxima das imagens */
+    width: 100%; /* A largura ocupará 100% do espaço disponível */
+    max-width: 300px; /* Mas não excederá 300px */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para efeito visual */
@@ -117,7 +127,6 @@ section h2 {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Ajustes na Galeria de Eventos */
 .event-gallery {
@@ -158,6 +167,7 @@ section h2 {
 .galeria-festajunina img:hover {
     transform: scale(1.05);
 }
+
 .imagem-centralizada {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
@@ -175,16 +185,16 @@ table {
 th, td {
     padding: 12px;
     text-align: left;
-    border: 1px solid #8b5a2b; /* Borda marrom escura */
+    border: 1px solid var(--cor-destaque); /* Borda marrom escura */
 }
 
 th {
     background-color: #e8dcc3; /* Fundo claro para cabeçalho */
-    color: #4b3b28; /* Texto em marrom escuro */
+    color: var(--cor-texto); /* Texto em marrom escuro */
 }
 
 tr:nth-child(even) {
-    background-color: #f5f1e6; /* Fundo suave para linhas pares */
+    background-color: var(--cor-fundo); /* Fundo suave para linhas pares */
 }
 
 tr:hover {
@@ -205,6 +215,11 @@ tr:hover {
 .botao-doacao:hover {
     background-color: #5b0463; /* Cor do botão ao passar o mouse */
 }
+
+.botao-doacao:active {
+    transform: scale(0.95); /* Efeito de "apertar" no botão */
+}
+
 /* Botões Sociais */
 .social-buttons {
     display: flex;
@@ -219,13 +234,12 @@ tr:hover {
 }
 
 /* Estilo específico para a logo do Instagram */
-
 .logo-instagram {
     width: 12px; /* Tamanho bem pequeno */
     height: auto; /* Mantém a proporção */
     margin-right: 8px; /* Espaçamento entre a logo e o texto */
 }
-
+/* Imagens do Boi de Mamão */
 #boi-de-mamao {
     margin: 2rem 0;
     text-align: center;
@@ -240,61 +254,35 @@ tr:hover {
 .imagens-boi img {
     width: 100px; /* Tamanho das imagens */
     height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Bordas arredondadas nas imagens */
-}
-
-
-/* Efeito hover para todas as imagens */
-img:hover {
-    transform: scale(1.05); /* Aumenta o tamanho da imagem ao passar o mouse */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
-}
-
-/* Avaliações */
-#avaliacoes {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #f5f1e6; /* Cor de fundo suave que combina com o resto do site */
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#estrelas {
-    display: flex;
-    cursor: pointer;
-    justify-content: center; /* Centraliza as estrelas */
-}
-
-.estrela {
-    font-size: 2rem;
-    color: #ffcc00; /* Cor padrão das estrelas */
-    margin-right: 5px;
-    transition: transform 0.2s; /* Animação suave ao passar o mouse */
-}
-
-.estrela:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-}
-
-#avaliacoes-lista {
-    margin-top: 1rem; /* Espaço acima da lista */
-}
-
-#avaliacoes-lista ul {
-    list-style: none;
-    padding: 0;
-}
-
-#avaliacoes-lista li {
-    padding: 12px; /* Espaçamento interno */
-    margin: 10px 0;
-    background: #fff; /* Fundo branco para os comentários */
     border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: box-shadow 0.3s; /* Animação de sombra ao passar o mouse */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra para um leve efeito de profundidade */
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
-#avaliacoes-lista li:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
+.imagens-boi img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cor-destaque); /* Marrom escuro para o rodapé */
+    color: var(--cor-clara); /* Texto claro no rodapé */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Ajustes para o layout em dispositivos menores */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px; /* Reduz a margem em telas menores */
+    }
+
+    .galeria-costelaco img {
+        width: 120px; /* Ajusta o tamanho das imagens na galeria em telas pequenas */
+    }
+
+    .social-buttons img {
+        width: 25px; /* Reduz o tamanho dos ícones de redes sociais */
+    }
+}
