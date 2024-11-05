@@ -157,17 +157,13 @@ video {
     transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
-/* Ajustes na Galeria de Eventos */
 .galeria-imagens img {
-    width: 120%; /* Aumenta a largura das imagens */
+    width: 150px; /* Aumenta a largura das imagens para 150px */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 8px; /* Adiciona bordas arredondadas */
     transition: transform 0.3s; /* Efeito de transição suave */
 }
 
-.galeria-imagens img:hover {
-    transform: scale(1.05); /* Leve aumento ao passar o mouse */
-}
 .galeria-eventos {
     display: flex; /* Define como flexível */
     justify-content: center; /* Centraliza horizontalmente */
@@ -176,7 +172,7 @@ video {
 }
 
 .galeria-eventos img {
-    max-width: 100px; /* Limita a largura máxima */
+    width: 150px; /* Ajusta a largura das imagens na galeria de eventos */
     height: auto; /* Mantém a proporção */
     transition: transform 0.3s; /* Efeito suave para transformação */
 }
