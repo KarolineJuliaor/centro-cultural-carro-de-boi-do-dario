@@ -219,6 +219,21 @@ tr:hover {
     margin: 0 10px; /* Espaçamento entre os ícones */
 }
 
+#botao-instagram-boi button {
+    background-color: #E1306C; /* Cor do Instagram */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#botao-instagram-boi button:hover {
+    background-color: #C13584;
+}
+
 
 /* Avaliações */
 #avaliacoes {
@@ -267,3 +282,4 @@ tr:hover {
 #avaliacoes-lista li:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
 }
+
