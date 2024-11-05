@@ -219,6 +219,22 @@ tr:hover {
     margin: 0 10px; /* Espaçamento entre os ícones */
 }
 
+#boi-de-mamao {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.imagens-boi {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.imagens-boi img {
+    width: 100px; /* Tamanho das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+}
 
 
 /* Avaliações */
