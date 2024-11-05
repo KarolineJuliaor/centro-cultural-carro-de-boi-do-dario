@@ -59,6 +59,22 @@ header h1 {
     color: #555; /* Cor do texto */
 }
 
+.assista-video {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px auto; /* Espaço ao redor */
+}
+
+.assista-video h2 {
+    font-size: 2rem; /* Tamanho do título */
+    color: #6a0572; /* Cor do título */
+}
+
+.assista-video iframe {
+    max-width: 100%; /* Ajusta o vídeo para não ultrapassar a largura do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+    border: none; /* Remove bordas */
+}
+
 
 /* Navegação */
 nav ul {
@@ -126,15 +142,19 @@ section h2 {
 .galeria-eventos {
     display: flex; /* Define como flexível */
     justify-content: center; /* Centraliza horizontalmente */
-    flex-wrap: wrap; /* Permite que as imagens quebrem em várias linhas, mantendo-se alinhadas no centro */
+    flex-wrap: wrap; /* Permite que as imagens quebrem em várias linhas */
     gap: 10px; /* Espaçamento entre as imagens */
 }
 
 .galeria-eventos img {
     max-width: 100px; /* Limita a largura máxima */
     height: auto; /* Mantém a proporção */
+    transition: transform 0.3s; /* Efeito suave para transformação */
 }
 
+.galeria-eventos img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
 
 .event-gallery {
     margin-bottom: 3rem;
