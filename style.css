@@ -126,7 +126,7 @@ section h2 {
     flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se não houver espaço */
     justify-content: center; /* Centraliza as imagens na galeria */
     gap: 10px; /* Espaçamento entre as imagens */
-    text-align: center; /* Centraliza o texto e imagens */
+    text-align: center; /* Centraliza o texto */
 }
 
 .galeria-cultural img {
@@ -135,6 +135,11 @@ section h2 {
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para efeito visual */
     object-fit: cover; /* Corta as imagens para preencher o espaço */
+    transition: transform 0.3s; /* Suaviza a transição ao aumentar */
+}
+
+.galeria-cultural img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
 /* Ajustes na Galeria de Eventos */
