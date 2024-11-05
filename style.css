@@ -93,13 +93,12 @@ section h2 {
     display: flex;
     flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se não houver espaço */
     justify-content: center; /* Centraliza as imagens na galeria */
+    gap: 10px; /* Espaçamento entre as imagens */
     text-align: center; /* Centraliza o texto e imagens */
 }
 
 .galeria-cultural img {
-    margin: 10px;
-    width: 100%; /* A largura ocupará 100% do espaço disponível */
-    max-width: 300px; /* Mas não excederá 300px */
+    max-width: 100px; /* Limita a largura máxima das imagens */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para efeito visual */
