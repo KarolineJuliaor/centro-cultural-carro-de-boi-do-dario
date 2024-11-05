@@ -106,33 +106,22 @@ section h2 {
     object-fit: cover; /* Corta as imagens para preencher o espaço */
 }
 
-/* Estilos específicos para a galeria do Costelaço */
-.galeria-costelaco {
-    display: flex;
-    flex-wrap: nowrap; /* Impede que as imagens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    gap: 10px; /* Espaçamento entre as imagens */
-    overflow-x: auto; /* Permite rolagem horizontal se as imagens excederem a largura da tela */
-}
-
-.galeria-costelaco img {
-    width: 150px; /* Define um tamanho fixo para as imagens */
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeria-costelaco img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* Ajustes na Galeria de Eventos */
+.galeria-eventos {
+    display: flex; /* Define como flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite que as imagens quebrem em várias linhas, mantendo-se alinhadas no centro */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.galeria-eventos img {
+    max-width: 100px; /* Ajuste conforme o necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
 .event-gallery {
     margin-bottom: 3rem;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; /* Centraliza o texto do título e data */
 }
 
 .event-gallery h2 {
@@ -145,35 +134,6 @@ section h2 {
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 1rem;
-}
-
-/* Galeria de Imagens de Eventos */
-.costelaco-images,
-.galeria-festajunina {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-}
-
-.costelaco-images img,
-.galeria-festajunina img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.costelaco-images img:hover,
-.galeria-festajunina img:hover {
-    transform: scale(1.05);
-}
-
-.imagem-centralizada {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente se necessário */
-    margin: 20px 0; /* Espaçamento acima e abaixo */
 }
 
 /* Estilos para a tabela */
