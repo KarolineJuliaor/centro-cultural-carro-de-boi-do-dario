@@ -310,29 +310,46 @@
     </section>
                 <!-- Avaliações -->
 
+<!-- Seção de Avaliações -->
 <section id="avaliacoes">
     <h2>Avaliações</h2>
-    <div id="estrelas">
-        <span class="estrela" data-value="1">★</span>
-        <span class="estrela" data-value="2">★</span>
-        <span class="estrela" data-value="3">★</span>
-        <span class="estrela" data-value="4">★</span>
-        <span class="estrela" data-value="5">★</span>
+    <div class="avaliacao">
+        <div class="estrelas">
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9734;</span>
+        </div>
+        <p>Ótimo espaço para eventos culturais! A equipe é muito acolhedora.</p>
+        <span class="data">01/11/2024</span>
     </div>
+    <div class="avaliacao">
+        <div class="estrelas">
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+        </div>
+        <p>Adorei as aulas de capoeira! Muito divertido e educativo.</p>
+        <span class="data">30/10/2024</span>
+    </div>
+    <!-- Formulário para nova avaliação -->
     <form id="form-avaliacao">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="comentario">Comentário:</label>
-        <textarea id="comentario" name="comentario" required></textarea>
+        <input type="text" id="nome" placeholder="Seu nome" required>
+        <input type="email" id="email" placeholder="Seu email" required>
+        <textarea id="comentario" placeholder="Sua avaliação" required></textarea>
+        <div class="estrelas form-estrelas">
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+            <span class="estrela">&#9733;</span>
+        </div>
         <button type="submit">Enviar Avaliação</button>
     </form>
-    <div id="avaliacoes-lista">
-        <ul id="lista-avaliacoes">
-            <!-- Comentários dos usuários aparecerão aqui -->
-        </ul>
-    </div>
+    <ul id="lista-avaliacoes"></ul>
 </section>
 
 <script>
