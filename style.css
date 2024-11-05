@@ -18,8 +18,22 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: var(--cor-destaque); /* Marrom escuro para destaque */
-    padding: 20px;
+    /* Estilo do cabeçalho */
+    background-color: var(--cor-destaque);
+    padding: 1.25rem;
+    text-align: center;
+}
+
+/* Navegação */
+nav ul {
+    /* Estilos da navegação */
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: var(--cor-destaque);
+}
+
+    padding: 1.25rem; /* 20px é aproximadamente 1.25rem */
     text-align: center;
 }
 
@@ -47,7 +61,13 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    background-color: var(--cor-destaque); /* Marrom escuro para navegação */
+header {
+    background-color: var(--cor-destaque); /* Marrom escuro para destaque */
+    color: var(--cor-clara); /* Certifique-se de que o texto tenha bom contraste */
+}
+
+
+
     margin: 0;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -68,16 +88,21 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--cor-hover); /* Tom amadeirado claro ao passar o mouse */
 }
+nav ul li a:focus,
+.botao-doacao:focus {
+    outline: 2px solid var(--cor-hover); /* Adiciona um contorno ao foco */
+    outline-offset: 2px; /* Espaçamento do contorno em relação ao elemento */
+}
 
 /* Seções principais */
 main {
-    padding: 20px;
+    padding: 1.25rem; /* 20px é aproximadamente 1.25rem */
 }
 
 section {
     background-color: #fff8e6;
     border-radius: 12px;
-    padding: 20px;
+    padding: 1.25rem; /* 20px é aproximadamente 1.25rem */
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -275,12 +300,15 @@ footer {
 /* Ajustes para o layout em dispositivos menores */
 @media (max-width: 768px) {
     nav ul li {
-        margin: 0 10px; /* Reduz a margem em telas menores */
+        display: block; /* Coloca os links da navegação em uma coluna */
+        margin: 10px 0; /* Adiciona espaço entre os itens */
     }
 
     .galeria-costelaco img {
-        width: 120px; /* Ajusta o tamanho das imagens na galeria em telas pequenas */
+        width: 100%; /* Imagens ocupam 100% do espaço em telas pequenas */
     }
+}
+
 
     .social-buttons img {
         width: 25px; /* Reduz o tamanho dos ícones de redes sociais */
