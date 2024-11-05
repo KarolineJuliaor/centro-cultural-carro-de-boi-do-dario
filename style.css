@@ -219,12 +219,12 @@ tr:hover {
 }
 
 /* Estilo específico para a logo do Instagram */
+
 .logo-instagram {
-    width: 24px; /* Define a largura da logo do Instagram */
+    width: 12px; /* Tamanho bem pequeno */
     height: auto; /* Mantém a proporção */
     margin-right: 8px; /* Espaçamento entre a logo e o texto */
 }
-
 
 #boi-de-mamao {
     margin: 2rem 0;
