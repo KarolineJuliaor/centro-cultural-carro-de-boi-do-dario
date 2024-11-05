@@ -250,6 +250,20 @@ img {
     border-radius: 8px; /* Bordas arredondadas */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    
+    .imagens-boi {
+    display: flex; /* Utiliza o layout flexível */
+    flex-wrap: nowrap; /* As imagens não vão para a linha de baixo */
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+}
+
+.imagens-boi img {
+    max-width: 100%; /* Ajusta a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaçamento entre as imagens */
+}
+
+    
 }
 
 /* Efeito hover para todas as imagens */
