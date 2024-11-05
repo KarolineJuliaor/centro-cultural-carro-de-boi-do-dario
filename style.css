@@ -120,6 +120,21 @@ section h2 {
     border-bottom: 2px solid var(--cor-destaque); /* Linha de destaque */
 }
 
+/* Estilos para a galeria */
+#gallery-display img {
+    max-width: 300px; /* Aumenta a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px; /* Espaçamento entre as imagens */
+}
+
+/* Estilos para vídeos */
+video {
+    max-width: 600px; /* Aumenta a largura máxima do vídeo */
+    height: auto; /* Mantém a proporção do vídeo */
+    margin: 10px; /* Espaçamento ao redor do vídeo */
+}
+
+
 /* Galeria Cultural */
 .galeria-cultural {
     display: flex;
