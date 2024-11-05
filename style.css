@@ -115,9 +115,10 @@ section h2 {
 }
 
 .galeria-eventos img {
-    max-width: 100px; /* Ajuste conforme o necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100px; /* Limita a largura máxima */
+    height: auto; /* Mantém a proporção */
 }
+
 
 .event-gallery {
     margin-bottom: 3rem;
