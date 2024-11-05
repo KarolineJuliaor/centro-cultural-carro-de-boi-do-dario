@@ -59,20 +59,19 @@ header h1 {
     color: #555; /* Cor do texto */
 }
 
-.assista-video {
+.video-container {
     text-align: center; /* Centraliza o texto */
     margin: 20px auto; /* Espaço ao redor */
 }
 
-.assista-video h2 {
+.video-container h2 {
     font-size: 2rem; /* Tamanho do título */
     color: #6a0572; /* Cor do título */
 }
 
-.assista-video iframe {
-    max-width: 100%; /* Ajusta o vídeo para não ultrapassar a largura do contêiner */
+.video-container iframe {
+    max-width: 100%; /* Garante que o vídeo não exceda a largura do contêiner */
     height: auto; /* Mantém a proporção do vídeo */
-    border: none; /* Remove bordas */
 }
 
 
