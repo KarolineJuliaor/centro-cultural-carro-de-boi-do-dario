@@ -60,26 +60,25 @@ function loadImages() {
 const estrelas = document.querySelectorAll('.estrela');
 let notaSelecionada = 0;
 
-// Adiciona evento de clique nas estrelas
+// Funcionalidade para as estrelas de avaliação
 estrelas.forEach((estrela, index) => {
     estrela.addEventListener('click', () => {
         notaSelecionada = index + 1;
-        atualizarEstrelas(notaSelecionada);
+        estrelas.forEach((e, i) => {
+            e.style.color = i < notaSelecionada ? '#ffcc00' : '#000';
+        });
     });
 });
 
-// Função de envio da avaliação
-const form = document.getElementById('form-avaliacao');
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const nome = document.getElementById('nome').value;
-    const comentario = document.getElementById('comentario').value;
-    const email = document.getElementById('email').value;
-
-    saveReviewToLocalStorage(nome, comentario, notaSelecionada, email);
-    form.reset();
-    atualizarEstrelas(0);
+// Funcionalidade para as estrelas no formulário
+const formEstrelas = document.querySelectorAll('.form-estrelas .estrela');
+formEstrelas.forEach((estrela, index) => {
+    estrela.addEventListener('click', () => {
+        notaSelecionada = index + 1;
+        formEstrelas.forEach((e, i) => {
+            e.style.color = i < notaSelecionada ? '#ffcc00' : '#000';
+        });
+    });
 });
 
 // Salvar avaliações no localStorage
@@ -87,7 +86,7 @@ function saveReviewToLocalStorage(nome, comentario, nota, email) {
     let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     reviews.push({ nome, comentario, nota, email });
     localStorage.setItem('reviews', JSON.stringify(reviews));
-    exibirAvaliacoes();
+    loadReviews(); // Atualiza as avaliações
 }
 
 // Carregar avaliações salvas ao recarregar a página
@@ -114,11 +113,8 @@ function addReview(nome, comentario, nota, email) {
     listaAvaliacoes.appendChild(li);
 }
 
-// Chame a função loadImages e loadReviews no evento de carregamento da janela
-window.addEventListener('load', () => {
-    loadImages(); // Carrega as imagens ao abrir a página
-    loadReviews(); // Carrega as avaliações ao abrir a página
-});
+// Chame a função loadReviews no evento de carregamento da janela
+window.addEventListener('load', loadReviews);
 
 // Função para excluir a avaliação
 function excluirAvaliacao(nome, email, comentario, nota) {
@@ -127,7 +123,7 @@ function excluirAvaliacao(nome, email, comentario, nota) {
         let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
         reviews = reviews.filter(review => !(review.nome === nome && review.email === email && review.comentario === comentario && review.nota === nota));
         localStorage.setItem('reviews', JSON.stringify(reviews));
-        exibirAvaliacoes(); // Atualiza a exibição após a exclusão
+        loadReviews(); // Atualiza a exibição após a exclusão
     } else {
         alert("Senha incorreta. Você não tem permissão para excluir esta avaliação.");
     }
