@@ -315,17 +315,19 @@
 
     <div class="avaliacao-container">
         <h2>Deixe sua Avaliação</h2>
-        <div class="form-estrelas">
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-        </div>
-        <input type="text" id="nome" placeholder="Seu nome" required />
-        <input type="email" id="email" placeholder="Seu email" required />
-        <textarea id="comentario" placeholder="Seu comentário" required></textarea>
-        <button id="enviar">Enviar Avaliação</button>
+        <form onsubmit="return false;"> <!-- Incluído o elemento form -->
+            <div class="form-estrelas">
+                <span class="estrela">⭐</span>
+                <span class="estrela">⭐</span>
+                <span class="estrela">⭐</span>
+                <span class="estrela">⭐</span>
+                <span class="estrela">⭐</span>
+            </div>
+            <input type="text" id="nome" placeholder="Seu nome" required />
+            <input type="email" id="email" placeholder="Seu email" required />
+            <textarea id="comentario" placeholder="Seu comentário" required></textarea>
+            <button type="submit" id="enviar">Enviar Avaliação</button>
+        </form>
     </div>
 
     <ul id="lista-avaliacoes"></ul>
