@@ -1,3 +1,4 @@
+
 /* Variáveis CSS */
 :root {
     --cor-fundo: #f5f1e6;
@@ -18,22 +19,8 @@ body {
 
 /* Cabeçalho */
 header {
-    /* Estilo do cabeçalho */
-    background-color: var(--cor-destaque);
-    padding: 1.25rem;
-    text-align: center;
-}
-
-/* Navegação */
-nav ul {
-    /* Estilos da navegação */
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    background-color: var(--cor-destaque);
-}
-
-    padding: 1.25rem; /* 20px é aproximadamente 1.25rem */
+    background-color: var(--cor-destaque); /* Marrom escuro para destaque */
+    padding: 20px;
     text-align: center;
 }
 
@@ -61,13 +48,7 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-header {
-    background-color: var(--cor-destaque); /* Marrom escuro para destaque */
-    color: var(--cor-clara); /* Certifique-se de que o texto tenha bom contraste */
-}
-
-
-
+    background-color: var(--cor-destaque); /* Marrom escuro para navegação */
     margin: 0;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -88,21 +69,16 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--cor-hover); /* Tom amadeirado claro ao passar o mouse */
 }
-nav ul li a:focus,
-.botao-doacao:focus {
-    outline: 2px solid var(--cor-hover); /* Adiciona um contorno ao foco */
-    outline-offset: 2px; /* Espaçamento do contorno em relação ao elemento */
-}
 
 /* Seções principais */
 main {
-    padding: 1.25rem; /* 20px é aproximadamente 1.25rem */
+    padding: 20px;
 }
 
 section {
     background-color: #fff8e6;
     border-radius: 12px;
-    padding: 1.25rem; /* 20px é aproximadamente 1.25rem */
+    padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -292,23 +268,21 @@ tr:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--cor-destaque); /* Marrom escuro para o rodapé */
-    color: var(--cor-clara); /* Texto claro no rodapé */
+    background-color: var(--cor-fundo); /* Cor de fundo igual ao restante */
+    color: var(--cor-texto); /* Texto em marrom escuro para o rodapé */
     margin-top: 20px; /* Espaçamento superior */
 }
+
 
 /* Ajustes para o layout em dispositivos menores */
 @media (max-width: 768px) {
     nav ul li {
-        display: block; /* Coloca os links da navegação em uma coluna */
-        margin: 10px 0; /* Adiciona espaço entre os itens */
+        margin: 0 10px; /* Reduz a margem em telas menores */
     }
 
     .galeria-costelaco img {
-        width: 100%; /* Imagens ocupam 100% do espaço em telas pequenas */
+        width: 120px; /* Ajusta o tamanho das imagens na galeria em telas pequenas */
     }
-}
-
 
     .social-buttons img {
         width: 25px; /* Reduz o tamanho dos ícones de redes sociais */
