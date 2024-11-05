@@ -205,7 +205,6 @@ tr:hover {
 .botao-doacao:hover {
     background-color: #5b0463; /* Cor do botão ao passar o mouse */
 }
-
 /* Botões Sociais */
 .social-buttons {
     display: flex;
@@ -218,6 +217,14 @@ tr:hover {
     height: auto; /* Mantém a proporção da imagem */
     margin: 0 10px; /* Espaçamento entre os ícones */
 }
+
+/* Estilo específico para a logo do Instagram */
+.logo-instagram {
+    width: 24px; /* Define a largura da logo do Instagram */
+    height: auto; /* Mantém a proporção */
+    margin-right: 8px; /* Espaçamento entre a logo e o texto */
+}
+
 
 #boi-de-mamao {
     margin: 2rem 0;
