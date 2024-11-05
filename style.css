@@ -243,26 +243,6 @@ tr:hover {
     border-radius: 8px; /* Bordas arredondadas nas imagens */
 }
 
-/* Centraliza todas as imagens */
-img {
-    display: block; /* Faz a imagem ocupar uma linha inteira */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
-}
-
-/* Galeria de Imagens */
-.imagens-boi {
-    display: flex; /* Usar flexbox para disposição em linha */
-    overflow-x: auto; /* Permitir rolagem horizontal */
-    gap: 10px; /* Espaçamento entre as imagens */
-}
-
-.imagens-boi img {
-    max-width: 100%; /* Ajusta a largura máxima da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-}
 
 /* Efeito hover para todas as imagens */
 img:hover {
