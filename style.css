@@ -43,6 +43,23 @@ header h1 {
     margin-top: 5px;
 }
 
+.sobre-centro-cultural {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px auto; /* Espaço ao redor */
+    max-width: 800px; /* Limita a largura para melhor visualização */
+}
+
+.sobre-centro-cultural h2 {
+    font-size: 2rem; /* Tamanho do título */
+    color: #6a0572; /* Cor do título */
+}
+
+.sobre-centro-cultural p {
+    font-size: 1.2rem; /* Tamanho do texto */
+    color: #555; /* Cor do texto */
+}
+
+
 /* Navegação */
 nav ul {
     list-style: none;
