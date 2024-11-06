@@ -199,6 +199,27 @@ video {
     margin-bottom: 1rem;
 }
 
+/* Imagens do Boi de Mamão */
+
+.boi-de-mamao-galeria {
+    display: flex; /* Define como flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite que as imagens quebrem em várias linhas */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+
+.boi-de-mamao-galeria img {
+    width: 150px; /* Aumenta a largura das imagens para 150px */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    transition: transform 0.3s; /* Efeito de transição suave */
+}
+
+.boi-de-mamao-galeria img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
 /* Estilos para a tabela */
 table {
     width: 100%;
