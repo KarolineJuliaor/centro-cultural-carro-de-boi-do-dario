@@ -281,7 +281,65 @@ tr:hover {
 .boi-de-mamao-galeria img:hover {
     transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
+/* Estilo comum para todas as galerias */
+.gallery {
+    margin: 20px 0;
+    text-align: center;
+}
 
+.file-input {
+    display: none; /* Esconde o campo de input */
+}
+
+.gallery-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery-display img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-display img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Botão para adicionar imagens */
+.gallery input[type="file"] + .gallery-display {
+    cursor: pointer;
+    color: #6a0572;
+    background-color: #fad0c4;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery input[type="file"] + .gallery-display:hover {
+    background-color: #ff9a9e;
+}
+
+/* Ajustes específicos para a galeria do Boi de Mamão */
+#boi-display {
+    background-color: #eaf6f6; /* Cor suave para o fundo */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#event-container {
+    background-color: #fff0f0; /* Cor suave para o fundo da galeria de eventos */
+    padding: 20px;
+    border-radius: 12px;
+}
 
 #avaliacoes-lista {
     list-style: none;
