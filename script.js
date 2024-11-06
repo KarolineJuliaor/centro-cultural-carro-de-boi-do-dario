@@ -46,7 +46,7 @@ function carregarImagens(key, displayId) {
         display.appendChild(img);
     });
 }
-
+// Avaliações
 const estrelas = document.querySelectorAll('.estrela');
 const enviarBtn = document.getElementById('enviar');
 let notaSelecionada = 0;
@@ -108,7 +108,11 @@ function loadReviews() {
 function addReview(nome, comentario, nota, email) {
     const listaAvaliacoes = document.getElementById('lista-avaliacoes');
     const li = document.createElement('li');
-    li.textContent = `${nome} (${email}): ${comentario} - Nota: ${'⭐'.repeat(nota)}`;
+    li.innerHTML = `
+        <strong>${nome} (${email})</strong>
+        <p>${comentario}</p>
+        <div>Nota: ${'⭐'.repeat(nota)}</div>
+    `;
 
     const botaoExcluir = document.createElement('button');
     botaoExcluir.textContent = 'Excluir';
@@ -134,5 +138,4 @@ function excluirAvaliacao(nome, email, comentario, nota) {
 }
 
 // Carrega as avaliações ao abrir a página
-window.addEventListener('load', loadImages);
 window.addEventListener('load', loadReviews);
