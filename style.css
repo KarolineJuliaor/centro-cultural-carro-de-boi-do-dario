@@ -353,3 +353,51 @@ footer {
         width: 25px; /* Reduz o tamanho dos ícones de redes sociais */
     }
 }
+
+
+footer {
+    background-color: #6a0572;
+    color: white;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem 0;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffccff;
+}
+
+.footer-section p, .footer-section a {
+    color: #e1e1e1;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ffccff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e1e1;
+    color: #e1e1e1;
+}
+
