@@ -21,7 +21,13 @@ header {
     background-color: var(--cor-destaque); /* Marrom escuro para destaque */
     padding: 20px;
     text-align: center;
+}
 
+header .logo {
+    max-width: 120px; /* Tamanho máximo da logo */
+    height: auto;
+    border-radius: 50%; /* Borda arredondada para efeito de logo */
+}
 
 header h1 {
     color: var(--cor-clara); /* Texto claro no fundo marrom */
@@ -238,6 +244,7 @@ tr:hover {
 .botao-doacao:active {
     transform: scale(0.95); /* Efeito de "apertar" no botão */
 }
+
 /* Botões Sociais */
 .social-buttons {
     display: flex;
@@ -246,25 +253,16 @@ tr:hover {
 }
 
 .social-buttons img {
-    width: 40px; /* Aumenta o tamanho das logos */
+    width: 30px; /* Define uma largura fixa */
     height: auto; /* Mantém a proporção da imagem */
     margin: 0 10px; /* Espaçamento entre os ícones */
-    transition: transform 0.3s;
 }
 
-/* Efeito de zoom suave ao passar o mouse */
-.social-buttons img:hover {
-    transform: scale(1.1);
-}
-
-/* Ajuste do tamanho específico da logo do Instagram */
+/* Estilo específico para a logo do Instagram */
 .logo-instagram {
-    width: 40px; /* Define um tamanho específico */
-    height: auto;
+    width: 12px; /* Tamanho bem pequeno */
+    height: auto; /* Mantém a proporção */
     margin-right: 8px; /* Espaçamento entre a logo e o texto */
-    border-radius: 50%; /* Borda arredondada, se necessário */
-}
-
 }
 /* Estilo para imagens do "Boi de Mamão do Rio Vermelho" */
 #boi-de-mamao img {
@@ -402,4 +400,3 @@ footer {
     border-top: 1px solid #e1e1e1;
     color: #e1e1e1;
 }
-
