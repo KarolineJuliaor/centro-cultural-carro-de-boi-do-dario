@@ -322,11 +322,11 @@
 <section id="avaliacao-formulario">
     <h2>Deixe sua Avaliação</h2>
     <div id="estrelas">
-        <span class="estrela" data-valor="1">⭐</span>
-        <span class="estrela" data-valor="2">⭐</span>
-        <span class="estrela" data-valor="3">⭐</span>
-        <span class="estrela" data-valor="4">⭐</span>
-        <span class="estrela" data-valor="5">⭐</span>
+        <span class="estrela" data-valor="1">&#9733;</span>
+        <span class="estrela" data-valor="2">&#9733;</span>
+        <span class="estrela" data-valor="3">&#9733;</span>
+        <span class="estrela" data-valor="4">&#9733;</span>
+        <span class="estrela" data-valor="5">&#9733;</span>
     </div>
     <input type="text" id="nome" placeholder="Seu nome" required />
     <input type="email" id="email" placeholder="Seu email" required />
@@ -339,6 +339,19 @@
     <h2>Avaliações</h2>
     <ul id="lista-avaliacoes"></ul> <!-- Avaliações dinâmicas -->
 </div>
+
+<style>
+    /* Estilo das Estrelas */
+    #estrelas .estrela {
+        font-size: 2rem;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    #estrelas .estrela.ativa {
+        color: #FFD700; /* Dourado para estrela ativa */
+    }
+</style>
 
 <script>
     let rating = 0; // Variável para armazenar a avaliação selecionada
@@ -353,7 +366,7 @@
 
     function atualizarEstrelas(rating) {
         document.querySelectorAll('#estrelas .estrela').forEach(star => {
-            star.style.color = (star.getAttribute('data-valor') <= rating) ? '#FFD700' : '#ccc';
+            star.classList.toggle('ativa', star.getAttribute('data-valor') <= rating);
         });
     }
 
@@ -381,7 +394,6 @@
     });
 </script>
 
-
     <script src="script.js"></script>
 <!-- Rodapé -->
 <footer>
@@ -394,4 +406,30 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram" width="24" height="24">
         </a>
     </div>
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>Sobre Nós</h3>
+            <p>Centro Cultural Carro de Boi do Dário - incentivando a cultura e o esporte para a comunidade.</p>
+            <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360, Ingleses, Florianópolis - SC</p>
+            <p><strong>Telefone:</strong> (48) 99932-3570</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social">
+            <h3>Siga-nos</h3>
+            <a href="https://www.instagram.com/centroculturalcarrodeboidodari/" target="_blank">Instagram</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário | Todos os direitos reservados.</p>
+    </div>
+</footer>
+
 </footer>
