@@ -162,7 +162,7 @@ video {
     border-radius: 8px; /* Adiciona bordas arredondadas */
     transition: transform 0.3s; /* Efeito de transição suave */
 }
-
+/* Ajustes na Galeria de Eventos */
 .galeria-eventos {
     display: flex; /* Define como flexível */
     justify-content: center; /* Centraliza horizontalmente */
@@ -171,8 +171,9 @@ video {
 }
 
 .galeria-eventos img {
-    width: 150px; /* Ajusta a largura das imagens na galeria de eventos */
+    width: 160px; /* Tamanho ligeiramente maior */
     height: auto; /* Mantém a proporção */
+    border-radius: 12px; /* Bordas arredondadas */
     transition: transform 0.3s; /* Efeito suave para transformação */
 }
 
@@ -180,6 +181,7 @@ video {
     transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
+/* Estilos para a galeria de eventos */
 .event-gallery {
     margin-bottom: 3rem;
     text-align: center; /* Centraliza o texto do título e data */
@@ -196,6 +198,7 @@ video {
     color: #555;
     margin-bottom: 1rem;
 }
+
 
 /* Estilos para a tabela */
 table {
