@@ -318,22 +318,20 @@
     </section>
         
 
-   <!-- Seção de Avaliação -->
+<!-- Seção de Avaliação -->
 <section id="avaliacao-formulario">
     <h2>Deixe sua Avaliação</h2>
-    <form onsubmit="return false;">
-        <div id="estrelas">
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-            <span class="estrela">⭐</span>
-        </div>
-        <input type="text" id="nome" placeholder="Seu nome" required />
-        <input type="email" id="email" placeholder="Seu email" required />
-        <textarea id="comentario" placeholder="Seu comentário" required></textarea>
-        <button type="submit" id="enviar">Enviar Avaliação</button>
-    </form>
+    <div id="estrelas">
+        <span class="estrela" data-valor="1">⭐</span>
+        <span class="estrela" data-valor="2">⭐</span>
+        <span class="estrela" data-valor="3">⭐</span>
+        <span class="estrela" data-valor="4">⭐</span>
+        <span class="estrela" data-valor="5">⭐</span>
+    </div>
+    <input type="text" id="nome" placeholder="Seu nome" required />
+    <input type="email" id="email" placeholder="Seu email" required />
+    <textarea id="comentario" placeholder="Escreva sua avaliação"></textarea>
+    <button id="enviar">Enviar Avaliação</button>
 </section>
 
 <!-- Lista de Avaliações -->
@@ -342,13 +340,47 @@
     <ul id="lista-avaliacoes"></ul> <!-- Avaliações dinâmicas -->
 </div>
 
-<div id="lista-avaliacoes"></div>
+<script>
+    let rating = 0; // Variável para armazenar a avaliação selecionada
 
-<div id="lista-de-avaliacoes">
-    <h2>Avaliações</h2>
-    <ul id="lista-avaliacoes"></ul> <!-- Avaliações dinâmicas -->
-</div>
-</section>
+    // Adiciona evento de clique nas estrelas
+    document.querySelectorAll('#estrelas .estrela').forEach(star => {
+        star.addEventListener('click', function() {
+            rating = this.getAttribute('data-valor'); // Captura o valor da estrela clicada
+            atualizarEstrelas(rating); // Atualiza a exibição das estrelas
+        });
+    });
+
+    function atualizarEstrelas(rating) {
+        document.querySelectorAll('#estrelas .estrela').forEach(star => {
+            star.style.color = (star.getAttribute('data-valor') <= rating) ? '#FFD700' : '#ccc';
+        });
+    }
+
+    // Função para capturar a avaliação e exibir na lista
+    document.getElementById('enviar').addEventListener('click', function() {
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const comentario = document.getElementById('comentario').value;
+
+        if (nome && email && comentario && rating) {
+            const lista = document.getElementById('lista-avaliacoes');
+            const item = document.createElement('li');
+            item.innerHTML = `<strong>${nome}</strong> (${rating} estrelas): ${comentario}`;
+            lista.appendChild(item);
+
+            // Limpa os campos
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('comentario').value = '';
+            atualizarEstrelas(0); // Reseta as estrelas
+            rating = 0; // Reseta a avaliação
+        } else {
+            alert('Por favor, preencha todos os campos e selecione uma avaliação.');
+        }
+    });
+</script>
+
 
     <script src="script.js"></script>
 <!-- Rodapé -->
