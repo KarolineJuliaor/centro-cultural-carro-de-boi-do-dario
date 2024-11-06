@@ -226,9 +226,7 @@
         });
     }
 </script>
-
-    
-  <!-- Seção de Eventos e Festividades -->
+<!-- Seção de Eventos e Festividades -->
 
     <section id="eventos">
     <div class="event-gallery">
@@ -289,8 +287,7 @@
 </div>
   
   </section>
-    
-    </section>
+        
 <!-- Sessão do Boi de Mamão -->
 
        
@@ -298,7 +295,7 @@
     <div class="boi-gallery">
         <h2>Boi de Mamão do Rio Vermelho</h2>
         <p>O Boi de Mamão do Rio Vermelho é uma dança alegre que celebra a vida, unindo gerações em torno de histórias, cores e sorrisos, mantendo viva a magia da tradição catarinense no coração do bairro.</p>
-    <div class="boi-de-mamao-galeria">
+        <div class="galeria-boi">
             <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465656260_2535154043341837_9106598365961118593_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE-TnwwbhmBXqHMs8KCVIfCqVF2fy4dmS-pUXZ_Lh2ZL0RBpvT3LsZ0MZnVbxLnJbHvFSd4fkUjatuT30r4z-ai&_nc_ohc=YjIarsLwStcQ7kNvgGan4ky&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A5Aif0gBzM5SFRr1--Nsp4C&oh=00_AYCQoZgIH86dWw8p-WdGC_C0rCA00f6xN7YrTVxcoCbU3A&oe=67301702" alt="Boi de Mamão 1">
             <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465907900_2535154170008491_5595218770859661673_n.jpg?stp=dst-jpg_s600x600&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFU-DU1Jc_Gjyq6QIXnVYK6DjsHo76c4EUOOwejvpzgRVCV7Q0p8z5TpA2AlwiKZw4YRfuKsApTh1ZlVBCZEvya&_nc_ohc=ZCiPN0aJVkcQ7kNvgGnTPNv&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A5Aif0gBzM5SFRr1--Nsp4C&oh=00_AYCPc49_pUN_saWaJnHocyeMhsoDFgpO6Fi0N-7696FHnQ&oe=672FE6CD" alt="Boi de Mamão 2">
             <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465672888_2535154086675166_2333911400523448081_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHhs-FTf8MVHWojH93IPGVMjZFDGPMvvLONkUMY8y-8sy0UNRl9BC7JArEo1HKoH8RR3mwVTfi-EG0ryAVjOC2I&_nc_ohc=xcNbr_QHrGIQ7kNvgEcjHMy&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A5Aif0gBzM5SFRr1--Nsp4C&oh=00_AYCrwQ-6eCmRyEi11wyDr0oBV8tN4lmaSZ87dMC6aDwewA&oe=672FF4F8" alt="Boi de Mamão 3">
@@ -318,20 +315,22 @@
     </section>
         
 
-<!-- Seção de Avaliação -->
+   <!-- Seção de Avaliação -->
 <section id="avaliacao-formulario">
     <h2>Deixe sua Avaliação</h2>
-    <div id="estrelas">
-        <span class="estrela" data-valor="1">&#9733;</span>
-        <span class="estrela" data-valor="2">&#9733;</span>
-        <span class="estrela" data-valor="3">&#9733;</span>
-        <span class="estrela" data-valor="4">&#9733;</span>
-        <span class="estrela" data-valor="5">&#9733;</span>
-    </div>
-    <input type="text" id="nome" placeholder="Seu nome" required />
-    <input type="email" id="email" placeholder="Seu email" required />
-    <textarea id="comentario" placeholder="Escreva sua avaliação"></textarea>
-    <button id="enviar">Enviar Avaliação</button>
+    <form onsubmit="return false;">
+        <div id="estrelas">
+            <span class="estrela">⭐</span>
+            <span class="estrela">⭐</span>
+            <span class="estrela">⭐</span>
+            <span class="estrela">⭐</span>
+            <span class="estrela">⭐</span>
+        </div>
+        <input type="text" id="nome" placeholder="Seu nome" required />
+        <input type="email" id="email" placeholder="Seu email" required />
+        <textarea id="comentario" placeholder="Seu comentário" required></textarea>
+        <button type="submit" id="enviar">Enviar Avaliação</button>
+    </form>
 </section>
 
 <!-- Lista de Avaliações -->
@@ -340,59 +339,15 @@
     <ul id="lista-avaliacoes"></ul> <!-- Avaliações dinâmicas -->
 </div>
 
-<style>
-    /* Estilo das Estrelas */
-    #estrelas .estrela {
-        font-size: 2rem;
-        color: #ccc;
-        cursor: pointer;
-        transition: color 0.3s;
-    }
-    #estrelas .estrela.ativa {
-        color: #FFD700; /* Dourado para estrela ativa */
-    }
-</style>
+<div id="lista-avaliacoes"></div>
 
-<script>
-    let rating = 0; // Variável para armazenar a avaliação selecionada
+<div id="lista-de-avaliacoes">
+    <h2>Avaliações</h2>
+    <ul id="lista-avaliacoes"></ul> <!-- Avaliações dinâmicas -->
+</div>
+</section>
 
-    // Adiciona evento de clique nas estrelas
-    document.querySelectorAll('#estrelas .estrela').forEach(star => {
-        star.addEventListener('click', function() {
-            rating = this.getAttribute('data-valor'); // Captura o valor da estrela clicada
-            atualizarEstrelas(rating); // Atualiza a exibição das estrelas
-        });
-    });
-
-    function atualizarEstrelas(rating) {
-        document.querySelectorAll('#estrelas .estrela').forEach(star => {
-            star.classList.toggle('ativa', star.getAttribute('data-valor') <= rating);
-        });
-    }
-
-    // Função para capturar a avaliação e exibir na lista
-    document.getElementById('enviar').addEventListener('click', function() {
-        const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
-        const comentario = document.getElementById('comentario').value;
-
-        if (nome && email && comentario && rating) {
-            const lista = document.getElementById('lista-avaliacoes');
-            const item = document.createElement('li');
-            item.innerHTML = `<strong>${nome}</strong> (${rating} estrelas): ${comentario}`;
-            lista.appendChild(item);
-
-            // Limpa os campos
-            document.getElementById('nome').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('comentario').value = '';
-            atualizarEstrelas(0); // Reseta as estrelas
-            rating = 0; // Reseta a avaliação
-        } else {
-            alert('Por favor, preencha todos os campos e selecione uma avaliação.');
-        }
-    });
-</script>
+    <script src="script.js"></script>
 
 <!-- Rodapé -->
 <footer>
