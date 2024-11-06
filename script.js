@@ -47,44 +47,58 @@ function carregarImagens(key, displayId) {
     });
 }
 // Avaliações
-// Seleção de elementos e variáveis
+// Variáveis e Seleção de Elementos
 const estrelas = document.querySelectorAll('.estrela');
 const enviarBtn = document.getElementById('enviar');
+const notaSelecionadaDisplay = document.getElementById('nota-selecionada');
+const listaAvaliacoes = document.getElementById('lista-avaliacoes');
 let notaSelecionada = 0;
 
-// Atualiza a cor das estrelas ao selecionar
+// Atualiza a cor das estrelas ao passar o mouse
 estrelas.forEach((estrela, index) => {
+    estrela.addEventListener('mouseover', () => {
+        atualizarEstrelas(estrelas, index + 1);  // Atualiza as estrelas ao passar o mouse
+    });
+    estrela.addEventListener('mouseout', () => {
+        atualizarEstrelas(estrelas, notaSelecionada); // Reseta para a nota atual ao tirar o mouse
+    });
     estrela.addEventListener('click', () => {
         notaSelecionada = index + 1;
-        atualizarEstrelas(estrelas, notaSelecionada);
+        notaSelecionadaDisplay.textContent = `Você selecionou ${notaSelecionada} estrela(s)`; // Exibe nota selecionada
+        atualizarEstrelas(estrelas, notaSelecionada); // Marca as estrelas
     });
 });
 
+// Atualiza a cor das estrelas com base na nota
 function atualizarEstrelas(estrelas, nota) {
-    estrelas.forEach((e, i) => {
-        e.style.color = i < nota ? '#ffcc00' : '#000';
+    estrelas.forEach((estrela, index) => {
+        estrela.style.color = index < nota ? '#ffcc00' : '#ccc'; // Cor amarelo para as estrelas selecionadas
     });
 }
 
-// Enviar avaliação
+// Enviar a avaliação
 enviarBtn.addEventListener('click', () => {
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const comentario = document.getElementById('comentario').value;
 
+    // Validação: Verifica se todos os campos estão preenchidos e se uma nota foi selecionada
     if (notaSelecionada && nome && email && comentario) {
         saveReviewToLocalStorage(nome, comentario, notaSelecionada, email);
         limparCampos();
+        alert('Sua avaliação foi enviada com sucesso!');
     } else {
         alert("Por favor, preencha todos os campos e selecione uma nota.");
     }
 });
 
+// Limpa os campos do formulário após o envio
 function limparCampos() {
     document.getElementById('nome').value = '';
     document.getElementById('email').value = '';
     document.getElementById('comentario').value = '';
-    atualizarEstrelas(estrelas, 0); // Reseta as estrelas
+    atualizarEstrelas(estrelas, 0);  // Reseta as estrelas para 0
+    notaSelecionadaDisplay.textContent = '';  // Limpa a exibição da nota
 }
 
 // Função para salvar avaliações no localStorage
@@ -92,22 +106,30 @@ function saveReviewToLocalStorage(nome, comentario, nota, email) {
     let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     reviews.push({ nome, comentario, nota, email });
     localStorage.setItem('reviews', JSON.stringify(reviews));
-    loadReviews(); // Atualiza a lista de avaliações
+    loadReviews();  // Atualiza a lista de avaliações imediatamente
 }
 
-// Carregar avaliações ao abrir a página
+// Carregar e exibir avaliações ao abrir a página
 function loadReviews() {
     const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    const listaAvaliacoes = document.getElementById('lista-avaliacoes');
     listaAvaliacoes.innerHTML = ''; // Limpa a lista antes de recarregar
-    reviews.forEach(review => {
-        addReview(review.nome, review.comentario, review.nota, review.email);
-    });
+
+    if (reviews.length > 0) {
+        let mediaNotas = 0;
+        reviews.forEach(review => {
+            addReview(review.nome, review.comentario, review.nota, review.email);
+            mediaNotas += review.nota;  // Soma das notas para cálculo da média
+        });
+        
+        const media = (mediaNotas / reviews.length).toFixed(1);
+        document.getElementById('media-nota').textContent = `Média: ${media} de 5 (${reviews.length} avaliações)`; // Exibe média
+    } else {
+        document.getElementById('media-nota').textContent = 'Ainda não há avaliações.';
+    }
 }
 
 // Exibir a avaliação na lista
 function addReview(nome, comentario, nota, email) {
-    const listaAvaliacoes = document.getElementById('lista-avaliacoes');
     const li = document.createElement('li');
     li.textContent = `${nome} (${email}): ${comentario} - Nota: ${'⭐'.repeat(nota)}`;
 
@@ -134,6 +156,5 @@ function excluirAvaliacao(nome, email, comentario, nota) {
     }
 }
 
-// Carrega as avaliações ao abrir a página
+// Carregar avaliações ao carregar a página
 window.addEventListener('load', loadReviews);
-
