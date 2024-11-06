@@ -47,7 +47,6 @@ function carregarImagens(key, displayId) {
     });
 }
 // Avaliações
-// Variáveis e Seleção de Elementos
 const estrelas = document.querySelectorAll('.estrela');
 const enviarBtn = document.getElementById('enviar');
 const notaSelecionadaDisplay = document.getElementById('nota-selecionada');
@@ -143,7 +142,7 @@ function addReview(nome, comentario, nota, email) {
     listaAvaliacoes.appendChild(li);
 }
 
-// Exclui uma avaliação
+// Excluir uma avaliação
 function excluirAvaliacao(nome, email, comentario, nota) {
     const senha = prompt("Digite a senha para excluir a avaliação:");
     if (senha === "@Boidemamão2023") {
@@ -156,5 +155,5 @@ function excluirAvaliacao(nome, email, comentario, nota) {
     }
 }
 
-// Carregar avaliações ao carregar a página
-window.addEventListener('load', loadReviews);
+// Carrega as avaliações quando a página é carregada
+loadReviews();
