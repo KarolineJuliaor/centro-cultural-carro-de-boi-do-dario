@@ -273,14 +273,6 @@ tr:hover {
     border-radius: 8px; /* Borda arredondada */
 }
 
-/* Estilo para a galeria de imagens do Boi de Mamão */
-.boi-de-mamao-galeria {
-    display: flex; /* Flexbox para o layout das imagens */
-    justify-content: center; /* Centraliza as imagens */
-    flex-wrap: wrap; /* Permite que as imagens quebrem em várias linhas, caso necessário */
-    gap: 10px; /* Espaçamento entre as imagens */
-}
-
 .boi-de-mamao-galeria img {
     width: 150px; /* Largura das imagens na galeria */
     height: auto; /* Mantém a proporção */
