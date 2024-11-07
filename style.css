@@ -237,3 +237,22 @@ footer {
     border-top: 1px solid #e1e1e1;
     color: #e1e1e1;
 }
+.galeria-comum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.galeria-comum img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.galeria-comum img:hover {
+    transform: scale(1.1);
+}
