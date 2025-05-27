@@ -1,403 +1,328 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Cultural Carro de Boi do Dário</title>
-    <link rel="icon" href="images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Metatags Open Graph -->
-    <meta property="og:title" content="Centro Cultural Carro de Boi do Dário">
-    <meta property="og:description" content="Promovendo a cultura local com diversas atividades.">
-    <meta property="og:image" content="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465661278_2534456050078303_5744589255031977972_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHNeH-hEXRPYAp-iLuGCsaW-WwSjt7Qj3H5bBKO3tCPcUK9NJuHlorpe_ir6JHnPCBQHOHqj0he7_Z-FxXz67XM&_nc_ohc=2n4hnxgtklkQ7kNvgHO06qV&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AQom_A6bZChl8yP-sLxJLH6&oh=00_AYAZ6NXrzEDT0IGvjFNPLwI1Vwqe_GjHAL_9MKv3kyhvAw&oe=67301278">
-    <meta property="og:url" content="https://karolinejuliaor.github.io/centro-cultural-carro-de-boi-do-dario/">
-    <meta property="og:type" content="website">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Centro Cultural Carro de Boi do Dário</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin:0; padding:0;
+    background: #fffbf0;
+    color: #333;
+  }
+  header {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header nav a {
+    margin: 0 1rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  h2 {
+    color: #6a0572;
+    margin-bottom: 1rem;
+  }
+  /* Vídeo */
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 2rem;
+  }
+  .video-container iframe {
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  /* Atividades */
+  .atividades-lista {
+    list-style: none;
+    padding: 0;
+  }
+  .atividade {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .atividade span {
+    flex: 1;
+  }
+  .whatsapp-link {
+    text-decoration: none;
+    background-color: #25D366;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  .whatsapp-link img {
+    width: 20px;
+    margin-right: 6px;
+  }
+  /* Imagens do espaço */
+  .espaco-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .espaco-imagens img {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  /* Galeria festa */
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .galeria img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  /* Boi de Mamão */
+  .boi-mamao {
+    text-align: center;
+  }
+  .boi-mamao a {
+    display: inline-block;
+    margin: 1rem 0;
+    color: #6a0572;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  /* Formulário contato */
+  form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  form label {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  form input, form textarea {
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  form button {
+    margin-top: 1.5rem;
+    background-color: #6a0572;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  form button:hover {
+    background-color: #5b0463;
+  }
+  /* Avaliações */
+  #avaliacoes-lista {
+    max-width: 700px;
+    margin: 1rem auto 0 auto;
+    list-style: none;
+    padding: 0;
+  }
+  #avaliacoes-lista li {
+    background: #f9c8d8;
+    margin-bottom: 10px;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #6a0572;
+  }
+  .estrela {
+    color: #ffcc00;
+    font-size: 1.4rem;
+  }
+  /* Rodapé */
+  footer {
+    background: #fad0c4;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    color: #6a0572;
+  }
+  /* Escondendo seções */
+  .hidden {
+    display: none;
+  }
+</style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <a href="index.html">
-            <img src="https://lh5.googleusercontent.com/p/AF1QipOKO4peeH9odRhRD9q_n0yBeubKKXHajSJVz8Cs=w600-h600-k-no" 
-                 alt="Logo Centro Cultural Carro de Boi do Dário" class="logo">
-        </a>
-        <h1>Centro Cultural Carro de Boi do Dário</h1>
-        <p class="descricao">Promovendo Cultura e Tradições no Rio Vermelho, Florianópolis</p>
-    </header>
 
-    <!-- Menu de navegação -->
-    <nav>
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#atividades">Atividades</a></li>
-            <li><a href="#inscricao">Inscrição</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#doacoes">Doações</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#avaliacoes">Avaliações</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-        
-    </nav>
+<header>
+  <h1>Centro Cultural Carro de Boi do Dário</h1>
+  <nav>
+    <a href="#" data-target="sobre">Sobre</a>
+    <a href="#" data-target="atividades">Atividades</a>
+    <a href="#" data-target="espaco">Espaço</a>
+    <a href="#" data-target="galeria">Galeria</a>
+    <a href="#" data-target="boi">Boi de Mamão</a>
+    <a href="#" data-target="contato">Contato</a>
+    <a href="#" data-target="avaliacoes">Avaliações</a>
+  </nav>
+</header>
 
-    <!-- Seções do site -->
-    <main>
-        <!-- Sobre o Centro Cultural -->
-        <section id="sobre">
-            <h2>Sobre o Centro Cultural</h2>
-            <p>O Centro Cultural Carro de Boi do Dário, localizado no Rio Vermelho, em Florianópolis, é um espaço vibrante e acolhedor que valoriza o folclore e as tradições regionais, com destaque para o boi de mamão e a capoeira.</p>
-            <p>Além disso, o centro oferece diversos projetos, como aulas de jiu-jitsu, taekwondo e encontros da melhor idade, incentivando a participação de toda a comunidade.</p>
-            <p>É um lugar onde o passado e o presente se encontram, promovendo alegria e conexão para todas as idades.</p>  
-        </section>
-
-
-<!-- Vídeo -->
-<section class="video-container">
-    <h2>Assista ao vídeo:</h2>
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/AwcamUrCufI" frameborder="0" allowfullscreen></iframe>
+<!-- Sobre -->
+<section id="sobre">
+  <h2>Sobre o Centro Cultural</h2>
+  <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção de atividades culturais e esportivas que fortalecem a comunidade local e valorizam nossas tradições.</p>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/AwcamUrCufI" title="Vídeo Centro Cultural" allowfullscreen></iframe>
+  </div>
 </section>
 
-
-        <!-- Atividades e Horários -->
-    <section id="atividades">
-    <h2>Atividades e Horários</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Atividade</th>
-                <th>Dia</th>
-                <th>Horário</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Jiu-Jitsu</td>
-                <td>Segunda</td>
-                <td>18:30 às 19:30</td>
-            </tr>
-            <tr>
-                <td>Taekwondo</td>
-                <td>Terça e Quinta</td>
-                <td>9:00 às 10:30</td>
-            </tr>
-            <tr>
-                <td>Taekwondo</td>
-                <td>Terça e Quinta</td>
-                <td>15:00 às 16:30</td>
-            </tr>
-            <tr>
-                <td>Capoeira</td>
-                <td>Terça e Quinta</td>
-                <td>20:00 às 22:00</td>
-            </tr>
-            <tr>
-                <td>Melhor Idade</td>
-                <td>Quarta</td>
-                <td>13:30 às 17:00</td>
-            </tr>
-            <tr>
-                <td>Jiu-Jitsu</td>
-                <td>Quarta</td>
-                <td>18:30 às 19:30</td>
-            </tr>
-            <tr>
-                <td>Boi de Mamão</td>
-                <td>Sábado</td>
-                <td>9:00 às 12:00</td>
-            </tr>
-        </tbody>
-    </table>
+<!-- Atividades -->
+<section id="atividades" class="hidden">
+  <h2>Atividades do Centro</h2>
+  <ul class="atividades-lista">
+    <li class="atividade">
+      <span>Capoeira - Roseta</span>
+      <a class="whatsapp-link" href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+      </a>
+    </li>
+    <li class="atividade">
+      <span>Jiu-Jitsu - Marcelo</span>
+      <a class="whatsapp-link" href="https://wa.me/554884655901" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+      </a>
+    </li>
+    <li class="atividade">
+      <span>Taekwondo - Jefferson Sampaio</span>
+      <a class="whatsapp-link" href="https://wa.me/554884138611" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+      </a>
+    </li>
+    <li class="atividade">
+      <span>Melhor Idade - Sandra</span>
+      <a class="whatsapp-link" href="https://wa.me/555199187236" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+      </a>
+    </li>
+  </ul>
 </section>
 
-<!-- Inscrição nas Atividades -->
-<section id="inscricao">
-    <h2>Inscrição nas Atividades</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Oficina</th>
-                <th>Professor</th>
-                <th>Contato</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Capoeira</td>
-                <td>Roseta</td>
-                <td>
-                    <a href="https://wa.me/554899323570">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" 
-                             alt="WhatsApp" 
-                             style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-                        Contato WhatsApp
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Jiu-Jitsu</td>
-                <td>Marcelo</td>
-                <td>
-                    <a href="https://wa.me/554884655901">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" 
-                             alt="WhatsApp" 
-                             style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-                        Contato WhatsApp
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Taekwondo</td>
-                <td>Jefferson Sampaio</td>
-                <td>
-                    <a href="https://wa.me/554884138611">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" 
-                             alt="WhatsApp" 
-                             style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-                        Contato WhatsApp
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Melhor Idade</td>
-                <td>Sandra</td>
-                <td>
-                    <a href="https://wa.me/555199187236">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" 
-                             alt="WhatsApp" 
-                             style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-                        Contato WhatsApp
-                    </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<!-- Espaço -->
+<section id="espaco" class="hidden">
+  <h2>Nosso Espaço</h2>
+  <div class="espaco-imagens">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Espaço 1" />
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=80" alt="Espaço 2" />
+    <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=600&q=80" alt="Espaço 3" />
+  </div>
 </section>
 
-<!-- Galeria Cultural -->
-<section class="galeria-cultural">
-    <h2>Galeria Cultural</h2>
-    <div id="gallery-display" class="gallery-grid">
-        <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465779390_2535122080011700_2092575697472723843_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG3_CUCYc1sUUe4GWKayQKYLuI6LEjCiM0u4josSMKIzQiSuCB7Jl4y4MD5aPgN-gUWs4GO_gSOxFAvN_JGytJg&_nc_ohc=iMCvY2WfVV8Q7kNvgHYqKZP&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=ApoFHQf7_sttopeLFZ23rMg&oh=00_AYDUNWnG-cSHaqY4kSQLQzS004grqQZiYuDYCVsC3lmcCg&oe=672FE400" alt="bernunça">
-        <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465783138_2534285046762070_6759362700265038283_n.jpg?stp=dst-jpg_p526x296&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFSCgzcJNGdLz0MZNZ9ja4NqtCGlB_afduq0IaUH9p928JYYetIeI4WkQP5UiKtl_e9gyOoAvlSZzi3qUBkGIy0&_nc_ohc=_BTY5Q0IhUMQ7kNvgEPl1ez&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AOPG6_xnKICnay6oNwFtRfl&oh=00_AYBf2ebH9mzKQCMV782_Y1-hZeLUd6TIwJ96u9bvQuFg5A&oe=672E9C1D" alt="boi">
-        <img src="https://scontent.ffln14-1.fna.fbcdn.net/v/t39.30808-6/452535873_7851476141634953_8636169732329445622_n.jpg?stp=dst-jpg_p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFATX7HZBx5X-pEzny19Nxu0lCGqhLP5MzSUIaqEs_kzOxAru_oPs13tTPf9xi6oNyM1G_9c7NrlyC-ojxDWNo_&_nc_ohc=Y-tN5SGrFgYQ7kNvgELbTyQ&_nc_zt=23&_nc_ht=scontent.ffln14-1.fna&_nc_gid=A7t3_mNZUwoynds9M0Yhet8&oh=00_AYBAhQYckM6T8lGze7LWhFb6EI8N3fhgJ2GTQL_R2J2vWg&oe=672E0692" alt="centro">
-        <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t51.75761-15/464761552_18364292731116402_8820717587036138505_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHnSV4iOUwoMvBvhteGkhpgxsfvZDAlU3vGx-9kMCVTe0UcMFFPgoEH7WpBOLdvfqnSpENjZhklc0jOpixxytfk&_nc_ohc=93aIw-749gIQ7kNvgGdB0my&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A4gvnxYiV15Ww0VFMooNwjR&oh=00_AYB-QIZInDZa6jW7aBz4uy2rxxMVkxXckVrHGr-vo73jsQ&oe=672E8ECE" alt="macaco">
-        <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465778184_2534284976762077_7241843877576658867_n.jpg?stp=dst-jpg_s600x600&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFlXiFT5ABdiBFoFzXvPwcJVhxCDABXwtVWHEIMAFfC1fDOLmyPAQRlyxLYoiDkaeEJ6OiKZB_tuBaxkR-L2Hin&_nc_ohc=luENY97nXcUQ7kNvgG7Ydsa&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=ARREa5141N0pmhpp74uvr-Q&oh=00_AYCJq-mQFZxTez9yIpeTZ3WLKUW0nf4uE-Mlv7txl_Mscw&oe=672EA149" alt="galeria4">
-        <img src="https://scontent.ffln14-1.fna.fbcdn.net/v/t39.30808-6/448707990_402770336077596_6179340254069271712_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF11zU7K7o7uCDgdoW9nMBOPcEF0QgWuuY9wQXRCBa65mdstIIljO9755E9LwxXGySuxeJUN0nLgr8rtGiYNcBb&_nc_ohc=GRzzWaW6ZrYQ7kNvgGIhPPh&_nc_zt=23&_nc_ht=scontent.ffln14-1.fna&_nc_gid=A-b987BwBgXKdL1SEncqRhU&oh=00_AYBh7phHYuibhvwDQw9BnZ-XUNXJ4CUsFAOqVeOI3iafcg&oe=672E0373" alt="galeria3">
-        <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465690521_2535808819943026_1839333337600993799_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEE98ZYQ_MVQSjlXrVrxfMs7sy1lctNueDuzLWVy0254ODX4jRAc2MPgFbkbPTFk8F99L51nhazLFhB3XMvbmDm&_nc_ohc=EL1F18yrvCEQ7kNvgEyzCaR&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A-8MK0UUJpJBOeL7GAEX55H&oh=00_AYCmUnYW3B3RScw_ZUdwQyGS6uT5Qq2mi7ONHi11Fz_mQA&oe=67311B73" alt="niverleo">
-        <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465782472_2535808926609682_667471915781991314_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHMbKibEDKQ_1jjBnsFb8AJ7nY7q4vivk_udjuri-K-T9aaMef7zr_IkIZmmLX5WXlhG8i-IhAcUsKMYv1lZjBE&_nc_ohc=oifktiA09swQ7kNvgHFZ3jB&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A-8MK0UUJpJBOeL7GAEX55H&oh=00_AYABci5DNSyEVhC0vuALM01NrchDxAjK5XF8_RmQPRzwOQ&oe=673138F2" alt="melhoridade">
-        <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465719737_2534283723428869_3462354862167876674_n.jpg?stp=dst-jpg_s600x600&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGBEMbV8tSpzrSuQ_-lojdGHyj2bFhfpVYfKPZsWF-lVtUOmvxWrbF0YOXeEcBeCeNa8pT-fBS8cddsKoJ5fGpI&_nc_ohc=4dgBczqh9_8Q7kNvgHJDdUM&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=ARREa5141N0pmhpp74uvr-Q&oh=00_AYBWqzDmOJ-kagjunNsHpe1pk7OtiXoejBxdOOWQIqnTdg&oe=672E97AF" alt="instrumentosefrajola">
-        
-        
-        <!-- Adicione mais imagens conforme necessário -->
-    </div>
+<!-- Galeria -->
+<section id="galeria" class="hidden">
+  <h2>Galeria de Eventos</h2>
+  <h3>Festas Juninas</h3>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=500&q=80" alt="Festa Junina 1" />
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Festa Junina 2" />
+  </div>
+  <h3>Festa de Halloween</h3>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Halloween 1" />
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=500&q=80" alt="Halloween 2" />
+  </div>
+  <h3>Outros Eventos</h3>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=500&q=80" alt="Evento 1" />
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=500&q=80" alt="Evento 2" />
+  </div>
 </section>
 
-<!-- Doações e Voluntariado -->
-
-        <!-- Botão de Copiar Chave PIX -->
-<section id="doacoes" class="doacao-section">
-    <h2>Doações e Voluntariado</h2>
-    <p>Ajude o centro com uma doação via PIX.</p>
-    <button onclick="copyPixKey()" class="botao-doacao">
-        Copiar Chave PIX
-    </button>
-   <p id="copyMessage" style="display: none;">
-    Chave PIX copiada: <strong>019.817.115-38</strong><br>
-    Fabiane Almeida de Oliveira Piergallini, Nu Pagamentos S.A.
-</p>
-
+<!-- Boi de Mamão -->
+<section id="boi" class="hidden">
+  <h2>Boi de Mamão</h2>
+  <p>Conheça mais sobre o nosso tradicional Boi de Mamão e acompanhe nas redes sociais.</p>
+  <a href="https://www.instagram.com/boidemamaodoriovermelho/" target="_blank" rel="noopener noreferrer">@boidemamaodoriovermelho</a>
+  <div class="galeria" style="margin-top:1rem;">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Boi de Mamão 1" />
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Boi de Mamão 2" />
+  </div>
 </section>
 
-<script>
-    function copyPixKey() {
-        const pixKey = "019.817.115-38";
-        const name = "Fabiane Almeida de Oliveira Piergallini, Nu Pagamentos S.A.";
-        const fullMessage = Chave PIX copiada: ${pixKey} - ${name};
-
-        // Copiar a chave PIX para a área de transferência
-        navigator.clipboard.writeText(pixKey).then(() => {
-            const messageElement = document.getElementById("copyMessage");
-            messageElement.style.display = "block"; // Mostra a mensagem
-            messageElement.textContent = fullMessage; // Atualiza o texto da mensagem
-        }).catch(err => {
-            console.error('Erro ao copiar a chave PIX: ', err);
-        });
-    }
-</script>
-<!-- Seção de Eventos e Festividades -->
-
-    <section id="eventos">
-    <div class="event-gallery">
-        <h2>Costelaço</h2>
-        <p>16 de Março</p>
-        <div class="galeria-eventos">
-                <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465152302_2532129086977666_1810457961398246470_n.jpg?stp=dst-jpg_s600x600&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG3GWd3R6MAdyV9S22cBh5aziCelc2LhIXOIJ6VzYuEhZ15YYEY5fonqup34jseSmXgqqK2R_nEdQRY1i49RNdm&_nc_ohc=3LgbWn1XHwgQ7kNvgFkbdVs&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AIyy_oLLwzc8KjhZTs0aWk8&oh=00_AYBeNptKVyorbFE5R4aPrzOaA9izxTy1fBLP7huQxsL6CA&oe=672ACD55" alt="Costelaço 1">
-                <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465170815_2532089640314944_8268335862973320949_n.jpg?stp=dst-jpg_s600x600&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGhepM3jRP1pQqyC-MY6w8TnUkIlC64h5ydSQiULriHnAL99MjBpoISVF1MeEF-oQ9RJCcHYKFS071e72T7Gv_2&_nc_ohc=U5i0tHPgUr0Q7kNvgFVRQVL&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=At5gWLEnABBK5pKvkUaZQ3_&oh=00_AYAiYdGuIRvZVnDIOOzw3VpZD1gWFtcLkTWSR8GQimTD2Q&oe=672A9951" alt="Costelaço 2">
-                <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465101868_2532089676981607_588623184155181495_n.jpg?stp=dst-jpg_s600x600&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF24znyklrLhdEQUuekPW5UfYo4u5WgKex9iji7laAp7C73NudgRYhrQO77j8h86kO4XJakvp_qIYu94VRwEGNY&_nc_ohc=2Bu9t5Kqf6IQ7kNvgH7Yk6e&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=At5gWLEnABBK5pKvkUaZQ3_&oh=00_AYCd88xjBqNMoQyvDqxIdwSvFHpcLFsYnRw9pjnNNatMOw&oe=672AB635" alt="Costelaço 3">
-                <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465115592_2532089706981604_2155539516237957009_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHef53ziUCi3ywyo5IjsExkLe9dbjg9yaAt711uOD3JoIRS0no7AV7rShAGP-NhE_IzeWSuioMNlCYohYH_Q9Fh&_nc_ohc=wFgPpJKYvLcQ7kNvgEkIUuG&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=At5gWLEnABBK5pKvkUaZQ3_&oh=00_AYBvhSr_aa8AiUn_0DkKQXYeKCmNyC3Klp1ZPneWkFulWw&oe=672AAD75" alt="Costelaço 4">
-                <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465215264_2532089823648259_6171843703004300092_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFTEHr1rpNN79EDaecZoJT7eUDhN7m8d6F5QOE3ubx3oZCIQXozoL527AhfNQkQfXFc1KnCN1yHU9tRRihRwtkh&_nc_ohc=RkOP3p2ZaTcQ7kNvgEsUrTP&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=At5gWLEnABBK5pKvkUaZQ3_&oh=00_AYBurpNEkRGSAFP79rk9KhI-JlmnoIFovsoyWFVLj7-nFw&oe=672AB716" alt="Costelaço 5">
-                <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465117659_2532129150310993_8669992348723268229_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEWvhw8Q00tgZ32fxQ6YGHz9P6uzk4Me3T0_q7OTgx7dGOEaqSyNrSTAx2aX9x26rlEDIb2EFgxjGEywar8siGY&_nc_ohc=WmSSBxuX_SIQ7kNvgGCEHic&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AIyy_oLLwzc8KjhZTs0aWk8&oh=00_AYCVQobuf6t4K175qjYNZ20rxAfGwN_7G224YXmnVeu1MA&oe=672AD310" alt="Costelaço 6">
-            </div>
-        </div>
-    </div>
-    
-<section id="eventos-junina">
-    <div class="event-gallery">
-        <h2>Festa Junina</h2>
-        <p>15 de Junho</p>
-        <div class="galeria-eventos">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465671682_2534311576759417_5057075782077597287_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEFPdlUKMUK0D1vwIuKxzU9d7ysqRU2AyN3vKypFTYDI9BMFdyUwr8u3ZEnB1vcqE-UzbvyPZ0J6I9FQGSgyaMP&_nc_ohc=SORngT1bk9IQ7kNvgFVe-BZ&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AmwKd2Dx2KbBl_uODGe8k3M&oh=00_AYBMXWS46JNXtPH1Ri3oCudaeJoOIW8x1wEUTE7ZQYkBcw&oe=672EA1EA" alt="Junina 1">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465152287_2532145740309334_3844097066186793_n.jpg?stp=dst-jpg_s600x600&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGFY3PCiGO7F1dbBeGahkqixSl7PbqVtvXFKXs9upW29Uued8abvR3sLkMUGNLPn8CxSqyojHo2tZ-QaL41qcSn&_nc_ohc=XE2L5-RTwy4Q7kNvgHaHgy0&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AKsd1lcpPJSBOg1RS4zCUXf&oh=00_AYA0s2BpLbCIugppfhtnOpytkIudLd0xQ3E23PK77tCK5g&oe=672AF254" alt="Junina 2">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465781985_2534311503426091_8955211150258263915_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeETX3-K89qLwzMIi8TnvLHlrSYfXm0L-satJh9ebQv6xlzMmTViEZF5S-tw0X4D4EIy8xU-NfI35p4aPWS6mrP-&_nc_ohc=piT9RJjbeUAQ7kNvgEPDvoG&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AmwKd2Dx2KbBl_uODGe8k3M&oh=00_AYAmdLqJhFpQZE8dheAo422NaiwGDfsy0X6UhOHzkYK7rA&oe=672E8872" alt="Junina 3">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465152110_2532145700309338_6384312311058734863_n.jpg?stp=dst-jpg_s600x600&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHrE3KQLOZlAsO9iwIobPr2nc3__7zMoHSdzf__vMygdP16HySpFGsQCMMpp2l3mpjeBGqG8J7EfSsjzJANLrve&_nc_ohc=jBqSXEc99zQQ7kNvgE-niMH&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AKsd1lcpPJSBOg1RS4zCUXf&oh=00_AYAG8S0XduxMNysTSeNup5CxlwB7vFAFWDbq1bojifzSmw&oe=672ADCAC" alt="Junina 4">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465609435_2534311630092745_7545266908665005765_n.jpg?stp=dst-jpg_s600x600&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHHwGhoWfSFcT-EqkqmiZGZ61mZZ0c1pQ7rWZlnRzWlDvUaylkoW4qZFXm9UlieO8MpbTkwHvze2kfrRRL0oan8&_nc_ohc=9fiHFTZOIUEQ7kNvgFNw9_K&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AmwKd2Dx2KbBl_uODGe8k3M&oh=00_AYDf2B-Owq011_DcH2SxiL2gkCSjzRs1Pwem9OAnHjhDew&oe=672E862B" alt="Junina 5">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465692323_2534311540092754_111969711890703064_n.jpg?stp=dst-jpg_s600x600&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFpu3wXlIwSu_SsVSmLPhYE8i7FyDZCwFTyLsXINkLAVE5-fkwJlCarAJY87xCtGDFom8G8EcJZ2yUKkzmPA4Cl&_nc_ohc=GbKnd_SwJREQ7kNvgHVIrx4&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=AmwKd2Dx2KbBl_uODGe8k3M&oh=00_AYC2_ElE-lx-TDFTP3PXtkjousmf9_TyuHnl3EH8tyyhfQ&oe=672EACF8" alt="Junina 6">
-        </div>
-    </div>
+<!-- Contato -->
+<section id="contato" class="hidden">
+  <h2>Entre em Contato</h2>
+  <p>Para mais informações ou para aluguel do espaço, entre em contato com Roseta via WhatsApp:</p>
+  <a class="whatsapp-link" href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer" style="font-size:1.2rem; padding: 0.5rem 1rem;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> +55 48 9932-3570 (Roseta)
+  </a>
+  <form id="form-contato">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" required />
+    <label for="email">Email:</label>
+    <input type="email" id="email" required />
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" rows="4" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 </section>
 
-<section id="eventos-feijoada">
-    <div class="event-gallery">
-        <h2>Feijoada com Samba</h2>
-        <p>7 de Setembro</p>
-        <div class="galeria-eventos">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465284469_2532068923650349_3260295226576536047_n.jpg?stp=dst-jpg_s600x600&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHQ13S01obBpuzkHWZsxo_-e5qv_uSqgKJ7mq_-5KqAok-UGW8yA72N8V_SiJ6vcPzkY466t7x2yfulohUEez4t&_nc_ohc=hmGsU82UjZMQ7kNvgEY6NRq&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=ARlnXnUJaTp327x6B47wKTq&oh=00_AYCLV9WARNXdSDppaBlzYATSe0DVX-EUJkCVjHxKE0q8mg&oe=672ABA4E" alt="Feijoada 1">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465285057_2532068950317013_6926694484576485787_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHHL27IWrAw7nk7oyo5g2YB1rJYldcQoSHWsliV1xChITMNpM3ywJipVPxOeT4aOLF_F8T_hqpPdAAnO4VqaH0U&_nc_ohc=ihin8iJRaAgQ7kNvgHY5_Dm&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=ARlnXnUJaTp327x6B47wKTq&oh=00_AYDfETpjJdFK1nt6Gct7wriMTbEE9KlqTgHk8vU1u7cTrg&oe=672AD838" alt="Feijoada 2">
-            <!-- Adicione mais imagens conforme necessário -->
-        </div>
-    </div>
+<!-- Avaliações -->
+<section id="avaliacoes" class="hidden">
+  <h2>Avalie Nosso Espaço</h2>
+  <form id="form-avaliacao">
+    <label>Nota:</label>
+    <select id="nota" required>
+      <option value="">Selecione</option>
+      <option value="5">★★★★★ (Excelente)</option>
+      <option value="4">★★★★</option>
+      <option value="3">★★★</option>
+      <option value="2">★★</option>
+      <option value="1">★ (Ruim)</option>
+    </select>
+    <label for="comentario">Comentário:</label>
+    <textarea id="comentario" rows="3" placeholder="Escreva sua avaliação..." required></textarea>
+    <button type="submit">Enviar Avaliação</button>
+  </form>
+
+  <ul id="avaliacoes-lista"></ul>
 </section>
 
-        
-<!-- Sessão do Boi de Mamão -->
-
-       
-<section id="BoideMamão">
-    <div class="boi-gallery">
-        <h2>Boi de Mamão do Rio Vermelho</h2>
-        <p>O Boi de Mamão do Rio Vermelho é uma dança alegre que celebra a vida, unindo gerações em torno de histórias, cores e sorrisos, mantendo viva a magia da tradição catarinense no coração do bairro.</p>
-        <div class="galeria-boi">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465656260_2535154043341837_9106598365961118593_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE-TnwwbhmBXqHMs8KCVIfCqVF2fy4dmS-pUXZ_Lh2ZL0RBpvT3LsZ0MZnVbxLnJbHvFSd4fkUjatuT30r4z-ai&_nc_ohc=YjIarsLwStcQ7kNvgGan4ky&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A5Aif0gBzM5SFRr1--Nsp4C&oh=00_AYCQoZgIH86dWw8p-WdGC_C0rCA00f6xN7YrTVxcoCbU3A&oe=67301702" alt="Boi de Mamão 1">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465907900_2535154170008491_5595218770859661673_n.jpg?stp=dst-jpg_s600x600&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFU-DU1Jc_Gjyq6QIXnVYK6DjsHo76c4EUOOwejvpzgRVCV7Q0p8z5TpA2AlwiKZw4YRfuKsApTh1ZlVBCZEvya&_nc_ohc=ZCiPN0aJVkcQ7kNvgGnTPNv&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A5Aif0gBzM5SFRr1--Nsp4C&oh=00_AYCPc49_pUN_saWaJnHocyeMhsoDFgpO6Fi0N-7696FHnQ&oe=672FE6CD" alt="Boi de Mamão 2">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465672888_2535154086675166_2333911400523448081_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHhs-FTf8MVHWojH93IPGVMjZFDGPMvvLONkUMY8y-8sy0UNRl9BC7JArEo1HKoH8RR3mwVTfi-EG0ryAVjOC2I&_nc_ohc=xcNbr_QHrGIQ7kNvgEcjHMy&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A5Aif0gBzM5SFRr1--Nsp4C&oh=00_AYCrwQ-6eCmRyEi11wyDr0oBV8tN4lmaSZ87dMC6aDwewA&oe=672FF4F8" alt="Boi de Mamão 3">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465691961_2535153846675190_6132678941785978660_n.jpg?stp=dst-jpg_s600x600&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGgnH2-rJ2sxDjXgUQWaaTC-XknlX9okeb5eSeVf2iR5i7NpO6owAMZ1CzI-Aeo3fYLdsAxsTy4YEA_oZV9OCK2&_nc_ohc=mcfsn6FwzdEQ7kNvgG9w1EA&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=ANoJc2s63kQvei1U6j-bGY8&oh=00_AYC1psG_4ybxP2MnPw6XRHy9-dsvrXLRvhBSAtwIFIKT2g&oe=67301437" alt="Boi de Mamão 4">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465783087_2535807266609848_2904229508977852293_n.jpg?stp=dst-jpg_s600x600&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEO63TMetN6lF1nOrxxJ6VFwbxQkiS8-LfBvFCSJLz4tzn7EvEfe7LWhIA2zLee_MmXNCrEua0QHTl00VehKbVu&_nc_ohc=e0qEH31fV8sQ7kNvgGCQza3&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=ARntbkUHzZ7GieQI30t3BVa&oh=00_AYD10rlI4SX1DEtVhYZy4mc1ULQqHRq8-3CTYrk2G5uwSQ&oe=67313497" alt="Boi de Mamão 6">
-            <img src="https://scontent.ffln2-3.fna.fbcdn.net/v/t39.30808-6/465646497_2535154136675161_8915325647437707050_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHbUGYNzSVv2ZcBnKza480xajP8p4Xb5o5qM_ynhdvmjvout-CaNlrZpQZCoNYreG-0zXn1BUEXZ8-9sU-5K1Vt&_nc_ohc=gqueJBrBMs4Q7kNvgGj-MFT&_nc_zt=23&_nc_ht=scontent.ffln2-3.fna&_nc_gid=A5Aif0gBzM5SFRr1--Nsp4C&oh=00_AYDic0V_SnHZ-qmigvFcHztpx5HueN4MgJVJszwafBxnhA&oe=67300BFE" alt="Boi de Mamão 5">
-        </div> <!-- Fechamento da div anterior -->
-
-<section class="social-media">
-    <p>Siga-nos nas redes e acompanhe</p>
-        <div class="social-buttons">
-            <a id="botao-youtube" href="https://www.youtube.com/@anapso82" target="_blank">
-                <img src="https://www.unirio.br/cla_novo/ivl/youtube.png/image" alt="YouTube Logo" class="logo-youtube" style="width: 30px; height: auto;">
-            </a>
-            <a id="botao-instagram" href="https://www.instagram.com/boidemamaodoriovermelho/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram">
-            </a>
-        
-    </section>
-        
-<!-- Seção de Avaliação -->
-<section id="avaliacao-formulario">
-    <h2>Deixe sua Avaliação</h2>
-    <div id="estrelas">
-        <span class="estrela" data-valor="1">&#9733;</span>
-        <span class="estrela" data-valor="2">&#9733;</span>
-        <span class="estrela" data-valor="3">&#9733;</span>
-        <span class="estrela" data-valor="4">&#9733;</span>
-        <span class="estrela" data-valor="5">&#9733;</span>
-    </div>
-    <input type="text" id="nome" placeholder="Seu nome" required />
-    <input type="email" id="email" placeholder="Seu email" required />
-    <textarea id="comentario" placeholder="Escreva sua avaliação"></textarea>
-    <button id="enviar">Enviar Avaliação</button>
-</section>
-
-<!-- Lista de Avaliações -->
-<div id="lista-de-avaliacoes">
-    <h2>Avaliações</h2>
-    <ul id="lista-avaliacoes"></ul> <!-- Avaliações dinâmicas -->
-</div>
-
-<style>
-    /* Estilo das Estrelas */
-    #estrelas .estrela {
-        font-size: 2rem;
-        color: #ccc;
-        cursor: pointer;
-        transition: color 0.3s;
-    }
-    #estrelas .estrela.ativa {
-        color: #FFD700; /* Dourado para estrela ativa */
-    }
-</style>
-
-<script>
-    let rating = 0; // Variável para armazenar a avaliação selecionada
-
-    // Adiciona evento de clique nas estrelas
-    document.querySelectorAll('#estrelas .estrela').forEach(star => {
-        star.addEventListener('click', function() {
-            rating = this.getAttribute('data-valor'); // Captura o valor da estrela clicada
-            atualizarEstrelas(rating); // Atualiza a exibição das estrelas
-        });
-    });
-
-    function atualizarEstrelas(rating) {
-        document.querySelectorAll('#estrelas .estrela').forEach(star => {
-            star.classList.toggle('ativa', star.getAttribute('data-valor') <= rating);
-        });
-    }
-
-    // Função para capturar a avaliação e exibir na lista
-    document.getElementById('enviar').addEventListener('click', function() {
-        const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
-        const comentario = document.getElementById('comentario').value;
-
-        if (nome && email && comentario && rating) {
-            const lista = document.getElementById('lista-avaliacoes');
-            const item = document.createElement('li');
-            item.innerHTML = `<strong>${nome}</strong> (${rating} estrelas): ${comentario}`;
-            lista.appendChild(item);
-
-            // Limpa os campos
-            document.getElementById('nome').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('comentario').value = '';
-            atualizarEstrelas(0); // Reseta as estrelas
-            rating = 0; // Reseta a avaliação
-        } else {
-            alert('Por favor, preencha todos os campos e selecione uma avaliação.');
-        }
-    });
-</script>
-
-
-<!-- Rodapé -->
 <footer>
-    <div class="footer-content">
-        <!-- Seção Social -->
-        <div class="footer-section social">
-            <h3>Siga-nos e entre em contato</h3>
-            <a href="https://wa.me/554899323570" target="_blank" id="whatsapp">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="WhatsApp" width="24" height="24">
-            </a>
-            <a href="https://www.instagram.com/centroculturalcarrodeboi/" target="_blank" id="instagram">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram" width="24" height="24">
-            </a>
-        </div>
-
-        <!-- Seção Sobre Nós -->
-        <div class="footer-section about">
-            <h3>Sobre Nós</h3>
-            <p>Centro Cultural Carro de Boi do Dário - incentivando a cultura e o esporte para a comunidade.</p>
-            <p><strong>Endereço:</strong> Rod. João Gualberto Soares, 4360 - Rio Vermelho, Florianópolis - SC</p>
-        </div>
-    </div>
-
-    <!-- Seção de Direitos Autorais -->
-    <div class="footer-bottom">
-        <p>&copy; 2024 Centro Cultural Carro de Boi do Dário | Todos os direitos reservados.</p>
-    </div>
+  <p>Siga-nos nas redes sociais:</p>
+  <p>
+    <a href="https://www.youtube.com/watch?v=AwcamUrCufI&t=2s" target="_blank" rel="noopener noreferrer">YouTube</a> | 
+    <a href="https://www.instagram.com/centroculturalcarrodeboi/" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+    <a href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer">WhatsApp (Roseta)</a>
+  </p>
+  <p>© 2025 Centro Cultural Carro de Boi do Dário</p>
 </footer>
