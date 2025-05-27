@@ -1,321 +1,266 @@
-/* ============================
-   Variáveis CSS - Cores Base
-   ============================ */
-:root {
-    --cor-fundo: #f5f1e6;
-    --cor-texto: #4b3b28;
-    --cor-destaque: #8b5a2b;
-    --cor-clara: #fdf5e6;
-    --cor-hover: #ffe4b5;
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ============================
-   Reset e Estilos Gerais
-   ============================ */
+/* Corpo */
 body {
-    font-family: 'Georgia', serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    margin: 0;
-    padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff9f6;
+  color: #4b3b4f;
+  line-height: 1.6;
 }
 
-/* ============================
-   Cabeçalho (Header)
-   ============================ */
+/* Cabeçalho */
 header {
-    background-color: var(--cor-destaque);
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo {
-    max-width: 120px;
-    height: auto;
-    border-radius: 50%;
+  background: linear-gradient(90deg, #ffa5ab, #fcd5ce);
+  padding: 1.2rem 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    color: var(--cor-clara);
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 10px;
+  color: #6a0572;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.9rem;
 }
 
-.descricao {
-    color: var(--cor-clara);
-    font-size: 1.2em;
-    margin-top: 5px;
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-/* ============================
-   Sobre o Centro Cultural
-   ============================ */
-.sobre-centro-cultural {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 800px;
+header nav a:hover {
+  color: #4b3b4f;
+  text-decoration: underline;
 }
 
-.sobre-centro-cultural h2 {
-    font-size: 2rem;
-    color: #6a0572;
-}
-
-.sobre-centro-cultural p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* ============================
-   Contêiner de Vídeo
-   ============================ */
-.video-container {
-    text-align: center;
-    margin: 20px auto;
-}
-
-.video-container h2 {
-    font-size: 2rem;
-    color: #6a0572;
-}
-
-.video-container iframe {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ============================
-   Navegação (Menu)
-   ============================ */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    background-color: var(--cor-destaque);
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--cor-clara);
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--cor-hover);
-}
-
-/* ============================
-   Conteúdo Principal
-   ============================ */
-main {
-    padding: 20px;
-}
-
+/* Seções */
 section {
-    background-color: #fff8e6;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(234, 215, 222, 0.4);
 }
 
-section h2 {
-    color: var(--cor-texto);
-    border-bottom: 2px solid var(--cor-destaque);
-    padding-bottom: 5px;
+/* Títulos */
+h2 {
+  color: #6a0572;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.7rem;
 }
 
-/* ============================
-   Galerias de Imagens e Vídeos
-   ============================ */
-/* Galeria Cultural */
-.galeria-cultural {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    text-align: center;
-}
-
-.galeria-cultural img {
-    max-width: 100px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.galeria-cultural img:hover {
-    transform: scale(1.1);
-}
-
+/* Vídeo */
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    padding-top: 25px;
-    height: 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(106, 5, 114, 0.25);
+  margin-bottom: 2rem;
 }
+
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Lista de atividades */
+.atividades-lista {
+  list-style: none;
+}
+
+.atividade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  background: #f7e9f0;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(180, 105, 160, 0.2);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.whatsapp-link {
+  background-color: #25d366;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  background-color: #128c7e;
+}
+
+.whatsapp-link img {
+  width: 22px;
+  margin-right: 8px;
+}
+
+/* Imagens do espaço */
+.espaco-imagens,
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.espaco-imagens img,
+.galeria img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(106, 5, 114, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.espaco-imagens img:hover,
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Boi de Mamão */
+.boi-mamao {
+  text-align: center;
+}
+
+.boi-mamao a {
+  display: inline-block;
+  margin: 1rem 0;
+  color: #6a0572;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.boi-mamao a:hover {
+  color: #9e4f98;
+}
+
+/* Formulário contato */
+form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #6a0572;
+}
+
+form input,
+form textarea {
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border: 2px solid #d9c2d7;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #6a0572;
+  outline: none;
+}
+
+form button {
+  margin-top: 1.5rem;
+  background-color: #6a0572;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #8e3d9c;
+}
+
+/* Avaliações */
+#avaliacoes-lista {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  list-style: none;
+  padding: 0;
+}
+
+#avaliacoes-lista li {
+  background: #f9c8d8;
+  color: #6a0572;
+  margin-bottom: 12px;
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(180, 105, 160, 0.15);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.estrela {
+  color: #ffcc00;
+  font-size: 1.4rem;
+  margin-right: 5px;
+}
+
+/* Rodapé */
+footer {
+  background: linear-gradient(90deg, #ffa5ab, #fcd5ce);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  color: #6a0572;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .espaco-imagens img,
+  .galeria img {
     width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #fff; /* ou cor que combine com o seu design */
-    z-index: 1000;
-}
-
-
-/* Galeria Imagens */
-.galeria-imagens img {
-    width: 150px;
     height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s;
+  }
+  .atividade {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .whatsapp-link {
+    margin-top: 0.5rem;
+  }
 }
-
-/* Galeria de Eventos */
-.galeria-eventos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.galeria-eventos img {
-    width: 160px;
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s;
-}
-
-.galeria-eventos img:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos da galeria de eventos */
-.event-gallery {
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-.event-gallery h2 {
-    font-size: 1.8rem;
-    color: #6a0572;
-    margin-bottom: 1rem;
-}
-
-.event-gallery p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-/* Vídeos */
-video {
-    max-width: 600px;
-    height: auto;
-    margin: 10px;
-}
-
-/* ============================
-   Tabela
-   ============================ */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid var(--cor-destaque);
-}
-
-th {
-    background-color: #e8dcc3;
-    color: var(--cor-texto);
-}
-
-tr:nth-child(even) {
-    background-color: var(--cor-fundo);
-}
-
-tr:hover {
-    background-color: #dcdcdc;
-}
-
-/* ============================
-   Botões
-   ============================ */
-/* Botão de Doação */
-.botao-doacao {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #6a0572;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.botao-doacao:hover {
-    background-color: #5b0463;
-}
-
-.botao-doacao:active {
-    transform: scale(0.95);
-}
-
-/* Botões Sociais */
-.social-buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.social-buttons img {
-    width: 30px;
-    height: auto;
-    margin: 0 10px;
-}
-
-/* Logo Instagram pequena */
-.logo-instagram {
-    width: 12px;
-    height: auto;
-    margin-right: 8px;
-}
-
-/* ============================
-   Estilo Imagens "Boi de Mamão"
-   ============================ */
-#boi-de-mamao img {
-    width: 50%;
-    height: auto;
-    max-width: 300px;
-}
-
-/* ============================
-   Ajustes Finais
-   ============================ */
-/* Qualquer ajuste extra pode ser inserido aqui */
-
