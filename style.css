@@ -1,4 +1,6 @@
-/* Variáveis CSS */
+/* ============================
+   Variáveis CSS - Cores Base
+   ============================ */
 :root {
     --cor-fundo: #f5f1e6;
     --cor-texto: #4b3b28;
@@ -7,30 +9,34 @@
     --cor-hover: #ffe4b5;
 }
 
-/* Estilos gerais */
+/* ============================
+   Reset e Estilos Gerais
+   ============================ */
 body {
     font-family: 'Georgia', serif;
-    background-color: var(--cor-fundo); /* Fundo suave */
-    color: var(--cor-texto); /* Cor de texto marrom escuro */
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho */
+/* ============================
+   Cabeçalho (Header)
+   ============================ */
 header {
-    background-color: var(--cor-destaque); /* Marrom escuro para destaque */
+    background-color: var(--cor-destaque);
     padding: 20px;
     text-align: center;
 }
 
 header .logo {
-    max-width: 120px; /* Tamanho máximo da logo */
+    max-width: 120px;
     height: auto;
-    border-radius: 50%; /* Borda arredondada para efeito de logo */
+    border-radius: 50%;
 }
 
 header h1 {
-    color: var(--cor-clara); /* Texto claro no fundo marrom */
+    color: var(--cor-clara);
     font-size: 2em;
     font-weight: bold;
     margin-top: 10px;
@@ -42,45 +48,52 @@ header h1 {
     margin-top: 5px;
 }
 
+/* ============================
+   Sobre o Centro Cultural
+   ============================ */
 .sobre-centro-cultural {
-    text-align: center; /* Centraliza o texto */
-    margin: 20px auto; /* Espaço ao redor */
-    max-width: 800px; /* Limita a largura para melhor visualização */
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 .sobre-centro-cultural h2 {
-    font-size: 2rem; /* Tamanho do título */
-    color: #6a0572; /* Cor do título */
+    font-size: 2rem;
+    color: #6a0572;
 }
 
 .sobre-centro-cultural p {
-    font-size: 1.2rem; /* Tamanho do texto */
-    color: #555; /* Cor do texto */
+    font-size: 1.2rem;
+    color: #555;
 }
 
+/* ============================
+   Contêiner de Vídeo
+   ============================ */
 .video-container {
-    text-align: center; /* Centraliza o texto */
-    margin: 20px auto; /* Espaço ao redor */
+    text-align: center;
+    margin: 20px auto;
 }
 
 .video-container h2 {
-    font-size: 2rem; /* Tamanho do título */
-    color: #6a0572; /* Cor do título */
+    font-size: 2rem;
+    color: #6a0572;
 }
 
 .video-container iframe {
-    max-width: 100%; /* Garante que o vídeo não exceda a largura do contêiner */
-    height: auto; /* Mantém a proporção do vídeo */
+    max-width: 100%;
+    height: auto;
 }
 
-
-/* Navegação */
+/* ============================
+   Navegação (Menu)
+   ============================ */
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
-    background-color: var(--cor-destaque); /* Marrom escuro para navegação */
     margin: 0;
+    text-align: center;
+    background-color: var(--cor-destaque);
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -92,16 +105,18 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--cor-clara); /* Links em tom claro */
+    color: var(--cor-clara);
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--cor-hover); /* Tom amadeirado claro ao passar o mouse */
+    color: var(--cor-hover);
 }
 
-/* Seções principais */
+/* ============================
+   Conteúdo Principal
+   ============================ */
 main {
     padding: 20px;
 }
@@ -115,76 +130,67 @@ section {
 }
 
 section h2 {
-    color: var(--cor-texto); /* Título em marrom escuro */
-    border-bottom: 2px solid var(--cor-destaque); /* Linha de destaque */
+    color: var(--cor-texto);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 5px;
 }
 
-/* Estilos para a galeria */
-#gallery-display img {
-    max-width: 300px; /* Aumenta a largura máxima das imagens */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 10px; /* Espaçamento entre as imagens */
-}
-
-/* Estilos para vídeos */
-video {
-    max-width: 600px; /* Aumenta a largura máxima do vídeo */
-    height: auto; /* Mantém a proporção do vídeo */
-    margin: 10px; /* Espaçamento ao redor do vídeo */
-}
-
-
+/* ============================
+   Galerias de Imagens e Vídeos
+   ============================ */
 /* Galeria Cultural */
 .galeria-cultural {
     display: flex;
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se não houver espaço */
-    justify-content: center; /* Centraliza as imagens na galeria */
-    gap: 10px; /* Espaçamento entre as imagens */
-    text-align: center; /* Centraliza o texto */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
 }
 
 .galeria-cultural img {
-    max-width: 100px; /* Limita a largura máxima das imagens */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para efeito visual */
-    object-fit: cover; /* Corta as imagens para preencher o espaço */
-    transition: transform 0.3s; /* Suaviza a transição ao aumentar */
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
 .galeria-cultural img:hover {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    transform: scale(1.1);
 }
 
+/* Galeria Imagens */
 .galeria-imagens img {
-    width: 150px; /* Aumenta a largura das imagens para 150px */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    transition: transform 0.3s; /* Efeito de transição suave */
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
-/* Ajustes na Galeria de Eventos */
+
+/* Galeria de Eventos */
 .galeria-eventos {
-    display: flex; /* Define como flexível */
-    justify-content: center; /* Centraliza horizontalmente */
-    flex-wrap: wrap; /* Permite que as imagens quebrem em várias linhas */
-    gap: 10px; /* Espaçamento entre as imagens */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .galeria-eventos img {
-    width: 160px; /* Tamanho ligeiramente maior */
-    height: auto; /* Mantém a proporção */
-    border-radius: 12px; /* Bordas arredondadas */
-    transition: transform 0.3s; /* Efeito suave para transformação */
+    width: 160px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s;
 }
 
 .galeria-eventos img:hover {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    transform: scale(1.1);
 }
 
-/* Estilos para a galeria de eventos */
+/* Estilos da galeria de eventos */
 .event-gallery {
     margin-bottom: 3rem;
-    text-align: center; /* Centraliza o texto do título e data */
+    text-align: center;
 }
 
 .event-gallery h2 {
@@ -199,292 +205,94 @@ video {
     margin-bottom: 1rem;
 }
 
+/* Vídeos */
+video {
+    max-width: 600px;
+    height: auto;
+    margin: 10px;
+}
 
-/* Estilos para a tabela */
+/* ============================
+   Tabela
+   ============================ */
 table {
     width: 100%;
-    border-collapse: collapse; /* Remove espaços entre as células */
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
 th, td {
     padding: 12px;
     text-align: left;
-    border: 1px solid var(--cor-destaque); /* Borda marrom escura */
+    border: 1px solid var(--cor-destaque);
 }
 
 th {
-    background-color: #e8dcc3; /* Fundo claro para cabeçalho */
-    color: var(--cor-texto); /* Texto em marrom escuro */
+    background-color: #e8dcc3;
+    color: var(--cor-texto);
 }
 
 tr:nth-child(even) {
-    background-color: var(--cor-fundo); /* Fundo suave para linhas pares */
+    background-color: var(--cor-fundo);
 }
 
 tr:hover {
-    background-color: #dcdcdc; /* Efeito de hover para as linhas */
+    background-color: #dcdcdc;
 }
 
+/* ============================
+   Botões
+   ============================ */
 /* Botão de Doação */
 .botao-doacao {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #6a0572; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    border-radius: 4px; /* Bordas arredondadas */
-    text-decoration: none; /* Remover sublinhado */
-    transition: background-color 0.3s; /* Efeito de transição */
+    background-color: #6a0572;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .botao-doacao:hover {
-    background-color: #5b0463; /* Cor do botão ao passar o mouse */
+    background-color: #5b0463;
 }
 
 .botao-doacao:active {
-    transform: scale(0.95); /* Efeito de "apertar" no botão */
+    transform: scale(0.95);
 }
 
 /* Botões Sociais */
 .social-buttons {
     display: flex;
-    justify-content: center; /* Centraliza os botões */
-    margin: 20px 0; /* Espaçamento em cima e embaixo */
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .social-buttons img {
-    width: 30px; /* Define uma largura fixa */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 0 10px; /* Espaçamento entre os ícones */
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
 }
 
-/* Estilo específico para a logo do Instagram */
+/* Logo Instagram pequena */
 .logo-instagram {
-    width: 12px; /* Tamanho bem pequeno */
-    height: auto; /* Mantém a proporção */
-    margin-right: 8px; /* Espaçamento entre a logo e o texto */
+    width: 12px;
+    height: auto;
+    margin-right: 8px;
 }
-/* Estilo para imagens do "Boi de Mamão do Rio Vermelho" */
+
+/* ============================
+   Estilo Imagens "Boi de Mamão"
+   ============================ */
 #boi-de-mamao img {
-    width: 50%;  /* Ajusta a largura das imagens para 50% do tamanho original */
-    height: auto; /* Mantém a proporção das imagens */
-    max-width: 300px; /* Limita o tamanho máximo da imagem */
-    margin: 10px 0; /* Espaço acima e abaixo das imagens */
-    border-radius: 8px; /* Borda arredondada */
+    width: 50%;
+    height: auto;
+    max-width: 300px;
 }
 
-.boi-de-mamao-galeria img {
-    width: 150px; /* Largura das imagens na galeria */
-    height: auto; /* Mantém a proporção */
-    border-radius: 8px; /* Bordas arredondadas */
-    transition: transform 0.3s; /* Transição suave para o efeito hover */
-}
+/* ============================
+   Ajustes Finais
+   ============================ */
+/* Qualquer ajuste extra pode ser inserido aqui */
 
-.boi-de-mamao-galeria img:hover {
-    transform: scale(1.1); /* Efeito de zoom nas imagens ao passar o mouse */
-}
-
-
-
-#avaliacoes-lista {
-    list-style: none;
-    padding: 0;
-}
-
-#avaliacoes-lista li {
-    background: #fff8e6;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #d32f2f;
-}
-
-.estrela {
-    font-size: 1.5rem;
-    color: #ffcc00;
-    margin-right: 5px;
-}
-
-
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--cor-fundo); /* Cor de fundo igual ao restante */
-    color: var(--cor-texto); /* Texto em marrom escuro para o rodapé */
-    margin-top: 20px; /* Espaçamento superior */
-}
-
-
-/* Ajustes para o layout em dispositivos menores */
-@media (max-width: 768px) {
-    nav ul li {
-        margin: 0 10px; /* Reduz a margem em telas menores */
-    }
-
-    .galeria-costelaco img {
-        width: 120px; /* Ajusta o tamanho das imagens na galeria em telas pequenas */
-    }
-
-    .social-buttons img {
-        width: 25px; /* Reduz o tamanho dos ícones de redes sociais */
-    }
-}
-
-
-footer {
-    background-color: #6a0572;
-    color: white;
-    padding: 2rem 0;
-    font-size: 0.9rem;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 2rem;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 1rem 0;
-}
-
-.footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #ffccff;
-}
-
-.footer-section p, .footer-section a {
-    color: #e1e1e1;
-    margin: 0.5rem 0;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-section a:hover {
-    color: #ffccff;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 1rem;
-    border-top: 1px solid #e1e1e1;
-    color: #e1e1e1;
-}
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: inherit; /* Herda a cor de fundo do corpo */
-    color: inherit; /* Herda a cor do texto */
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem 2rem; /* Adiciona mais espaço para o conteúdo do rodapé */
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 1rem 0;
-}
-
-.footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #6a0572; /* Altera a cor para combinar melhor com o tema geral */
-}
-
-.footer-section p, .footer-section a {
-    color: #333; /* Define um tom escuro para melhor legibilidade */
-    margin: 0.5rem 0;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-section a:hover {
-    color: #6a0572; /* Cor de destaque ao passar o mouse */
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 1rem;
-    border-top: 1px solid #e1e1e1;
-    color: #333; /* Tom escuro para contraste */
-}
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--cor-destaque);
-    color: var(--cor-clara);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 2rem;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 1rem 0;
-}
-
-.footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #ffccff;
-}
-
-.footer-section p, .footer-section a {
-    color: #e1e1e1;
-    margin: 0.5rem 0;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-section a:hover {
-    color: #ffccff;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 1rem;
-    border-top: 1px solid #e1e1e1;
-    color: #e1e1e1;
