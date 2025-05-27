@@ -4,325 +4,197 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Centro Cultural Carro de Boi do Dário</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin:0; padding:0;
-    background: #fffbf0;
-    color: #333;
-  }
-  header {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    padding: 1rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  header nav a {
-    margin: 0 1rem;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  header nav a:hover {
-    text-decoration: underline;
-  }
-  section {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-  }
-  h2 {
-    color: #6a0572;
-    margin-bottom: 1rem;
-  }
-  /* Vídeo */
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin-bottom: 2rem;
-  }
-  .video-container iframe {
-    position: absolute;
-    top:0; left:0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  /* Atividades */
-  .atividades-lista {
-    list-style: none;
-    padding: 0;
-  }
-  .atividade {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-  .atividade span {
-    flex: 1;
-  }
-  .whatsapp-link {
-    text-decoration: none;
-    background-color: #25D366;
-    color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-  }
-  .whatsapp-link img {
-    width: 20px;
-    margin-right: 6px;
-  }
-  /* Imagens do espaço */
-  .espaco-imagens {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  .espaco-imagens img {
-    width: 280px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-  /* Galeria festa */
-  .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  .galeria img {
-    width: 220px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-  /* Boi de Mamão */
-  .boi-mamao {
-    text-align: center;
-  }
-  .boi-mamao a {
-    display: inline-block;
-    margin: 1rem 0;
-    color: #6a0572;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  /* Formulário contato */
-  form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  form label {
-    margin-top: 1rem;
-    font-weight: bold;
-  }
-  form input, form textarea {
-    padding: 0.5rem;
-    margin-top: 0.3rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  form button {
-    margin-top: 1.5rem;
-    background-color: #6a0572;
-    color: white;
-    border: none;
-    padding: 0.7rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  form button:hover {
-    background-color: #5b0463;
-  }
-  /* Avaliações */
-  #avaliacoes-lista {
-    max-width: 700px;
-    margin: 1rem auto 0 auto;
-    list-style: none;
-    padding: 0;
-  }
-  #avaliacoes-lista li {
-    background: #f9c8d8;
-    margin-bottom: 10px;
-    padding: 1rem;
-    border-radius: 8px;
-    color: #6a0572;
-  }
-  .estrela {
-    color: #ffcc00;
-    font-size: 1.4rem;
-  }
-  /* Rodapé */
-  footer {
-    background: #fad0c4;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-    color: #6a0572;
-  }
-  /* Escondendo seções */
-  .hidden {
-    display: none;
-  }
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <h1>Centro Cultural Carro de Boi do Dário</h1>
   <nav>
-    <a href="#" data-target="sobre">Sobre</a>
-    <a href="#" data-target="atividades">Atividades</a>
-    <a href="#" data-target="espaco">Espaço</a>
-    <a href="#" data-target="galeria">Galeria</a>
-    <a href="#" data-target="boi">Boi de Mamão</a>
-    <a href="#" data-target="contato">Contato</a>
-    <a href="#" data-target="avaliacoes">Avaliações</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#atividades">Atividades</a>
+    <a href="#espaco">Espaço</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#boi-mamao">Boi de Mamão</a>
+    <a href="#contato">Contato</a>
+    <a href="#avaliacoes">Avaliações</a>
   </nav>
 </header>
 
-<!-- Sobre -->
 <section id="sobre">
   <h2>Sobre o Centro Cultural</h2>
-  <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção de atividades culturais e esportivas que fortalecem a comunidade local e valorizam nossas tradições.</p>
   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/AwcamUrCufI" title="Vídeo Centro Cultural" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/AwcamUrCufI" 
+      title="Vídeo Centro Cultural Carro de Boi do Dário" 
+      allowfullscreen></iframe>
   </div>
+  <p>O Centro Cultural Carro de Boi do Dário é um espaço dedicado à promoção de atividades culturais e esportivas, visando o desenvolvimento da comunidade local em Florianópolis.</p>
 </section>
 
-<!-- Atividades -->
-<section id="atividades" class="hidden">
-  <h2>Atividades do Centro</h2>
+<section id="atividades">
+  <h2>Atividades</h2>
   <ul class="atividades-lista">
     <li class="atividade">
-      <span>Capoeira - Roseta</span>
+      Capoeira - Roseta
       <a class="whatsapp-link" href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />Chat
       </a>
     </li>
     <li class="atividade">
-      <span>Jiu-Jitsu - Marcelo</span>
+      Jiu-Jitsu - Marcelo
       <a class="whatsapp-link" href="https://wa.me/554884655901" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />Chat
       </a>
     </li>
     <li class="atividade">
-      <span>Taekwondo - Jefferson Sampaio</span>
+      Taekwondo - Jefferson Sampaio
       <a class="whatsapp-link" href="https://wa.me/554884138611" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />Chat
       </a>
     </li>
     <li class="atividade">
-      <span>Melhor Idade - Sandra</span>
+      Melhor Idade - Sandra
       <a class="whatsapp-link" href="https://wa.me/555199187236" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> Chat
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />Chat
       </a>
     </li>
   </ul>
 </section>
 
-<!-- Espaço -->
-<section id="espaco" class="hidden">
+<section id="espaco">
   <h2>Nosso Espaço</h2>
   <div class="espaco-imagens">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Espaço 1" />
-    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=80" alt="Espaço 2" />
-    <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=600&q=80" alt="Espaço 3" />
+    <img src="https://via.placeholder.com/260x160?text=Espaço+1" alt="Espaço do Centro Cultural 1" />
+    <img src="https://via.placeholder.com/260x160?text=Espaço+2" alt="Espaço do Centro Cultural 2" />
+    <img src="https://via.placeholder.com/260x160?text=Espaço+3" alt="Espaço do Centro Cultural 3" />
   </div>
 </section>
 
-<!-- Galeria -->
-<section id="galeria" class="hidden">
+<section id="galeria">
   <h2>Galeria de Eventos</h2>
   <h3>Festas Juninas</h3>
   <div class="galeria">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=500&q=80" alt="Festa Junina 1" />
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Festa Junina 2" />
+    <img src="https://via.placeholder.com/260x160?text=Festa+Junina+1" alt="Festa Junina 1" />
+    <img src="https://via.placeholder.com/260x160?text=Festa+Junina+2" alt="Festa Junina 2" />
   </div>
   <h3>Festa de Halloween</h3>
   <div class="galeria">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Halloween 1" />
-    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=500&q=80" alt="Halloween 2" />
+    <img src="https://via.placeholder.com/260x160?text=Halloween+1" alt="Halloween 1" />
+    <img src="https://via.placeholder.com/260x160?text=Halloween+2" alt="Halloween 2" />
   </div>
   <h3>Outros Eventos</h3>
   <div class="galeria">
-    <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=500&q=80" alt="Evento 1" />
-    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=500&q=80" alt="Evento 2" />
+    <img src="https://via.placeholder.com/260x160?text=Evento+1" alt="Evento 1" />
+    <img src="https://via.placeholder.com/260x160?text=Evento+2" alt="Evento 2" />
   </div>
 </section>
 
-<!-- Boi de Mamão -->
-<section id="boi" class="hidden">
+<section id="boi-mamao" class="boi-mamao">
   <h2>Boi de Mamão</h2>
-  <p>Conheça mais sobre o nosso tradicional Boi de Mamão e acompanhe nas redes sociais.</p>
-  <a href="https://www.instagram.com/boidemamaodoriovermelho/" target="_blank" rel="noopener noreferrer">@boidemamaodoriovermelho</a>
-  <div class="galeria" style="margin-top:1rem;">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Boi de Mamão 1" />
-    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Boi de Mamão 2" />
+  <p>Conheça mais sobre o Boi de Mamão do Rio Vermelho no nosso Instagram:</p>
+  <a href="https://www.instagram.com/boidemamaodoriovermelho/" target="_blank" rel="noopener noreferrer">
+    @boidemamaodoriovermelho
+  </a>
+  <div class="galeria">
+    <img src="https://via.placeholder.com/260x160?text=Boi+de+Mamão+1" alt="Boi de Mamão 1" />
+    <img src="https://via.placeholder.com/260x160?text=Boi+de+Mamão+2" alt="Boi de Mamão 2" />
   </div>
 </section>
 
-<!-- Contato -->
-<section id="contato" class="hidden">
+<section id="contato">
   <h2>Entre em Contato</h2>
-  <p>Para mais informações ou para aluguel do espaço, entre em contato com Roseta via WhatsApp:</p>
-  <a class="whatsapp-link" href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer" style="font-size:1.2rem; padding: 0.5rem 1rem;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" /> +55 48 9932-3570 (Roseta)
-  </a>
+  <p>Para mais informações ou aluguel do espaço, fale com a Roseta:</p>
+  <p><strong>WhatsApp: </strong><a href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer">+55 48 9932-3570</a></p>
+
   <form id="form-contato">
     <label for="nome">Nome:</label>
-    <input type="text" id="nome" required />
+    <input type="text" id="nome" name="nome" required />
+
     <label for="email">Email:</label>
-    <input type="email" id="email" required />
+    <input type="email" id="email" name="email" required />
+
     <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" rows="4" required></textarea>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
     <button type="submit">Enviar</button>
   </form>
 </section>
 
-<!-- Avaliações -->
-<section id="avaliacoes" class="hidden">
+<section id="avaliacoes">
   <h2>Avalie Nosso Espaço</h2>
   <form id="form-avaliacao">
     <label>Nota:</label>
-    <select id="nota" required>
-      <option value="">Selecione</option>
-      <option value="5">★★★★★ (Excelente)</option>
-      <option value="4">★★★★</option>
-      <option value="3">★★★</option>
-      <option value="2">★★</option>
-      <option value="1">★ (Ruim)</option>
-    </select>
+    <div id="estrelas">
+      <span class="estrela" data-valor="1">&#9733;</span>
+      <span class="estrela" data-valor="2">&#9733;</span>
+      <span class="estrela" data-valor="3">&#9733;</span>
+      <span class="estrela" data-valor="4">&#9733;</span>
+      <span class="estrela" data-valor="5">&#9733;</span>
+    </div>
+
     <label for="comentario">Comentário:</label>
-    <textarea id="comentario" rows="3" placeholder="Escreva sua avaliação..." required></textarea>
+    <textarea id="comentario" rows="3" required></textarea>
+
     <button type="submit">Enviar Avaliação</button>
   </form>
 
-  <ul id="avaliacoes-lista"></ul>
+  <ul id="avaliacoes-lista">
+    <!-- Avaliações aparecerão aqui -->
+  </ul>
 </section>
 
 <footer>
-  <p>Siga-nos nas redes sociais:</p>
-  <p>
-    <a href="https://www.youtube.com/watch?v=AwcamUrCufI&t=2s" target="_blank" rel="noopener noreferrer">YouTube</a> | 
-    <a href="https://www.instagram.com/centroculturalcarrodeboi/" target="_blank" rel="noopener noreferrer">Instagram</a> | 
-    <a href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer">WhatsApp (Roseta)</a>
-  </p>
   <p>© 2025 Centro Cultural Carro de Boi do Dário</p>
+  <p>
+    <a href="https://www.youtube.com/watch?v=AwcamUrCufI&t=2s" target="_blank" rel="noopener noreferrer">YouTube</a> |
+    <a href="https://www.instagram.com/centroculturalcarrodeboi/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+    <a href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </p>
 </footer>
+
+<script>
+// Script básico para as estrelas da avaliação
+const estrelas = document.querySelectorAll('#estrelas .estrela');
+const comentarioInput = document.getElementById('comentario');
+const avaliacoesLista = document.getElementById('avaliacoes-lista');
+let notaSelecionada = 0;
+
+estrelas.forEach(estrela => {
+  estrela.addEventListener('click', () => {
+    notaSelecionada = parseInt(estrela.dataset.valor);
+    atualizarEstrelas(notaSelecionada);
+  });
+});
+
+function atualizarEstrelas(nota) {
+  estrelas.forEach(estrela => {
+    estrela.style.color = estrela.dataset.valor <= nota ? '#ffcc00' : '#ccc';
+  });
+}
+
+document.getElementById('form-avaliacao').addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (notaSelecionada === 0) {
+    alert('Por favor, selecione uma nota.');
+    return;
+  }
+  const comentario = comentarioInput.value.trim();
+  if (!comentario) {
+    alert('Por favor, escreva um comentário.');
+    return;
+  }
+  adicionarAvaliacao(notaSelecionada, comentario);
+  comentarioInput.value = '';
+  notaSelecionada = 0;
+  atualizarEstrelas(0);
+});
+
+function adicionarAvaliacao(nota, texto) {
+  const li = document.createElement('li');
+  li.innerHTML = `${'★'.repeat(nota)}${'☆'.repeat(5 - nota)} - ${texto}`;
+  avaliacoesLista.prepend(li);
+}
+</script>
+
+</body>
+</html>
