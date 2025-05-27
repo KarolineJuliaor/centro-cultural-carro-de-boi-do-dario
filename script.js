@@ -12,12 +12,21 @@ function addImage(input) {
 function adicionarImagem(input, displayId, storageKey) {
     const display = document.getElementById(displayId);
     const file = input.files[0];
-    if (!file) return; // Verifica se um arquivo foi selecionado
+    if (!file) return;
+
     const reader = new FileReader();
     reader.onload = function(e) {
+        let storedImages = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+        if (storedImages.length >= 10) {
+            alert('Limite de 10 imagens atingido.');
+            return;
+        }
+
         const img = document.createElement('img');
         img.src = e.target.result;
         display.appendChild(img);
+
         saveImageToLocalStorage(storageKey, img.src);
     };
     reader.readAsDataURL(file);
@@ -30,37 +39,56 @@ function saveImageToLocalStorage(key, src) {
     localStorage.setItem(key, JSON.stringify(storedImages));
 }
 
-// Carregar imagens do localStorage ao recarregar a página
-function loadImages() {
-    carregarImagens('gallery', 'gallery-display');
-    carregarImagens('events', 'event-container');
-}
-
-// Carregar imagens de uma chave específica do localStorage
+// Função para carregar imagens do localStorage
 function carregarImagens(key, displayId) {
     const display = document.getElementById(displayId);
     const storedImages = JSON.parse(localStorage.getItem(key)) || [];
+
     storedImages.forEach(src => {
         const img = document.createElement('img');
         img.src = src;
         display.appendChild(img);
     });
+
+    // Permitir remover imagem ao clicar
+    display.addEventListener('click', function(e) {
+        if (e.target.tagName === 'IMG') {
+            const srcToRemove = e.target.src;
+            e.target.remove();
+
+            let imagensAtualizadas = JSON.parse(localStorage.getItem(key)) || [];
+            imagensAtualizadas = imagensAtualizadas.filter(src => src !== srcToRemove);
+            localStorage.setItem(key, JSON.stringify(imagensAtualizadas));
+        }
+    });
 }
+
+// Carregar todas as imagens ao recarregar a página
+function loadImages() {
+    carregarImagens('gallery', 'gallery-display');
+    carregarImagens('events', 'event-container');
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const estrelas = document.querySelectorAll('.estrela');
     let avaliacaoSelecionada = 0;
 
-    // Adiciona a interação nas estrelas
+    // Carregar avaliação salva e marcar estrelas
+    const avaliacaoSalvaValor = localStorage.getItem('avaliacao');
+    if (avaliacaoSalvaValor) {
+        avaliacaoSelecionada = parseInt(avaliacaoSalvaValor);
+        estrelas.forEach(s => {
+            s.innerHTML = s.getAttribute('data-valor') <= avaliacaoSelecionada ? '&#9733;' : '&#9734;';
+        });
+    }
+
+    // Adicionar interação nas estrelas
     estrelas.forEach(estrela => {
         estrela.addEventListener('click', function() {
             avaliacaoSelecionada = parseInt(this.getAttribute('data-valor'));
-
-            // Marca as estrelas
             estrelas.forEach(s => {
                 s.innerHTML = s.getAttribute('data-valor') <= avaliacaoSelecionada ? '&#9733;' : '&#9734;';
             });
-
-            // Salva a avaliação no localStorage
             localStorage.setItem('avaliacao', avaliacaoSelecionada);
         });
     });
@@ -69,30 +97,45 @@ document.addEventListener("DOMContentLoaded", function() {
     function enviarAvaliacao() {
         if (avaliacaoSelecionada > 0) {
             const comentario = prompt("Deixe um comentário:");
-
             if (comentario) {
-                // Adiciona a avaliação à lista
-                const novaAvaliacao = document.createElement('li');
-                novaAvaliacao.innerHTML = `Avaliação: ${avaliacaoSelecionada} estrelas - Comentário: ${comentario}`;
-                document.querySelector('#avaliacoes-lista ul').appendChild(novaAvaliacao);
+                const novaAvaliacao = {
+                    estrelas: avaliacaoSelecionada,
+                    comentario: comentario
+                };
 
-                // Salva novamente as avaliações no localStorage
-                localStorage.setItem('avaliacoes', document.querySelector('#avaliacoes-lista').innerHTML);
+                let avaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || [];
+                avaliacoes.push(novaAvaliacao);
+                localStorage.setItem('avaliacoes', JSON.stringify(avaliacoes));
+
+                atualizarListaAvaliacoes();
             }
         } else {
             alert('Por favor, selecione uma avaliação.');
         }
     }
 
-    // Função para enviar avaliação ao clicar em botão
+    // Atualizar a lista de avaliações na tela
+    function atualizarListaAvaliacoes() {
+        const lista = document.querySelector('#avaliacoes-lista ul');
+        lista.innerHTML = '';
+
+        const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || [];
+        avaliacoes.forEach(av => {
+            const item = document.createElement('li');
+            item.innerHTML = `Avaliação: ${av.estrelas} estrelas - Comentário: ${av.comentario}`;
+            lista.appendChild(item);
+        });
+    }
+
+    // Botão de enviar avaliação
     const botaoEnviar = document.getElementById('enviar-avaliacao');
     if (botaoEnviar) {
         botaoEnviar.addEventListener('click', enviarAvaliacao);
     }
 
-    // Carregar avaliações salvas no localStorage
-    const avaliacaoSalva = localStorage.getItem('avaliacoes');
-    if (avaliacaoSalva) {
-        document.getElementById('avaliacoes-lista').innerHTML = avaliacaoSalva;
-    }
+    // Carregar lista de avaliações na tela
+    atualizarListaAvaliacoes();
+
+    // Carregar imagens salvas
+    loadImages();
 });
