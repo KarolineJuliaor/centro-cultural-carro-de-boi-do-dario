@@ -1,5 +1,3 @@
-
-```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,49 +8,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* ========================================================== */
+        /* Variáveis e Configurações Globais                          */
+        /* ========================================================== */
         :root {
-            --primary-color: #6a0572;
-            --secondary-color: #ff9a9e;
-            --tertiary-color: #fad0c4;
-            --background-light: #fffbf0;
-            --text-color-dark: #333;
-            --text-color-light: #fff;
-            --whatsapp-green: #25D366;
-            --star-gold: #ffcc00;
-            --star-gray: #ccc;
-            --rustico-brown: #8B4513;
-            --rustic-yellow: #f4d03f;
+            --cor-primaria-marrom: #8B4513; /* Marrom-Sela para títulos e detalhes */
+            --cor-secundaria-verde: #556B2F; /* Verde-Oliva para links e destaque */
+            --cor-terciaria-amarelo: #D4AC0D; /* Amarelo-Ocre para detalhes e botões */
+            --cor-fundo-leve: #FDF5E6; /* Creme (Cornsilk) para o fundo do corpo */
+            --cor-texto-escuro: #4a2c00; /* Marrom bem escuro para texto principal */
+            --cor-cinza-neutro: #eee;
+            --cor-estrela-ouro: #FFD700;
         }
 
+        /* Tipografia */
         body {
             font-family: 'Roboto', Arial, sans-serif;
+            color: var(--cor-texto-escuro);
+            background-color: var(--cor-fundo-leve);
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: var(--background-light);
-            color: var(--text-color-dark);
-            line-height: 1.6;
         }
 
-        header {
-            background: linear-gradient(to bottom, var(--rustic-yellow), var(--tertiary-color));
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            color: var(--rustico-brown);
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            margin-bottom: 0.5rem;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: var(--cor-primaria-marrom);
         }
-        
-        header p {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.5rem;
-            color: var(--rustico-brown);
-            margin-top: 0;
+
+        a {
+            color: var(--cor-secundaria-verde);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--cor-terciaria-amarelo);
+        }
+
+        /* ========================================================== */
+        /* Estrutura do Layout                                        */
+        /* ========================================================== */
+        header {
+            background: linear-gradient(to right, var(--cor-terciaria-amarelo), var(--cor-fundo-leve));
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom: 2px dashed var(--cor-primaria-marrom);
         }
 
         .logo-container {
@@ -60,72 +61,63 @@
         }
 
         .logo-container img {
-            max-width: 150px;
+            max-width: 180px;
             height: auto;
             border-radius: 50%;
-            border: 5px solid var(--text-color-light);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 5px solid var(--cor-texto-escuro);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .subtitulo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin: 0.5rem 0 0;
+            color: var(--cor-primaria-marrom);
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin-top: 2rem;
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0.5rem 1rem;
+            justify-content: center;
+            gap: 1.5rem;
         }
 
         nav ul li a {
-            text-decoration: none;
-            color: var(--rustico-brown);
             font-weight: bold;
+            color: var(--cor-secundaria-verde);
             padding: 0.5rem 1rem;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border: 1px solid var(--cor-secundaria-verde);
+            transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: rgba(139, 69, 19, 0.2);
+            background-color: var(--cor-secundaria-verde);
+            color: var(--cor-fundo-leve);
         }
 
         main {
-            padding: 2rem 1rem;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
         section {
+            background-color: #fefefe;
+            border-radius: 15px;
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            padding: 2rem;
-            background: var(--text-color-light);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid #e0e0e0;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        h3 {
-            color: var(--rustico-brown);
-            font-family: 'Playfair Display', serif;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--cor-cinza-neutro);
         }
 
         .section-icon {
@@ -134,39 +126,8 @@
         }
 
         .section-icon img {
-            width: 80px;
+            max-width: 120px;
             height: auto;
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .image-gallery figure {
-            margin: 0;
-        }
-        
-        .image-gallery img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .image-gallery img:hover {
-            transform: scale(1.03);
-        }
-
-        .image-gallery figcaption {
-            text-align: center;
-            font-style: italic;
-            font-size: 0.9rem;
-            color: #555;
-            margin-top: 0.5rem;
         }
 
         .video-container {
@@ -175,9 +136,9 @@
             height: 0;
             overflow: hidden;
             max-width: 100%;
-            background: #000;
             margin-top: 1.5rem;
             border-radius: 8px;
+            border: 2px solid var(--cor-primaria-marrom);
         }
 
         .video-container iframe {
@@ -189,131 +150,166 @@
             border: 0;
         }
 
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: #f1f1f1;
-            color: var(--primary-color);
-            margin-top: 2rem;
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
-        }
-
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
+        /* ========================================================== */
+        /* Estilos de Botões e Links                                  */
+        /* ========================================================== */
+        .whatsapp-link {
+            color: var(--cor-secundaria-verde);
             font-weight: bold;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease;
         }
 
-        footer a:hover {
-            color: #5b0463;
+        .whatsapp-button {
+            display: inline-block;
+            background-color: var(--cor-secundaria-verde);
+            color: var(--cor-fundo-leve) !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
         }
-        
-        /* Estilos da Avaliação */
+
+        .whatsapp-button:hover {
+            background-color: #45821c;
+            transform: translateY(-2px);
+        }
+
+        /* ========================================================== */
+        /* Galeria e Imagens                                          */
+        /* ========================================================== */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .image-gallery figure {
+            margin: 0;
+            border: 1px solid var(--cor-cinza-neutro);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .image-gallery figure:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .image-gallery figcaption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9rem;
+            padding: 0.5rem;
+            background-color: var(--cor-cinza-neutro);
+        }
+
+        /* ========================================================== */
+        /* Seção de Avaliações                                        */
+        /* ========================================================== */
         #estrelas .estrela {
             font-size: 2.5rem;
             cursor: pointer;
-            color: var(--star-gray);
+            color: var(--cor-cinza-neutro);
             margin-right: 5px;
             transition: color 0.2s ease;
         }
+
         #estrelas .estrela.selected,
         #estrelas .estrela:hover {
-            color: var(--star-gold);
+            color: var(--cor-estrela-ouro);
+        }
+
+        #avaliacoes-lista {
+            margin-top: 2rem;
         }
 
         #avaliacoes-lista ul {
             list-style: none;
             padding: 0;
-            margin-top: 1.5rem;
         }
 
         #avaliacoes-lista li {
-            background-color: #f9f9f9;
+            background-color: #faf5e6;
             padding: 1rem;
-            border-radius: 8px;
+            border-radius: 10px;
             margin-bottom: 1rem;
-            border: 1px solid #eee;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        #avaliacoes-lista li strong {
-            color: var(--primary-color);
-        }
-        #avaliacoes-lista li p {
-            margin: 0.5rem 0 0;
+            border: 1px solid #e0e0e0;
         }
 
         textarea {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
             resize: vertical;
             margin-top: 1rem;
-            border: 1px solid #ccc;
+            border: 1px solid var(--cor-cinza-neutro);
             border-radius: 5px;
             font-family: 'Roboto', Arial, sans-serif;
         }
 
         button {
-            background-color: var(--primary-color);
-            color: var(--text-color-light);
+            background-color: var(--cor-primaria-marrom);
+            color: var(--cor-fundo-leve);
             border: none;
             padding: 0.75rem 1.5rem;
             margin-top: 1rem;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #5b0463;
+            background-color: #6c3412;
         }
 
+        /* ========================================================== */
+        /* Rodapé                                                     */
+        /* ========================================================== */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--cor-terciaria-amarelo);
+            color: var(--cor-primaria-marrom);
+            margin-top: 2rem;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+        }
+
+        footer a {
+            color: var(--cor-primaria-marrom);
+            font-weight: bold;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: #6c3412;
+        }
+
+        /* ========================================================== */
+        /* Responsividade                                             */
+        /* ========================================================== */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
+            h1 {
+                font-size: 2.5rem;
             }
-            nav ul li {
-                margin: 0.5rem 0.8rem;
-            }
-            main {
-                padding: 1.5rem 0.5rem;
-            }
-            section {
-                padding: 1.5rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            .image-gallery {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            header p {
-                font-size: 1.2rem;
+            .section {
+                padding: 2rem 1rem;
             }
             nav ul {
                 flex-direction: column;
-                align-items: center;
+                gap: 0.5rem;
+                margin-top: 1rem;
             }
-            nav ul li {
-                margin: 0.5rem 0;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            .image-gallery {
-                grid-template-columns: 1fr;
-            }
-            .video-container {
-                padding-bottom: 75%;
+            nav ul li a {
+                padding: 0.5rem;
             }
         }
     </style>
@@ -325,7 +321,7 @@
         <img src="logo-centro-cultural.png" alt="Logo do Centro Cultural Carro de Boi do Dário" />
     </div>
     <h1>Centro Cultural Carro de Boi do Dário</h1>
-    <p>Cultura, Tradição e Comunidade</p>
+    <p class="subtitulo">Cultura, Tradição e Comunidade</p>
     <nav aria-label="Navegação principal do site">
         <ul>
             <li><a href="#sobre">Sobre</a></li>
@@ -454,7 +450,7 @@
     function atualizarEstrelas(nota) {
         estrelas.forEach(estrela => {
             const valor = parseInt(estrela.dataset.valor);
-            estrela.style.color = valor <= nota ? 'var(--star-gold)' : 'var(--star-gray)';
+            estrela.style.color = valor <= nota ? 'var(--cor-estrela-ouro)' : 'var(--cor-cinza-neutro)';
         });
     }
 
@@ -500,4 +496,3 @@
 
 </body>
 </html>
-```
