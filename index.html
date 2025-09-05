@@ -1,508 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Centro Cultural Carro de Boi do Dário</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* ========================================================== */
-        /* Variáveis e Configurações Globais                          */
-        /* ========================================================== */
-        :root {
-            --cor-primaria-marrom: #8B4513; /* Marrom-Sela para títulos e detalhes */
-            --cor-secundaria-verde: #556B2F; /* Verde-Oliva para links e destaque */
-            --cor-terciaria-verde-escuro: #3C553C; /* Verde Escuro (era Amarelo-Ocre) para detalhes e botões */
-            --cor-fundo-leve: #E6F5E6; /* Verde muito claro para o fundo do corpo */
-            --cor-texto-escuro: #4a2c00; /* Marrom bem escuro para texto principal */
-            --cor-cinza-neutro: #eee;
-            --cor-estrela-ouro: #FFD700;
-        }
-
-        /* Tipografia */
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            color: var(--cor-texto-escuro);
-            background-color: var(--cor-fundo-leve);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--cor-primaria-marrom);
-        }
-
-        a {
-            color: var(--cor-secundaria-verde);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--cor-terciaria-verde-escuro); /* Ajuste de hover para a nova cor */
-        }
-
-        /* ========================================================== */
-        /* Estrutura do Layout                                        */
-        /* ========================================================== */
-        header {
-            background: linear-gradient(to right, var(--cor-terciaria-verde-escuro), var(--cor-fundo-leve)); /* Fundo do header com verde escuro */
-            padding: 2.5rem 1rem;
-            text-align: center;
-            border-bottom: 2px dashed var(--cor-primaria-marrom);
-        }
-
-        .logo-container {
-            margin-bottom: 1.5rem;
-        }
-
-        .logo-container img {
-            max-width: 180px;
-            height: auto;
-            border-radius: 50%;
-            border: 5px solid var(--cor-texto-escuro);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        .subtitulo {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.8rem;
-            margin: 0.5rem 0 0;
-            color: var(--cor-primaria-marrom);
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        nav ul li a {
-            font-weight: bold;
-            color: var(--cor-secundaria-verde);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            border: 1px solid var(--cor-secundaria-verde);
-            transition: all 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: var(--cor-secundaria-verde);
-            color: var(--cor-fundo-leve);
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            background-color: #fefefe;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-            border: 1px solid var(--cor-cinza-neutro);
-        }
-
-        .section-icon {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .section-icon img {
-            max-width: 120px;
-            height: auto;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            margin-top: 1.5rem;
-            border-radius: 8px;
-            border: 2px solid var(--cor-primaria-marrom);
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* ========================================================== */
-        /* Estilos de Botões e Links                                  */
-        /* ========================================================== */
-        .link-whatsapp {
-            color: var(--cor-secundaria-verde);
-            font-weight: bold;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: var(--cor-secundaria-verde);
-            color: var(--cor-fundo-leve) !important;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-transform: uppercase;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #45821c;
-            transform: translateY(-2px);
-        }
-
-        /* ========================================================== */
-        /* Galeria e Imagens                                          */
-        /* ========================================================== */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .image-gallery figure {
-            margin: 0;
-            border: 1px solid var(--cor-cinza-neutro);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .image-gallery figure:hover {
-            transform: translateY(-5px);
-        }
-
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        .image-gallery figcaption {
-            text-align: center;
-            font-style: italic;
-            font-size: 0.9rem;
-            padding: 0.5rem;
-            background-color: var(--cor-cinza-neutro);
-        }
-
-        /* ========================================================== */
-        /* Seção de Avaliações                                        */
-        /* ========================================================== */
-        #estrelas .estrela {
-            font-size: 2.5rem;
-            cursor: pointer;
-            color: var(--cor-cinza-neutro);
-            margin-right: 5px;
-            transition: color 0.2s ease;
-        }
-
-        #estrelas .estrela.selected,
-        #estrelas .estrela:hover {
-            color: var(--cor-estrela-ouro);
-        }
-
-        #avaliacoes-lista {
-            margin-top: 2rem;
-        }
-
-        #avaliacoes-lista ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #avaliacoes-lista li {
-            background-color: #faf5e6;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            border: 1px solid #e0e0e0;
-        }
-
-        textarea {
-            width: 100%;
-            padding: 10px;
-            resize: vertical;
-            margin-top: 1rem;
-            border: 1px solid var(--cor-cinza-neutro);
-            border-radius: 5px;
-            font-family: 'Roboto', Arial, sans-serif;
-        }
-
-        button {
-            background-color: var(--cor-primaria-marrom);
-            color: var(--cor-fundo-leve);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            margin-top: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #6c3412;
-        }
-
-        /* ========================================================== */
-        /* Rodapé                                                     */
-        /* ========================================================== */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--cor-terciaria-verde-escuro); /* Fundo do rodapé com verde escuro */
-            color: var(--cor-primaria-marrom);
-            margin-top: 2rem;
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
-        }
-
-        footer a {
-            color: var(--cor-primaria-marrom);
-            font-weight: bold;
-            margin: 0 0.5rem;
-        }
-
-        footer a:hover {
-            color: #6c3412;
-        }
-
-        /* ========================================================== */
-        /* Responsividade                                             */
-        /* ========================================================== */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            .section {
-                padding: 2rem 1rem;
-            }
-            nav ul {
-                flex-direction: column;
-                gap: 0.5rem;
-                margin-top: 1rem;
-            }
-            nav ul li a {
-                padding: 0.5rem;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Cultural Carro de Boi do Dário</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <div class="logo-container">
-        <img src="3.jpg" alt="Logo do Centro Cultural Carro de Boi do Dário, com a imagem de dois bois de mamão." />
-    </div>
-    <h1>Centro Cultural Carro de Boi do Dário</h1>
-    <p class="subtitulo">Cultura, Tradição e Comunidade</p>
-    <nav aria-label="Navegação principal do site">
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#atividades">Atividades</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#carreatas">Carreatas</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="#avaliacoes">Avaliações</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="logo-carro-boi.png" alt="Logo Centro Cultural Carro de Boi">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#doacao" class="btn-doacao">Apoie o Centro</a>
+        </div>
+    </header>
 
-<main>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Centro Cultural Carro de Boi do Dário</h1>
+            <p class="subtitle">Celebrando a Cultura, Transformando Vidas.</p>
+            <div class="cta-buttons">
+                <a href="#projetos" class="btn btn-primary">Conheça Nossos Projetos</a>
+                <a href="#contato" class="btn btn-secondary">Participe</a>
+            </div>
+        </div>
+    </section>
 
-    <section id="sobre" aria-labelledby="sobre-titulo">
-        <h2 id="sobre-titulo">Sobre o Centro Cultural</h2>
-        <p>O Centro Cultural Carro de Boi do Dário é um espaço vibrante e acolhedor, dedicado à promoção da cultura, esporte e bem-estar na comunidade local. Nascido do legado de Sr. Dario e impulsionado pela paixão de Robson "Roseta", nosso centro é um ponto de encontro para todas as idades, oferecendo diversas atividades que enriquecem a vida de nossos participantes.</p>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/AwcamUrCufI" title="Vídeo de apresentação do Centro Cultural Carro de Boi do Dário" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <h2>Nossa História e Missão</h2>
+            <p>Texto sobre a história e os valores do centro cultural...</p>
+            </div>
+    </section>
 
-    <section id="atividades" aria-labelledby="atividades-titulo">
-        <h2 id="atividades-titulo">Nossas Atividades</h2>
-        
-        <div class="section-icon">
-            <img src="Logo mandinga (1).jpg" alt="Logo da Capoeira Mandinga, em verde com figura de capoeirista." />
-            <h3>Capoeira</h3>
-            <p><strong>Professor Roseta:</strong> Nosso espaço é o berço de uma das artes marciais mais completas, misturando luta, dança e música. As aulas de capoeira com o Mestre Roseta resgatam a tradição e promovem o desenvolvimento físico e mental.</p>
-            <a class="btn-whatsapp" href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer" aria-label="Fale com Roseta no WhatsApp sobre Capoeira">WhatsApp Capoeira</a>
-        </div>
-        
-        <div class="section-icon">
-            <img src="1.png" alt="Logo do Boi de Mamão do Rio Vermelho, com figura de um boi colorido." />
-            <h3>Boi de Mamão</h3>
-            <p><strong>A Arte Tradicional:</strong> Celebramos o folclore açoriano com o nosso tradicional Boi de Mamão do Rio Vermelho. Esta manifestação cultural encanta adultos e crianças com suas cores, personagens e a história de ressurreição do boi. Siga nossa comunidade no Instagram para não perder as apresentações.</p>
-            <p>Conheça as camisetas temáticas do Boi de Mamão e ajude a fortalecer a nossa cultura! Você encontra modelos exclusivos no Instagram da **Bazulão:**
-                <a class="link-whatsapp" href="https://www.instagram.com/bazulaoficial/" target="_blank" rel="noopener noreferrer">@bazulaoficial</a></p>
-        </div>
-        
-        <h3>Outras Atividades:</h3>
-        <ul>
-            <li>
-                <strong>Jiu-Jitsu:</strong> Com Professor Marcelo <a class="link-whatsapp" href="https://wa.me/554884655901" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </li>
-            <li>
-                <strong>Taekwondo:</strong> Com Professor Jefferson Sampaio <a class="link-whatsapp" href="https://wa.me/554884138611" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </li>
-            <li>
-                <strong>Melhor Idade:</strong> Com Sandra <a class="link-whatsapp" href="https://wa.me/555199187236" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </li>
-        </ul>
-    </section>
-
-    <section id="galeria" aria-labelledby="galeria-titulo">
-        <h2 id="galeria-titulo">Galeria de Memórias</h2>
-        <p>Confira alguns dos momentos mais especiais do nosso Centro Cultural.</p>
-        
-        <h3>Festas e Eventos</h3>
-        <div class="image-gallery">
-            <figure>
-                <img src="festajunina1.jpg" alt="Pessoas fantasiadas e decorações típicas em uma festa junina." />
-                <figcaption>Festa Junina</figcaption>
-            </figure>
-            <figure>
-                <img src="halloween1.jpg" alt="Decoração de Halloween com abóboras e teias de aranha." />
-                <figcaption>Festa de Halloween</figcaption>
-            </figure>
-            <figure>
-                <img src="evento1.jpg" alt="Pessoas reunidas em um evento comunitário com música." />
-                <figcaption>Evento comunitário</figcaption>
-            </figure>
-        </div>
-    </section>
-    
-    <section id="carreatas" aria-labelledby="carreatas-titulo">
-        <h2 id="carreatas-titulo">Espaço para Carreatas e Carros de Boi</h2>
-        <div class="section-icon">
-            <img src="icon-carro-boi.png" alt="Ícone de um carro de boi." />
-        </div>
-        <p>Nosso centro cultural agora dispõe de um espaço dedicado para a organização e realização de carreatas e manifestações que celebram a tradição do carro de boi. Este é um local de encontro e partida, preparado para receber a comunidade e seus veículos tradicionais, mantendo viva a história rural da nossa região. Para mais informações sobre a locação e agendamento deste espaço, entre em contato.</p>
-        <img src="espaco-carreatas.jpg" alt="Espaço ao ar livre do centro cultural para carreatas, com um carro de boi." style="max-width: 100%; border-radius: 8px; margin-top: 1rem;" />
-    </section>
-
-    <section id="contato" aria-labelledby="contato-titulo">
-        <h2 id="contato-titulo">Fale Conosco</h2>
-        <p>Para mais informações, aluguel de espaços ou dúvidas, entre em contato diretamente com Roseta.</p>
-        <a class="btn-whatsapp" href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer" aria-label="Fale com Roseta no WhatsApp">WhatsApp Roseta</a>
-    </section>
-
-    <section id="avaliacoes" aria-labelledby="avaliacoes-titulo">
-        <h2 id="avaliacoes-titulo">Avalie nosso espaço</h2>
-        <p>Sua opinião é muito importante para nós. Deixe sua avaliação e ajude a fortalecer nossa comunidade!</p>
-        <div id="estrelas">
-            <span class="estrela" data-valor="1">&#9733;</span>
-            <span class="estrela" data-valor="2">&#9733;</span>
-            <span class="estrela" data-valor="3">&#9733;</span>
-            <span class="estrela" data-valor="4">&#9733;</span>
-            <span class="estrela" data-valor="5">&#9733;</span>
-        </div>
-        <form id="form-avaliacao">
-            <label for="comentario">Comentário:</label>
-            <textarea id="comentario" name="comentario" rows="3" required></textarea>
-            <button type="submit">Enviar Avaliação</button>
-        </form>
-        <div id="avaliacoes-lista">
-            <h3>Avaliações da Comunidade</h3>
-            <ul id="lista-avaliacoes"></ul>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>Siga nossas redes sociais:</p>
-    <a href="https://www.youtube.com/watch?v=AwcamUrCufI&t=2s" target="_blank" rel="noopener noreferrer">YouTube</a> |
-    <a href="https://www.instagram.com/centroculturalcarrodeboi/" target="_blank" rel="noopener noreferrer">Instagram</a> |
-    <a href="https://wa.me/554899323570" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-</footer>
-
-<script>
-    // Seleciona todos os elementos de estrela e outros elementos do formulário de avaliação
-    const estrelas = document.querySelectorAll('#estrelas .estrela');
-    const formAvaliacao = document.getElementById('form-avaliacao');
-    const listaAvaliacoesUl = document.getElementById('lista-avaliacoes');
-    const comentarioInput = document.getElementById('comentario');
-    let notaSelecionada = 0; // Variável para armazenar a nota que o usuário selecionou
-
-    // Função para atualizar a cor das estrelas com base na nota
-    function atualizarEstrelas(nota) {
-        estrelas.forEach(estrela => {
-            const valor = parseInt(estrela.dataset.valor); // Pega o valor da estrela (1 a 5)
-            // Se o valor da estrela for menor ou igual à nota, pinta de ouro; caso contrário, de cinza
-            estrela.style.color = valor <= nota ? 'var(--cor-estrela-ouro)' : 'var(--cor-cinza-neutro)';
-        });
-    }
-
-    // Adiciona "ouvintes de evento" para cada estrela
-    estrelas.forEach(estrela => {
-        // Ao clicar: define a nota selecionada e atualiza as estrelas
-        estrela.addEventListener('click', () => {
-            notaSelecionada = parseInt(estrela.dataset.valor);
-            atualizarEstrelas(notaSelecionada);
-        });
-        // Ao passar o mouse: atualiza as estrelas para mostrar a pré-seleção
-        estrela.addEventListener('mouseover', () => {
-            const valorHover = parseInt(estrela.dataset.valor);
-            atualizarEstrelas(valorHover);
-        });
-        // Ao tirar o mouse: retorna as estrelas ao estado da nota selecionada (ou todas cinza se nenhuma)
-        estrela.addEventListener('mouseout', () => {
-            atualizarEstrelas(notaSelecionada);
-        });
-    });
-
-    // Adiciona um ouvinte de evento para quando o formulário de avaliação for enviado
-    formAvaliacao.addEventListener('submit', (e) => {
-        e.preventDefault(); // Impede o comportamento padrão de recarregar a página
-        const comentario = comentarioInput.value; // Pega o texto do comentário
-
-        // Validação: verifica se uma nota foi selecionada e se o comentário não está vazio
-        if (notaSelecionada === 0 || comentario.trim() === '') {
-            alert('Por favor, selecione uma nota e digite seu comentário.');
-            return; // Sai da função se a validação falhar
-        }
-
-        // Cria um novo item de lista (<li>) para a avaliação
-        const novaAvaliacao = document.createElement('li');
-        novaAvaliacao.innerHTML = `
-            <strong>Nota: ${notaSelecionada} estrela(s)</strong>
-            <p>${comentario}</p>
-        `;
-        // Adiciona a nova avaliação à lista de avaliações existente
-        listaAvaliacoesUl.appendChild(novaAvaliacao);
-
-        // Limpa o formulário após o envio
-        comentarioInput.value = ''; // Limpa o campo de comentário
-        notaSelecionada = 0; // Reseta a nota selecionada
-        atualizarEstrelas(notaSelecionada); // Atualiza as estrelas para o estado inicial (todas cinza)
-    });
-
-</script>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Centro Cultural Carro de Boi do Dário. Todos os direitos reservados.</p>
+            </div>
+    </footer>
 
 </body>
 </html>
